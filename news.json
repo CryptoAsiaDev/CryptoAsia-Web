@@ -1,10 +1,44 @@
 {
-  "updated": "2026-10-23T19:59:33.046Z",
+  "updated": "2026-10-23T22:54:54.942Z",
   "skipped": [
+    "a08955d050c85b6d",
     "70dd2a65a17f1719",
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "015bf6f0dacaa12e",
+      "headline": "OCC stablecoin rule changes redemption timing and bank obligations",
+      "summary": "A new OCC rule for stablecoin issuers sets how the two-business-day redemption limit ends, with bank availability assessed separately. The excerpt gives few further details.",
+      "category": "Regulation",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/new-occ-stablecoin-rule-resets-redemptions-and-banks-face-big-shifts/",
+      "published": "2026-10-23T22:50:04.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/occ-seven-day-reversal.webp",
+      "sourceTitle": "New OCC stablecoin rule resets redemptions, and banks face big shifts"
+    },
+    {
+      "id": "c71e88cafcf31073",
+      "headline": "Blockstream Starts Institutional Consulting Arm and Opens Lugano Office",
+      "summary": "Blockstream plans to offer its engineering expertise to banks and asset managers from a new office in Lugano, Switzerland.",
+      "category": "Exchanges",
+      "source": "Bitcoin Magazine",
+      "url": "https://bitcoinmagazine.com/news/blockstream-launches-institutional-service",
+      "published": "2026-10-23T21:20:39.000Z",
+      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Blockstream-Launches-Institutional-Consulting-Services-Opens-Lugano-Office.jpg",
+      "sourceTitle": "Blockstream Launches Institutional Consulting Services, Opens Lugano Office"
+    },
+    {
+      "id": "7ee2e4604a21ef2b",
+      "headline": "UK regulator says some crypto apps may need licences for automated routing",
+      "summary": "The FCA's proposed guidance distinguishes between technical access and substantive involvement in transactions, as firms prepare for the UK's crypto regime starting October 2027.",
+      "category": "Regulation",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/uks-fca-says-crypto-apps-may-need-licenses-when-algorithms-choose-trade-routes/",
+      "published": "2026-10-23T20:30:00.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/fca-crypto-algorithm-control.webp",
+      "sourceTitle": "UK’s FCA says crypto apps may need licenses when algorithms choose trade routes"
+    },
     {
       "id": "5d8e4440e663bed9",
       "headline": "SEC Lists AI Superintelligence and Tokenization Among Market Risks",
