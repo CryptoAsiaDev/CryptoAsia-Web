@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Fortune — Daily Chinese Zodiac Reading | Crypto Asia</title>
+<meta name="description" content="Your free daily crypto fortune based on the Chinese zodiac: lucky number, colour, direction and hour. For fun only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.signs{display:grid;grid-template-columns:repeat(6,1fr);gap:.6rem;margin-top:1.4rem}
+.sign-btn{background:var(--white);border:1px solid var(--border);padding:.8rem .4rem;cursor:pointer;text-align:center;font:inherit;color:inherit;transition:all .15s}
+.sign-btn:hover{border-color:var(--gold);transform:translateY(-2px)}
+.sign-btn.on{background:var(--black);color:var(--gold);border-color:var(--black)}
+.sign-btn .e{display:block;font-size:2rem;line-height:1.1}
+.sign-btn .n{display:block;font-family:var(--fm);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-top:.2rem}
+.pick-row{display:flex;gap:.8rem;flex-wrap:wrap;align-items:flex-end}
+.pick-row .grow{flex:1;min-width:200px}
+.or{font-family:var(--fm);font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gray3);margin:1.4rem 0 -.2rem}
+
+#result{display:none;margin-top:1.75rem}
+#result.show{display:block}
+.fortune{display:grid;grid-template-columns:260px 1fr;gap:2rem;align-items:start}
+.f-sign{text-align:center}
+.f-emoji{font-size:7rem;line-height:1}
+.f-name{font-family:var(--fh);font-weight:900;font-size:1.5rem;color:var(--gold);letter-spacing:.06em;margin-top:.4rem}
+.f-zh{font-size:2.2rem;color:var(--white);margin-top:.1rem}
+.f-date{font-family:var(--fm);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,250,247,.55);margin-top:.6rem}
+.f-reading{font-size:1.45rem;line-height:1.4;color:var(--white);margin-bottom:1.4rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:.8rem;margin-bottom:1.4rem}
+.stat{border:1px solid rgba(245,197,24,.3);padding:.8rem 1rem}
+.stat .k{font-family:var(--fm);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.stat .v{font-family:var(--fh);font-weight:900;font-size:1.3rem;color:var(--white);margin-top:.2rem;display:flex;align-items:center;gap:.6rem}
+.stat .v small{font-family:var(--fs);font-weight:500;font-size:1rem;color:rgba(250,250,247,.65)}
+.swatch{display:inline-block;width:22px;height:22px;border:2px solid rgba(250,250,247,.6);border-radius:50%}
+.bars{display:grid;gap:.55rem;margin-bottom:1.4rem}
+.bar{display:flex;align-items:center;gap:.8rem;font-family:var(--fm);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,250,247,.7)}
+.bar .name{width:90px}
+.bar .pips{display:flex;gap:.3rem}
+.pip{width:34px;height:10px;background:rgba(250,250,247,.15)}
+.pip.on{background:var(--gold)}
+.extras{font-size:1.1rem;color:rgba(250,250,247,.8);margin-bottom:.4rem}
+.extras b{color:var(--gold);font-weight:600}
+.mantra{margin-top:1rem;border-left:3px solid var(--gold);padding-left:1rem;font-size:1.25rem;font-style:italic;color:var(--white)}
+.actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+.sponsor{display:none;margin-top:1.2rem;font-family:var(--fm);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(250,250,247,.55)}
+.sponsor a{color:var(--gold)}
+.preview-wrap{display:none;margin-top:1.4rem;text-align:center}
+.preview-wrap canvas{max-width:360px;width:100%;border:1px solid var(--border)}
+@media(max-width:820px){
+  .signs{grid-template-columns:repeat(4,1fr)}
+  .fortune{grid-template-columns:1fr}
+  .f-emoji{font-size:5rem}
+  .stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main>
+  <div class="eyebrow">Daily ritual</div>
+  <h1>CRYPTO <span class="gold">FORTUNE</span></h1>
+  <p class="lead">Your free daily reading based on the Chinese zodiac. Get a lucky number, colour, direction and hour, then share your card. A new fortune arrives every day.</p>
+
+  <div class="panel reveal">
+    <h2>FIND YOUR SIGN</h2>
+    <div class="pick-row">
+      <div class="grow">
+        <label class="label" for="dob">Your birth date</label>
+        <input class="input" type="date" id="dob" max="">
+      </div>
+      <button class="btn" id="btnFind" type="button">Reveal my fortune</button>
+    </div>
+    <div class="or">or pick your sign</div>
+    <div class="signs" id="signs"></div>
+    <p class="note" style="margin-top:1.2rem">Your date is only used in your browser to find your sign. Nothing is sent or stored on a server. Born in January or early February? Use your full birth date, because the Chinese year starts at Lunar New Year.</p>
+  </div>
+
+  <div id="result">
+    <div class="dark-panel">
+      <div class="fortune">
+        <div class="f-sign">
+          <div class="f-emoji" id="fEmoji"></div>
+          <div class="f-name" id="fName"></div>
+          <div class="f-zh" id="fZh"></div>
+          <div class="f-date" id="fDate"></div>
+        </div>
+        <div>
+          <div class="f-reading" id="fReading"></div>
+          <div class="stats">
+            <div class="stat"><div class="k">Lucky number</div><div class="v" id="fNum"></div></div>
+            <div class="stat"><div class="k">Lucky colour</div><div class="v" id="fColour"></div></div>
+            <div class="stat"><div class="k">Lucky direction</div><div class="v" id="fDir"></div></div>
+            <div class="stat"><div class="k">Lucky hour</div><div class="v" id="fHour"></div></div>
+          </div>
+          <div class="bars" id="fBars"></div>
+          <div class="extras" id="fFriends"></div>
+          <div class="mantra" id="fMantra"></div>
+          <div class="actions no-print">
+            <button class="btn" id="btnCard" type="button">Create share card</button>
+            <button class="btn ghost" id="btnShare" type="button" style="color:var(--white);box-shadow:inset 0 0 0 2px var(--gold)">Share on &#120143;</button>
+          </div>
+          <div class="sponsor" id="sponsor"></div>
+        </div>
+      </div>
+    </div>
+    <div class="preview-wrap" id="previewWrap">
+      <canvas id="cv" width="1080" height="1350"></canvas>
+      <div class="actions" style="justify-content:center">
+        <button class="btn" id="btnDownload" type="button">Download PNG</button>
+      </div>
+    </div>
+  </div>
+
+  <p class="note" style="margin-top:1.75rem">Crypto Fortune is just for fun. It is not financial advice and it does not predict markets. Never make trading decisions based on a horoscope.</p>
+</main>
+
+<div id="site-foot"></div>
+<script src="shared.js"></script>
+<script>
+// Optional sponsor line under each fortune. Set to {name:'Brand', url:'https://...'} to show it, or null to hide.
+var SPONSOR = null;
+
+var SIGNS = [
+  {id:'rat',    en:'Rat',     zh:'鼠', emoji:'🐀'},
+  {id:'ox',     en:'Ox',      zh:'牛', emoji:'🐂'},
+  {id:'tiger',  en:'Tiger',   zh:'虎', emoji:'🐅'},
+  {id:'rabbit', en:'Rabbit',  zh:'兔', emoji:'🐇'},
+  {id:'dragon', en:'Dragon',  zh:'龙', emoji:'🐉'},
+  {id:'snake',  en:'Snake',   zh:'蛇', emoji:'🐍'},
+  {id:'horse',  en:'Horse',   zh:'马', emoji:'🐎'},
+  {id:'goat',   en:'Goat',    zh:'羊', emoji:'🐐'},
+  {id:'monkey', en:'Monkey',  zh:'猴', emoji:'🐒'},
+  {id:'rooster',en:'Rooster', zh:'鸡', emoji:'🐓'},
+  {id:'dog',    en:'Dog',     zh:'狗', emoji:'🐕'},
+  {id:'pig',    en:'Pig',     zh:'猪', emoji:'🐖'}
+];
+var READINGS = [
+  "Quiet confidence outshines loud noise today. Let the market chatter pass you by.",
+  "A small, steady habit pays off more than a big gamble. Stay consistent.",
+  "Someone in your circle shares a useful idea. Listen first, decide later.",
+  "Your intuition is sharp, but your patience is sharper. Slow down and double-check.",
+  "Doors open for the curious. Read one more page before you click confirm.",
+  "A calm mind is today's lucky charm. Close a few tabs, breathe, then continue.",
+  "Fortune favours the prepared. Back up what matters and keep your keys offline.",
+  "A friendly surprise arrives mid-day. Say yes to a small invitation.",
+  "Avoid chasing. Let things come to you, because what is meant for you will not miss you.",
+  "Teamwork is lucky today. Share a win and it grows.",
+  "An old project deserves a second look. Fresh eyes see new paths.",
+  "Patience is your power move. Wait for clarity before you act.",
+  "Generosity brings good energy. Help a newcomer and notice what comes back.",
+  "Today rewards focus. Pick one thing and do it well.",
+  "Trust the process and question the hype. A little healthy doubt keeps you safe.",
+  "Your energy is magnetic today. Use it to connect, not to rush."
+];
+var MANTRAS = [
+  "Stay humble, stack steady.",
+  "Guard the keys, guard the peace.",
+  "Calm in, calm out.",
+  "Learn daily, panic never.",
+  "Small steps, long road.",
+  "Be early to learn, not late to listen.",
+  "Kind to others, careful with links.",
+  "Slow is smooth, smooth is strong."
+];
+var COLOURS = [
+  {n:'Gold',hex:'#F5C518'},{n:'Lucky Red',hex:'#D7263D'},{n:'Jade Green',hex:'#00A878'},{n:'Sky Blue',hex:'#4DA8DA'},
+  {n:'Royal Purple',hex:'#7B5EA7'},{n:'Pearl White',hex:'#F4F4F0'},{n:'Sunset Orange',hex:'#FF8C42'},{n:'Peach Pink',hex:'#F7A8B8'}
+];
+var DIRS = ['North','North-East','East','South-East','South','South-West','West','North-West'];
+var HOURS = [
+  {zh:'子',n:'Zi',t:'23:00–01:00'},{zh:'丑',n:'Chou',t:'01:00–03:00'},{zh:'寅',n:'Yin',t:'03:00–05:00'},
+  {zh:'卯',n:'Mao',t:'05:00–07:00'},{zh:'辰',n:'Chen',t:'07:00–09:00'},{zh:'巳',n:'Si',t:'09:00–11:00'},
+  {zh:'午',n:'Wu',t:'11:00–13:00'},{zh:'未',n:'Wei',t:'13:00–15:00'},{zh:'申',n:'Shen',t:'15:00–17:00'},
+  {zh:'酉',n:'You',t:'17:00–19:00'},{zh:'戌',n:'Xu',t:'19:00–21:00'},{zh:'亥',n:'Hai',t:'21:00–23:00'}
+];
+var TRINES = [[0,4,8],[1,5,9],[2,6,10],[3,7,11]]; // classic "friendly" groups
+
+function $(id){ return document.getElementById(id); }
+
+// ---- sign from birth date (uses the browser's Chinese calendar; falls back to the calendar year) ----
+function signFromDate(d){
+  try{
+    var parts = new Intl.DateTimeFormat('en-u-ca-chinese',{year:'numeric'}).formatToParts(d);
+    for(var i=0;i<parts.length;i++){
+      if(parts[i].type==='relatedYear'){ return (((parseInt(parts[i].value,10)-4)%12)+12)%12; }
+    }
+  }catch(e){}
+  return (((d.getFullYear()-4)%12)+12)%12;
+}
+
+// ---- deterministic daily randomness: same sign + same day = same fortune ----
+function xmur3(str){var h=1779033703^str.length;for(var i=0;i<str.length;i++){h=Math.imul(h^str.charCodeAt(i),3432918353);h=h<<13|h>>>19;}
+  return function(){h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);return(h^=h>>>16)>>>0;};}
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296;};}
+function dateKey(){
+  var d=new Date();
+  return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2);
+}
+function pick(rng,arr){ return arr[Math.floor(rng()*arr.length)]; }
+
+function makeFortune(signIdx){
+  var key = dateKey()+'|'+SIGNS[signIdx].id;
+  var rng = mulberry32(xmur3(key)());
+  var trine = TRINES.filter(function(t){return t.indexOf(signIdx)>-1;})[0]
+    .filter(function(i){return i!==signIdx;});
+  return {
+    sign: SIGNS[signIdx],
+    key: key,
+    reading: pick(rng,READINGS),
+    number: 1+Math.floor(rng()*99),
+    colour: pick(rng,COLOURS),
+    dir: pick(rng,DIRS),
+    hour: pick(rng,HOURS),
+    luck: 2+Math.floor(rng()*4),
+    patience: 2+Math.floor(rng()*4),
+    courage: 2+Math.floor(rng()*4),
+    friends: trine.map(function(i){return SIGNS[i];}),
+    mantra: pick(rng,MANTRAS)
+  };
+}
+
+var current = null;
+
+function pips(n){
+  var s=''; for(var i=1;i<=5;i++){ s+='<span class="pip'+(i<=n?' on':'')+'"></span>'; } return s;
+}
+function show(signIdx){
+  var f = makeFortune(signIdx); current = f;
+  $('fEmoji').textContent = f.sign.emoji;
+  $('fName').textContent = f.sign.en.toUpperCase();
+  $('fZh').textContent = f.sign.zh;
+  $('fDate').textContent = new Date().toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  $('fReading').textContent = f.reading;
+  $('fNum').textContent = f.number;
+  $('fColour').innerHTML = '<span class="swatch" style="background:'+f.colour.hex+'"></span><span>'+f.colour.n+'</span>';
+  $('fDir').textContent = f.dir;
+  $('fHour').innerHTML = f.hour.zh+' <small>'+f.hour.n+' hour · '+f.hour.t+'</small>';
+  $('fBars').innerHTML =
+    '<div class="bar"><span class="name">Luck</span><span class="pips">'+pips(f.luck)+'</span></div>'+
+    '<div class="bar"><span class="name">Patience</span><span class="pips">'+pips(f.patience)+'</span></div>'+
+    '<div class="bar"><span class="name">Courage</span><span class="pips">'+pips(f.courage)+'</span></div>';
+  $('fFriends').innerHTML = 'Friendly signs today: <b>'+f.friends.map(function(s){return s.emoji+' '+s.en;}).join(' &nbsp;·&nbsp; ')+'</b>';
+  $('fMantra').textContent = '“'+f.mantra+'”';
+  if(SPONSOR && SPONSOR.name){
+    $('sponsor').style.display='block';
+    $('sponsor').innerHTML = 'Today\'s fortune is brought to you by <a href="'+SPONSOR.url+'" target="_blank" rel="noopener sponsored">'+SPONSOR.name+'</a>';
+  }
+  $('result').classList.add('show');
+  document.querySelectorAll('.sign-btn').forEach(function(b,i){ b.classList.toggle('on', i===signIdx); });
+  try{ localStorage.setItem('ca_fortune_sign', String(signIdx)); }catch(e){}
+  $('previewWrap').style.display='none';
+}
+
+// ---- UI wiring ----
+(function init(){
+  var grid = $('signs');
+  SIGNS.forEach(function(s,i){
+    var b=document.createElement('button'); b.type='button'; b.className='sign-btn';
+    b.innerHTML='<span class="e">'+s.emoji+'</span><span class="n">'+s.en+'</span>';
+    b.onclick=function(){ show(i); $('result').scrollIntoView({behavior:'smooth',block:'start'}); };
+    grid.appendChild(b);
+  });
+  $('dob').max = dateKey();
+  $('btnFind').onclick=function(){
+    var v=$('dob').value; if(!v){ $('dob').focus(); return; }
+    var p=v.split('-'); var d=new Date(+p[0],+p[1]-1,+p[2],12);
+    show(signFromDate(d)); $('result').scrollIntoView({behavior:'smooth',block:'start'});
+  };
+  try{
+    var saved=localStorage.getItem('ca_fortune_sign');
+    if(saved!==null && SIGNS[+saved]) show(+saved);
+  }catch(e){}
+})();
+
+// ---- share card ----
+var logoImg=new Image(); logoImg.src='CRYPTO_ASIA_PAVIA.png';
+function drawCard(withLogo){
+  if(!current) return;
+  var f=current, cv=$('cv'), c=cv.getContext('2d'), W=cv.width, H=cv.height;
+  c.fillStyle='#080807'; c.fillRect(0,0,W,H);
+  c.strokeStyle='rgba(245,197,24,0.09)'; c.lineWidth=1;
+  for(var x=0;x<=W;x+=60){c.beginPath();c.moveTo(x,0);c.lineTo(x,H);c.stroke();}
+  for(var y=0;y<=H;y+=60){c.beginPath();c.moveTo(0,y);c.lineTo(W,y);c.stroke();}
+  c.strokeStyle='#F5C518'; c.lineWidth=8; c.strokeRect(40,40,W-80,H-80);
+
+  c.textAlign='left'; c.fillStyle='#F5C518'; c.font='700 34px "Share Tech Mono", monospace';
+  c.fillText('CRYPTO FORTUNE', 90, 130);
+  c.fillStyle='rgba(250,250,247,0.6)'; c.font='500 30px "Share Tech Mono", monospace';
+  c.fillText(new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'}).toUpperCase(), 90, 176);
+
+  c.textAlign='center';
+  c.font='260px serif'; c.fillStyle='#FAFAF7'; c.fillText(f.sign.emoji, W/2, 470);
+  c.fillStyle='#F5C518'; c.font='900 84px Orbitron, monospace'; c.fillText(f.sign.en.toUpperCase()+'  '+f.sign.zh, W/2, 590);
+
+  // lucky number
+  c.fillStyle='rgba(250,250,247,0.6)'; c.font='500 30px "Share Tech Mono", monospace'; c.fillText('LUCKY NUMBER', W/2, 690);
+  c.fillStyle='#F5C518'; c.font='900 190px Orbitron, monospace'; c.fillText(String(f.number), W/2, 860);
+
+  // colour / direction / hour row
+  var cols=[
+    ['COLOUR', f.colour.n],
+    ['DIRECTION', f.dir],
+    ['HOUR', f.hour.zh+' '+f.hour.n]
+  ];
+  cols.forEach(function(r,i){
+    var cx=210+i*330;
+    c.fillStyle='rgba(250,250,247,0.55)'; c.font='500 26px "Share Tech Mono", monospace'; c.fillText(r[0], cx, 950);
+    c.fillStyle='#FAFAF7'; c.font='600 38px Rajdhani, sans-serif'; c.fillText(r[1], cx, 1000);
+  });
+  c.fillStyle=f.colour.hex; c.beginPath(); c.arc(210,1040,16,0,Math.PI*2); c.fill();
+  c.strokeStyle='rgba(250,250,247,0.6)'; c.lineWidth=3; c.stroke();
+
+  // mantra
+  c.fillStyle='#FAFAF7'; c.font='italic 600 44px Rajdhani, sans-serif'; c.fillText('“'+f.mantra+'”', W/2, 1130);
+
+  c.textAlign='left'; c.fillStyle='#F5C518'; c.font='900 32px Orbitron, monospace'; c.fillText('CRYPTOASIA.NET', 90, H-80);
+  c.textAlign='right'; c.fillStyle='rgba(250,250,247,0.45)'; c.font='500 24px "Share Tech Mono", monospace'; c.fillText('FOR FUN ONLY', W-90, H-84);
+  if(withLogo!==false && logoImg.complete && logoImg.naturalWidth){
+    var lh=64, lw=logoImg.naturalWidth/logoImg.naturalHeight*lh;
+    c.drawImage(logoImg, W-90-lw, 70, lw, lh);
+  }
+}
+$('btnCard').onclick=function(){
+  $('previewWrap').style.display='block';
+  (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(function(){ drawCard(true); });
+  $('previewWrap').scrollIntoView({behavior:'smooth',block:'nearest'});
+};
+$('btnDownload').onclick=function(){
+  function save(){ $('cv').toBlob(function(b){ var a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='crypto-fortune-'+current.sign.id+'.png'; a.click(); setTimeout(function(){URL.revokeObjectURL(a.href);},2000); },'image/png'); }
+  try{ $('cv').toDataURL(); save(); }catch(e){ drawCard(false); save(); drawCard(true); }
+};
+$('btnShare').onclick=function(){
+  if(!current) return;
+  var f=current;
+  var text='My Crypto Fortune today ('+f.sign.emoji+' '+f.sign.en+'): lucky number '+f.number+', '+f.colour.n+', '+f.dir+'.\n“'+f.mantra+'”\n\nGet yours with @CryptoAsiaBTC';
+  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text)+'&url='+encodeURIComponent(location.href),'_blank','noopener');
+};
+</script>
+</body>
+</html>

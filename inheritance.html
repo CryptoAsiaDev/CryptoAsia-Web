@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Inheritance Kit — Plan Who Can Reach Your Crypto | Crypto Asia</title>
+<meta name="description" content="A free, private planner that helps you write down where your crypto is and who should help your family reach it. Runs in your browser. Never asks for seed phrases.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.steps{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.4rem}
+.step-pill{font-family:var(--fm);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;padding:.4rem .8rem;border:1px solid var(--border);color:var(--gray3);background:var(--white)}
+.step-pill.on{background:var(--black);color:var(--gold);border-color:var(--black)}
+.step-pill.done{border-color:var(--gold);color:var(--text)}
+.step{display:none}
+.step.show{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{margin-bottom:1.1rem}
+.rows{display:grid;gap:.9rem}
+.row-card{border:1px solid var(--border);background:var(--gray);padding:1rem;position:relative}
+.row-card .rm{position:absolute;top:.5rem;right:.6rem;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--gray3)}
+.row-card .rm:hover{color:#c0392b}
+.nav-row{display:flex;justify-content:space-between;gap:.8rem;margin-top:1.6rem;flex-wrap:wrap}
+.hint{font-size:.95rem;color:var(--text2);margin:-.2rem 0 1rem}
+.promise{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:0 0 1.75rem}
+.promise div{border:1px solid var(--border);background:var(--white);border-top:3px solid var(--gold);padding:1rem 1.1rem}
+.promise b{font-family:var(--fh);font-size:.82rem;letter-spacing:.05em;display:block;margin-bottom:.25rem}
+.promise span{font-size:1rem;color:var(--text2)}
+
+/* printable plan */
+#plan{display:none;background:#fff;border:1px solid var(--border);padding:2.5rem}
+#plan.show{display:block}
+#plan h2{font-family:var(--fh);font-size:1.5rem;margin-bottom:.3rem}
+#plan .meta{font-family:var(--fm);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);margin-bottom:1.5rem}
+#plan h3{font-family:var(--fh);font-size:1rem;letter-spacing:.05em;border-bottom:2px solid var(--gold);padding-bottom:.3rem;margin:1.6rem 0 .8rem}
+#plan table{width:100%;border-collapse:collapse;font-size:1.02rem}
+#plan th,#plan td{border:1px solid var(--border);padding:.5rem .65rem;text-align:left;vertical-align:top}
+#plan th{background:var(--gray);font-family:var(--fm);font-size:.76rem;letter-spacing:.08em;text-transform:uppercase}
+#plan p{margin:.3rem 0}
+#plan .empty{color:var(--gray3);font-style:italic}
+#plan .legal{margin-top:2rem;font-size:.9rem;color:var(--text2);border-top:1px solid var(--border);padding-top:.8rem}
+.sign-lines{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:2.2rem}
+.sign-lines div{border-top:1px solid #000;padding-top:.3rem;font-size:.9rem;color:var(--text2)}
+.upsell{margin-top:1.75rem}
+.upsell .dark-panel{display:flex;gap:1.5rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.upsell h3{font-family:var(--fh);font-size:1.05rem;color:var(--gold);margin-bottom:.3rem}
+.upsell p{color:rgba(250,250,247,.75);font-size:1.05rem;max-width:560px}
+@media(max-width:760px){
+  .grid2,.promise,.sign-lines{grid-template-columns:1fr}
+  #plan{padding:1.25rem}
+  #plan table{font-size:.9rem}
+}
+@media print{
+  main{padding:0}
+  #plan{border:none;padding:0}
+  .panel,.dark-panel,.steps,.promise,.eyebrow,h1.page-h1,.lead,.upsell,.warn,.note{display:none !important}
+  #plan{display:block !important}
+}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main>
+  <div class="eyebrow no-print">Family planning</div>
+  <h1 class="page-h1">CRYPTO <span class="gold">INHERITANCE</span> KIT</h1>
+  <p class="lead no-print">If something happened to you tomorrow, could your family find and reach your crypto? Answer a few questions and get a printable plan you can keep somewhere safe.</p>
+
+  <div class="promise no-print">
+    <div><b>PRIVATE</b><span>Everything stays in your browser. Nothing is uploaded or saved anywhere.</span></div>
+    <div><b>NO SECRETS</b><span>You write where things are, never the keys themselves.</span></div>
+    <div><b>PRINT OR PDF</b><span>Download it, print it, and store it with your important papers.</span></div>
+  </div>
+
+  <div class="warn no-print" style="margin-bottom:1.5rem">
+    <b>NEVER type your seed phrase, private keys or passwords on this page, or anywhere online.</b>
+    This planner only records <i>where</i> things are kept and <i>who</i> should help. If it detects something that looks like a seed phrase or key, it will stop you.
+  </div>
+
+  <div id="wizard" class="panel no-print">
+    <div class="steps" id="stepPills"></div>
+
+    <!-- STEP 1 -->
+    <div class="step show" data-step="0">
+      <h2>1. ABOUT YOU</h2>
+      <div class="grid2">
+        <div class="field"><label class="label" for="f_name">Your name</label><input class="input" id="f_name" data-guard></div>
+        <div class="field"><label class="label" for="f_country">Country / where you live</label><input class="input" id="f_country" data-guard></div>
+      </div>
+      <div class="field"><label class="label" for="f_notes">One line for your family (optional)</label>
+        <textarea class="textarea" id="f_notes" data-guard placeholder="e.g. Please read this slowly and ask for help before moving anything."></textarea></div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" data-step="1">
+      <h2>2. WHO SHOULD HELP</h2>
+      <p class="hint">Add the people you trust. List a primary contact first.</p>
+      <div class="rows" id="people"></div>
+      <button class="btn ghost" type="button" id="addPerson" style="margin-top:1rem">+ Add person</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" data-step="2">
+      <h2>3. WHAT YOU HOLD</h2>
+      <p class="hint">List each place you hold crypto. Describe it, but do not enter any balances you are uncomfortable sharing with family.</p>
+      <div class="rows" id="assets"></div>
+      <button class="btn ghost" type="button" id="addAsset" style="margin-top:1rem">+ Add holding</button>
+    </div>
+
+    <!-- STEP 4 -->
+    <div class="step" data-step="3">
+      <h2>4. WHERE ACCESS IS KEPT</h2>
+      <p class="hint">Describe locations only, such as "metal backup plate in the home safe". Do not write the words or keys.</p>
+      <div class="field"><label class="label" for="f_hw">Hardware wallets and devices</label><textarea class="textarea" id="f_hw" data-guard placeholder="e.g. Two hardware wallets in the safe, in the study."></textarea></div>
+      <div class="field"><label class="label" for="f_backup">Where recovery backups are stored (location only)</label><textarea class="textarea" id="f_backup" data-guard placeholder="e.g. Steel backup in the bank safe-deposit box, branch and box number held by my lawyer."></textarea></div>
+      <div class="field"><label class="label" for="f_pass">How passwords and 2FA are managed</label><textarea class="textarea" id="f_pass" data-guard placeholder="e.g. Password manager. Emergency access is set for my spouse. 2FA codes are on my old phone in the safe."></textarea></div>
+      <div class="field"><label class="label" for="f_email">Important email and phone accounts</label><textarea class="textarea" id="f_email" data-guard placeholder="e.g. Main email is the recovery address for my exchange accounts."></textarea></div>
+    </div>
+
+    <!-- STEP 5 -->
+    <div class="step" data-step="4">
+      <h2>5. YOUR WISHES AND ADVISERS</h2>
+      <div class="field"><label class="label" for="f_wishes">What do you want to happen?</label><textarea class="textarea" id="f_wishes" data-guard placeholder="e.g. Keep long-term holdings for 12 months before selling anything. Split equally between my children."></textarea></div>
+      <div class="grid2">
+        <div class="field"><label class="label" for="f_lawyer">Lawyer / will location</label><input class="input" id="f_lawyer" data-guard placeholder="Name, firm and contact"></div>
+        <div class="field"><label class="label" for="f_acct">Accountant / tax adviser</label><input class="input" id="f_acct" data-guard placeholder="Name and contact"></div>
+      </div>
+      <div class="field"><label class="label" for="f_warn">Warnings for your family</label><textarea class="textarea" id="f_warn" data-guard placeholder="e.g. Never share codes with anyone who calls or messages you. Beware of 'recovery' scams."></textarea></div>
+    </div>
+
+    <div class="warn" id="guardMsg" style="display:none;margin-top:1rem"></div>
+
+    <div class="nav-row">
+      <button class="btn ghost" type="button" id="btnBack">&larr; Back</button>
+      <button class="btn" type="button" id="btnNext">Next &rarr;</button>
+    </div>
+  </div>
+
+  <div id="plan"></div>
+
+  <div class="upsell no-print" id="upsell" style="display:none">
+    <div class="dark-panel">
+      <div>
+        <h3>WANT A SECOND PAIR OF EYES?</h3>
+        <p>Get your plan reviewed, or ask about a personal walkthrough for your family. Message us on X and we will reply with options.</p>
+      </div>
+      <a class="btn" id="upsellBtn" href="https://x.com/CryptoAsiaBTC" target="_blank" rel="noopener">Message @CryptoAsiaBTC</a>
+    </div>
+  </div>
+</main>
+
+<div id="site-foot"></div>
+<script src="shared.js"></script>
+<script>
+var STEPS = ['About you','Helpers','Holdings','Access','Wishes'];
+var step = 0;
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+
+// ---------- safety guard: block anything that looks like a secret ----------
+// Seed phrases are 12+ plain lowercase words. Normal sentences contain everyday words like "the" or "and"
+// (none of which are in the seed-word list), so a run with 2 or more of those is treated as ordinary writing.
+var PROSE_WORDS = ['the','and','for','with','that','this','are','was','then','than','from','have','has','they','your','please','before','between','after','their','them','should','would','could','but','not','you','our','his','her','she','who','how','why','its'];
+function looksLikeSeed(text){
+  var runs = text.match(/\b(?:[a-z]{3,8}\s+){11,}[a-z]{3,8}\b/g) || [];
+  for(var i=0;i<runs.length;i++){
+    var words = runs[i].split(/\s+/), hits = 0;
+    for(var j=0;j<words.length;j++){ if(PROSE_WORDS.indexOf(words[j])>-1) hits++; }
+    if(hits < 2) return true;
+  }
+  return false;
+}
+var SECRET_PATTERNS = [
+  {test:looksLikeSeed, why:'a list of 12 or more plain words (this looks like a seed phrase)'},
+  {re:/\b[0-9a-fA-F]{64}\b/, why:'a 64-character hex string (this looks like a private key)'},
+  {re:/\b[xyz]prv[1-9A-HJ-NP-Za-km-z]{50,}\b/, why:'an extended private key'},
+  {re:/\b[5KL][1-9A-HJ-NP-Za-km-z]{50,51}\b/, why:'a Bitcoin private key (WIF)'},
+  {re:/\b0x[0-9a-fA-F]{64}\b/, why:'a 0x private key'}
+];
+function findSecret(text){
+  for(var i=0;i<SECRET_PATTERNS.length;i++){
+    var p = SECRET_PATTERNS[i];
+    if(p.test ? p.test(text) : p.re.test(text)) return p.why;
+  }
+  return null;
+}
+function allFieldsText(){
+  return Array.prototype.map.call(document.querySelectorAll('#wizard input, #wizard textarea'),function(el){return el.value;}).join('\n');
+}
+function guardCheck(){
+  var why = findSecret(allFieldsText());
+  var box = $('guardMsg');
+  if(why){
+    box.style.display='block';
+    box.innerHTML = '<b>Stop — please remove this.</b> One of your answers contains '+why+'. Never put secrets in this planner. Delete it from the box, and write only <i>where</i> it is kept (for example "steel plate in the safe").';
+    return false;
+  }
+  box.style.display='none'; return true;
+}
+document.addEventListener('input', function(e){
+  if(e.target.closest && e.target.closest('#wizard')) guardCheck();
+});
+
+// ---------- repeating rows ----------
+var ASSET_TYPES = ['Exchange account','Hardware wallet','Software / mobile wallet','Staking or DeFi position','NFTs / Ordinals','Other'];
+function personRow(){
+  var d=document.createElement('div'); d.className='row-card';
+  d.innerHTML='<button class="rm" type="button" title="Remove" aria-label="Remove">&times;</button>'+
+    '<div class="grid2">'+
+    '<div class="field"><label class="label">Name</label><input class="input p-name" data-guard></div>'+
+    '<div class="field"><label class="label">Relationship</label><input class="input p-rel" data-guard placeholder="e.g. Spouse, sibling, friend"></div>'+
+    '<div class="field"><label class="label">Phone or email</label><input class="input p-contact" data-guard></div>'+
+    '<div class="field"><label class="label">Role</label><select class="select p-role"><option>Primary contact</option><option>Backup contact</option><option>Beneficiary</option><option>Technical helper</option><option>Legal adviser</option></select></div>'+
+    '</div>';
+  d.querySelector('.rm').onclick=function(){ d.remove(); };
+  return d;
+}
+function assetRow(){
+  var d=document.createElement('div'); d.className='row-card';
+  d.innerHTML='<button class="rm" type="button" title="Remove" aria-label="Remove">&times;</button>'+
+    '<div class="grid2">'+
+    '<div class="field"><label class="label">Type</label><select class="select a-type">'+ASSET_TYPES.map(function(t){return '<option>'+t+'</option>';}).join('')+'</select></div>'+
+    '<div class="field"><label class="label">Name / platform</label><input class="input a-name" data-guard placeholder="e.g. Binance, Ledger Nano, Phantom"></div>'+
+    '</div>'+
+    '<div class="field"><label class="label">Notes for your family (no keys or passwords)</label><textarea class="textarea a-note" data-guard placeholder="e.g. Main long-term holdings. Login email is my main email."></textarea></div>';
+  d.querySelector('.rm').onclick=function(){ d.remove(); };
+  return d;
+}
+$('addPerson').onclick=function(){ $('people').appendChild(personRow()); };
+$('addAsset').onclick=function(){ $('assets').appendChild(assetRow()); };
+$('people').appendChild(personRow());
+$('assets').appendChild(assetRow());
+
+// ---------- wizard ----------
+function renderPills(){
+  $('stepPills').innerHTML = STEPS.map(function(s,i){
+    return '<span class="step-pill'+(i===step?' on':(i<step?' done':''))+'">'+(i+1)+'. '+s+'</span>';
+  }).join('');
+  document.querySelectorAll('.step').forEach(function(el){ el.classList.toggle('show', +el.getAttribute('data-step')===step); });
+  $('btnBack').style.visibility = step===0 ? 'hidden' : 'visible';
+  $('btnNext').textContent = step===STEPS.length-1 ? 'Create my plan' : 'Next →';
+}
+$('btnBack').onclick=function(){ if(step>0){ step--; renderPills(); window.scrollTo({top:0,behavior:'smooth'}); } };
+$('btnNext').onclick=function(){
+  if(!guardCheck()) return;
+  if(step<STEPS.length-1){ step++; renderPills(); window.scrollTo({top:0,behavior:'smooth'}); }
+  else buildPlan();
+};
+
+// ---------- plan ----------
+function val(id){ return $(id).value.trim(); }
+function para(label,text){ return '<p><b>'+label+':</b> '+(text?esc(text).replace(/\n/g,'<br>'):'<span class="empty">Not provided</span>')+'</p>'; }
+function buildPlan(){
+  if(!guardCheck()) return;
+  var people = Array.prototype.map.call(document.querySelectorAll('#people .row-card'),function(r){
+    return {name:r.querySelector('.p-name').value.trim(), rel:r.querySelector('.p-rel').value.trim(), contact:r.querySelector('.p-contact').value.trim(), role:r.querySelector('.p-role').value};
+  }).filter(function(p){return p.name||p.contact;});
+  var assets = Array.prototype.map.call(document.querySelectorAll('#assets .row-card'),function(r){
+    return {type:r.querySelector('.a-type').value, name:r.querySelector('.a-name').value.trim(), note:r.querySelector('.a-note').value.trim()};
+  }).filter(function(a){return a.name||a.note;});
+  var today = new Date().toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});
+
+  var h = '';
+  h += '<h2>CRYPTO ACCESS PLAN'+(val('f_name')?' — '+esc(val('f_name')).toUpperCase():'')+'</h2>';
+  h += '<div class="meta">Prepared '+today+(val('f_country')?' · '+esc(val('f_country')):'')+' · Keep this somewhere safe and tell your helpers where it is</div>';
+  if(val('f_notes')) h += '<p>'+esc(val('f_notes')).replace(/\n/g,'<br>')+'</p>';
+
+  h += '<h3>1. WHO TO CONTACT FIRST</h3>';
+  if(people.length){
+    h += '<table><tr><th>Name</th><th>Relationship</th><th>Contact</th><th>Role</th></tr>'+
+      people.map(function(p){return '<tr><td>'+esc(p.name)+'</td><td>'+esc(p.rel)+'</td><td>'+esc(p.contact)+'</td><td>'+esc(p.role)+'</td></tr>';}).join('')+'</table>';
+  } else h += '<p class="empty">No contacts added.</p>';
+
+  h += '<h3>2. WHAT I HOLD</h3>';
+  if(assets.length){
+    h += '<table><tr><th>Type</th><th>Name / platform</th><th>Notes</th></tr>'+
+      assets.map(function(a){return '<tr><td>'+esc(a.type)+'</td><td>'+esc(a.name)+'</td><td>'+esc(a.note).replace(/\n/g,'<br>')+'</td></tr>';}).join('')+'</table>';
+  } else h += '<p class="empty">No holdings added.</p>';
+
+  h += '<h3>3. WHERE ACCESS IS KEPT</h3>';
+  h += para('Hardware wallets and devices',val('f_hw'));
+  h += para('Recovery backups (location only)',val('f_backup'));
+  h += para('Passwords and 2FA',val('f_pass'));
+  h += para('Important email and phone accounts',val('f_email'));
+
+  h += '<h3>4. MY WISHES</h3>';
+  h += para('What I want to happen',val('f_wishes'));
+  h += para('Lawyer / will location',val('f_lawyer'));
+  h += para('Accountant / tax adviser',val('f_acct'));
+
+  h += '<h3>5. WARNINGS FOR MY FAMILY</h3>';
+  h += para('Please be careful',val('f_warn'));
+  h += '<p>Nobody legitimate will ever ask you to share a seed phrase or send crypto to "unlock" an account. Take your time and get help from the people listed above.</p>';
+
+  h += '<div class="sign-lines"><div>Signature</div><div>Date</div></div>';
+  h += '<div class="legal">This plan is a personal record, not a will or a legal document, and it does not transfer ownership of anything. Laws on inheritance and digital assets differ by country, so speak to a qualified lawyer about making a valid will. Crypto Asia does not store this information.</div>';
+  h += '<div class="no-print" style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.5rem"><button class="btn" type="button" onclick="window.print()">Print / Save as PDF</button><button class="btn ghost" type="button" id="btnEdit">&larr; Edit my answers</button></div>';
+
+  $('plan').innerHTML = h;
+  $('plan').classList.add('show');
+  $('wizard').style.display='none';
+  $('upsell').style.display='block';
+  document.querySelectorAll('.promise,.lead').forEach(function(el){ el.style.display='none'; });
+  $('btnEdit').onclick=function(){
+    $('plan').classList.remove('show'); $('wizard').style.display='block'; $('upsell').style.display='none';
+    document.querySelectorAll('.promise,.lead').forEach(function(el){ el.style.display=''; });
+    step=0; renderPills(); window.scrollTo({top:0,behavior:'smooth'});
+  };
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+renderPills();
+</script>
+</body>
+</html>

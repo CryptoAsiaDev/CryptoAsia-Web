@@ -1,0 +1,15 @@
+{
+  "updated": "2026-10-23T00:00:00.000Z",
+  "items": [
+    {
+      "id": "sample1",
+      "headline": "Sample: how your automatic news briefs will look",
+      "summary": "This placeholder shows the layout. Once the news workflow runs, real briefs replace it, each with a link to the original publisher.",
+      "category": "Tech",
+      "source": "Crypto Asia",
+      "url": "https://x.com/CryptoAsiaBTC",
+      "published": "2026-10-23T00:00:00.000Z",
+      "sample": true
+    }
+  ]
+}

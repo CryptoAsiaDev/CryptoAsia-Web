@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web3 Asia Jobs — Crypto &amp; Blockchain Jobs | Crypto Asia</title>
+<meta name="description" content="Crypto and Web3 jobs for Asia: engineering, community, content, design and more. Projects can post a role in minutes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.top{display:flex;justify-content:space-between;align-items:flex-end;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:.8rem;margin-bottom:1.2rem}
+.count{font-family:var(--fm);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);margin-bottom:1rem}
+.jobs{display:grid;gap:1rem}
+.job{background:var(--white);border:1px solid var(--border);border-left:5px solid var(--border);padding:1.3rem 1.5rem;display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;transition:transform .15s,box-shadow .15s}
+.job:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(245,197,24,.14)}
+.job.featured{border-left-color:var(--gold);background:linear-gradient(90deg,rgba(245,197,24,.12),var(--white) 40%)}
+.job h3{font-family:var(--fh);font-size:1.02rem;letter-spacing:.03em;margin-bottom:.15rem}
+.job .co{font-size:1.15rem;color:var(--text2);margin-bottom:.55rem}
+.job .tags{display:flex;gap:.45rem;flex-wrap:wrap}
+.job .sal{font-size:1.05rem;color:var(--text2);margin-top:.5rem}
+.job .side{text-align:right}
+.job .when{font-family:var(--fm);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gray3);margin-top:.6rem}
+.empty{text-align:center;padding:3rem 1rem;border:2px dashed var(--border);background:var(--white)}
+.empty h3{font-family:var(--fh);font-size:1.05rem;margin-bottom:.4rem}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(8,8,7,.78);display:none;align-items:flex-start;justify-content:center;z-index:300;padding:1rem;overflow:auto}
+.modal.open{display:flex}
+.sheet{background:var(--white);max-width:720px;width:100%;margin:2rem 0;padding:2rem;border-top:4px solid var(--gold)}
+.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem}
+.sheet-head h3{font-family:var(--fh);font-size:1rem;letter-spacing:.06em}
+.x{background:none;border:none;font-size:1.7rem;cursor:pointer;color:var(--text)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{margin-bottom:1rem}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.2rem}
+.plan{border:2px solid var(--border);padding:1rem 1.1rem;cursor:pointer;background:#fff}
+.plan.on{border-color:var(--gold);background:rgba(245,197,24,.12)}
+.plan b{font-family:var(--fh);font-size:.85rem;letter-spacing:.05em;display:block}
+.plan .pr{font-family:var(--fh);font-size:1.4rem;font-weight:900;margin:.2rem 0}
+.plan span{font-size:.98rem;color:var(--text2)}
+.out{background:var(--gray);border:1px solid var(--border);padding:1rem;font-family:var(--fm);font-size:.85rem;white-space:pre-wrap;margin:1rem 0;display:none}
+.pitch{margin-top:2rem}
+.pitch .dark-panel{display:flex;gap:1.5rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.pitch h3{font-family:var(--fh);font-size:1.05rem;color:var(--gold);margin-bottom:.3rem}
+.pitch p{color:rgba(250,250,247,.78);font-size:1.08rem;max-width:600px}
+@media(max-width:820px){
+  .filters,.grid2,.plans{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr}
+  .job .side{text-align:left}
+}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main>
+  <div class="top">
+    <div>
+      <div class="eyebrow">Work in Web3</div>
+      <h1>WEB3 <span class="gold">ASIA</span> JOBS</h1>
+      <p class="lead" style="margin-bottom:0">Crypto and blockchain roles for Asia, from engineers to community managers. Hiring? Post a role in minutes.</p>
+    </div>
+    <button class="btn" id="btnPost" type="button">Post a job</button>
+  </div>
+
+  <div class="filters">
+    <input class="input" id="q" type="search" placeholder="Search roles or companies">
+    <select class="select" id="fCat"><option value="">All categories</option></select>
+    <select class="select" id="fType"><option value="">All types</option></select>
+    <select class="select" id="fLoc"><option value="">Any location</option><option value="remote">Remote only</option></select>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="jobs" id="jobs"></div>
+
+  <div class="pitch">
+    <div class="dark-panel">
+      <div>
+        <h3>HIRING IN WEB3?</h3>
+        <p>Reach crypto talent across Asia through the Crypto Asia community. Listings stay live for <span id="pitchDays">30</span> days, and featured listings are pinned to the top.</p>
+      </div>
+      <button class="btn" type="button" id="btnPost2">Post a job</button>
+    </div>
+  </div>
+</main>
+
+<!-- Post a job -->
+<div class="modal" id="modal">
+  <div class="sheet">
+    <div class="sheet-head"><h3>POST A JOB</h3><button class="x" id="btnClose" type="button" aria-label="Close">&times;</button></div>
+
+    <div class="plans" id="plans"></div>
+
+    <div class="grid2">
+      <div class="field"><label class="label" for="p_company">Company / project</label><input class="input" id="p_company"></div>
+      <div class="field"><label class="label" for="p_title">Role title</label><input class="input" id="p_title"></div>
+      <div class="field"><label class="label" for="p_type">Type</label><select class="select" id="p_type"></select></div>
+      <div class="field"><label class="label" for="p_cat">Category</label><select class="select" id="p_cat"></select></div>
+      <div class="field"><label class="label" for="p_loc">Location</label><input class="input" id="p_loc" placeholder="e.g. Remote · Asia"></div>
+      <div class="field"><label class="label" for="p_sal">Pay (optional)</label><input class="input" id="p_sal" placeholder="e.g. USD 3,000 / month"></div>
+    </div>
+    <div class="field"><label class="label" for="p_apply">How to apply (link or email)</label><input class="input" id="p_apply" placeholder="https://… or name@company.com"></div>
+    <div class="field"><label class="label" for="p_desc">Short description (optional)</label><textarea class="textarea" id="p_desc"></textarea></div>
+    <div class="field"><label class="label" for="p_contact">Your contact (so we can confirm)</label><input class="input" id="p_contact" placeholder="X handle, Telegram or email"></div>
+
+    <div class="out" id="out"></div>
+    <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+      <button class="btn" type="button" id="btnGen">Create my listing</button>
+      <button class="btn ghost" type="button" id="btnCopy" style="display:none">Copy listing</button>
+      <a class="btn dark" id="btnX" href="#" target="_blank" rel="noopener" style="display:none">Send on X</a>
+    </div>
+    <p class="note" style="margin-top:1rem" id="postNote"></p>
+  </div>
+</div>
+
+<div id="site-foot"></div>
+<script src="shared.js"></script>
+<script>
+/* ---- Settings you can change ---- */
+var CONFIG = {
+  contactX: 'https://x.com/CryptoAsiaBTC',     // where employers send their listing
+  listingDays: 30,                              // how long a listing stays live
+  plans: [
+    {id:'standard', name:'STANDARD', price:'USD 50',  blurb:'Listed for 30 days.'},
+    {id:'featured', name:'FEATURED', price:'USD 150', blurb:'Pinned on top and highlighted for 30 days.'}
+  ]
+};
+var CATEGORIES = ['Engineering','Marketing & Community','Design','Business Development','Operations & Support','Content','Other'];
+var TYPES = ['Full-time','Part-time','Contract','Internship','Gig'];
+// Used only if jobs.json cannot be loaded (for example when the file is opened straight from a folder).
+var FALLBACK = [
+  {title:'Community Manager (Southeast Asia)',company:'Sample Labs',type:'Full-time',location:'Remote · Asia',category:'Marketing & Community',salary:'Example: USD 2,000 – 3,500 / month',apply:'',posted:'2026-10-20',featured:true,sample:true},
+  {title:'Solidity / Rust Developer',company:'Example Protocol',type:'Contract',location:'Remote',category:'Engineering',salary:'Example: USD 60 – 90 / hour',apply:'',posted:'2026-10-18',featured:false,sample:true}
+];
+
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+function safeUrl(u){
+  u = String(u||'').trim();
+  if(/^https?:\/\//i.test(u) || /^mailto:/i.test(u)) return u;
+  if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(u)) return 'mailto:'+u;
+  return '';
+}
+
+var ALL = [];
+function ago(dstr){
+  var d = new Date(dstr+'T00:00:00'); if(isNaN(d)) return '';
+  var days = Math.floor((Date.now()-d.getTime())/86400000);
+  if(days<=0) return 'Posted today'; if(days===1) return 'Posted yesterday';
+  if(days<30) return 'Posted '+days+' days ago';
+  return 'Posted '+Math.floor(days/30)+' mo ago';
+}
+function live(j){
+  if(!j.expires) return true;
+  return new Date(j.expires+'T23:59:59').getTime() >= Date.now();
+}
+
+function render(){
+  var q = $('q').value.trim().toLowerCase(), cat = $('fCat').value, type = $('fType').value, loc = $('fLoc').value;
+  var list = ALL.filter(live).filter(function(j){
+    if(cat && j.category!==cat) return false;
+    if(type && j.type!==type) return false;
+    if(loc==='remote' && !/remote/i.test(j.location||'')) return false;
+    if(q && (j.title+' '+j.company+' '+(j.location||'')).toLowerCase().indexOf(q)===-1) return false;
+    return true;
+  }).sort(function(a,b){
+    if(!!b.featured!==!!a.featured) return b.featured?1:-1;
+    return (b.posted||'').localeCompare(a.posted||'');
+  });
+  $('count').textContent = list.length+' open role'+(list.length===1?'':'s');
+  if(!list.length){
+    $('jobs').innerHTML = '<div class="empty"><h3>NO ROLES MATCH YET</h3><p>Try clearing the filters, or post the first one.</p></div>';
+    return;
+  }
+  $('jobs').innerHTML = list.map(function(j){
+    var url = safeUrl(j.apply);
+    var btn = j.sample || !url ? '<span class="btn ghost" style="opacity:.5;pointer-events:none">Sample</span>'
+                               : '<a class="btn" href="'+esc(url)+'" target="_blank" rel="noopener nofollow">Apply</a>';
+    return '<div class="job'+(j.featured?' featured':'')+'">'+
+      '<div><h3>'+esc(j.title)+'</h3><div class="co">'+esc(j.company)+'</div>'+
+      '<div class="tags">'+(j.featured?'<span class="tag gold">Featured</span>':'')+(j.sample?'<span class="tag sample">Sample listing</span>':'')+
+      '<span class="tag">'+esc(j.type)+'</span><span class="tag">'+esc(j.location||'')+'</span><span class="tag">'+esc(j.category)+'</span></div>'+
+      (j.salary?'<div class="sal">'+esc(j.salary)+'</div>':'')+'</div>'+
+      '<div class="side">'+btn+'<div class="when">'+esc(ago(j.posted))+'</div></div></div>';
+  }).join('');
+}
+
+function fillSelect(sel, items){ items.forEach(function(v){ var o=document.createElement('option'); o.value=v; o.textContent=v; sel.appendChild(o); }); }
+fillSelect($('fCat'),CATEGORIES); fillSelect($('fType'),TYPES);
+fillSelect($('p_cat'),CATEGORIES); fillSelect($('p_type'),TYPES);
+$('pitchDays').textContent = CONFIG.listingDays;
+['q','fCat','fType','fLoc'].forEach(function(id){ $(id).addEventListener('input',render); });
+
+fetch('jobs.json',{cache:'no-store'}).then(function(r){ if(!r.ok) throw 0; return r.json(); })
+  .then(function(d){ ALL = Array.isArray(d)?d:(d.jobs||[]); render(); })
+  .catch(function(){ ALL = FALLBACK; render(); });
+
+/* ---- Post a job ---- */
+var plan = 'standard';
+function renderPlans(){
+  $('plans').innerHTML = CONFIG.plans.map(function(p){
+    return '<div class="plan'+(p.id===plan?' on':'')+'" data-id="'+p.id+'"><b>'+p.name+'</b><div class="pr">'+esc(p.price)+'</div><span>'+esc(p.blurb)+'</span></div>';
+  }).join('');
+  document.querySelectorAll('.plan').forEach(function(el){ el.onclick=function(){ plan=el.getAttribute('data-id'); renderPlans(); }; });
+}
+function openModal(){ $('modal').classList.add('open'); renderPlans(); $('postNote').textContent='Payment is arranged directly with Crypto Asia after we confirm your listing. Nothing is charged on this page.'; }
+$('btnPost').onclick=openModal; $('btnPost2').onclick=openModal;
+$('btnClose').onclick=function(){ $('modal').classList.remove('open'); };
+$('modal').addEventListener('click',function(e){ if(e.target.id==='modal') $('modal').classList.remove('open'); });
+$('btnGen').onclick=function(){
+  var p = CONFIG.plans.filter(function(x){return x.id===plan;})[0];
+  if(!$('p_company').value.trim() || !$('p_title').value.trim()){ (!$('p_company').value.trim()?$('p_company'):$('p_title')).focus(); return; }
+  var txt =
+    'NEW JOB LISTING — '+p.name+' ('+p.price+')\n\n'+
+    'Role: '+$('p_title').value.trim()+'\n'+
+    'Company: '+$('p_company').value.trim()+'\n'+
+    'Type: '+$('p_type').value+'\n'+
+    'Category: '+$('p_cat').value+'\n'+
+    'Location: '+($('p_loc').value.trim()||'—')+'\n'+
+    'Pay: '+($('p_sal').value.trim()||'—')+'\n'+
+    'Apply: '+($('p_apply').value.trim()||'—')+'\n'+
+    'Description: '+($('p_desc').value.trim()||'—')+'\n'+
+    'Contact: '+($('p_contact').value.trim()||'—');
+  $('out').style.display='block'; $('out').textContent=txt;
+  $('btnCopy').style.display='inline-flex';
+  $('btnX').style.display='inline-flex'; $('btnX').href=CONFIG.contactX;
+  $('postNote').textContent='Copy your listing, then send it to us on X. We will confirm, agree payment and publish it.';
+};
+$('btnCopy').onclick=function(){
+  var t=$('out').textContent;
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(function(){ $('btnCopy').textContent='Copied!'; setTimeout(function(){$('btnCopy').textContent='Copy listing';},1600); }); }
+  else { var r=document.createRange(); r.selectNodeContents($('out')); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+};
+</script>
+</body>
+</html>

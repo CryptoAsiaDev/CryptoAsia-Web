@@ -1,0 +1,41 @@
+{
+  "_readme": "Edit this file to add or remove jobs. Delete the three sample entries when you add real ones. Fields: title, company, type (Full-time | Part-time | Contract | Internship | Gig), location, category, salary (optional text), apply (URL or mailto: link), posted (YYYY-MM-DD), expires (YYYY-MM-DD, optional), featured (true/false), sample (true on demo entries only).",
+  "jobs": [
+    {
+      "title": "Community Manager (Southeast Asia)",
+      "company": "Sample Labs",
+      "type": "Full-time",
+      "location": "Remote · Asia",
+      "category": "Marketing & Community",
+      "salary": "Example: USD 2,000 – 3,500 / month",
+      "apply": "",
+      "posted": "2026-10-20",
+      "featured": true,
+      "sample": true
+    },
+    {
+      "title": "Solidity / Rust Developer",
+      "company": "Example Protocol",
+      "type": "Contract",
+      "location": "Remote",
+      "category": "Engineering",
+      "salary": "Example: USD 60 – 90 / hour",
+      "apply": "",
+      "posted": "2026-10-18",
+      "featured": false,
+      "sample": true
+    },
+    {
+      "title": "Crypto Content Writer (中文 / English)",
+      "company": "Demo Media",
+      "type": "Part-time",
+      "location": "Remote · Malaysia / Singapore / Hong Kong",
+      "category": "Content",
+      "salary": "Example: USD 25 per article",
+      "apply": "",
+      "posted": "2026-10-15",
+      "featured": false,
+      "sample": true
+    }
+  ]
+}
