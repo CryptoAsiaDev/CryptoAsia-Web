@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Asia — Decentralized + Revolution</title>
+<meta name="description" content="Crypto Asia — Web3 projects, NFT collections, Bitcoin Ordinals, and digital artifacts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#F5C518;--gold-d:#C49A00;--gold-l:#FFE566;
+  --black:#080807;--white:#FAFAF7;--gray:#F2F0E6;--gray3:#A8A490;
+  --text:#111110;--text2:#3A3830;--border:#D4D0BC;
+  --fh:'Orbitron',monospace;--fs:'Rajdhani',sans-serif;--fm:'Share Tech Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--white);color:var(--text);font-family:var(--fs);font-size:18px;line-height:1.6;overflow-x:hidden}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 3rem;height:68px;
+  background:rgba(250,250,247,0.95);backdrop-filter:blur(14px);
+  border-bottom:2px solid var(--gold);
+}
+.nav-logo img{height:40px;width:auto;object-fit:contain}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{
+  color:var(--text2);font-size:0.88rem;text-decoration:none;
+  font-family:var(--fm);letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s;
+}
+.nav-links a:hover{color:var(--black)}
+.nav-cta{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  background:var(--gold);color:var(--black);
+  font-family:var(--fm);font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;
+  text-decoration:none;padding:0.55rem 1.3rem;font-weight:700;
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);
+  transition:background 0.2s;
+}
+.nav-cta:hover{background:var(--gold-l)}
+
+/* HERO */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;
+  padding:8rem 3rem 5rem;position:relative;overflow:hidden;background:var(--black);
+}
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(245,197,24,0.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(245,197,24,0.07) 1px,transparent 1px);
+  background-size:56px 56px;
+}
+.hero-video{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-video iframe{width:100%;height:100%;pointer-events:none;opacity:0.15;transform:scale(1.1)}
+.hero-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(8,8,7,0.97) 35%,rgba(8,8,7,0.65) 100%);z-index:1;
+}
+.scan-line{
+  position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  animation:scan 5s linear infinite;z-index:3;opacity:0.6;
+}
+@keyframes scan{0%{top:-2px}100%{top:100%}}
+.hero-content{position:relative;z-index:2;max-width:1000px}
+.hero-eyebrow{
+  font-family:var(--fm);font-size:0.82rem;color:var(--gold);
+  letter-spacing:0.25em;text-transform:uppercase;
+  margin-bottom:1.75rem;display:flex;align-items:center;gap:1rem;
+}
+.hero-eyebrow::before{content:'';display:inline-block;width:40px;height:2px;background:var(--gold)}
+.hero-logo-img{
+  height:100px;width:auto;margin-bottom:2.5rem;
+  filter:drop-shadow(0 0 28px rgba(245,197,24,0.45));
+}
+.hero h1{
+  font-family:var(--fh);font-size:clamp(2.4rem,6vw,5.2rem);
+  font-weight:900;line-height:1.05;color:var(--white);
+  letter-spacing:0.04em;margin-bottom:1.5rem;
+}
+.hero h1 .gold{color:var(--gold)}
+.hero-desc{font-size:1.3rem;color:rgba(250,250,247,0.55);max-width:560px;line-height:1.7;margin-bottom:2.5rem}
+.hero-pillars{display:flex;gap:1rem;flex-wrap:wrap}
+.pillar{
+  font-family:var(--fm);font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--gold);border:1px solid rgba(245,197,24,0.3);padding:0.55rem 1.15rem;
+  background:rgba(245,197,24,0.05);
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
+}
+
+/* SECTIONS */
+section{padding:6rem 3rem}
+.section-eyebrow{
+  font-family:var(--fm);font-size:0.78rem;color:var(--gold-d);
+  letter-spacing:0.22em;text-transform:uppercase;
+  margin-bottom:0.75rem;display:flex;align-items:center;gap:1rem;
+}
+.section-eyebrow::before{content:'';width:28px;height:2px;background:var(--gold);flex-shrink:0}
+.section-title{
+  font-family:var(--fh);font-size:clamp(1.9rem,3.5vw,2.9rem);
+  font-weight:900;letter-spacing:0.03em;color:var(--black);margin-bottom:0.5rem;line-height:1.1;
+}
+
+/* OVERVIEW */
+.overview{
+  background:var(--gray);border-top:3px solid var(--gold);
+  background-image:linear-gradient(rgba(245,197,24,0.07) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(245,197,24,0.07) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.ov-card{
+  background:var(--white);border:1px solid var(--border);border-top:3px solid var(--gold);
+  padding:2.5rem 2rem;transition:transform 0.2s,box-shadow 0.2s;
+}
+.ov-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(245,197,24,0.13)}
+.ov-num{font-family:var(--fm);font-size:0.72rem;color:var(--gray3);letter-spacing:0.15em;margin-bottom:0.75rem}
+.ov-icon{font-size:2.2rem;margin-bottom:1rem}
+.ov-title{font-family:var(--fh);font-size:1.05rem;font-weight:700;letter-spacing:0.06em;margin-bottom:0.75rem;color:var(--black)}
+.ov-text{color:var(--text2);font-size:1.05rem;line-height:1.65}
+
+/* HODL */
+.hodl{background:var(--white)}
+.hodl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
+.hodl-card{
+  border:1px solid var(--border);background:var(--gray);
+  padding:2.25rem 2rem;position:relative;overflow:hidden;
+  transition:border-color 0.2s,transform 0.2s;
+  clip-path:polygon(0 0,calc(100% - 16px) 0,100% 16px,100% 100%,0 100%);
+}
+.hodl-card:hover{border-color:var(--gold);transform:translateY(-3px)}
+.hodl-card::after{
+  content:'';position:absolute;top:0;right:0;width:0;height:0;
+  border-style:solid;border-width:0 16px 16px 0;
+  border-color:transparent var(--gold) transparent transparent;
+}
+.hodl-title{font-family:var(--fh);font-size:1rem;font-weight:700;letter-spacing:0.05em;margin-bottom:0.75rem;color:var(--black)}
+.hodl-text{color:var(--text2);font-size:1rem;line-height:1.65}
+.hodl-link{
+  display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;
+  font-family:var(--fm);font-size:0.76rem;color:var(--gold-d);
+  text-decoration:none;letter-spacing:0.06em;border-bottom:1px solid var(--gold);padding-bottom:1px;
+}
+.hodl-link:hover{color:var(--black)}
+
+/* PROJECTS — dark */
+.projects{
+  background:var(--black);
+  background-image:linear-gradient(rgba(245,197,24,0.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(245,197,24,0.05) 1px,transparent 1px);
+  background-size:48px 48px;border-top:3px solid var(--gold);
+}
+.projects .section-title{color:var(--white)}
+.projects .section-eyebrow{color:var(--gold)}
+.proj-grid{
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:1px;background:rgba(245,197,24,0.12);
+  border:1px solid rgba(245,197,24,0.12);margin-top:3rem;
+}
+.proj-card{background:#0c0c0a;padding:2rem 1.75rem;transition:background 0.2s}
+.proj-card:hover{background:rgba(245,197,24,0.05)}
+.proj-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem;gap:0.5rem;flex-wrap:wrap}
+.proj-chain{
+  font-family:var(--fm);font-size:0.7rem;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.25rem 0.7rem;border:1px solid rgba(245,197,24,0.25);color:var(--gold);
+}
+.proj-badge{
+  font-family:var(--fm);font-size:0.66rem;letter-spacing:0.08em;text-transform:uppercase;
+  padding:0.25rem 0.6rem;color:var(--black);background:var(--gold);font-weight:700;
+}
+.proj-badge.new{background:transparent;color:var(--gold);border:1px solid var(--gold)}
+.proj-name{font-family:var(--fh);font-size:1.15rem;font-weight:700;letter-spacing:0.04em;margin-bottom:0.5rem;color:var(--white)}
+.proj-desc{color:rgba(250,250,247,0.5);font-size:1rem;line-height:1.65;margin-bottom:1rem}
+.proj-links{display:flex;gap:0.75rem;flex-wrap:wrap}
+.proj-link{
+  font-family:var(--fm);font-size:0.74rem;color:var(--gold);
+  text-decoration:none;letter-spacing:0.05em;
+  border-bottom:1px solid rgba(245,197,24,0.3);padding-bottom:1px;transition:border-color 0.2s;
+}
+.proj-link:hover{border-color:var(--gold)}
+
+/* TOKENS */
+.tokens{background:var(--black);padding-top:1px}
+.tokens .section-title{color:var(--white)}
+.tokens-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  gap:1px;background:rgba(245,197,24,0.12);
+  border:1px solid rgba(245,197,24,0.12);margin-top:3rem;
+}
+.token-card{background:#0c0c0a;padding:1.75rem 1.5rem;transition:background 0.2s}
+.token-card:hover{background:rgba(245,197,24,0.05)}
+.token-ticker{font-family:var(--fh);font-size:1.1rem;font-weight:900;color:var(--gold);margin-bottom:0.4rem;letter-spacing:0.06em}
+.token-name{font-size:0.95rem;color:rgba(250,250,247,0.5);margin-bottom:0.75rem}
+.token-proto{
+  font-family:var(--fm);font-size:0.66rem;color:rgba(250,250,247,0.28);
+  border-top:1px solid rgba(245,197,24,0.1);padding-top:0.6rem;margin-top:0.5rem;letter-spacing:0.06em;
+}
+
+/* FOOTER */
+footer{
+  background:var(--black);border-top:2px solid var(--gold);
+  padding:3rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;
+}
+.footer-copy{font-family:var(--fm);font-size:0.72rem;color:rgba(250,250,247,0.3);letter-spacing:0.07em}
+.footer-x{
+  display:flex;align-items:center;gap:0.5rem;
+  color:var(--gold);font-family:var(--fm);font-size:0.8rem;
+  text-decoration:none;border:1px solid rgba(245,197,24,0.3);
+  padding:0.5rem 1.1rem;letter-spacing:0.1em;transition:background 0.2s;
+}
+.footer-x:hover{background:rgba(245,197,24,0.08)}
+
+/* COOKIE */
+#cookie-bar{
+  position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--black);border-top:2px solid var(--gold);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 3rem;gap:1rem;
+  font-size:0.85rem;color:rgba(250,250,247,0.45);
+  font-family:var(--fm);letter-spacing:0.04em;
+}
+#cookie-bar button{
+  font-family:var(--fm);font-size:0.74rem;letter-spacing:0.12em;text-transform:uppercase;
+  background:var(--gold);color:var(--black);border:none;padding:0.55rem 1.5rem;cursor:pointer;font-weight:700;
+  clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%);
+}
+
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 0.55s ease,transform 0.55s ease}
+.reveal.visible{opacity:1;transform:none}
+
+@media(max-width:768px){
+  nav{padding:0 1.25rem}
+  .nav-links{display:none}
+  .hero{padding:6rem 1.5rem 3rem}
+  section{padding:4rem 1.5rem}
+  .ov-grid,.hodl-grid,.proj-grid,.tokens-grid{grid-template-columns:1fr}
+  footer{padding:2rem 1.5rem}
+  #cookie-bar{padding:1rem 1.5rem;flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="CRYPTO_ASIA_PAVIA.png" alt="Crypto Asia" onerror="this.style.display='none';this.nextSibling.style.display='block'">
+    <span style="display:none;font-family:var(--fh);font-size:1rem;font-weight:900;color:var(--gold);letter-spacing:0.1em">CRYPTO ASIA</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#hodl">Portfolio</a></li>
+    <li><a href="#projects">Projects</a></li>
+  </ul>
+  <a class="nav-cta" href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">&#120143; Follow</a>
+</nav>
+
+<section class="hero" id="top">
+  <div class="scan-line"></div>
+  <div class="hero-video">
+    <iframe src="https://player.vimeo.com/video/564123870?h=08fd0ecb77&autoplay=1&loop=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
+      allow="autoplay; fullscreen" frameborder="0" title="Background"></iframe>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Decentralized + Revolution</p>
+    <img class="hero-logo-img" src="CRYPTO_ASIA_PAVIA.png" alt="Crypto Asia Logo"
+      onerror="this.style.display='none'">
+    <h1>WEB3 <span class="gold">PIONEERS</span><br>SINCE 2017</h1>
+    <p class="hero-desc">Exploring the frontiers of blockchain, digital ownership, and decentralized finance — globally.</p>
+    <div class="hero-pillars">
+      <div class="pillar">Freedom of Choice</div>
+      <div class="pillar">Financial Sovereignty</div>
+      <div class="pillar">Decentralization</div>
+    </div>
+  </div>
+</section>
+
+<section class="overview" id="overview">
+  <div class="section-eyebrow">What we do</div>
+  <h2 class="section-title reveal">VENTURE. COLLECT. BUILD.</h2>
+  <div class="ov-grid">
+    <div class="ov-card reveal">
+      <div class="ov-num">01</div>
+      <div class="ov-icon">&#9889;</div>
+      <div class="ov-title">VENTURE</div>
+      <div class="ov-text">IDO, IEO, Launchpads, and Ordinals inscribing across multiple chains since 2017.</div>
+    </div>
+    <div class="ov-card reveal">
+      <div class="ov-num">02</div>
+      <div class="ov-icon">&#128302;</div>
+      <div class="ov-title">COLLECT</div>
+      <div class="ov-text">NFTs, Digital Artifacts, and Virtual Lands across Ethereum, Bitcoin, Cardano, and POW chains.</div>
+    </div>
+    <div class="ov-card reveal">
+      <div class="ov-num">03</div>
+      <div class="ov-icon">&#128295;</div>
+      <div class="ov-title">BUILD</div>
+      <div class="ov-text">Web3 projects and on-chain experiments pushing the boundaries of blockchain technology.</div>
+    </div>
+  </div>
+</section>
+
+<section class="hodl" id="hodl">
+  <div class="section-eyebrow">Holdings</div>
+  <h2 class="section-title reveal">OUR HODL</h2>
+  <div class="hodl-grid">
+    <div class="hodl-card reveal">
+      <div class="hodl-title">CRYPTO PROJECTS</div>
+      <div class="hodl-text">Active since 2017 across Layer 1 &amp; L2 protocols, DeFi, NFT, GameFi, RWA, AI, MEME, BTC &amp; POW Ecosystem, Ordinals, BRC20, SRC20, Tap Protocol, RUNES and more.</div>
+    </div>
+    <div class="hodl-card reveal">
+      <div class="hodl-title">DIGITAL COLLECTIBLES</div>
+      <div class="hodl-text">On-chain art and digital artifacts across Ethereum, Cardano, Bitcoin Ordinals, Dogecoin and Bellscoin. PFP, Fine Art, P2E assets, Access NFTs — RTFKT, VeeFriends, Bitcoin Frogs, Ape Society and more.</div>
+    </div>
+    <div class="hodl-card reveal">
+      <div class="hodl-title">VIRTUAL LANDS</div>
+      <div class="hodl-text">Accumulating metaverse land since 2018 — Crypto Voxels, Somnium Space, Sandbox, Bitmap, Pavia, Boss Planet and beyond.</div>
+      <a class="hodl-link" href="https://www.sandbox.game/en/estates/2868/" target="_blank" rel="noopener">Crypto Asia Estate in SANDBOX &#8594;</a>
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="section-eyebrow">Web3 Projects</div>
+  <h2 class="section-title reveal">WHAT WE'VE BUILT</h2>
+  <div class="proj-grid">
+    <div class="proj-card reveal">
+      <div class="proj-header"><span class="proj-chain">Bitcoin · Ordinals</span><span class="proj-badge">OG Sub78k</span></div>
+      <div class="proj-name">PIXELQUOTE</div>
+      <div class="proj-desc">One of the earliest Ordinals creators (Jan 2023). Genesis: 263 pcs, Sub35k–78k. PixelQuote 2.0: 270 pcs — first and only MP4 video collection within Sub100k. Listed on Magic Eden, OrdinalsWallet, Ord.io.</div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://linktr.ee/pixelquotenft" target="_blank" rel="noopener">Linktree &#8599;</a>
+        <a class="proj-link" href="https://x.com/PixelQuoteNFT" target="_blank" rel="noopener">@PixelQuoteNFT &#8599;</a>
+      </div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-header"><span class="proj-chain">Ethereum · Myria</span><span class="proj-badge">Genesis</span></div>
+      <div class="proj-name">FEPE METAVERSE</div>
+      <div class="proj-desc">Built with MYRIA — a Web3 metaverse project. FEPE character created 2020. 500 Genesis FEPE on OpenSea since 2020, expanding across multiple blockchains.</div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://myria.com/game-detail/?gameId=world-fepe" target="_blank" rel="noopener">FEPE World on Myria &#8599;</a>
+      </div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-header"><span class="proj-chain">Dogecoin · Doginals</span><span class="proj-badge">OG Sub95k</span></div>
+      <div class="proj-name">DOGINALS FEPE</div>
+      <div class="proj-desc">OG Doginals collection (Sub84k–95k), March 2023. 4,100 supply — art fully encoded on the Dogecoin blockchain.</div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://linktr.ee/doginalsfepe" target="_blank" rel="noopener">Linktree &#8599;</a>
+        <a class="proj-link" href="https://twitter.com/DoginalsFepe" target="_blank" rel="noopener">@DoginalsFepe &#8599;</a>
+      </div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-header"><span class="proj-chain">Cardano · CNFT</span><span class="proj-badge">First Abstract</span></div>
+      <div class="proj-name">MUSASHINO ART</div>
+      <div class="proj-desc">First Abstract Art NFT on Cardano. 9,900 pieces across 23 unique art styles — all manually illustrated. Listed on jpg.store.</div>
+      <div class="proj-links">
+        <a class="proj-link" href="http://www.musashinoartnft.com/" target="_blank" rel="noopener">Website &#8599;</a>
+        <a class="proj-link" href="https://linktr.ee/musashinoartnft" target="_blank" rel="noopener">Linktree &#8599;</a>
+      </div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-header"><span class="proj-chain">Bitcoin · Stamps</span><span class="proj-badge">OG Sub10k</span></div>
+      <div class="proj-name">BITCOIN STAMPS ART</div>
+      <div class="proj-desc">Two OG Sub10k art collections on Bitcoin Stamps Protocol (May 2023). A UTXO protocol for permanent on-chain art in Bitcoin.</div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://stampart.io/" target="_blank" rel="noopener">StampArt.io &#8599;</a>
+        <a class="proj-link" href="https://x.com/BitcoinStampArt" target="_blank" rel="noopener">@BitcoinStampArt &#8599;</a>
+      </div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-header"><span class="proj-chain">Cosmos</span><span class="proj-badge">OG Sub10k</span></div>
+      <div class="proj-name">COSMOS INSCRIPTIONS</div>
+      <div class="proj-desc">Two Sub10k collections on Cosmos blockchain using Ordinals theory — Cosmos Rock and FEPE Cosmos.</div>
+      <div class="proj-links">
+        <a class="proj-link" href="https://asteroidhub.xyz/portfolio/cosmos-rock/" target="_blank" rel="noopener">Cosmos Rock &#8599;</a>
+        <a class="proj-link" href="https://asteroidhub.xyz/portfolio/fepe/" target="_blank" rel="noopener">FEPE Cosmos &#8599;</a>
+      </div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-header"><span class="proj-chain">Bellscoin</span><span class="proj-badge new">New Project</span></div>
+      <div class="proj-name">BELLSCOIN PROJECT</div>
+      <div class="proj-desc">Building on Bellscoin — a scalable POW blockchain with 450k+ holders and 150M+ inscriptions. First token by Dogecoin founder Billy Markus, revived December 2023.</div>
+    </div>
+    <div class="proj-card reveal">
+      <div class="proj-header"><span class="proj-chain">Luckycoin</span><span class="proj-badge new">New Project</span></div>
+      <div class="proj-name">LUCKY COIN / LUKINALS</div>
+      <div class="proj-desc">OG meme coin from 2013 — the chain Dogecoin forked from. Ordinals (Lukinals) deployed with 30k+ inscriptions to date.</div>
+    </div>
+  </div>
+</section>
+
+<section class="tokens">
+  <div class="section-eyebrow" style="color:var(--gold)">On-Chain Tokens</div>
+  <h2 class="section-title reveal" style="color:var(--white)">TOKEN PORTFOLIO</h2>
+  <div class="tokens-grid">
+    <div class="token-card reveal">
+      <div class="token-ticker">$ASIA</div>
+      <div class="token-name">BRC20 · March 2023</div>
+      <div class="token-proto">Bitcoin Ordinals Standard</div>
+      <a class="proj-link" href="https://unisat.io/brc20/ASIA" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.75rem">Unisat &#8599;</a>
+    </div>
+    <div class="token-card reveal">
+      <div class="token-ticker">$SRC20</div>
+      <div class="token-name">Bitcoin Stamps · May 2023</div>
+      <div class="token-proto">OG Token Standard</div>
+      <a class="proj-link" href="https://openstamp.io/market/src20/trading?ticker=SRC20" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.75rem">OpenStamp &#8599;</a>
+    </div>
+    <div class="token-card reveal">
+      <div class="token-ticker">$PIXELQUOTE</div>
+      <div class="token-name">TAP Protocol · 2023</div>
+      <div class="token-proto">Airdropped to Ordinals holders</div>
+      <a class="proj-link" href="https://ordinalnovus.com/cbrc-20/hodl" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.75rem">OrdinalNovus &#8599;</a>
+    </div>
+    <div class="token-card reveal">
+      <div class="token-ticker">$HODL</div>
+      <div class="token-name">CBRC20 · Dec 2023</div>
+      <div class="token-proto">First token with MP4 metadata</div>
+      <a class="proj-link" href="https://ordinalnovus.com/cbrc-20/hodl" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.75rem">OrdinalNovus &#8599;</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="CRYPTO_ASIA_PAVIA.png" alt="Crypto Asia" style="height:48px;width:auto"
+    onerror="this.style.display='none';this.nextSibling.style.display='block'">
+  <span style="display:none;font-family:var(--fh);font-size:1.1rem;font-weight:900;color:var(--gold);letter-spacing:0.1em">CRYPTO ASIA</span>
+  <div class="footer-copy">&#169; 2024 CRYPTOASIA.NET — ALL RIGHTS RESERVED</div>
+  <a class="footer-x" href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">&#120143; @CryptoAsiaBTC</a>
+</footer>
+
+<div id="cookie-bar">
+  <span>We use cookies to analyze website traffic and optimize your experience.</span>
+  <button onclick="document.getElementById('cookie-bar').style.display='none'">Accept</button>
+</div>
+
+<script>
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+},{threshold:0.08,rootMargin:'0px 0px -30px 0px'})
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))
+</script>
+</body>
+</html>
