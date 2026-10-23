@@ -1,0 +1,44 @@
+name: Update crypto news
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'     # every 30 minutes
+  workflow_dispatch:           # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install parser
+        run: npm install --no-save --no-audit --no-fund fast-xml-parser@4
+
+      - name: Fetch feeds and write briefs
+        run: node scripts/fetch-news.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit news.json if it changed
+        run: |
+          if [[ -n "$(git status --porcelain news.json)" ]]; then
+            git config user.name "crypto-asia-bot"
+            git config user.email "bot@users.noreply.github.com"
+            git add news.json
+            git commit -m "Update news"
+            git pull --rebase
+            git push
+          else
+            echo "No changes to publish."
+          fi
