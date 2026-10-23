@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perp DEX Airdrop Calculator — Crypto Asia</title>
+<meta name="description" content="Estimate your potential perp DEX airdrop from your points balance, FDV, total points and airdrop allocation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --gold:#F5C518;--gold-d:#C49A00;--gold-l:#FFE566;
+  --black:#080807;--white:#FAFAF7;--gray:#F2F0E6;--gray3:#A8A490;
+  --text:#111110;--text2:#3A3830;--border:#D4D0BC;
+  --fh:'Orbitron',monospace;--fs:'Rajdhani',sans-serif;--fm:'Share Tech Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--white);color:var(--text);font-family:var(--fs);font-size:19px;line-height:1.55;
+  background-image:linear-gradient(rgba(245,197,24,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(245,197,24,0.07) 1px,transparent 1px);
+  background-size:48px 48px;min-height:100vh;
+}
+nav{
+  position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:68px;background:rgba(250,250,247,0.95);backdrop-filter:blur(14px);border-bottom:2px solid var(--gold);
+}
+.nav-logo img{height:40px;width:auto;display:block}
+.nav-logo span{display:none;font-family:var(--fh);font-weight:900;color:var(--black);letter-spacing:.1em}
+.nav-right{display:flex;gap:1rem;align-items:center}
+.nav-link{font-family:var(--fm);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);text-decoration:none}
+.nav-link:hover{color:var(--black)}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--gold);color:var(--black);
+  font-family:var(--fm);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  padding:.7rem 1.4rem;font-weight:700;border:none;cursor:pointer;
+  clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%);transition:background .2s;
+}
+.btn:hover{background:var(--gold-l)}
+.btn.dark{background:var(--black);color:var(--gold)}
+.btn.dark:hover{background:#222}
+.btn.ghost{background:transparent;color:var(--black);box-shadow:inset 0 0 0 2px var(--black);clip-path:none}
+.btn.ghost:hover{background:var(--black);color:var(--gold)}
+
+main{max-width:1100px;margin:0 auto;padding:3.5rem 1.5rem 4rem}
+.eyebrow{font-family:var(--fm);font-size:.85rem;color:var(--gold-d);letter-spacing:.22em;text-transform:uppercase;display:flex;align-items:center;gap:1rem;margin-bottom:.75rem}
+.eyebrow::before{content:'';width:28px;height:2px;background:var(--gold)}
+h1{font-family:var(--fh);font-size:clamp(2rem,5vw,3.4rem);font-weight:900;line-height:1.08;letter-spacing:.02em;margin-bottom:1rem}
+h1 .gold{color:var(--gold-d)}
+.lead{font-size:1.25rem;color:var(--text2);max-width:640px;margin-bottom:2.5rem}
+
+/* DEX TABS */
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.tab{
+  font-family:var(--fm);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;padding:.65rem 1.1rem;
+  background:var(--white);border:1px solid var(--border);color:var(--text2);cursor:pointer;display:flex;align-items:center;gap:.55rem;transition:all .15s;
+}
+.tab .dot{width:28px;height:28px;display:grid;place-items:center;background:var(--black);color:var(--gold);font-family:var(--fh);font-size:.7rem;font-weight:900;overflow:hidden}
+.dot img{width:100%;height:100%;object-fit:cover;display:block}
+.tab:hover{border-color:var(--gold)}
+.tab.active{background:var(--black);color:var(--gold);border-color:var(--black)}
+.tab.active .dot{background:var(--gold);color:var(--black)}
+
+/* PANEL */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.panel{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--gold);padding:2rem}
+.panel h2{font-family:var(--fh);font-size:1.05rem;letter-spacing:.06em;margin-bottom:1.5rem}
+.field{margin-bottom:1.4rem}
+.field label{display:block;font-family:var(--fm);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);margin-bottom:.5rem}
+.field .row{display:flex;align-items:stretch;border:2px solid var(--border);background:#fff;transition:border-color .15s}
+.field .row:focus-within{border-color:var(--gold)}
+.field .affix{display:grid;place-items:center;padding:0 .9rem;background:var(--gray);font-family:var(--fm);color:var(--text2);font-size:1rem}
+.field input[type=number],.field input[type=text]{
+  flex:1;min-width:0;border:none;outline:none;padding:.85rem 1rem;font-family:var(--fs);font-weight:600;font-size:1.35rem;color:var(--black);background:transparent;
+}
+.hint{font-size:.9rem;color:var(--gray3);margin-top:.35rem}
+.note{font-family:var(--fm);font-size:.78rem;letter-spacing:.04em;color:var(--text2);background:rgba(245,197,24,.15);border-left:3px solid var(--gold);padding:.75rem 1rem;margin-top:.5rem}
+
+/* RESULT */
+.result{background:var(--black);color:var(--white);border-top:3px solid var(--gold);padding:2rem;display:flex;flex-direction:column}
+.result-head{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem}
+.result-head .dot{width:44px;height:44px;display:grid;place-items:center;background:var(--gold);color:var(--black);font-family:var(--fh);font-weight:900;font-size:1rem;overflow:hidden}
+.result-head .name{font-family:var(--fh);font-size:1.15rem;letter-spacing:.06em}
+.big-label{font-family:var(--fm);font-size:.85rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.big{font-family:var(--fh);font-weight:900;font-size:clamp(2.4rem,6vw,3.8rem);color:var(--gold);line-height:1.1;margin:.4rem 0 1.5rem;word-break:break-word}
+.stats{border-top:1px solid rgba(245,197,24,.2)}
+.stat{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid rgba(245,197,24,.12);font-size:1.15rem}
+.stat span:first-child{color:rgba(250,250,247,.6)}
+.stat span:last-child{font-family:var(--fm);color:var(--white);text-align:right}
+.actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.75rem}
+
+/* UNIT TOGGLE */
+.unit{display:flex}
+.unit button{font-family:var(--fm);font-size:.95rem;font-weight:700;padding:0 1rem;border:none;background:var(--gray);color:var(--text2);cursor:pointer;transition:all .15s}
+.unit button.on{background:var(--black);color:var(--gold)}
+
+/* TIERS */
+.tier-badge{margin-left:auto;font-family:var(--fm);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--black);font-weight:700;padding:.35rem .8rem}
+.tiers-wrap{margin-top:1.5rem}
+.tiers-wrap h3{font-family:var(--fh);font-size:.95rem;letter-spacing:.06em;margin-bottom:.4rem}
+.tiers-wrap .sub{color:var(--text2);margin-bottom:1rem}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.tier{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--gray3);padding:1.4rem 1.2rem;cursor:pointer;transition:transform .15s,box-shadow .15s;text-align:left;font:inherit;color:inherit}
+.tier:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(245,197,24,.15)}
+.tier.active{background:var(--black);color:var(--white);border-top-color:var(--gold)}
+.tier .t-name{font-family:var(--fh);font-size:1rem;font-weight:900;letter-spacing:.05em;margin-bottom:.15rem}
+.tier.active .t-name{color:var(--gold)}
+.tier .t-who{font-size:.95rem;color:var(--text2);margin-bottom:.9rem}
+.tier.active .t-who{color:rgba(250,250,247,.6)}
+.tier .t-row{display:flex;justify-content:space-between;gap:.5rem;font-family:var(--fm);font-size:.85rem;padding:.4rem 0;border-top:1px solid var(--border)}
+.tier.active .t-row{border-top-color:rgba(245,197,24,.2)}
+.tier .t-row span:first-child{color:var(--gray3)}
+.tier .t-try{margin-top:.8rem;font-family:var(--fm);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-d)}
+.tier.active .t-try{color:var(--gold)}
+
+/* FORMULA */
+.formula{margin-top:1.5rem;background:var(--gray);border:1px solid var(--border);padding:1.75rem 2rem}
+.formula h3{font-family:var(--fh);font-size:.95rem;letter-spacing:.06em;margin-bottom:1rem}
+.formula code{display:block;font-family:var(--fm);font-size:1rem;color:var(--black);padding:.35rem 0}
+.formula code b{color:var(--gold-d)}
+
+/* MODAL */
+.modal{position:fixed;inset:0;background:rgba(8,8,7,.8);display:none;align-items:center;justify-content:center;z-index:300;padding:1rem}
+.modal.open{display:flex}
+.sheet{background:var(--white);max-width:760px;width:100%;max-height:92vh;overflow:auto;padding:2rem;border-top:4px solid var(--gold)}
+.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.25rem}
+.sheet-head h3{font-family:var(--fh);font-size:1rem;letter-spacing:.06em}
+.x{background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--text)}
+.templates{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-bottom:1rem}
+.tpl{aspect-ratio:1;border:3px solid transparent;cursor:pointer;display:grid;place-items:center;font-family:var(--fm);font-size:.7rem;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.tpl.active{border-color:var(--gold)}
+.preview{display:block;width:100%;max-width:420px;margin:0 auto 1.25rem;border:1px solid var(--border)}
+.sheet .actions{margin-top:0;justify-content:center}
+
+footer{border-top:2px solid var(--gold);background:var(--black);padding:2rem;text-align:center;font-family:var(--fm);font-size:.78rem;letter-spacing:.07em;color:rgba(250,250,247,.45)}
+footer a{color:var(--gold);text-decoration:none}
+.disclaimer{margin-top:1.5rem;font-size:.95rem;color:var(--text2)}
+
+@media(max-width:820px){
+  .grid{grid-template-columns:1fr}
+  .templates{grid-template-columns:repeat(2,1fr)}
+  nav{padding:0 1rem}
+  .nav-link{display:none}
+  main{padding-top:2.5rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="CRYPTO_ASIA_PAVIA.png" alt="Crypto Asia" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <span>CRYPTO ASIA</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="btn" href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">&#120143; Follow</a>
+  </div>
+</nav>
+
+<main>
+  <div class="eyebrow">Crypto Asia Tools</div>
+  <h1>PERP DEX <span class="gold">AIRDROP</span><br>CALCULATOR</h1>
+  <p class="lead">Estimate your potential airdrop from your points balance. Pick a protocol, then adjust every value freely.</p>
+
+  <div class="tabs" id="tabs"></div>
+
+  <div class="grid">
+    <div class="panel">
+      <h2>YOUR INPUTS</h2>
+
+      <div class="field">
+        <label for="myPoints">My Points</label>
+        <div class="row"><input id="myPoints" type="number" min="0" step="any" placeholder="e.g. 25000" inputmode="decimal"></div>
+      </div>
+      <div class="field">
+        <label for="fdv">FDV Assumption</label>
+        <div class="row"><span class="affix">$</span><input id="fdv" type="number" min="0" step="any" inputmode="decimal"><div class="unit"><button type="button" id="unitM" class="on">M</button><button type="button" id="unitB">B</button></div></div>
+      </div>
+      <div class="field">
+        <label for="totalPoints">Total Points</label>
+        <div class="row"><input id="totalPoints" type="number" min="0" step="any" inputmode="decimal"></div>
+        <div class="hint">All points issued by the protocol across every user.</div>
+      </div>
+      <div class="field">
+        <label for="pct">Airdrop % of Supply</label>
+        <div class="row"><input id="pct" type="number" min="0" max="100" step="any" inputmode="decimal"><span class="affix">%</span></div>
+      </div>
+      <div class="note">Preset values are placeholders — replace them with the latest community estimates before you rely on the result.</div>
+    </div>
+
+    <div class="result">
+      <div class="result-head">
+        <div class="dot" id="resDot">N</div>
+        <div class="name" id="resName">RiseX</div>
+        <span class="tier-badge" id="resTier">Beginner</span>
+      </div>
+      <div class="big-label">Your potential airdrop</div>
+      <div class="big" id="outAirdrop">$0</div>
+      <div class="stats">
+        <div class="stat"><span>Total Airdrop Pool</span><span id="outPool">—</span></div>
+        <div class="stat"><span>My Points</span><span id="outMy">—</span></div>
+        <div class="stat"><span>Price per Point</span><span id="outPPP">—</span></div>
+        <div class="stat"><span>My Share of Pool</span><span id="outShare">—</span></div>
+        <div class="stat"><span>Airdrop Supply</span><span id="outSupply">—</span></div>
+      </div>
+      <div class="actions">
+        <button class="btn" id="btnCard">Create Card</button>
+        <button class="btn ghost" id="btnShare" style="color:var(--white);box-shadow:inset 0 0 0 2px var(--gold)">Share on &#120143;</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="tiers-wrap">
+    <h3>WHERE DO YOU STAND?</h3>
+    <p class="sub">Tiers are based on your estimated airdrop value. Tap a tier to try its typical points balance.</p>
+    <div class="tiers" id="tiers"></div>
+  </div>
+
+  <div class="formula">
+    <h3>HOW IT'S CALCULATED</h3>
+    <code><b>Airdrop Pool</b> = FDV × Airdrop % of Supply</code>
+    <code><b>Price per Point</b> = Airdrop Pool ÷ Total Points</code>
+    <code><b>Your Airdrop</b> = My Points × Price per Point</code>
+    <p class="disclaimer">This is a simple estimate. It assumes the full airdrop is valued at the FDV you enter, and it ignores vesting, sybil filtering, point-weight changes and market moves. Not financial advice.</p>
+  </div>
+</main>
+
+<footer>© 2026 <a href="index.html">CRYPTO ASIA</a> — CRYPTOASIA.NET</footer>
+
+<!-- CARD MODAL -->
+<div class="modal" id="modal">
+  <div class="sheet">
+    <div class="sheet-head"><h3>CHOOSE CARD BACKGROUND</h3><button class="x" id="btnClose" aria-label="Close">&#10005;</button></div>
+    <div class="templates" id="tpls"></div>
+    <div style="margin-bottom:1rem"><label class="btn ghost" style="cursor:pointer">Upload your photo<input id="photo" type="file" accept="image/*" hidden></label></div>
+    <canvas id="cv" class="preview" width="1080" height="1080"></canvas>
+    <div class="actions">
+      <button class="btn" id="btnDownload">Download PNG</button>
+      <button class="btn dark" id="btnShare2">Share on &#120143;</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Placeholder presets — editable. Replace with current community estimates.
+// fdvM = FDV in millions of dollars.
+// pts = default "My Points". tryPts = typical balance for Beginner / Amateur / Pro / Whale (used by the tier cards).
+const D = {fdvM:500, total:11000000, pct:20, pts:100, tryPts:[100,800,3000,8000]};
+const DEXES = [
+  {id:'risex',       name:'RiseX',       letter:'Rx', ...D},
+  {id:'txflow',      name:'TxFlow',      letter:'Tx', ...D, total:35000000, pts:1000, tryPts:[350,2500,9000,25000]},
+  {id:'imperial',     name:'Imperial Trade', letter:'Im', ...D, fdvM:200, pct:25, total:1000000, pts:100, tryPts:[20,150,550,1500]},
+  {id:'drake',        name:'Drake Exchange', letter:'Dr', ...D, fdvM:100, pct:25, total:32000000, pts:1000, tryPts:[1300,9600,35000,96000]},
+  {id:'bulk',         name:'Bulk Trade',  letter:'Bk', ...D, fdvM:200, pct:30, total:50000000, pts:1000, tryPts:[850,6250,23000,62500]},
+  {id:'perpl',        name:'PERPL',       letter:'Pl', ...D, fdvM:100, pct:20, total:3000000, pts:100, tryPts:[150,1100,4100,11300]},
+  {id:'n1',           name:'N1',          letter:'N1', ...D, fdvM:50, pct:20, total:2000000000, pts:100000, tryPts:[200000,1500000,5500000,15000000]},
+  {id:'miracle',      name:'Miracle Trade', letter:'Mi', ...D, fdvM:50, pct:45, total:5500000, pts:1000, tryPts:[250,1850,6700,18300]},
+  {id:'nado',        name:'Nado',    letter:'N',  ...D, fdvM:500, pct:10, total:40000000, pts:500, tryPts:[800,6000,22000,60000]},
+  {id:'variational', name:'Variational', letter:'V',  ...D, fdvM:1000, pct:50, tryPts:[22,165,605,1650]},
+  {id:'extended',    name:'Extended',    letter:'E',  ...D},
+  {id:'pacifica',    name:'Pacifica',    letter:'P',  ...D, fdvM:500, pct:25, total:400000000, pts:1000, tryPts:[3200,24000,88000,240000]},
+  {id:'hibachi',     name:'Hibachi',     letter:'H',  ...D, fdvM:100, pct:15, total:80000000, pts:1000, tryPts:[5300,40000,147000,400000]}
+];
+// Tiers are set by estimated airdrop value (USD), so they hold for every protocol.
+const TIERS = [
+  {id:'beginner', name:'Beginner', who:'Just getting started',   min:0},
+  {id:'amateur',  name:'Amateur',  who:'Farming regularly',      min:2500},
+  {id:'pro',      name:'Pro',      who:'Serious volume',         min:15000},
+  {id:'whale',    name:'Whale',    who:'Over $50K airdrop value', min:50000}
+];
+let fdvUnit = 'M';
+const TEMPLATES = [
+  ['Gold',   ['#F5C518','#C49A00']],
+  ['Night',  ['#080807','#2a2410']],
+  ['Chain',  ['#FFE566','#F5C518']],
+  ['Carbon', ['#1b1b18','#080807']],
+  ['Sun',    ['#FFB800','#FF7A00']],
+  ['Mint',   ['#0f2a24','#0a1512']],
+  ['Ink',    ['#111110','#3A3830']],
+  ['Cream',  ['#FAFAF7','#E6E3D4']]
+];
+
+const $ = id => document.getElementById(id);
+let current = DEXES[0];
+let tplIndex = 0;
+let photoImg = null;
+let logoImg = null;
+
+// ---- formatting ----
+function money(n){
+  if(!isFinite(n)) return '—';
+  const a = Math.abs(n);
+  if(a >= 1e12) return '$' + (n/1e12).toFixed(2) + 'T';
+  if(a >= 1e9)  return '$' + (n/1e9).toFixed(2) + 'B';
+  if(a >= 1e6)  return '$' + (n/1e6).toFixed(2) + 'M';
+  if(a >= 1e4)  return '$' + Math.round(n).toLocaleString('en-US');
+  if(a >= 100)  return '$' + n.toLocaleString('en-US',{maximumFractionDigits:0});
+  if(a >= 1)    return '$' + n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+  if(a === 0)   return '$0';
+  return '$' + n.toPrecision(3);
+}
+function num(n){ return isFinite(n) ? n.toLocaleString('en-US',{maximumFractionDigits:2}) : '—'; }
+function val(id){ const v = parseFloat($(id).value); return isFinite(v) && v >= 0 ? v : NaN; }
+
+// ---- core calculation ----
+function calc(){
+  const my = val('myPoints'), fdvIn = val('fdv'), total = val('totalPoints'), pct = val('pct');
+  const fdv = isFinite(fdvIn) ? fdvIn * (fdvUnit === 'B' ? 1e9 : 1e6) : NaN; // FDV in USD
+  const out = {my, fdv, total, pct, pool:NaN, ppp:NaN, airdrop:0, share:NaN};
+  if(isFinite(fdv) && isFinite(pct)) out.pool = fdv * pct / 100;
+  if(isFinite(out.pool) && isFinite(total) && total > 0) out.ppp = out.pool / total;
+  if(isFinite(out.ppp) && isFinite(my)) out.airdrop = my * out.ppp;
+  if(isFinite(my) && isFinite(total) && total > 0) out.share = my / total * 100;
+  return out;
+}
+function render(){
+  const r = calc();
+  $('outAirdrop').textContent = money(r.airdrop);
+  $('outPool').textContent = money(r.pool);
+  $('outMy').textContent = isFinite(r.my) ? num(r.my) : '—';
+  $('outPPP').textContent = money(r.ppp);
+  $('outShare').textContent = isFinite(r.share) ? (r.share < 0.0001 ? '<0.0001%' : r.share.toPrecision(3) + '%') : '—';
+  $('outSupply').textContent = isFinite(r.pct) ? r.pct + '% of total supply' : '—';
+  $('resName').textContent = current.name;
+  $('resDot').innerHTML = dotHTML(current);
+  $('resTier').textContent = tierFor(r.airdrop).name;
+  renderTiers(r);
+  return r;
+}
+
+// ---- protocol logos (logos/<id>.png) — falls back to the letter badge if a file is missing ----
+function dotHTML(d){
+  return '<img src="logos/' + d.id + '.png" alt="' + d.name + '" onerror="this.parentNode.textContent=\'' + d.letter + '\'">';
+}
+const dexLogos = {};
+function dexLogo(d){
+  if(!dexLogos[d.id]){
+    const i = new Image();
+    i.onload = () => { if($('modal').classList.contains('open')) drawCard(); };
+    i.src = 'logos/' + d.id + '.png';
+    dexLogos[d.id] = i;
+  }
+  return dexLogos[d.id];
+}
+
+// ---- tiers ----
+function tierFor(value){
+  let t = TIERS[0];
+  TIERS.forEach(x => { if(isFinite(value) && value >= x.min) t = x; });
+  return t;
+}
+function renderTiers(r){
+  const wrap = $('tiers'); wrap.innerHTML = '';
+  const active = tierFor(r.airdrop).id;
+  TIERS.forEach((t,i) => {
+    const next = TIERS[i+1];
+    const ok = isFinite(r.ppp) && r.ppp > 0;
+    const lo = ok ? Math.ceil(t.min / r.ppp) : NaN;
+    const hi = ok && next ? Math.ceil(next.min / r.ppp) - 1 : NaN;
+    const ptsTxt = !ok ? '—' : (next ? num(lo) + ' – ' + num(hi) : num(lo) + '+');
+    const valTxt = next ? money(t.min) + ' – ' + money(next.min) : money(t.min) + '+';
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'tier' + (t.id === active ? ' active' : '');
+    b.innerHTML = '<div class="t-name">' + t.name.toUpperCase() + '</div><div class="t-who">' + t.who + '</div>' +
+      '<div class="t-row"><span>Points</span><span>' + ptsTxt + '</span></div>' +
+      '<div class="t-row"><span>Value</span><span>' + valTxt + '</span></div>' +
+      '<div class="t-try">Try ' + num(current.tryPts[i]) + ' pts →</div>';
+    b.onclick = () => { $('myPoints').value = current.tryPts[i]; render(); if($('modal').classList.contains('open')) drawCard(); };
+    wrap.appendChild(b);
+  });
+}
+
+// ---- FDV unit toggle (M / B) ----
+function setUnit(u, convert){
+  if(convert && u !== fdvUnit){
+    const v = parseFloat($('fdv').value);
+    if(isFinite(v)) $('fdv').value = +(u === 'B' ? v / 1000 : v * 1000).toPrecision(10);
+  }
+  fdvUnit = u;
+  $('unitM').classList.toggle('on', u === 'M');
+  $('unitB').classList.toggle('on', u === 'B');
+  render();
+}
+$('unitM').onclick = () => setUnit('M', true);
+$('unitB').onclick = () => setUnit('B', true);
+
+// ---- tabs ----
+function buildTabs(){
+  const wrap = $('tabs'); wrap.innerHTML = '';
+  DEXES.forEach(d => {
+    const b = document.createElement('button');
+    b.className = 'tab' + (d.id === current.id ? ' active' : '');
+    b.innerHTML = '<span class="dot">' + dotHTML(d) + '</span>' + d.name;
+    b.onclick = () => { current = d; loadPreset(); buildTabs(); };
+    wrap.appendChild(b);
+  });
+}
+function loadPreset(){
+  fdvUnit = 'M';
+  $('unitM').classList.add('on'); $('unitB').classList.remove('on');
+  $('myPoints').value = current.pts;
+  $('fdv').value = current.fdvM;
+  $('totalPoints').value = current.total;
+  $('pct').value = current.pct;
+  render();
+}
+['myPoints','fdv','totalPoints','pct'].forEach(id => $(id).addEventListener('input', render));
+
+// ---- card ----
+function buildTpls(){
+  const wrap = $('tpls'); wrap.innerHTML = '';
+  TEMPLATES.forEach((t,i) => {
+    const d = document.createElement('div');
+    d.className = 'tpl' + (i === tplIndex && !photoImg ? ' active' : '');
+    d.style.background = 'linear-gradient(135deg,' + t[1][0] + ',' + t[1][1] + ')';
+    d.textContent = t[0];
+    d.onclick = () => { tplIndex = i; photoImg = null; buildTpls(); drawCard(); };
+    wrap.appendChild(d);
+  });
+}
+function isDark(hex){
+  const n = parseInt(hex.slice(1),16), r=n>>16, g=(n>>8)&255, b=n&255;
+  return (r*299 + g*587 + b*114)/1000 < 140;
+}
+function drawCard(withLogo = true){
+  const cv = $('cv'), c = cv.getContext('2d'), W = cv.width, H = cv.height;
+  const r = calc();
+  // background
+  if(photoImg){
+    const s = Math.max(W/photoImg.width, H/photoImg.height);
+    const w = photoImg.width*s, h = photoImg.height*s;
+    c.drawImage(photoImg, (W-w)/2, (H-h)/2, w, h);
+    c.fillStyle = 'rgba(8,8,7,0.55)'; c.fillRect(0,0,W,H);
+  } else {
+    const t = TEMPLATES[tplIndex][1];
+    const g = c.createLinearGradient(0,0,W,H); g.addColorStop(0,t[0]); g.addColorStop(1,t[1]);
+    c.fillStyle = g; c.fillRect(0,0,W,H);
+  }
+  const dark = photoImg ? true : isDark(TEMPLATES[tplIndex][1][0]);
+  const fg = dark ? '#FAFAF7' : '#080807';
+  const accent = dark ? '#F5C518' : '#080807';
+  // grid overlay
+  c.strokeStyle = dark ? 'rgba(245,197,24,0.08)' : 'rgba(8,8,7,0.07)'; c.lineWidth = 1;
+  for(let x=0;x<=W;x+=60){c.beginPath();c.moveTo(x,0);c.lineTo(x,H);c.stroke();}
+  for(let y=0;y<=H;y+=60){c.beginPath();c.moveTo(0,y);c.lineTo(W,y);c.stroke();}
+  // border
+  c.strokeStyle = accent; c.lineWidth = 8; c.strokeRect(40,40,W-80,H-80);
+
+  c.textBaseline = 'alphabetic';
+  c.fillStyle = accent; c.font = '700 34px "Share Tech Mono", monospace';
+  c.fillText('PERP DEX AIRDROP ESTIMATE', 90, 130);
+
+  // dex badge + name
+  c.fillStyle = accent; c.fillRect(90,170,90,90);
+  const dl = withLogo ? dexLogo(current) : null;
+  if(dl && dl.complete && dl.naturalWidth){
+    c.drawImage(dl, 90, 170, 90, 90);
+  } else {
+    c.fillStyle = dark ? '#080807' : '#F5C518'; c.font = '900 ' + (current.letter.length > 1 ? 40 : 56) + 'px Orbitron, monospace';
+    c.textAlign = 'center'; c.fillText(current.letter, 135, 232); c.textAlign = 'left';
+  }
+  c.fillStyle = fg; c.font = '900 72px Orbitron, monospace'; c.fillText(current.name.toUpperCase(), 210, 240);
+  c.fillStyle = accent; c.font = '700 30px "Share Tech Mono", monospace';
+  c.fillText('TIER · ' + tierFor(r.airdrop).name.toUpperCase(), 210, 292);
+
+  // main number
+  c.fillStyle = accent; c.font = '700 34px "Share Tech Mono", monospace';
+  c.fillText('YOUR POTENTIAL AIRDROP', 90, 420);
+  let txt = money(r.airdrop), size = 190;
+  c.font = '900 ' + size + 'px Orbitron, monospace';
+  while(c.measureText(txt).width > W - 180 && size > 60){ size -= 6; c.font = '900 ' + size + 'px Orbitron, monospace'; }
+  c.fillStyle = accent; c.fillText(txt, 90, 420 + size*0.95);
+
+  // stats
+  const rows = [
+    ['My Points', isFinite(r.my) ? num(r.my) : '—'],
+    ['FDV', money(r.fdv)],
+    ['Airdrop Pool', money(r.pool)],
+    ['Price per Point', money(r.ppp)]
+  ];
+  let y = 740;
+  rows.forEach(rw => {
+    c.fillStyle = dark ? 'rgba(250,250,247,0.65)' : 'rgba(8,8,7,0.65)'; c.font = '500 36px Rajdhani, sans-serif';
+    c.textAlign = 'left'; c.fillText(rw[0], 90, y);
+    c.fillStyle = fg; c.font = '600 38px "Share Tech Mono", monospace';
+    c.textAlign = 'right'; c.fillText(rw[1], W-90, y);
+    c.strokeStyle = dark ? 'rgba(245,197,24,0.25)' : 'rgba(8,8,7,0.2)'; c.lineWidth = 2;
+    c.beginPath(); c.moveTo(90,y+22); c.lineTo(W-90,y+22); c.stroke();
+    y += 72;
+  });
+  c.textAlign = 'left';
+
+  // footer brand
+  c.fillStyle = accent; c.font = '900 34px Orbitron, monospace';
+  c.fillText('CRYPTOASIA.NET', 90, H-80);
+  if(withLogo && logoImg && logoImg.complete && logoImg.naturalWidth){
+    const lh = 70, lw = logoImg.naturalWidth/logoImg.naturalHeight*lh;
+    c.drawImage(logoImg, W-90-lw, H-140, lw, lh);
+  }
+}
+function openCard(){
+  $('modal').classList.add('open');
+  buildTpls();
+  const draw = () => drawCard();
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(draw);
+}
+function downloadCard(){
+  const save = () => {
+    $('cv').toBlob(b => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(b);
+      a.download = 'crypto-asia-' + current.id + '-airdrop.png';
+      a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    }, 'image/png');
+  };
+  try { $('cv').toDataURL(); save(); }
+  catch(e){ drawCard(false); save(); drawCard(true); } // canvas tainted by logo (e.g. file://) — export without it
+}
+function shareX(){
+  const r = calc();
+  const text = 'My potential ' + current.name + ' airdrop: ' + money(r.airdrop) +
+    ' (' + (isFinite(r.my) ? num(r.my) : '0') + ' pts @ ' + money(r.fdv) + ' FDV) · ' + tierFor(r.airdrop).name + ' tier\n\nCalculate yours with @CryptoAsiaBTC';
+  const url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(location.href);
+  window.open(url, '_blank', 'noopener');
+}
+
+$('btnCard').onclick = openCard;
+$('btnClose').onclick = () => $('modal').classList.remove('open');
+$('modal').addEventListener('click', e => { if(e.target.id === 'modal') $('modal').classList.remove('open'); });
+$('btnDownload').onclick = downloadCard;
+$('btnShare').onclick = shareX;
+$('btnShare2').onclick = shareX;
+$('photo').addEventListener('change', e => {
+  const f = e.target.files[0]; if(!f) return;
+  const img = new Image();
+  img.onload = () => { photoImg = img; buildTpls(); drawCard(); };
+  img.src = URL.createObjectURL(f);
+});
+['myPoints','fdv','totalPoints','pct'].forEach(id => $(id).addEventListener('input', () => { if($('modal').classList.contains('open')) drawCard(); }));
+
+// logo for the card
+logoImg = new Image(); logoImg.src = 'CRYPTO_ASIA_PAVIA.png';
+
+buildTabs();
+loadPreset();
+</script>
+</body>
+</html>
