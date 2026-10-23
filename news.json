@@ -1,15 +1,64 @@
 {
-  "updated": "2026-10-23T00:00:00.000Z",
+  "updated": "2026-10-23T19:59:33.046Z",
+  "skipped": [
+    "70dd2a65a17f1719",
+    "411b85e0b11be00b"
+  ],
   "items": [
     {
-      "id": "sample1",
-      "headline": "Sample: how your automatic news briefs will look",
-      "summary": "This placeholder shows the layout. Once the news workflow runs, real briefs replace it, each with a link to the original publisher.",
+      "id": "5d8e4440e663bed9",
+      "headline": "SEC Lists AI Superintelligence and Tokenization Among Market Risks",
+      "summary": "The SEC's Division of Examinations has named advanced technologies such as superintelligence, alongside tokenization risks, as areas of focus. The excerpt is brief and gives no further detail.",
+      "category": "Regulation",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/381745/sec-ai-super-intelligence-tokenization-2027-exam-list",
+      "published": "2026-10-23T18:54:55.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/12/SEC2-gID_7.jpg",
+      "sourceTitle": "SEC Flags AI 'Super Intelligence' and Tokenization as Systemic Market Risks"
+    },
+    {
+      "id": "90bf0ce4ccd22a1b",
+      "headline": "Initia pauses its blockchain after reported exploit",
+      "summary": "The Initia network suspended its layer-1 chain and rollups after security researchers flagged unauthorized token minting and asset transfers to Ethereum. The reported losses are said to exceed $2.6 million.",
       "category": "Tech",
-      "source": "Crypto Asia",
-      "url": "https://x.com/CryptoAsiaBTC",
-      "published": "2026-10-23T00:00:00.000Z",
-      "sample": true
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/initia-halts-blockchain-exploit-drained?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-23T18:39:02.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5MZKF3C8AJPVBYK5JQWCAWW/hi-got-crypto-losses-wallet.png",
+      "sourceTitle": "Initia halts blockchain after exploit reportedly drains over $2.6M"
+    },
+    {
+      "id": "f83dd8fecc8605fa",
+      "headline": "Spot Bitcoin ETFs see $635M outflows as BTC nears cost basis",
+      "summary": "US spot Bitcoin ETFs recorded about $635 million in net outflows on Thursday, the largest daily outflow since June 25, as bitcoin traded near the estimated cost basis of the funds' holdings. The withdrawals reversed nearly 60% of the inflows from the prior three sessions.",
+      "category": "Markets",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/bitcoin-etf-outflows-holdings-cost-basis/",
+      "published": "2026-10-23T18:10:49.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoin-etf-liquidity-drain.webp",
+      "sourceTitle": "Bitcoin ETFs shed $635 million as BTC tests their holdings’ estimated $81,500 cost basis"
+    },
+    {
+      "id": "346edf2e7d317b48",
+      "headline": "Bitcoin Core Updates Security Policy Amid AI-Driven Bug Discovery",
+      "summary": "Bitcoin Core developers will now backport fixes and release updates immediately for flaws considered easily discoverable, dropping long embargo periods. The change responds to bugs that an attacker could find with a single AI prompt.",
+      "category": "Tech",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/381715/bitcoin-core-security-policy-ai-threats",
+      "published": "2026-10-23T17:16:03.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/bitcoin-decrypt-style-screen-gID_7.png",
+      "sourceTitle": "Bitcoin Core Rewrites Its Security Policy for a World Where AI Finds Bugs in One Prompt"
+    },
+    {
+      "id": "732a2c4dd6a6a40b",
+      "headline": "Bitcoin Core Shortens Disclosure Timelines for AI-Discoverable Bugs",
+      "summary": "Bitcoin Core will now fast-track fixes and disclosures for vulnerabilities that AI tools can easily rediscover, moving away from long embargo periods. The change applies to those bugs.",
+      "category": "Tech",
+      "source": "Bitcoin Magazine",
+      "url": "https://bitcoinmagazine.com/news/bitcoin-core-ends-long-embargoes",
+      "published": "2026-10-23T17:06:32.000Z",
+      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Bitcoin-Core-Ends-Long-Embargoes-for-Bugs-AI-Can-Rediscover.jpg",
+      "sourceTitle": "Bitcoin Core Ends Long Embargoes for Bugs AI Can Rediscover"
     }
   ]
 }
