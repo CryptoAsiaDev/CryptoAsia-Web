@@ -1,6 +1,7 @@
 {
-  "updated": "2026-10-24T19:53:23.989Z",
+  "updated": "2026-10-24T22:01:50.664Z",
   "skipped": [
+    "1d86220321ffc825",
     "f6b5d603baeb28bb",
     "aa731226c3b8e867",
     "1406f5c70f6458db",
@@ -16,6 +17,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "182a8a2a2a9a5555",
+      "headline": "Circle launches USDC auctions letting institutions earn redemption fee rebates",
+      "summary": "Circle's new USDC auctions allow eligible institutions to collect rebates funded by matched redeemers. Redeemers' auction fees are capped at the Express rate.",
+      "category": "Exchanges",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/circles-new-usdc-auctions-let-institutions-collect-the-fees-others-pay-to-cash-out/",
+      "published": "2026-10-24T20:00:46.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/circle-match-institutional-flow.webp",
+      "sourceTitle": "Circle’s new USDC auctions let institutions collect the fees others pay to cash out"
+    },
+    {
+      "id": "0b1ab9c8165adb35",
+      "headline": "Ethereum sees large exchange outflow, mirroring pre-June rebound signal",
+      "summary": "Ethereum recorded its largest net outflow from exchanges in over four months, according to Santiment data. The same pattern appeared before a rebound in June, though US spot Ethereum funds have seen notable outflows this October.",
+      "category": "Altcoins",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/ethereum-outflow-signal-june-rebound/",
+      "published": "2026-10-24T19:40:56.000Z",
+      "image": "https://assets.beincrypto.com/img/jrIL_d59fwd75RDNuYwHcpeP7kw=/smart/1d92d3553805467b9b1e91bed2a82e10",
+      "sourceTitle": "Ethereum Flashes Same Signal That Triggered June’s Rebound"
+    },
     {
       "id": "8823bb078b070673",
       "headline": "Arthur Hayes closes out crypto trades, on-chain data shows about $26 million sold",
