@@ -1,12 +1,70 @@
 {
-  "updated": "2026-10-24T11:19:31.623Z",
+  "updated": "2026-10-24T14:40:56.698Z",
   "skipped": [
+    "d8cf8eb11972f711",
+    "2d8db9690ad4f40f",
+    "8071e8ccb709a07a",
     "819d204d5b70c941",
     "a08955d050c85b6d",
     "70dd2a65a17f1719",
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "652beee0d14a471c",
+      "headline": "Argentine judge closes criminal case against Milei over LIBRA token",
+      "summary": "A judge found that President Milei's promotion of the LIBRA memecoin did not amount to fraud, even though his backing drew attention to the token. The token has since crashed.",
+      "category": "Regulation",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/business/2026/10/24/argentina-drops-criminal-probe-into-president-milei-over-crashed-memecoin-libra",
+      "published": "2026-10-24T14:38:47.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/d5be50574b7c98b10befa8ee5f9704bd3fba1aa4-960x640.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Argentina drops criminal probe into President Milei over crashed memecoin LIBRA"
+    },
+    {
+      "id": "940e55205b44222d",
+      "headline": "Wealthy Bitcoin holders shift toward loans and yield products",
+      "summary": "Long-term investors are increasingly borrowing against their bitcoin and seeking income to grow their BTC holdings, according to Xapo Bank CEO Seamus Rocca.",
+      "category": "Markets",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/",
+      "published": "2026-10-24T14:00:00.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/cfea8454f56671dd812bbb4b292509a390b476d3-2400x1260.jpg?auto=format&fit=crop&crop=focalpoint&w=1200&h=675&q=75",
+      "sourceTitle": "Bitcoin’s wealthy holders turning to loans and yield as investment habits mature: Xapo CEO"
+    },
+    {
+      "id": "d749b32e132c0e24",
+      "headline": "HSBC Rolls Out Hong Kong Dollar Stablecoin Within PayMe App",
+      "summary": "HSBC has launched its Hong Kong dollar stablecoin inside the PayMe app, a move that tests whether a bank-issued token can serve as everyday money.",
+      "category": "Asia",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/381760/hong-kong-bank-hsbc-stablecoin-3-million-wallets",
+      "published": "2026-10-24T13:01:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/hong-kong-decrypt-style-gID_7.jpg",
+      "sourceTitle": "Hong Kong’s Biggest Bank Puts a Stablecoin in 3 Million Wallets"
+    },
+    {
+      "id": "e419971bc7b4e4a7",
+      "headline": "Arthur Hayes Sells About $22M in Crypto, Expects Market Pain",
+      "summary": "Arthur Hayes, chief investment officer of Maelstrom, has sold roughly $22.28 million in crypto from the firm's directional book. He confirmed the exit on X and said he plans to stay out of the market.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/arthur-hayes-dumps-crypto-sidelines/",
+      "published": "2026-10-24T13:00:05.000Z",
+      "image": "https://assets.beincrypto.com/img/Cnc2QfsKtiTq9AvaFObBTyn9PsQ=/smart/5718414bf5114b2093e7c3fb805706b6",
+      "sourceTitle": "Arthur Hayes Dumps $22 Million in Crypto, Warns of More Pain"
+    },
+    {
+      "id": "ea43bed0597f16fa",
+      "headline": "Apex Group CEO says stalled U.S. Clarity Act favors Asia, Middle East",
+      "summary": "Apex Group CEO Peter Hughes argued that the U.S. Clarity Act's failure could push digital asset firms toward faster-moving jurisdictions in Asia and the Middle East.",
+      "category": "Regulation",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/policy/2026/10/24/u-s-clarity-act-failure-gives-asia-and-middle-east-a-competitive-edge-says-apex-group-ceo",
+      "published": "2026-10-24T12:00:00.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/cb2a91ec8eda764f9a0f74f30550a6a716563fda-2517x1416.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "U.S. Clarity Act failure gives Asia and Middle East a competitive edge, says Apex Group CEO"
+    },
     {
       "id": "d44048bbcc24784f",
       "headline": "Senator seeks records on Tether payments to ex-adviser's firm",
