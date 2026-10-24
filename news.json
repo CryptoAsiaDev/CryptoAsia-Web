@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-24T17:41:48.410Z",
+  "updated": "2026-10-24T19:53:23.989Z",
   "skipped": [
+    "f6b5d603baeb28bb",
+    "aa731226c3b8e867",
     "1406f5c70f6458db",
     "e35d997654073e5b",
     "01765e01090b8e3c",
@@ -14,6 +16,17 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "8823bb078b070673",
+      "headline": "Arthur Hayes closes out crypto trades, on-chain data shows about $26 million sold",
+      "summary": "Arthur Hayes has exited Maelstrom's directional crypto positions, with analysts tracking roughly $26 million in token sales. Hayes reportedly cited macroeconomic and geopolitical uncertainty as the reason for taking profits on Ethereum, Ethena, Uniswap and other tokens.",
+      "category": "Markets",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/arthur-hayes-exits-crypto-trading-positions-as-analysts-track-26-million-in-sales/",
+      "published": "2026-10-24T18:00:27.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/arthur-hayes-crypto-retreat.webp",
+      "sourceTitle": "Arthur Hayes exits crypto trading positions as analysts track $26 million in sales"
+    },
     {
       "id": "6df470193d9e3916",
       "headline": "NYSE parent backs round-the-clock tokenized stock trading",
@@ -37,6 +50,17 @@
       "sourceTitle": "Strategy, Strive face balancing act between bitcoin buying and preferred stock dividends"
     },
     {
+      "id": "f2c99778922de150",
+      "headline": "Bitcoin dips under $80,000 as $200M in leveraged positions close",
+      "summary": "Bitcoin fell below $80,000 on Saturday, with over $200 million in crypto positions liquidated within an hour, most of them long bets. Ethereum also declined, and the total crypto market capitalisation dropped 4.06% over 24 hours.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-below-80000-crypto-liquidations/",
+      "published": "2026-10-24T15:47:22.000Z",
+      "image": "https://assets.beincrypto.com/img/na7YAtbzpI1K5iw3FoOs_g6PvKM=/smart/bc3114cf22df43ff9cbfc6e9ea25a64e",
+      "sourceTitle": "Bitcoin Loses $80,000 as $200 Million in Leverage Unwinds in an Hour"
+    },
+    {
       "id": "5d8aed6b88bfe626",
       "headline": "Bitcoin dips below $80,000 amid Middle East evacuation news",
       "summary": "Bitcoin has fallen to its lowest level in over a month, dropping below $80,000 over the weekend. The decline coincides with U.S. evacuations linked to the Middle East.",
@@ -46,6 +70,17 @@
       "published": "2026-10-24T15:11:24.000Z",
       "image": "https://cdn.sanity.io/images/s3y3vcno/production/3cbbb05ae60659ef1c46287aae06ad1132421ba3-2280x1284.png?auto=format&fit=crop&crop=focalpoint&w=1200&h=675&q=75",
       "sourceTitle": "Crypto under weekend pressure, bitcoin slides below $80,000 on U.S. Middle East evacuations"
+    },
+    {
+      "id": "96e263edf8737c32",
+      "headline": "Big Firms' Opposition to Tokenized Stocks May Not Be Decisive",
+      "summary": "Several major companies, including McDonald's, Microsoft and Google, objected to being listed on a new tokenized securities venue under an SEC innovation exemption. Commentary suggests the pushback may reflect issuer caution rather than a broad rejection of tokenization.",
+      "category": "Regulation",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/business/2026/10/23/why-mcdonalds-microsoft-and-google-saying-no-to-tokenized-stocks-isn-t-a-dealbreaker",
+      "published": "2026-10-24T15:00:00.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/5f5b4bcc5ab7ba1437f88bb9961bbd70e3bbb448-5624x3749.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Why McDonalds, Microsoft and Google saying no to tokenized stocks isn't a dealbreaker"
     },
     {
       "id": "652beee0d14a471c",
