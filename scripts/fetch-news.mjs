@@ -19,9 +19,9 @@ const MAX_NEW = Number(process.env.NEWS_MAX_NEW || 12);      // new briefs writt
 const KEEP = Number(process.env.NEWS_KEEP || 80);            // how many briefs stay on the site
 const PER_FEED = Number(process.env.NEWS_PER_FEED || 8);     // newest items read from each feed
 const MAX_AGE_HOURS = Number(process.env.NEWS_MAX_AGE_HOURS || 72);
-const UA = 'CryptoAsiaNewsBot/1.0 (+https://cryptoasia.net)';
+const UA = 'CryptoAsiaNewsBot/1.0 (+https://cryptoasiabtc.com)';
 
-export const CATEGORIES = ['Airdrops','Bitcoin','Ethereum','Altcoins','DeFi','NFTs & Ordinals','Regulation','Markets','Exchanges','Tech','Asia','Other'];
+export const CATEGORIES = ['Markets','Tech','Bitcoin','Altcoins','Asia','Regulation','Exchanges','Airdrops','Other'];
 const MAX_IMAGE_LOOKUPS = Number(process.env.NEWS_MAX_IMAGE_LOOKUPS || 10);   // article-page lookups per run (new + backfill)
 
 /* ---------- helpers ---------- */
@@ -104,6 +104,7 @@ Rules:
 - Neutral tone. No hype, no price predictions, no advice to buy or sell.
 - Decide whether the story is really about crypto, blockchain, digital assets or their regulation or markets.
 - Use the category "Airdrops" for any story about an airdrop, token distribution to users, points programs, retroactive rewards, claims or eligibility, even if another category could also fit.
+- Use "Altcoins" for Ethereum, Solana, DeFi, NFT and other non-Bitcoin token news. Use "Asia" for stories centred on Asian countries or companies. Use "Exchanges" for exchange news (listings, hacks, launches, licences).
 Reply with JSON only, in this exact shape:
 {"relevant": true|false, "headline": "max 12 words, your own words", "summary": "1-2 sentences, max 45 words", "category": "one of: ${CATEGORIES.join(' | ')}"}`;
 

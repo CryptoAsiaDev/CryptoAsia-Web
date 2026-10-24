@@ -9,7 +9,7 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="logos/favicon-180.png">
 <meta name="theme-color" content="#F5C518">
-<script>try{var t=localStorage.getItem('ca-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
 
 <meta name="description" content="Estimate your potential perp DEX airdrop from your points balance, FDV, total points and airdrop allocation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -167,6 +167,7 @@ h1 .gold{color:var(--gold-d)}
       </div>
       <div class="actions">
         <button class="btn" id="btnCard">Create Card</button>
+        <a class="btn" id="btnReg" href="#" target="_blank" rel="noopener sponsored" style="display:none;text-decoration:none;text-align:center">Register</a>
         <button class="btn ghost" id="btnShare" style="color:var(--white);box-shadow:inset 0 0 0 2px var(--gold)">Share on &#120143;</button>
       </div>
     </div>
@@ -183,7 +184,7 @@ h1 .gold{color:var(--gold-d)}
     <code><b>Airdrop Pool</b> = FDV × Airdrop % of Supply</code>
     <code><b>Price per Point</b> = Airdrop Pool ÷ Total Points</code>
     <code><b>Your Airdrop</b> = My Points × Price per Point</code>
-    <p class="disclaimer">This is a simple estimate. It assumes the full airdrop is valued at the FDV you enter, and it ignores vesting, sybil filtering, point-weight changes and market moves. Not financial advice.</p>
+    <p class="disclaimer">This is a simple estimate. It assumes the full airdrop is valued at the FDV you enter, and it ignores vesting, sybil filtering, point-weight changes and market moves. Not financial advice. Some links on this page are referral links: we may earn a reward if you sign up through them, at no cost to you.</p>
   </div>
 </main>
 
@@ -194,10 +195,11 @@ h1 .gold{color:var(--gold-d)}
   <div class="sheet">
     <div class="sheet-head"><h3>CHOOSE CARD BACKGROUND</h3><button class="x" id="btnClose" aria-label="Close">&#10005;</button></div>
     <div class="templates" id="tpls"></div>
-    <div style="margin-bottom:1rem"><label class="btn ghost" style="cursor:pointer">Upload your photo<input id="photo" type="file" accept="image/*" hidden></label></div>
+    <div style="margin-bottom:1rem"><label class="btn ghost" style="cursor:pointer">Upload your photo<input id="photo" type="file" accept="image/*" hidden></label> <label class="btn ghost" style="cursor:pointer">Upload your video (max 15s)<input id="video" type="file" accept="video/*" hidden></label><p id="vidMsg" class="note" style="margin-top:.6rem;display:none"></p></div>
     <canvas id="cv" class="preview" width="1080" height="1080"></canvas>
     <div class="actions">
       <button class="btn" id="btnDownload">Download PNG</button>
+      <button class="btn" id="btnVideo" style="display:none">Download video</button>
       <button class="btn dark" id="btnShare2">Share on &#120143;</button>
     </div>
   </div>
@@ -209,6 +211,20 @@ h1 .gold{color:var(--gold-d)}
 // fdvM = FDV in millions of dollars.
 // pts = default "My Points". tryPts = typical balance for Beginner / Amateur / Pro / Whale (used by the tier cards).
 const D = {fdvM:500, total:11000000, pct:20, pts:100, tryPts:[100,800,3000,8000]};
+// ---- Referral links (edit here). Leave a dex out to hide its Register button. ----
+const REFERRALS = {
+  bulk:'https://app.bulk.trade/ref/CryptoAsiaBTC',
+  drake:'https://drake.exchange?af=ef416da6',
+  hibachi:'https://hibachi.xyz/r/cryptoasia',
+  imperial:'https://imperial.trade/invite/CryptoAsia',
+  n1:'https://app.n1.xyz/r/atlantic-saxophone',
+  nado:'https://app.nado.xyz?join=cryptoasia',
+  pacifica:'https://app.pacifica.fi?referral=CryptoAsia',
+  perpl:'https://app.perpl.xyz/trade?ref=Rh53KNgcbnd',
+  risex:'https://www.rise.trade/invite/cryptoasia',
+  txflow:'https://app.txflow.com/r/VCSYLZVII7'
+  // extended:'', miracle:'', variational:''  <- add when you have the links
+};
 const DEXES = [
   {id:'risex',       name:'RiseX',       letter:'Rx', ...D},
   {id:'txflow',      name:'TxFlow',      letter:'Tx', ...D, total:35000000, pts:1000, tryPts:[350,2500,9000,25000]},
@@ -247,6 +263,8 @@ const $ = id => document.getElementById(id);
 let current = DEXES[0];
 let tplIndex = 0;
 let photoImg = null;
+let videoEl = null, videoURL = null, rafId = 0, noLogo = false, recording = false;
+const MAX_VIDEO_SEC = 15;
 let logoImg = null;
 
 // ---- formatting ----
@@ -287,6 +305,9 @@ function render(){
   $('resName').textContent = current.name;
   $('resDot').innerHTML = dotHTML(current);
   $('resTier').textContent = tierFor(r.airdrop).name;
+  const reg=$('btnReg'), link=REFERRALS[current.id];
+  if(link){reg.href=link;reg.textContent='Register on '+current.name+' \u2197';reg.style.display='';}
+  else{reg.style.display='none';reg.removeAttribute('href');}
   renderTiers(r);
   return r;
 }
@@ -375,10 +396,10 @@ function buildTpls(){
   const wrap = $('tpls'); wrap.innerHTML = '';
   TEMPLATES.forEach((t,i) => {
     const d = document.createElement('div');
-    d.className = 'tpl' + (i === tplIndex && !photoImg ? ' active' : '');
+    d.className = 'tpl' + (i === tplIndex && !photoImg && !videoEl ? ' active' : '');
     d.style.background = 'linear-gradient(135deg,' + t[1][0] + ',' + t[1][1] + ')';
     d.textContent = t[0];
-    d.onclick = () => { tplIndex = i; photoImg = null; buildTpls(); drawCard(); };
+    d.onclick = () => { tplIndex = i; photoImg = null; clearVideo(); buildTpls(); drawCard(); };
     wrap.appendChild(d);
   });
 }
@@ -390,17 +411,19 @@ function drawCard(withLogo = true){
   const cv = $('cv'), c = cv.getContext('2d'), W = cv.width, H = cv.height;
   const r = calc();
   // background
-  if(photoImg){
-    const s = Math.max(W/photoImg.width, H/photoImg.height);
-    const w = photoImg.width*s, h = photoImg.height*s;
-    c.drawImage(photoImg, (W-w)/2, (H-h)/2, w, h);
+  const media = videoEl && videoEl.videoWidth ? videoEl : photoImg;
+  if(media){
+    const mw = media.videoWidth || media.width, mh = media.videoHeight || media.height;
+    const s = Math.max(W/mw, H/mh);
+    const w = mw*s, h = mh*s;
+    c.drawImage(media, (W-w)/2, (H-h)/2, w, h);
     c.fillStyle = 'rgba(8,8,7,0.55)'; c.fillRect(0,0,W,H);
   } else {
     const t = TEMPLATES[tplIndex][1];
     const g = c.createLinearGradient(0,0,W,H); g.addColorStop(0,t[0]); g.addColorStop(1,t[1]);
     c.fillStyle = g; c.fillRect(0,0,W,H);
   }
-  const dark = photoImg ? true : isDark(TEMPLATES[tplIndex][1][0]);
+  const dark = (photoImg || videoEl) ? true : isDark(TEMPLATES[tplIndex][1][0]);
   const fg = dark ? '#FAFAF7' : '#080807';
   const accent = dark ? '#F5C518' : '#080807';
   // grid overlay
@@ -442,28 +465,105 @@ function drawCard(withLogo = true){
     ['Airdrop Pool', money(r.pool)],
     ['Price per Point', money(r.ppp)]
   ];
-  let y = 740;
+  let y = 700;
   rows.forEach(rw => {
-    c.fillStyle = dark ? 'rgba(250,250,247,0.65)' : 'rgba(8,8,7,0.65)'; c.font = '500 36px Rajdhani, sans-serif';
+    c.fillStyle = dark ? 'rgba(250,250,247,0.65)' : 'rgba(8,8,7,0.65)'; c.font = '500 34px Rajdhani, sans-serif';
     c.textAlign = 'left'; c.fillText(rw[0], 90, y);
-    c.fillStyle = fg; c.font = '600 38px "Share Tech Mono", monospace';
+    c.fillStyle = fg; c.font = '600 36px "Share Tech Mono", monospace';
     c.textAlign = 'right'; c.fillText(rw[1], W-90, y);
     c.strokeStyle = dark ? 'rgba(245,197,24,0.25)' : 'rgba(8,8,7,0.2)'; c.lineWidth = 2;
-    c.beginPath(); c.moveTo(90,y+22); c.lineTo(W-90,y+22); c.stroke();
-    y += 72;
+    c.beginPath(); c.moveTo(90,y+18); c.lineTo(W-90,y+18); c.stroke();
+    y += 62;
   });
   c.textAlign = 'left';
 
   // footer brand
   c.fillStyle = accent; c.font = '900 34px Orbitron, monospace';
-  c.fillText('CRYPTOASIA.NET', 90, H-80);
-  if(withLogo && logoImg && logoImg.complete && logoImg.naturalWidth){
+  c.textBaseline = 'middle';
+  c.fillText('CRYPTOASIABTC.COM', 90, H-112);
+  c.textBaseline = 'alphabetic';
+  if(withLogo && !noLogo && logoImg && logoImg.complete && logoImg.naturalWidth){
     const lh = 70, lw = logoImg.naturalWidth/logoImg.naturalHeight*lh;
-    c.drawImage(logoImg, W-90-lw, H-140, lw, lh);
+    c.drawImage(logoImg, W-90-lw, H-147, lw, lh);
   }
+}
+function clearVideo(){
+  if(videoEl){ try{ videoEl.pause(); }catch(e){} videoEl = null; }
+  if(videoURL){ URL.revokeObjectURL(videoURL); videoURL = null; }
+  cancelAnimationFrame(rafId); rafId = 0;
+  $('btnVideo').style.display = 'none';
+  const m = $('vidMsg'); m.style.display = 'none'; m.textContent = '';
+}
+function vidMsg(t){ const m = $('vidMsg'); m.textContent = t; m.style.display = t ? 'block' : 'none'; }
+function loop(){
+  if(!videoEl || !$('modal').classList.contains('open')) { rafId = 0; return; }
+  drawCard();
+  rafId = requestAnimationFrame(loop);
+}
+function loadVideo(file){
+  if(!file) return;
+  const v = document.createElement('video');
+  v.muted = true; v.loop = true; v.playsInline = true; v.preload = 'auto';
+  const url = URL.createObjectURL(file);
+  v.onloadedmetadata = () => {
+    if(!isFinite(v.duration) || v.duration > MAX_VIDEO_SEC + 0.3){
+      URL.revokeObjectURL(url);
+      vidMsg('That clip is ' + (isFinite(v.duration) ? Math.round(v.duration) + ' seconds' : 'too long') + '. Please use a clip of ' + MAX_VIDEO_SEC + ' seconds or less.');
+      return;
+    }
+    clearVideo(); photoImg = null;
+    videoEl = v; videoURL = url;
+    buildTpls();
+    v.play().catch(()=>{});
+    $('btnVideo').style.display = '';
+    vidMsg('Video added (' + v.duration.toFixed(1) + 's). Use Download video to save the card as a video.');
+    cancelAnimationFrame(rafId); rafId = requestAnimationFrame(loop);
+  };
+  v.onerror = () => { URL.revokeObjectURL(url); vidMsg('This browser cannot read that video. Try an MP4 (H.264) file.'); };
+  v.src = url;
+}
+function downloadVideo(){
+  if(!videoEl || recording) return;
+  if(!window.MediaRecorder || !$('cv').captureStream){ vidMsg('This browser cannot record video. Use a recent Chrome, Edge, Firefox or Safari on desktop.'); return; }
+  const types = ['video/mp4;codecs=avc1','video/mp4','video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm'];
+  const mime = types.find(t => MediaRecorder.isTypeSupported(t)) || '';
+  const ext = mime.indexOf('mp4') === 0 ? 'mp4' : 'webm';
+  try { $('cv').toDataURL(); noLogo = false; } catch(e){ noLogo = true; }
+  recording = true;
+  const btn = $('btnVideo'); const label = btn.textContent;
+  const stream = $('cv').captureStream(30);
+  const chunks = [];
+  let rec;
+  try { rec = new MediaRecorder(stream, mime ? {mimeType: mime, videoBitsPerSecond: 6000000} : {}); }
+  catch(e){ recording = false; vidMsg('Could not start recording in this browser.'); return; }
+  rec.ondataavailable = e => { if(e.data && e.data.size) chunks.push(e.data); };
+  rec.onstop = () => {
+    recording = false; btn.textContent = label; btn.disabled = false;
+    videoEl.loop = true; videoEl.play().catch(()=>{});
+    const b = new Blob(chunks, {type: mime || 'video/webm'});
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(b);
+    a.download = 'crypto-asia-' + current.id + '-airdrop.' + ext;
+    a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    vidMsg('Saved as .' + ext + '. Video has no sound.');
+  };
+  btn.disabled = true;
+  const dur = videoEl.duration;
+  videoEl.loop = false; videoEl.currentTime = 0;
+  const startRec = () => {
+    rec.start(250);
+    videoEl.play().catch(()=>{});
+    if(!rafId) rafId = requestAnimationFrame(loop);
+    const t0 = performance.now();
+    const tick = setInterval(() => { btn.textContent = 'Recording ' + Math.min(100, Math.round((performance.now()-t0)/10/dur)) + '%'; }, 300);
+    videoEl.onended = () => { clearInterval(tick); videoEl.onended = null; setTimeout(() => { if(rec.state !== 'inactive') rec.stop(); }, 150); };
+  };
+  videoEl.onseeked = () => { videoEl.onseeked = null; startRec(); };
+  if(videoEl.currentTime === 0 && videoEl.readyState >= 2){ videoEl.onseeked = null; startRec(); }
 }
 function openCard(){
   $('modal').classList.add('open');
+  if(videoEl){ videoEl.play().catch(()=>{}); if(!rafId) rafId = requestAnimationFrame(loop); }
   buildTpls();
   const draw = () => drawCard();
   (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(draw);
@@ -489,15 +589,17 @@ function shareX(){
 }
 
 $('btnCard').onclick = openCard;
-$('btnClose').onclick = () => $('modal').classList.remove('open');
-$('modal').addEventListener('click', e => { if(e.target.id === 'modal') $('modal').classList.remove('open'); });
+$('btnClose').onclick = () => { $('modal').classList.remove('open'); if(videoEl && !recording) videoEl.pause(); };
+$('modal').addEventListener('click', e => { if(e.target.id === 'modal'){ $('modal').classList.remove('open'); if(videoEl && !recording) videoEl.pause(); } });
+$('btnVideo').onclick = downloadVideo;
+$('video').addEventListener('change', e => { loadVideo(e.target.files[0]); e.target.value = ''; });
 $('btnDownload').onclick = downloadCard;
 $('btnShare').onclick = shareX;
 $('btnShare2').onclick = shareX;
 $('photo').addEventListener('change', e => {
   const f = e.target.files[0]; if(!f) return;
   const img = new Image();
-  img.onload = () => { photoImg = img; buildTpls(); drawCard(); };
+  img.onload = () => { clearVideo(); photoImg = img; buildTpls(); drawCard(); };
   img.src = URL.createObjectURL(f);
 });
 ['myPoints','fdv','totalPoints','pct'].forEach(id => $(id).addEventListener('input', () => { if($('modal').classList.contains('open')) drawCard(); }));

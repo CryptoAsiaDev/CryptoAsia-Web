@@ -1,0 +1,10 @@
+{
+  "_readme": "NFT Studio settings. Prices are in USDC for ONE clean (no watermark) export of ONE collection version. Payments go to the receiver address and Supabase project set in jobs-config.json. Until those are filled in, the Export button shows 'coming soon' and the free watermarked version still works.",
+  "maxSize": 20000,
+  "tiers": [
+    { "upTo": 4999, "price": 50 },
+    { "upTo": 9999, "price": 75 },
+    { "upTo": null, "price": 100 }
+  ],
+  "watermarkText": "CRYPTO ASIA · PREVIEW"
+}

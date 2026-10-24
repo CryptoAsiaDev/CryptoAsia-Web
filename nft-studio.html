@@ -9,12 +9,14 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="logos/favicon-180.png">
 <meta name="theme-color" content="#F5C518">
-<script>try{var t=localStorage.getItem('ca-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
-<meta name="description" content="Build a generative NFT collection in your browser. Upload trait layers, set rarity and rules, generate images and metadata. Your files never leave your device.">
+<script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
+<meta name="description" content="Build a generative NFT collection in your browser. Unlimited free watermarked generation. Pay once to export the clean collection and metadata. Your files never leave your device.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
+[hidden]{display:none!important}
+.grow{flex:1}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:0 0 2rem}
 .stat{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1rem 1.2rem}
 .stat b{display:block;font-family:var(--fh);font-size:1.2rem;color:var(--ink)}
@@ -23,372 +25,1282 @@
 .how div{background:var(--surface);border:1px solid var(--border);padding:1rem 1.2rem}
 .how b{font-family:var(--fh);color:var(--gold-d);font-size:1.1rem}
 .how p{font-size:1.05rem;color:var(--text2)}
-.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.2rem;border-bottom:2px solid var(--border)}
-.tb{font-family:var(--fh);font-size:.82rem;letter-spacing:.06em;background:none;border:none;border-bottom:4px solid transparent;color:var(--text2);padding:.8rem 1.1rem;cursor:pointer;margin-bottom:-2px}
-.tb.on{color:var(--ink);border-bottom-color:var(--gold)}
-.pane{display:none}.pane.on{display:block}
-.studio{display:grid;grid-template-columns:1fr 340px;gap:1.5rem;align-items:start}
-.layer{background:var(--surface);border:1px solid var(--border);border-left:5px solid var(--gold);padding:1rem 1.2rem;margin-bottom:1rem}
-.layer-head{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin-bottom:.8rem}
-.layer-head .input{max-width:240px;padding:.45rem .7rem;font-size:1.05rem}
-.mini{background:none;border:2px solid var(--border);color:var(--ink);font-family:var(--fm);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .6rem;cursor:pointer}
-.mini:hover{border-color:var(--gold)}
-.traits{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.7rem}
-.trait{border:1px solid var(--border);background:var(--field);padding:.5rem;text-align:center;position:relative}
-.trait img{width:100%;aspect-ratio:1;object-fit:contain;background:repeating-conic-gradient(#8884 0 25%,transparent 0 50%) 50%/16px 16px;display:block}
-.trait .nm{font-size:.85rem;margin:.3rem 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
-.trait input{width:100%;border:1px solid var(--border);background:var(--surface);color:var(--ink);padding:.2rem .4rem;font-family:var(--fm);font-size:.8rem}
-.trait .rm{position:absolute;top:2px;right:2px;background:#080807;color:var(--gold);border:none;width:22px;height:22px;cursor:pointer;line-height:1}
-.addrow{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem;align-items:center}
-.prev{position:sticky;top:90px}
-.prev canvas{width:100%;display:block;border:2px solid var(--gold);background:repeating-conic-gradient(#8884 0 25%,transparent 0 50%) 50%/20px 20px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.field{margin-bottom:1rem}
-.bar{height:14px;background:var(--gray);border:1px solid var(--border);margin:1rem 0}
-.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .1s}
 table.t{width:100%;border-collapse:collapse;font-size:1rem}
-table.t th,table.t td{border-bottom:1px solid var(--border);padding:.45rem .6rem;text-align:left}
+table.t th,table.t td{border-bottom:1px solid var(--border);padding:.5rem .6rem;text-align:left}
 table.t th{font-family:var(--fm);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
-.dist{margin-bottom:1.2rem}
-.dist h4{font-family:var(--fh);font-size:.85rem;letter-spacing:.05em;margin-bottom:.4rem;color:var(--ink)}
+.cta{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;margin:1.5rem 0 2.5rem}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0 2rem}
+.price-card{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.2rem;text-align:center}
+.price-card b{display:block;font-family:var(--fh);font-size:1.7rem;color:var(--ink)}
+.price-card span{font-family:var(--fm);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
+.pill{font-family:var(--fm);font-size:.78rem;letter-spacing:.06em;border:1px solid var(--border);background:var(--field);color:var(--ink);padding:.3rem .7rem}
+.mini{background:none;border:2px solid var(--border);color:var(--ink);font-family:var(--fm);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .6rem;cursor:pointer;display:inline-flex;align-items:center;gap:.3rem}
+.mini:hover{border-color:var(--gold)}
+.mini[disabled]{opacity:.45;cursor:not-allowed}
+.bar{height:14px;background:var(--gray);border:1px solid var(--border);margin:.8rem 0}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .1s}
+.dl{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.8rem}
+/* dashboard */
+.projs{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin-top:1rem}
+.proj{background:var(--surface);border:1px solid var(--border);border-left:5px solid var(--gold);padding:1rem 1.2rem;display:flex;flex-direction:column;gap:.4rem}
+.proj h3{font-family:var(--fh);font-size:.95rem;letter-spacing:.04em;word-break:break-word}
+.proj small{font-family:var(--fm);font-size:.75rem;color:var(--text2);letter-spacing:.05em}
+.proj .row{display:flex;gap:.5rem;margin-top:.5rem;flex-wrap:wrap}
+/* studio overlay */
+body.in-studio{overflow:hidden}
+#studio{position:fixed;inset:0;z-index:250;background:var(--page);display:grid;grid-template-rows:54px 1fr;grid-template-columns:clamp(430px,38vw,600px) minmax(0,1fr) 320px;color:var(--text);font-size:17px}
+.st-top{grid-column:1/-1;display:flex;align-items:center;gap:.6rem;padding:0 1rem;background:var(--navbg);border-bottom:2px solid var(--gold);min-width:0}
+.st-top .mini{border-color:var(--navfg-h);color:var(--navfg-h)}
+.st-top .mini:hover{background:var(--navfg-h);color:var(--gold)}
+.st-brand{font-family:var(--fh);font-size:.85rem;letter-spacing:.1em;color:var(--navfg-h);white-space:nowrap}
+.st-name{background:transparent;border:1px solid transparent;color:var(--navfg-h);font-family:var(--fh);font-size:.85rem;padding:.3rem .5rem;min-width:80px;width:min(260px,24vw)}
+.st-name:hover,.st-name:focus{border-color:var(--navfg-h);outline:none}
+#saveInd{font-family:var(--fm);font-size:.72rem;letter-spacing:.06em;color:var(--navfg);white-space:nowrap}
+.st-top .pill{background:var(--black);color:var(--gold);border-color:var(--black)}
+.st-left,.st-right{overflow:auto;background:var(--surface);min-height:0}
+.st-left{border-right:1px solid var(--border);display:flex;flex-direction:column}
+.st-right{border-left:1px solid var(--border);padding:1rem}
+.st-mid{display:flex;flex-direction:column;min-width:0;min-height:0}
+.tabs{display:flex;border-bottom:2px solid var(--border);background:var(--surface);flex:none}
+.tb{flex:1;font-family:var(--fh);font-size:.74rem;letter-spacing:.06em;background:none;border:none;border-bottom:4px solid transparent;color:var(--text2);padding:.8rem .4rem;cursor:pointer;margin-bottom:-2px;white-space:nowrap}
+.tb.on{color:var(--ink);border-bottom-color:var(--gold)}
+.tb.sm{flex:none;padding:.7rem 1.2rem}
+.pane{display:none;min-height:0}
+.pane.on{display:block}
+.lpane{overflow:auto;flex:1;padding:.9rem}
+.sum{font-family:var(--fm);font-size:.78rem;letter-spacing:.04em;color:var(--text2);background:rgba(245,197,24,.12);border-left:3px solid var(--gold);padding:.6rem .8rem;margin-bottom:.9rem}
+.sum b{color:var(--ink)}
+.sum.warn{background:rgba(220,70,40,.15);border-left-color:#d9482b}
+.layer{background:var(--field);border:1px solid var(--border);border-left:5px solid var(--gold);margin-bottom:.9rem}
+.layer.dragover{outline:3px dashed var(--gold)}
+.layer.off{opacity:.55}
+.lh{display:flex;gap:.35rem;align-items:center;padding:.5rem .6rem;background:var(--surface);border-bottom:1px solid var(--border)}
+.grip{cursor:grab;font-size:1.2rem;color:var(--text2);padding:0 .25rem;user-select:none}
+.lh .nm{flex:1;min-width:60px;border:1px solid transparent;background:transparent;color:var(--ink);font-family:var(--fs);font-weight:700;font-size:1.1rem;padding:.2rem .35rem}
+.lh .nm:focus,.lh .nm:hover{border-color:var(--border);background:var(--field);outline:none}
+.lh .cnt{font-family:var(--fm);font-size:.7rem;color:var(--text2);white-space:nowrap}
+.ic{background:none;border:1px solid var(--border);color:var(--ink);width:28px;height:28px;cursor:pointer;font-size:.85rem;line-height:1;padding:0}
+.ic:hover{border-color:var(--gold);background:var(--gold);color:#080807}
+.order{font-family:var(--fm);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);padding:.15rem .6rem 0}
+.lb{padding:.7rem}
+.traits{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:.6rem}
+.trait{border:1px solid var(--border);background:var(--surface);padding:.4rem;text-align:center;position:relative;cursor:pointer}
+.trait:hover,.trait.sel{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold)}
+.trait img{width:100%;aspect-ratio:1;object-fit:contain;background:repeating-conic-gradient(#8885 0 25%,transparent 0 50%) 50%/14px 14px;display:block}
+.trait .nm{font-size:.88rem;margin:.25rem 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
+.trait .wrow{display:flex;gap:.3rem;align-items:center}
+.trait input{width:100%;min-width:0;border:1px solid var(--border);background:var(--field);color:var(--ink);padding:.15rem .3rem;font-family:var(--fm);font-size:.78rem}
+.trait .pc{font-family:var(--fm);font-size:.72rem;color:var(--gold-d);white-space:nowrap}
+.trait .rm{position:absolute;top:2px;right:2px;background:#080807;color:var(--gold);border:none;width:22px;height:22px;cursor:pointer;line-height:1}
+.lfoot{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin-top:.7rem;font-family:var(--fm);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text2)}
+.lfoot input[type=number]{width:70px;border:1px solid var(--border);background:var(--field);color:var(--ink);padding:.2rem .4rem}
+.drop{font-family:var(--fs);font-size:.95rem;text-transform:none;letter-spacing:0;color:var(--text2)}
+.field{margin-bottom:.9rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.lpane .label{font-size:.72rem;margin-bottom:.3rem}
+.lpane .input,.lpane .select,.lpane .textarea{font-size:1rem;padding:.5rem .65rem}
+.lpane h3{font-family:var(--fh);font-size:.8rem;letter-spacing:.06em;margin:1.1rem 0 .6rem;padding-top:.9rem;border-top:1px solid var(--border)}
+/* centre */
+.mtools{display:flex;gap:.5rem;align-items:center;flex-wrap:wrap;padding:.7rem 1rem;border-bottom:1px solid var(--border)}
+.mtools select{width:auto;padding:.3rem .5rem;font-size:.95rem}
+.stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:1rem;overflow:auto}
+.stage canvas{max-width:100%;max-height:calc(100vh - 54px - 46px - 56px - 70px);border:2px solid var(--gold);background:repeating-conic-gradient(#8885 0 25%,transparent 0 50%) 50%/20px 20px}
+.empty{text-align:center;color:var(--text2);max-width:420px}
+.pinfo{padding:.6rem 1rem;border-top:1px solid var(--border);font-family:var(--fm);font-size:.75rem;color:var(--text2);letter-spacing:.04em;max-height:70px;overflow:auto}
+.metawrap{flex:1;min-height:0;overflow:auto;padding:0 1rem 1rem}
+.metawrap table.t input{width:100%;border:1px solid var(--border);background:var(--field);color:var(--ink);padding:.3rem .45rem;font-family:var(--fs);font-size:.95rem}
+.metawrap table.t{table-layout:fixed;min-width:640px}.metawrap th:nth-child(1){width:64px}.metawrap th:nth-child(2){width:26%}.metawrap th:nth-child(3){width:28%}.metawrap td{vertical-align:top}.metawrap td small{display:block;margin-top:.25rem;font-family:var(--fm);font-size:.7rem;color:var(--text2)}
+/* right */
+.st-right h4{font-family:var(--fh);font-size:.78rem;letter-spacing:.06em;margin:1rem 0 .5rem;color:var(--ink)}
+.st-right h4:first-child{margin-top:0}
+.st-right .btn{width:100%;margin-bottom:.5rem}
+.st-right .btn[disabled]{opacity:.5;cursor:not-allowed}
+.price-chip{font-family:var(--fh);font-size:1.6rem;color:var(--ink)}
+.state{font-family:var(--fm);font-size:.74rem;letter-spacing:.04em;padding:.5rem .7rem;border-left:3px solid var(--gold);background:rgba(245,197,24,.12);margin:.5rem 0}
+.state.paid{border-left-color:#2e9e57;background:rgba(46,158,87,.16)}
+.vid{font-family:var(--fm);font-size:.72rem;color:var(--text2);word-break:break-all}
+.dist{margin-bottom:1rem}
+.dist h4{margin:.2rem 0 .4rem}
 .dist .r{display:flex;gap:.6rem;align-items:center;font-size:.95rem;margin:.15rem 0}
 .dist .r em{flex:0 0 140px;font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dist .r s{display:block;height:10px;background:var(--gold);text-decoration:none}
-.dl{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
-@media(max-width:900px){.studio{grid-template-columns:1fr}.prev{position:static}.stats,.how{grid-template-columns:1fr 1fr}}
+.rcard{display:flex;gap:.5rem;align-items:center;justify-content:space-between;border:1px solid var(--border);background:var(--field);padding:.4rem .6rem;margin-bottom:.4rem;font-size:.95rem}
+.modal{position:fixed;inset:0;background:rgba(8,8,7,.78);display:none;align-items:flex-start;justify-content:center;z-index:400;padding:1rem;overflow:auto}
+.modal.open{display:flex}
+.sheet{background:var(--surface);max-width:620px;width:100%;margin:2rem 0;padding:1.6rem;border-top:4px solid var(--gold)}
+.sheet.wide{max-width:860px}
+.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+.sheet-head h3{font-family:var(--fh);font-size:.95rem;letter-spacing:.06em}
+.x{background:none;border:none;color:var(--ink);font-size:1.3rem;cursor:pointer}
+.wal{display:flex;gap:.8rem;align-items:center;width:100%;text-align:left;background:var(--field);border:2px solid var(--border);color:var(--ink);padding:.8rem 1rem;margin-bottom:.6rem;cursor:pointer;font-family:var(--fs);font-weight:700;font-size:1.1rem}
+.wal:hover{border-color:var(--gold)}
+.wal img{width:30px;height:30px;border-radius:6px}
+.log{white-space:pre-wrap;font-family:var(--fm);font-size:.78rem;background:var(--black);color:var(--gold);padding:.8rem;margin-top:1rem;display:none}
+.tbig{width:100%;max-height:260px;object-fit:contain;background:repeating-conic-gradient(#8885 0 25%,transparent 0 50%) 50%/16px 16px;border:1px solid var(--border);margin-bottom:.8rem}
+#mp-prev.on,#mp-meta.on{display:flex}
+@media(max-width:1100px){#studio{grid-template-columns:clamp(380px,46vw,520px) minmax(0,1fr);grid-template-rows:54px 1fr auto}.st-right{grid-column:1/-1;border-left:none;border-top:1px solid var(--border);max-height:42vh}}
+@media(max-width:760px){.stats,.how{grid-template-columns:1fr 1fr}.price-grid{grid-template-columns:1fr}
+  #studio{display:flex;flex-direction:column;overflow:auto}.st-left,.st-right{overflow:visible}.st-mid{min-height:70vh}.st-brand,#saveInd{display:none}.st-top{flex-wrap:wrap;height:auto;padding:.5rem}}
 @media(max-width:560px){.stats,.how,.grid2{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div id="site-nav"></div>
 
-<main>
+<!-- 1. LANDING -->
+<main id="landing">
   <div class="eyebrow">Create</div>
   <h1>NFT <span class="gold">STUDIO</span></h1>
-  <p class="lead">Build a generative NFT collection right in your browser. Upload your trait layers, set rarity and rules, then download the images and metadata. Your files never leave your device.</p>
+  <p class="lead">Build a generative NFT collection in your browser. Generate as often as you like for free with a watermark. When you are happy, pay once to export the clean images and metadata. Your files never leave your device.</p>
 
   <div class="stats">
-    <div class="stat"><b>5,000</b><span>Max collection size</span></div>
+    <div class="stat"><b id="stMax">20,000</b><span>Max collection size</span></div>
     <div class="stat"><b>100%</b><span>Runs on your device</span></div>
-    <div class="stat"><b>PNG / JPG</b><span>Export formats</span></div>
-    <div class="stat"><b>FREE</b><span>No sign-up needed</span></div>
+    <div class="stat"><b>FREE</b><span>Unlimited watermarked previews</span></div>
+    <div class="stat"><b>USDC</b><span>Pay on Base, Arbitrum, Polygon, BNB</span></div>
+  </div>
+
+  <div class="cta">
+    <button class="btn" id="btnConnect" type="button">Connect wallet &amp; start</button>
+    <span class="note" id="cfgNote" hidden></span>
   </div>
 
   <div class="how">
-    <div><b>01</b><p>Add layers (Background, Body, Eyes…) and upload trait images.</p></div>
-    <div><b>02</b><p>Set how rare each trait is, and add rules for traits that can't mix.</p></div>
-    <div><b>03</b><p>Generate the collection and check rarity ranks.</p></div>
-    <div><b>04</b><p>Download images and OpenSea-style metadata.</p></div>
+    <div><b>01</b><p>Connect your wallet and sign in. It is free and sends no transaction.</p></div>
+    <div><b>02</b><p>Add layers and trait images, set rarity, add rules and fill in the metadata.</p></div>
+    <div><b>03</b><p>Generate as many times as you like. Previews carry a watermark.</p></div>
+    <div><b>04</b><p>Pay once for the version you want and export it clean, with metadata.</p></div>
   </div>
 
-  <div class="tabs" role="tablist">
-    <button class="tb on" data-p="layers" type="button">LAYERS</button>
-    <button class="tb" data-p="rules" type="button">RULES</button>
-    <button class="tb" data-p="settings" type="button">SETTINGS</button>
-    <button class="tb" data-p="generate" type="button">GENERATE</button>
-  </div>
-
-  <div class="pane on" id="p-layers">
-    <div class="studio">
-      <div>
-        <div id="layers"></div>
-        <button class="btn" id="addLayer" type="button">+ Add layer</button>
-        <p class="note" style="margin-top:1rem">Layers are drawn from the top of the list to the bottom, so put the Background first. All images should have the same size, ideally with transparent backgrounds (PNG).</p>
-      </div>
-      <div class="prev panel">
-        <h2>PREVIEW</h2>
-        <canvas id="prev" width="400" height="400"></canvas>
-        <div class="dl"><button class="btn" id="shuffle" type="button">Shuffle</button></div>
-        <p class="note" id="prevInfo" style="margin-top:.8rem"></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="pane" id="p-rules">
-    <div class="panel">
-      <h2>RULES: TRAITS THAT CAN'T APPEAR TOGETHER</h2>
-      <div class="grid2">
-        <div class="field"><label class="label" for="rA">If a NFT has</label><select class="select" id="rA"></select></div>
-        <div class="field"><label class="label" for="rB">then it can't have</label><select class="select" id="rB"></select></div>
-      </div>
-      <button class="btn" id="addRule" type="button">Add rule</button>
-      <div id="rules" style="margin-top:1rem"></div>
-    </div>
-  </div>
-
-  <div class="pane" id="p-settings">
-    <div class="panel">
-      <h2>COLLECTION SETTINGS</h2>
-      <div class="grid2">
-        <div class="field"><label class="label" for="sName">Collection name</label><input class="input" id="sName" value="My Collection"></div>
-        <div class="field"><label class="label" for="sSize">Collection size</label><input class="input" id="sSize" type="number" min="1" max="5000" value="100"></div>
-        <div class="field"><label class="label" for="sW">Width (px)</label><input class="input" id="sW" type="number" min="64" max="4000" value="1000"></div>
-        <div class="field"><label class="label" for="sH">Height (px)</label><input class="input" id="sH" type="number" min="64" max="4000" value="1000"></div>
-        <div class="field"><label class="label" for="sStart">First token number</label><input class="input" id="sStart" type="number" min="0" value="1"></div>
-        <div class="field"><label class="label" for="sFmt">Image format</label><select class="select" id="sFmt"><option value="png">PNG (transparent, bigger files)</option><option value="jpg">JPG (smaller files)</option></select></div>
-      </div>
-      <div class="field"><label class="label" for="sDesc">Description</label><textarea class="textarea" id="sDesc"></textarea></div>
-      <div class="field"><label class="label" for="sUrl">External URL (optional)</label><input class="input" id="sUrl" placeholder="https://"></div>
-      <div class="field"><label class="label" for="sCid">Image link in the metadata</label><input class="input" id="sCid" value="ipfs://REPLACE_WITH_YOUR_CID"><p class="note" style="margin-top:.5rem">After you upload the images to IPFS or your host, replace this with the real folder link. Each token will point to <code>&lt;link&gt;/&lt;number&gt;.png</code>.</p></div>
-      <label style="display:flex;gap:.6rem;align-items:center;font-size:1.1rem"><input type="checkbox" id="sUnique" checked> Make every NFT unique (no duplicates)</label>
-    </div>
-  </div>
-
-  <div class="pane" id="p-generate">
-    <div class="panel">
-      <h2>GENERATE</h2>
-      <p id="genInfo" style="margin-bottom:1rem"></p>
-      <button class="btn" id="go" type="button">Generate collection</button>
-      <button class="btn ghost" id="stop" type="button" style="display:none">Stop</button>
-      <div class="bar"><i id="barI"></i></div>
-      <p class="note" id="status">Ready.</p>
-      <div class="dl" id="dls"></div>
-    </div>
-    <div class="panel" id="rarity" style="margin-top:1.5rem;display:none"></div>
+  <div class="panel">
+    <h2>PRICE FOR ONE CLEAN EXPORT</h2>
+    <div class="price-grid" id="priceGrid"></div>
+    <p style="color:var(--text2)">One payment covers one export of one collection version, and you can download that exact version again any time. Change the layers, rules, size or seed and it becomes a new version. Paid in USDC straight to the Crypto Asia wallet.</p>
   </div>
 </main>
 
+<!-- 2. DASHBOARD -->
+<main id="dash" hidden>
+  <div class="eyebrow">NFT Studio</div>
+  <h1 id="dWelcome" style="font-size:clamp(1.5rem,3.4vw,2.3rem)">Welcome back</h1>
+  <p class="vid" id="dAddr"></p>
+  <div class="cta" style="margin:1rem 0 1.5rem">
+    <button class="btn" id="btnNew" type="button">+ New project</button>
+    <label class="btn ghost" style="cursor:pointer">Open a saved project file<input type="file" id="fOpenDash" accept=".zip,application/zip" hidden></label>
+    <button class="btn ghost" id="btnLogout" type="button">Disconnect</button>
+  </div>
+  <div class="stats">
+    <div class="stat"><b id="sProj">0</b><span>Projects</span></div>
+    <div class="stat"><b id="sGen">0</b><span>NFTs generated</span></div>
+    <div class="stat"><b id="sExp">0</b><span>Collections exported</span></div>
+    <div class="stat"><b>Creator</b><span>Account type</span></div>
+  </div>
+  <div class="panel"><h2>MY PROJECTS</h2><div id="projList" class="projs"></div>
+    <p class="note" style="margin-top:1rem">Projects are saved in this browser, linked to your wallet. Use <b>Save project</b> inside the studio to keep a backup file or move to another computer.</p></div>
+</main>
+
 <div id="site-foot"></div>
+
+<!-- 3. FULL-PAGE STUDIO -->
+<div id="studio" hidden>
+  <header class="st-top">
+    <button class="mini" id="stBack" type="button">&larr; Dashboard</button>
+    <span class="st-brand">NFT STUDIO</span>
+    <input class="st-name" id="pName" aria-label="Project name" maxlength="60">
+    <span id="saveInd">Auto-saved</span>
+    <span class="grow"></span>
+    <button class="mini" id="btnRarity" type="button">Rarity</button>
+    <button class="mini" id="btnSaveFile" type="button">Save project</button>
+    <label class="mini" style="cursor:pointer">Open project<input type="file" id="fOpen" accept=".zip,application/zip" hidden></label>
+    <span class="pill" id="stWallet"></span>
+    <button class="theme-btn" id="stTheme" type="button" aria-label="Switch theme"></button>
+  </header>
+
+  <aside class="st-left">
+    <div class="tabs" role="tablist">
+      <button class="tb on" data-lp="layers" type="button">LAYERS</button>
+      <button class="tb" data-lp="settings" type="button">SETTINGS</button>
+      <button class="tb" data-lp="rules" type="button">RULES</button>
+    </div>
+
+    <div class="lpane pane on" id="lp-layers">
+      <div class="sum" id="sum"></div>
+      <div id="layers"></div>
+      <button class="btn" id="addLayer" type="button">+ Add layer</button>
+      <p class="note" style="margin-top:1rem">Layers are drawn from the top of the list (back) to the bottom (front). Drag the handle to reorder. Drop images on a layer to add them. Click a trait to edit it. All images should be the same size, ideally transparent PNG.</p>
+    </div>
+
+    <div class="lpane pane" id="lp-settings">
+      <h3 style="border:none;margin-top:0;padding-top:0">COLLECTION</h3>
+      <div class="field"><label class="label" for="sName">Collection name</label><input class="input" id="sName" maxlength="60"></div>
+      <div class="grid2">
+        <div class="field"><label class="label" for="sSize">Collection size</label><input class="input" id="sSize" type="number" min="1" step="1"></div>
+        <div class="field"><label class="label" for="sStart">First token number</label><input class="input" id="sStart" type="number" min="0" value="1"></div>
+        <div class="field"><label class="label" for="sW">Width (px)</label><input class="input" id="sW" type="number" min="64" max="4000"></div>
+        <div class="field"><label class="label" for="sH">Height (px)</label><input class="input" id="sH" type="number" min="64" max="4000"></div>
+      </div>
+      <div class="field"><label class="label" for="sFmt">Image format</label><select class="select" id="sFmt"><option value="png">PNG (transparent, bigger files)</option><option value="jpg">JPG (smaller files)</option></select></div>
+      <label style="display:flex;gap:.6rem;align-items:center;font-size:1.05rem;margin-bottom:.9rem"><input type="checkbox" id="sUnique"> Make every NFT unique (no duplicates)</label>
+      <div class="field"><label class="label" for="sSeed">Random seed</label>
+        <div style="display:flex;gap:.5rem"><input class="input" id="sSeed" readonly><button class="mini" id="btnReroll" type="button">Re-roll</button></div>
+        <p class="note" style="margin-top:.5rem">The seed decides which NFTs are made. The same seed and settings always give the same collection. Re-rolling makes a different collection, which needs a new payment to export.</p></div>
+
+      <h3>METADATA</h3>
+      <div class="field"><label class="label" for="sDesc">Description</label><textarea class="textarea" id="sDesc" rows="3"></textarea></div>
+      <div class="field"><label class="label" for="sUrl">External URL (optional)</label><input class="input" id="sUrl" placeholder="https://"></div>
+      <div class="field"><label class="label" for="sBase">Image link in the metadata</label><input class="input" id="sBase" placeholder="ipfs://YOUR_CID"><p class="note" style="margin-top:.5rem">After you upload the images to IPFS or your host, put the folder link here. Each token will point to <code>&lt;link&gt;/&lt;number&gt;.png</code>.</p></div>
+      <div class="grid2">
+        <div class="field"><label class="label" for="sSymbol">Symbol (optional)</label><input class="input" id="sSymbol" maxlength="12"></div>
+        <div class="field"><label class="label" for="sRoy">Creator royalty (%)</label><input class="input" id="sRoy" type="number" min="0" max="10" step="0.1"></div>
+      </div>
+      <div class="field"><label class="label" for="sRoyAddr">Royalty recipient wallet</label><input class="input" id="sRoyAddr" placeholder="0x…"></div>
+      <div class="field"><label class="label" for="sCreator">Creator wallet (optional)</label><input class="input" id="sCreator" placeholder="0x…"></div>
+      <p class="note">Royalty and recipient go into <code>collection.json</code> (OpenSea contract-level metadata). Editing metadata never changes your paid version.</p>
+    </div>
+
+    <div class="lpane pane" id="lp-rules">
+      <h3 style="border:none;margin-top:0;padding-top:0">TRAITS THAT CAN'T APPEAR TOGETHER</h3>
+      <div class="field"><label class="label" for="rA">If an NFT has</label><select class="select" id="rA"></select></div>
+      <div class="field"><label class="label" for="rB">then it can't have</label><select class="select" id="rB"></select></div>
+      <button class="btn" id="addRule" type="button">Add rule</button>
+      <div id="rules" style="margin-top:1rem"></div>
+    </div>
+  </aside>
+
+  <section class="st-mid">
+    <div class="tabs">
+      <button class="tb sm on" data-mp="prev" type="button">PREVIEW</button>
+      <button class="tb sm" data-mp="meta" type="button">METADATA</button>
+    </div>
+    <div class="pane on" id="mp-prev" style="flex:1;flex-direction:column;min-height:0">
+      <div class="mtools">
+        <button class="btn" id="shuffle" type="button" style="padding:.5rem 1rem">Shuffle</button>
+        <select class="select" id="pMode" aria-label="Preview mode"><option value="combo">Combined</option><option value="trait">Selected trait only</option></select>
+        <span class="vid" id="pHint"></span>
+      </div>
+      <div class="stage" id="stage"><canvas id="prev" width="600" height="600"></canvas></div>
+      <div class="pinfo" id="prevInfo"></div>
+    </div>
+    <div class="pane" id="mp-meta" style="flex:1;flex-direction:column;min-height:0">
+      <div class="mtools">
+        <button class="mini" id="mCsvOut" type="button">Download CSV template</button>
+        <label class="mini" style="cursor:pointer">Import CSV<input type="file" id="mCsvIn" accept=".csv,text/csv" hidden></label>
+        <button class="mini" id="mClear" type="button">Clear my edits</button>
+        <span class="grow"></span>
+        <input class="input" id="mJump" type="number" min="0" placeholder="Go to token #" style="width:140px;padding:.3rem .5rem;font-size:.95rem">
+        <button class="mini" id="mPrevP" type="button">&larr;</button><span class="vid" id="mPageInfo"></span><button class="mini" id="mNextP" type="button">&rarr;</button>
+      </div>
+      <div class="metawrap" id="metaWrap"></div>
+    </div>
+  </section>
+
+  <aside class="st-right">
+    <h4>EXPORT THIS COLLECTION</h4>
+    <div class="price-chip" id="rPrice">$—</div>
+    <div class="vid" id="rSub"></div>
+    <div class="state" id="rState">Checking…</div>
+    <div class="vid" style="margin-bottom:.8rem">Version ID: <span id="rVer">…</span></div>
+    <button class="btn ghost" id="btnGen" type="button">Generate preview (free, watermark)</button>
+    <button class="btn" id="btnExport" type="button">Export — no watermark</button>
+    <label id="folderRow" style="display:none;gap:.5rem;align-items:center;font-size:.95rem;margin-bottom:.5rem"><input type="checkbox" id="chkFolder"> Save straight into a folder (best for big collections)</label>
+    <button class="mini" id="btnStop" type="button" style="display:none">Stop</button>
+    <div class="bar"><i id="barI"></i></div>
+    <p class="vid" id="status">Ready.</p>
+    <div class="dl" id="dls"></div>
+  </aside>
+</div>
+
+<!-- modals -->
+<div class="modal" id="mConnect"><div class="sheet"><div class="sheet-head"><h3>CONNECT YOUR WALLET</h3><button class="x" data-close="mConnect" aria-label="Close">&#10005;</button></div>
+  <p style="margin-bottom:1rem;color:var(--text2)">Pick a wallet. You will be asked to sign a free message to sign in. No transaction is sent.</p>
+  <div id="walList"></div><p class="log" id="cLog"></p></div></div>
+
+<div class="modal" id="mNew"><div class="sheet"><div class="sheet-head"><h3>NEW PROJECT</h3><button class="x" data-close="mNew" aria-label="Close">&#10005;</button></div>
+  <div class="field"><label class="label" for="nName">Project / collection name</label><input class="input" id="nName" placeholder="My Collection" maxlength="60"></div>
+  <div class="field"><label class="label" for="nSize">Collection size</label><input class="input" id="nSize" type="number" min="1" value="100"><p class="note" style="margin-top:.5rem" id="nPrice"></p></div>
+  <div style="display:flex;gap:.6rem;justify-content:flex-end"><button class="btn ghost" data-close="mNew" type="button">Cancel</button><button class="btn" id="nGo" type="button">Continue &rarr;</button></div></div></div>
+
+<div class="modal" id="mPay"><div class="sheet"><div class="sheet-head"><h3>EXPORT WITHOUT WATERMARK</h3><button class="x" data-close="mPay" aria-label="Close">&#10005;</button></div>
+  <div id="payBody"></div><p class="log" id="payLog"></p></div></div>
+
+<div class="modal" id="mTrait"><div class="sheet"><div class="sheet-head"><h3 id="tTitle">TRAIT</h3><button class="x" data-close="mTrait" aria-label="Close">&#10005;</button></div><div id="tBody"></div></div></div>
+
+<div class="modal" id="mRarity"><div class="sheet wide"><div class="sheet-head"><h3>RARITY</h3><button class="x" data-close="mRarity" aria-label="Close">&#10005;</button></div><div id="rarBody"></div></div></div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script src="shared.js"></script>
 <script>
-/* NFT Studio — everything runs in the browser. Nothing is uploaded anywhere. */
-var MAX = 5000, BATCH = 500;
-var layers = [];        // {name, empty:0, traits:[{name, weight, img, url}]}
-var rules = [];         // {a:[l,t], b:[l,t]}
-var gen = { list:null, stop:false };
+/* NFT Studio — everything is built in the visitor's browser. Images never leave the device.
+   Only the wallet address, a version ID and the payment are ever sent anywhere (for paid exports). */
+var BATCH = 500, KEEP_LIMIT = 800*1e6;
+var CFG = { receiver:'', supabaseUrl:'', supabaseKey:'', chains:[] };
+var SCFG = { maxSize:20000, tiers:[{upTo:4999,price:50},{upTo:9999,price:75},{upTo:null,price:100}], watermarkText:'CRYPTO ASIA · PREVIEW' };
+var P = null;                 // current project
+var W = { addr:'', prov:null, name:'', chainId:0 };
+var busy = false;
+
 function $(id){ return document.getElementById(id); }
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
-function num(id, d){ var v = parseInt($(id).value,10); return isNaN(v) ? d : v; }
+function short(a){ return a ? a.slice(0,6)+'…'+a.slice(-4) : ''; }
+function isAddr(a){ return /^0x[0-9a-fA-F]{40}$/.test(a||''); }
+function uid(){ return Math.random().toString(36).slice(2,10)+Math.random().toString(36).slice(2,6); }
+function randSeed(){ return Math.floor(Math.random()*4294967296)>>>0; }
+function tick(){ return new Promise(function(r){ setTimeout(r,0); }); }
+function sleep(ms){ return new Promise(function(r){ setTimeout(r,ms); }); }
+function fmtNum(n){ return n>=1e12 ? n.toExponential(2).replace('e+','×10^') : Math.round(n).toLocaleString(); }
+function mulberry(seed){ var a = seed>>>0; return function(){ a = (a+0x6D2B79F5)>>>0; var t = a; t = Math.imul(t^(t>>>15), t|1); t ^= t+Math.imul(t^(t>>>7), t|61); return ((t^(t>>>14))>>>0)/4294967296; }; }
 
-/* ---- tabs ---- */
-document.querySelectorAll('.tb').forEach(function(b){ b.onclick = function(){
-  document.querySelectorAll('.tb').forEach(function(x){ x.classList.toggle('on', x===b); });
-  document.querySelectorAll('.pane').forEach(function(p){ p.classList.toggle('on', p.id==='p-'+b.getAttribute('data-p')); });
-  if (b.getAttribute('data-p')==='generate') genInfo();
-  if (b.getAttribute('data-p')==='rules') fillRuleSelects();
-}; });
-
-/* ---- layers ---- */
-function addLayer(name){ layers.push({name:name||('Layer '+(layers.length+1)), empty:0, traits:[]}); renderLayers(); }
-function renderLayers(){
-  var el = $('layers');
-  if (!layers.length) { el.innerHTML = '<div class="panel" style="margin-bottom:1rem"><p>No layers yet. Click <b>Add layer</b>, name it (for example Background) and upload your trait images.</p></div>'; return; }
-  el.innerHTML = layers.map(function(L,li){
-    return '<div class="layer" data-l="'+li+'"><div class="layer-head">'+
-      '<input class="input nm" value="'+esc(L.name)+'" data-act="rename" aria-label="Layer name">'+
-      '<button class="mini" data-act="up" type="button">&uarr;</button><button class="mini" data-act="down" type="button">&darr;</button>'+
-      '<button class="mini" data-act="del" type="button">Delete layer</button></div>'+
-      '<div class="traits">'+L.traits.map(function(T,ti){
-        return '<div class="trait" data-t="'+ti+'"><button class="rm" data-act="rmt" type="button" aria-label="Remove">&times;</button><img src="'+esc(T.url)+'" alt=""><div class="nm" title="'+esc(T.name)+'">'+esc(T.name)+'</div><input type="number" min="0" step="1" value="'+T.weight+'" data-act="w" aria-label="Weight"></div>';
-      }).join('')+'</div>'+
-      '<div class="addrow"><label class="btn ghost" style="cursor:pointer">+ Upload images<input type="file" accept="image/png,image/jpeg,image/webp" multiple data-act="file" style="display:none"></label>'+
-      '<label style="font-family:var(--fm);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase">Chance of NONE (weight) <input type="number" min="0" value="'+L.empty+'" data-act="empty" style="width:70px;border:1px solid var(--border);background:var(--field);color:var(--ink);padding:.2rem .4rem"></label>'+
-      '<span style="font-size:.95rem;color:var(--text2)">Weight = how common. Higher number = more common.</span></div></div>';
-  }).join('');
+/* ---------- hashing + signing helpers (same canonical form as the verifier) ---------- */
+function canon(v){
+  if (Array.isArray(v)) return '['+v.map(canon).join(',')+']';
+  if (v && typeof v==='object') return '{'+Object.keys(v).sort().map(function(k){ return JSON.stringify(k)+':'+canon(v[k]); }).join(',')+'}';
+  return JSON.stringify(v);
 }
-$('layers').addEventListener('click', function(e){
-  var b = e.target.closest('[data-act]'); if (!b) return;
-  var box = e.target.closest('.layer'); if (!box) return;
-  var li = +box.getAttribute('data-l'), act = b.getAttribute('data-act');
-  if (act==='del') { if (confirm('Delete this layer and its images?')) { layers.splice(li,1); rules = []; renderLayers(); renderRules(); preview(); } }
-  else if (act==='up' && li>0) { var t=layers[li]; layers[li]=layers[li-1]; layers[li-1]=t; rules=[]; renderLayers(); renderRules(); preview(); }
-  else if (act==='down' && li<layers.length-1) { var t2=layers[li]; layers[li]=layers[li+1]; layers[li+1]=t2; rules=[]; renderLayers(); renderRules(); preview(); }
-  else if (act==='rmt') { var ti = +e.target.closest('.trait').getAttribute('data-t'); URL.revokeObjectURL(layers[li].traits[ti].url); layers[li].traits.splice(ti,1); rules=[]; renderLayers(); renderRules(); preview(); }
-});
-$('layers').addEventListener('change', function(e){
-  var b = e.target; var act = b.getAttribute('data-act'); if (!act) return;
-  var box = b.closest('.layer'), li = +box.getAttribute('data-l');
-  if (act==='rename') { layers[li].name = b.value.trim() || ('Layer '+(li+1)); }
-  else if (act==='w') { var ti = +b.closest('.trait').getAttribute('data-t'); layers[li].traits[ti].weight = Math.max(0, parseFloat(b.value)||0); }
-  else if (act==='empty') { layers[li].empty = Math.max(0, parseFloat(b.value)||0); }
-  else if (act==='file') { loadFiles(li, b.files); b.value=''; return; }
-  preview();
-});
-function loadFiles(li, files){
-  var arr = Array.prototype.slice.call(files).filter(function(f){ return /^image\//.test(f.type); }).sort(function(a,b){ return a.name.localeCompare(b.name, undefined, {numeric:true}); });
-  var pending = arr.length, loaded = []; if (!pending) return;
-  var layer = layers[li];
-  function finish(){
-    if (--pending>0) return;
-    loaded.forEach(function(t){ if (t) layer.traits.push(t); });       // keep the file-name order
-    rules=[]; renderLayers(); renderRules(); autoSize(); preview();
-  }
-  arr.forEach(function(f,i){
-    var url = URL.createObjectURL(f), img = new Image();
-    img.onload = function(){ loaded[i] = {name:f.name.replace(/\.[^.]+$/,'').replace(/[_]+/g,' '), weight:1, img:img, url:url}; finish(); };
-    img.onerror = function(){ URL.revokeObjectURL(url); finish(); };
-    img.src = url;
+function hexOf(buf){ return Array.prototype.map.call(new Uint8Array(buf), function(b){ return ('0'+b.toString(16)).slice(-2); }).join(''); }
+function sha256buf(ab){ return crypto.subtle.digest('SHA-256', ab).then(hexOf); }
+function sha256hex(str){ return sha256buf(new TextEncoder().encode(str)); }
+function toHex(str){ return '0x'+hexOf(new TextEncoder().encode(str)); }
+function unitsFor(fee, dec){ return BigInt(Math.round(fee*100)) * (BigInt(10) ** BigInt(dec-2)); }
+function pad32(h){ return h.replace(/^0x/,'').toLowerCase().padStart(64,'0'); }
+function priceFor(size){ for (var i=0;i<SCFG.tiers.length;i++){ var t=SCFG.tiers[i]; if (t.upTo===null || size<=t.upTo) return t.price; } return SCFG.tiers[SCFG.tiers.length-1].price; }
+function payEnabled(){ return isAddr(CFG.receiver) && CFG.supabaseUrl && CFG.supabaseKey && CFG.chains.length; }
+function lsGet(k){ try { return JSON.parse(sessionStorage.getItem(k)||'null'); } catch(e){ return null; } }
+function lsSet(k,v){ try { if (v===null) sessionStorage.removeItem(k); else sessionStorage.setItem(k, JSON.stringify(v)); } catch(e){} }
+
+/* ---------- storage (IndexedDB, with an in-memory fallback) ---------- */
+var idb = null, mem = { projects:{}, licenses:{} };
+function idbOpen(){
+  return new Promise(function(res){
+    try {
+      var r = indexedDB.open('ca-nft-studio', 1);
+      r.onupgradeneeded = function(){ var d = r.result; d.createObjectStore('projects',{keyPath:'id'}); d.createObjectStore('licenses',{keyPath:'key'}); };
+      r.onsuccess = function(){ idb = r.result; res(); };
+      r.onerror = function(){ res(); };
+      r.onblocked = function(){ res(); };
+    } catch(e){ res(); }
   });
 }
-function autoSize(){
-  if (autoSize.done) return;
-  for (var i=0;i<layers.length;i++) if (layers[i].traits.length) { var im = layers[i].traits[0].img; $('sW').value = im.naturalWidth; $('sH').value = im.naturalHeight; autoSize.done = true; return; }
+function keyOf(store, v){ return store==='projects' ? v.id : v.key; }
+function dbPut(store, val){
+  return new Promise(function(res){
+    var fallback = function(){ mem[store][keyOf(store,val)] = val; res(); };
+    if (!idb) return fallback();
+    try { var q = idb.transaction(store,'readwrite').objectStore(store).put(val); q.onsuccess = function(){ res(); }; q.onerror = fallback; } catch(e){ fallback(); }
+  });
 }
-$('addLayer').onclick = function(){ addLayer(); };
+function dbGet(store, key){
+  return new Promise(function(res){
+    if (!idb) return res(mem[store][key]||null);
+    try { var q = idb.transaction(store).objectStore(store).get(key); q.onsuccess = function(){ res(q.result||null); }; q.onerror = function(){ res(mem[store][key]||null); }; } catch(e){ res(mem[store][key]||null); }
+  });
+}
+function dbDel(store, key){
+  return new Promise(function(res){
+    delete mem[store][key];
+    if (!idb) return res();
+    try { var q = idb.transaction(store,'readwrite').objectStore(store).delete(key); q.onsuccess = function(){ res(); }; q.onerror = function(){ res(); }; } catch(e){ res(); }
+  });
+}
+function dbAll(store){
+  return new Promise(function(res){
+    var m = Object.keys(mem[store]).map(function(k){ return mem[store][k]; });
+    if (!idb) return res(m);
+    try { var q = idb.transaction(store).objectStore(store).getAll(); q.onsuccess = function(){ res(q.result||[]); }; q.onerror = function(){ res(m); }; } catch(e){ res(m); }
+  });
+}
 
-/* ---- picking ---- */
-function pickIndex(L){
-  var total = L.empty; L.traits.forEach(function(t){ total += t.weight; });
-  if (total<=0) return L.traits.length ? Math.floor(Math.random()*L.traits.length) : -1;
-  var r = Math.random()*total;
-  for (var i=0;i<L.traits.length;i++){ r -= L.traits[i].weight; if (r<0) return i; }
-  return L.empty>0 ? -1 : L.traits.length-1;      // -1 = NONE
+/* ---------- project model ---------- */
+function defaultSettings(){ return { W:0, H:0, start:1, fmt:'png', unique:true, desc:'', url:'', base:'ipfs://REPLACE_WITH_YOUR_CID', symbol:'', royalty:0, royaltyAddr:'', creator:'' }; }
+function newProject(name, size){
+  return { id: uid(), wallet: W.addr, name: name||'My Collection', size: size, seed: randSeed(), created: Date.now(), updated: Date.now(),
+    settings: defaultSettings(),
+    layers: ['Background','Body','Eyes'].map(function(n){ return { id:uid(), name:n, hidden:false, empty:0, traits:[] }; }),
+    rules: [], overrides: {}, stats: { generated:0, exports:0 } };
 }
-function ruleOK(c){
-  for (var i=0;i<rules.length;i++){ var r=rules[i]; if (c[r.a[0]]===r.a[1] && c[r.b[0]]===r.b[1]) return false; }
-  return true;
+function plain(p){   // what gets saved: no image elements or object URLs
+  return { id:p.id, wallet:p.wallet, name:p.name, size:p.size, seed:p.seed, created:p.created, updated:p.updated, settings:p.settings, rules:p.rules, overrides:p.overrides, stats:p.stats,
+    layers: p.layers.map(function(L){ return { id:L.id, name:L.name, hidden:L.hidden, empty:L.empty, traits: L.traits.map(function(T){ return { id:T.id, name:T.name, weight:T.weight, hash:T.hash, type:T.type, blob:T.blob, w:T.w, h:T.h }; }) }; }) };
 }
-function randomCombo(){
-  for (var tries=0; tries<50; tries++){
-    var c = layers.map(pickIndex);
-    if (ruleOK(c)) return c;
+function hydrate(p){
+  var jobs = [];
+  p.layers.forEach(function(L){ L.traits.forEach(function(T){
+    if (T.url) return;
+    T.url = URL.createObjectURL(T.blob);
+    jobs.push(new Promise(function(res){ var im = new Image(); im.onload = function(){ T.img = im; T.w = im.naturalWidth; T.h = im.naturalHeight; res(); }; im.onerror = function(){ res(); }; im.src = T.url; }));
+  }); });
+  return Promise.all(jobs).then(function(){ return p; });
+}
+function release(p){ if (!p) return; p.layers.forEach(function(L){ L.traits.forEach(function(T){ if (T.url) URL.revokeObjectURL(T.url); }); }); }
+var saveTimer = 0;
+function markDirty(){
+  if (!P) return;
+  $('saveInd').textContent = 'Saving…';
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(saveNow, 700);
+  scheduleRefresh();
+}
+function saveNow(){
+  clearTimeout(saveTimer);
+  if (!P) return Promise.resolve();
+  P.updated = Date.now();
+  return dbPut('projects', plain(P)).then(function(){ $('saveInd').textContent = 'Auto-saved'; });
+}
+
+/* ---------- wallet ---------- */
+var PROVS = [];
+window.addEventListener('eip6963:announceProvider', function(e){ var d = e.detail; if (d && d.provider && !PROVS.some(function(p){ return p.info.uuid===d.info.uuid; })) PROVS.push(d); });
+try { window.dispatchEvent(new Event('eip6963:requestProvider')); } catch(e){}
+function provList(){
+  var l = PROVS.map(function(d){ return { name:d.info.name, icon:d.info.icon, prov:d.provider }; });
+  if (!l.length && window.ethereum) {
+    var e = window.ethereum;
+    if (Array.isArray(e.providers) && e.providers.length) e.providers.forEach(function(p,i){ l.push({ name: p.isMetaMask?'MetaMask':(p.isOkxWallet||p.isOKExWallet)?'OKX Wallet':'Wallet '+(i+1), prov:p }); });
+    else l.push({ name: (e.isOkxWallet||e.isOKExWallet)?'OKX Wallet':e.isMetaMask?'MetaMask':'Browser wallet', prov:e });
   }
-  return null;
+  return l;
 }
-function draw(ctx, W, H, c){
-  ctx.clearRect(0,0,W,H);
-  layers.forEach(function(L,i){ var t = c[i]>=0 ? L.traits[c[i]] : null; if (t) ctx.drawImage(t.img,0,0,W,H); });
+function req(method, params){ return W.prov.request({method:method, params:params||[]}); }
+function chainById(id){ return CFG.chains.filter(function(c){ return c.id===id; })[0]; }
+function switchChain(c){
+  return req('wallet_switchEthereumChain',[{chainId:c.hex}]).catch(function(e){
+    if (e && (e.code===4902 || /unrecognized|not added/i.test(e.message||''))) return req('wallet_addEthereumChain',[{chainId:c.hex, chainName:c.name, nativeCurrency:c.native, rpcUrls:[c.rpc], blockExplorerUrls:[c.explorer]}]);
+    throw e;
+  }).then(function(){ W.chainId = c.id; });
+}
+function errText(e){
+  if (e && (e.code===4001 || /user (rejected|denied)|rejected the request/i.test(e.message||''))) return 'Cancelled in your wallet. Nothing was charged.';
+  return 'Problem: '+((e&&e.message)||e);
+}
+function openWalletModal(){
+  var l = provList(), box = $('walList');
+  $('cLog').style.display = 'none';
+  box.innerHTML = l.length ? l.map(function(w,i){ return '<button class="wal" data-i="'+i+'" type="button">'+(w.icon?'<img src="'+esc(w.icon)+'" alt="">':'')+'<span>Continue with '+esc(w.name)+'</span></button>'; }).join('')
+    : '<p class="note">No wallet found in this browser. Install MetaMask or OKX Wallet (any EVM wallet works), then reload this page.</p>';
+  $('mConnect').classList.add('open');
+  box.querySelectorAll('.wal').forEach(function(b){ b.onclick = function(){ connectWith(l[+b.getAttribute('data-i')]); }; });
+}
+function cLog(t){ var l = $('cLog'); l.style.display = 'block'; l.textContent = t; }
+function connectWith(item){
+  W.prov = item.prov; W.name = item.name;
+  cLog('Opening your wallet…');
+  return req('eth_requestAccounts').then(function(a){
+    W.addr = (a[0]||'').toLowerCase();
+    if (!isAddr(W.addr)) throw new Error('No account returned by the wallet.');
+    return req('eth_chainId');
+  }).then(function(id){
+    W.chainId = parseInt(id,16);
+    cLog('Please sign the free sign-in message in your wallet…');
+    var msg = 'Crypto Asia NFT Studio — sign in\nWallet: '+W.addr+'\nNonce: '+uid()+'\nIssued: '+new Date().toISOString()+'\nThis only proves you own this wallet. It sends no transaction and costs nothing.';
+    return req('personal_sign',[toHex(msg), W.addr]);
+  }).then(function(){
+    lsSet('ca-studio-sess', { addr:W.addr, name:W.name });
+    bindProvider();
+    $('mConnect').classList.remove('open');
+    return enterDash();
+  }).catch(function(e){ W.addr=''; cLog(errText(e)); });
+}
+var bound = false;
+function bindProvider(){
+  if (bound || !W.prov || !W.prov.on) return; bound = true;
+  W.prov.on('accountsChanged', function(a){ var n = (a[0]||'').toLowerCase(); if (n !== W.addr) logout(); });
+  W.prov.on('chainChanged', function(id){ W.chainId = parseInt(id,16); });
+}
+function logout(){
+  lsSet('ca-studio-sess', null);
+  W.addr = '';
+  if (P) { saveNow(); release(P); P = null; }
+  $('studio').hidden = true; document.body.classList.remove('in-studio');
+  show('landing');
+}
+function restoreSession(){
+  var s = lsGet('ca-studio-sess'); if (!s || !isAddr(s.addr)) return Promise.resolve(false);
+  return sleep(250).then(function(){
+    var item = provList().filter(function(p){ return p.name===s.name; })[0] || provList()[0];
+    if (!item) return false;
+    W.prov = item.prov; W.name = item.name;
+    return req('eth_accounts').then(function(a){
+      if (!a || !a.length || (a[0]||'').toLowerCase() !== s.addr) { lsSet('ca-studio-sess', null); return false; }
+      W.addr = s.addr; bindProvider();
+      return req('eth_chainId').then(function(id){ W.chainId = parseInt(id,16); return true; });
+    }).catch(function(){ return false; });
+  });
 }
 
-/* ---- preview ---- */
-var curCombo = null;
-function preview(newCombo){
-  var cv = $('prev'), ctx = cv.getContext('2d');
-  var usable = layers.filter(function(L){ return L.traits.length; });
-  if (!usable.length) { ctx.clearRect(0,0,cv.width,cv.height); $('prevInfo').textContent = 'Upload images to see a preview.'; return; }
-  if (newCombo || !curCombo || curCombo.length!==layers.length) curCombo = randomCombo();
-  if (!curCombo) { $('prevInfo').textContent = 'These rules leave no valid combination. Remove a rule.'; return; }
-  var W = num('sW',1000), H = num('sH',1000);
-  cv.height = Math.round(400*H/W) || 400;
-  draw(ctx, cv.width, cv.height, curCombo);
-  $('prevInfo').textContent = layers.map(function(L,i){ return L.name+': '+(curCombo[i]>=0?L.traits[curCombo[i]].name:'none'); }).join('  ·  ');
+/* ---------- views ---------- */
+function show(v){
+  $('landing').hidden = v!=='landing';
+  $('dash').hidden = v!=='dash';
+  $('studio').hidden = v!=='studio';
+  document.body.classList.toggle('in-studio', v==='studio');
+  var nav = document.querySelector('.nav'); if (nav) nav.style.display = v==='studio' ? 'none' : '';
+  if (v!=='studio') window.scrollTo(0,0);
 }
-$('shuffle').onclick = function(){ preview(true); };
+async function enterDash(){
+  show('dash');
+  $('dWelcome').textContent = 'Welcome back, '+short(W.addr);
+  $('dAddr').textContent = W.addr;
+  var all = (await dbAll('projects')).filter(function(p){ return p.wallet===W.addr; }).sort(function(a,b){ return b.updated-a.updated; });
+  var lic = (await dbAll('licenses')).filter(function(l){ return l.wallet===W.addr && l.state==='paid'; });
+  $('sProj').textContent = all.length;
+  $('sGen').textContent = all.reduce(function(n,p){ return n+((p.stats&&p.stats.generated)||0); },0).toLocaleString();
+  $('sExp').textContent = lic.length;
+  $('projList').innerHTML = all.length ? all.map(function(p){
+    var n = p.layers.reduce(function(a,L){ return a+L.traits.length; },0);
+    return '<div class="proj" data-id="'+esc(p.id)+'"><h3>'+esc(p.name)+'</h3><small>'+p.size.toLocaleString()+' NFTs · '+p.layers.length+' layers · '+n+' traits</small><small>Edited '+new Date(p.updated).toLocaleString()+'</small>'+
+      '<div class="row"><button class="btn" data-act="open" type="button" style="padding:.5rem 1rem">Open</button><button class="mini" data-act="del" type="button">Delete</button></div></div>';
+  }).join('') : '<p style="color:var(--text2)">No projects yet. Create your first one.</p>';
+}
+$('projList').addEventListener('click', async function(e){
+  var b = e.target.closest('button[data-act]'); if (!b) return;
+  var id = b.closest('.proj').getAttribute('data-id');
+  if (b.getAttribute('data-act')==='open') { var rec = await dbGet('projects', id); if (rec) openStudio(rec); }
+  else if (confirm('Delete this project from this browser? A saved project file is not affected.')) { await dbDel('projects', id); enterDash(); }
+});
 
-/* ---- rules ---- */
-function traitOptions(){
-  var o = [];
-  layers.forEach(function(L,li){ L.traits.forEach(function(T,ti){ o.push('<option value="'+li+':'+ti+'">'+esc(L.name+' — '+T.name)+'</option>'); }); });
-  return o.join('');
+/* ---------- landing + config ---------- */
+function fetchJson(url){ return fetch(url, {cache:'no-cache'}).then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); }); }
+function renderLanding(){
+  $('stMax').textContent = SCFG.maxSize.toLocaleString();
+  var prev = 0;
+  $('priceGrid').innerHTML = SCFG.tiers.map(function(t){
+    var lbl = t.upTo===null ? (prev+1).toLocaleString()+' and above' : (prev+1).toLocaleString()+' – '+t.upTo.toLocaleString();
+    prev = t.upTo===null ? prev : t.upTo;
+    return '<div class="price-card"><b>$'+t.price+'</b><span>'+lbl+' NFTs</span></div>';
+  }).join('');
+  if (!payEnabled()) { $('cfgNote').hidden = false; $('cfgNote').textContent = 'Paid export is coming soon. Free watermarked generation works now.'; }
 }
-function fillRuleSelects(){ var o = traitOptions(); $('rA').innerHTML = o; $('rB').innerHTML = o; }
-function renderRules(){
-  fillRuleSelects();
-  $('rules').innerHTML = rules.length ? '<table class="t"><tr><th>Rule</th><th></th></tr>'+rules.map(function(r,i){
-    var A = layers[r.a[0]].traits[r.a[1]], B = layers[r.b[0]].traits[r.b[1]];
-    return '<tr><td>'+esc(layers[r.a[0]].name+' — '+A.name)+' <b>can\'t be with</b> '+esc(layers[r.b[0]].name+' — '+B.name)+'</td><td><button class="mini" data-i="'+i+'" type="button">Remove</button></td></tr>';
-  }).join('')+'</table>' : '<p style="color:var(--text2)">No rules yet.</p>';
-}
-$('addRule').onclick = function(){
-  var a = $('rA').value.split(':').map(Number), b = $('rB').value.split(':').map(Number);
-  if (!$('rA').value || !$('rB').value) return;
-  if (a[0]===b[0]) { alert('Pick traits from two different layers.'); return; }
-  rules.push({a:a,b:b}); renderRules(); curCombo = null; preview();
+$('btnConnect').onclick = openWalletModal;
+$('btnLogout').onclick = logout;
+document.querySelectorAll('[data-close]').forEach(function(b){ b.onclick = function(){ $(b.getAttribute('data-close')).classList.remove('open'); }; });
+document.querySelectorAll('.modal').forEach(function(m){ m.addEventListener('mousedown', function(e){ if (e.target===m) m.classList.remove('open'); }); });
+
+/* ---------- new project ---------- */
+$('btnNew').onclick = function(){ $('nName').value=''; $('nSize').value=100; nPrice(); $('mNew').classList.add('open'); $('nName').focus(); };
+function clampSize(v){ v = parseInt(v,10); if (isNaN(v)) v = 100; return Math.max(1, Math.min(SCFG.maxSize, v)); }
+function nPrice(){ var s = clampSize($('nSize').value); $('nPrice').textContent = 'Clean export price for '+s.toLocaleString()+' NFTs: $'+priceFor(s)+' USDC. Free watermarked previews are unlimited. Max size '+SCFG.maxSize.toLocaleString()+'.'; }
+$('nSize').addEventListener('input', nPrice);
+$('nGo').onclick = async function(){
+  var p = newProject($('nName').value.trim()||'My Collection', clampSize($('nSize').value));
+  await dbPut('projects', plain(p));
+  $('mNew').classList.remove('open');
+  openStudio(p);
 };
-$('rules').addEventListener('click', function(e){ var b=e.target.closest('button[data-i]'); if(!b) return; rules.splice(+b.getAttribute('data-i'),1); renderRules(); });
 
-/* ---- generate ---- */
-function possible(){
-  var n = 1; layers.forEach(function(L){ var c = L.traits.length + (L.empty>0?1:0); if (c>0) n *= c; });
-  return n;
-}
-function genInfo(){
-  var size = Math.min(MAX, Math.max(1,num('sSize',100))), p = possible();
-  var w = num('sW',1000), h = num('sH',1000);
-  var mb = Math.round(size*w*h*4/1e6/ (($('sFmt').value==='png')?6:12));
-  $('genInfo').innerHTML = 'Collection: <b>'+esc($('sName').value)+'</b> &middot; '+size+' NFTs &middot; '+w+'&times;'+h+' px &middot; up to <b>'+p.toLocaleString()+'</b> possible combinations (before rules).'+
-    '<br><span style="color:var(--text2)">Rough download size: '+(mb>1000?(mb/1000).toFixed(1)+' GB':mb+' MB')+'. Large collections need a computer with plenty of free memory; try a smaller size first.</span>';
-}
-function say(t){ $('status').textContent = t; }
-function mime(){ return $('sFmt').value==='png' ? 'image/png' : 'image/jpeg'; }
-function toBlob(cv){ return new Promise(function(res){ cv.toBlob(res, mime(), 0.92); }); }
-function tick(){ return new Promise(function(r){ setTimeout(r,0); }); }
-function save(name, blob){
+/* ---------- save / open project files ---------- */
+function extOf(type){ return /png/.test(type)?'png':/jpe?g/.test(type)?'jpg':/webp/.test(type)?'webp':/gif/.test(type)?'gif':'img'; }
+function saveFile(name, blob){
   var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click();
   setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 4000);
 }
-function csvCell(v){ v = String(v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
+async function saveProjectFile(){
+  if (!P) return;
+  await saveNow();
+  var zip = new JSZip(), seen = {};
+  var info = plain(P);
+  info.layers.forEach(function(L){ L.traits.forEach(function(T){
+    if (!seen[T.hash]) { seen[T.hash] = 1; zip.file('img/'+T.hash+'.'+extOf(T.type), T.blob); }
+    delete T.blob;
+  }); });
+  zip.file('project.json', JSON.stringify({ format:'ca-nft-studio', version:1, project:info }));
+  var blob = await zip.generateAsync({type:'blob', compression:'STORE'});
+  saveFile((P.name||'project').replace(/[^\w\- ]+/g,'').trim().replace(/\s+/g,'-')+'.nftstudio.zip', blob);
+}
+async function openProjectFile(file){
+  if (!file) return;
+  try {
+    var zip = await JSZip.loadAsync(file);
+    var jf = zip.file('project.json'); if (!jf) throw new Error('This is not a Crypto Asia NFT Studio project file.');
+    var data = JSON.parse(await jf.async('string'));
+    if (data.format!=='ca-nft-studio' || !data.project) throw new Error('This is not a Crypto Asia NFT Studio project file.');
+    var p = data.project; p.id = uid(); p.wallet = W.addr; p.updated = Date.now(); p.name = p.name+' (opened)';
+    p.size = clampSize(p.size);
+    p.settings = Object.assign(defaultSettings(), p.settings||{}); p.rules = p.rules||[]; p.overrides = p.overrides||{}; p.stats = p.stats||{generated:0,exports:0};
+    for (var i=0;i<p.layers.length;i++) for (var j=0;j<p.layers[i].traits.length;j++) {
+      var T = p.layers[i].traits[j], f = zip.file('img/'+T.hash+'.'+extOf(T.type));
+      if (!f) throw new Error('An image is missing from the project file.');
+      T.blob = new Blob([await f.async('arraybuffer')], {type:T.type});
+    }
+    await dbPut('projects', plain(p));
+    openStudio(p);
+  } catch(e){ alert('Could not open that file: '+((e&&e.message)||e)); }
+}
+$('fOpen').addEventListener('change', function(e){ var f = e.target.files[0]; e.target.value=''; openProjectFile(f); });
+$('fOpenDash').addEventListener('change', function(e){ var f = e.target.files[0]; e.target.value=''; openProjectFile(f); });
+$('btnSaveFile').onclick = saveProjectFile;
+</script>
+<script>
+/* ================= STUDIO ================= */
+var sel = { l:-1, t:-1 }, curCombo = null, CC = { key:'', combos:null, short:false, promise:null, pkey:'' }, LIC = { fp:'', state:'none', rec:null };
+var metaPage = 0, META_PER = 25, remoteChecked = {}, polling = {};
 
-$('stop').onclick = function(){ gen.stop = true; };
-$('go').onclick = async function(){
-  if (typeof JSZip === 'undefined') { say('The zip library did not load. Check your internet connection and reload the page.'); return; }
-  var used = layers.filter(function(L){ return L.traits.length; });
-  if (!used.length) { say('Add at least one layer with images first.'); return; }
-  var size = Math.min(MAX, Math.max(1,num('sSize',100))), start = num('sStart',1), W = num('sW',1000), H = num('sH',1000);
-  var ext = $('sFmt').value, unique = $('sUnique').checked;
-  $('go').disabled = true; $('stop').style.display = 'inline-flex'; $('dls').innerHTML = ''; $('rarity').style.display='none'; gen.stop = false;
-  // 1. choose the combinations
-  say('Choosing combinations…');
-  var combos = [], seen = new Set(), attempts = 0, cap = size*30;
+async function openStudio(rec){
+  if (P) release(P);
+  P = await hydrate(rec);
+  sel = {l:-1,t:-1}; curCombo = null; CC.key = ''; CC.combos = null; LIC = {fp:'',state:'none',rec:null}; remoteChecked = {}; metaPage = 0;
+  show('studio');
+  $('stWallet').textContent = short(W.addr);
+  setLeftTab('layers'); setMidTab('prev');
+  fillSettings(); renderAll(); autoSize();
+  refreshAll();
+}
+function activeLayers(){ return P.layers.filter(function(L){ return !L.hidden && L.traits.length; }); }
+function renderAll(){ renderLayers(); renderSum(); renderRules(); renderPreview(); renderRight(); }
+function setLeftTab(t){
+  document.querySelectorAll('[data-lp]').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-lp')===t); });
+  ['layers','settings','rules'].forEach(function(n){ $('lp-'+n).classList.toggle('on', n===t); });
+  if (t==='rules') fillRuleSelects();
+}
+function setMidTab(t){
+  document.querySelectorAll('[data-mp]').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-mp')===t); });
+  $('mp-prev').classList.toggle('on', t==='prev'); $('mp-meta').classList.toggle('on', t==='meta');
+  if (t==='meta') renderMeta(); else renderPreview();
+}
+document.querySelectorAll('[data-lp]').forEach(function(b){ b.onclick = function(){ setLeftTab(b.getAttribute('data-lp')); }; });
+document.querySelectorAll('[data-mp]').forEach(function(b){ b.onclick = function(){ setMidTab(b.getAttribute('data-mp')); }; });
+$('stBack').onclick = async function(){ if (busy) return; await saveNow(); release(P); P = null; enterDash(); };
+$('stTheme').onclick = function(){
+  var r = document.documentElement, t = r.getAttribute('data-theme')==='dark' ? 'light' : 'dark';
+  r.setAttribute('data-theme', t); try { localStorage.setItem('ca-theme', t); } catch(e){}
+  setThemeIcon(); var b = $('themeBtn'); if (b) b.textContent = t==='dark' ? '☀' : '☾';
+};
+function setThemeIcon(){ $('stTheme').textContent = document.documentElement.getAttribute('data-theme')==='dark' ? '☀' : '☾'; }
+setThemeIcon();
+
+/* ---------- settings ---------- */
+function fillSettings(){
+  var S = P.settings;
+  $('sName').value = P.name; $('pName').value = P.name; $('sSize').value = P.size; $('sStart').value = S.start;
+  $('sW').value = S.W||''; $('sH').value = S.H||''; $('sFmt').value = S.fmt; $('sUnique').checked = !!S.unique; $('sSeed').value = P.seed;
+  $('sDesc').value = S.desc; $('sUrl').value = S.url; $('sBase').value = S.base; $('sSymbol').value = S.symbol; $('sRoy').value = S.royalty||''; $('sRoyAddr').value = S.royaltyAddr; $('sCreator').value = S.creator;
+}
+function bindText(id, fn, evt){ $(id).addEventListener(evt||'input', function(){ if (!P) return; fn($(id)); markDirty(); }); }
+bindText('sName', function(e){ P.name = e.value.trim()||'My Collection'; $('pName').value = e.value; });
+bindText('pName', function(e){ P.name = e.value.trim()||'My Collection'; $('sName').value = e.value; });
+bindText('sSize', function(e){ P.size = clampSize(e.value); e.value = P.size; metaPage = 0; renderSum(); renderRight(); }, 'change');
+bindText('sStart', function(e){ P.settings.start = Math.max(0, parseInt(e.value,10)||0); e.value = P.settings.start; }, 'change');
+bindText('sW', function(e){ P.settings.W = Math.max(64, Math.min(4000, parseInt(e.value,10)||0)); renderPreview(); }, 'change');
+bindText('sH', function(e){ P.settings.H = Math.max(64, Math.min(4000, parseInt(e.value,10)||0)); renderPreview(); }, 'change');
+bindText('sFmt', function(e){ P.settings.fmt = e.value; }, 'change');
+bindText('sUnique', function(e){ P.settings.unique = e.checked; renderSum(); }, 'change');
+bindText('sDesc', function(e){ P.settings.desc = e.value; });
+bindText('sUrl', function(e){ P.settings.url = e.value.trim(); });
+bindText('sBase', function(e){ P.settings.base = e.value.trim(); });
+bindText('sSymbol', function(e){ P.settings.symbol = e.value.trim(); });
+bindText('sRoy', function(e){ P.settings.royalty = Math.max(0, Math.min(10, parseFloat(e.value)||0)); });
+bindText('sRoyAddr', function(e){ P.settings.royaltyAddr = e.value.trim(); });
+bindText('sCreator', function(e){ P.settings.creator = e.value.trim(); });
+$('btnReroll').onclick = function(){ if (!P || busy) return; if (!confirm('Re-roll makes a different collection. If you already paid for the current version, you will need a new payment to export the new one. Continue?')) return; P.seed = randSeed(); $('sSeed').value = P.seed; curCombo = null; markDirty(); renderPreview(); };
+function autoSize(){
+  if (!P || (P.settings.W && P.settings.H)) return;
+  for (var i=0;i<P.layers.length;i++) { var T = P.layers[i].traits[0]; if (T && T.w) { P.settings.W = T.w; P.settings.H = T.h; $('sW').value = T.w; $('sH').value = T.h; return; } }
+}
+
+/* ---------- layers ---------- */
+function pctOf(L, T){ var tot = L.empty; L.traits.forEach(function(x){ tot += x.weight; }); return tot>0 ? T.weight/tot*100 : 100/L.traits.length; }
+function noneOf(L){ var tot = L.empty; L.traits.forEach(function(x){ tot += x.weight; }); return tot>0 ? L.empty/tot*100 : 0; }
+function renderLayers(){
+  var el = $('layers');
+  if (!P.layers.length) { el.innerHTML = '<div class="note" style="margin-bottom:1rem">No layers yet. Click <b>Add layer</b>, name it (for example Background) and drop your trait images on it.</div>'; return; }
+  var n = P.layers.length;
+  el.innerHTML = P.layers.map(function(L,li){
+    var tag = li===0 ? 'back' : li===n-1 ? 'front' : '';
+    return '<div class="layer'+(L.hidden?' off':'')+'" data-l="'+li+'">'+
+      '<div class="lh"><span class="grip" data-act="grip" title="Drag to reorder">&#10303;</span>'+
+      '<button class="ic" data-act="eye" type="button" title="'+(L.hidden?'Show':'Hide')+' this layer">'+(L.hidden?'&#9711;':'&#9673;')+'</button>'+
+      '<input class="nm" value="'+esc(L.name)+'" data-act="rename" aria-label="Layer name" maxlength="40">'+
+      '<span class="cnt">'+L.traits.length+' trait'+(L.traits.length===1?'':'s')+'</span>'+
+      '<button class="ic" data-act="up" type="button" title="Move up (towards the back)">&uarr;</button><button class="ic" data-act="down" type="button" title="Move down (towards the front)">&darr;</button>'+
+      '<button class="ic" data-act="fold" type="button" title="Collapse">'+(L.folded?'&#9656;':'&#9662;')+'</button>'+
+      '<button class="ic" data-act="del" type="button" title="Delete layer">&#10005;</button></div>'+
+      '<div class="order">Layer '+(li+1)+(tag?' · '+tag:'')+(L.hidden?' · hidden (not in the collection)':'')+'</div>'+
+      (L.folded ? '' : '<div class="lb"><div class="traits">'+L.traits.map(function(T,ti){
+        return '<div class="trait'+(sel.l===li&&sel.t===ti?' sel':'')+'" data-t="'+ti+'" data-act="sel"><button class="rm" data-act="rmt" type="button" aria-label="Remove trait">&times;</button>'+
+          '<img src="'+esc(T.url)+'" alt="" draggable="false"><div class="nm" title="'+esc(T.name)+'">'+esc(T.name)+'</div>'+
+          '<div class="wrow"><input type="number" min="0" step="any" value="'+T.weight+'" data-act="w" aria-label="Weight"><span class="pc">'+pctOf(L,T).toFixed(1)+'%</span></div></div>';
+      }).join('')+'</div>'+
+      '<div class="lfoot"><label class="btn ghost" style="cursor:pointer;padding:.45rem .9rem;font-size:.75rem">+ Upload images<input type="file" accept="image/png,image/jpeg,image/webp,image/gif" multiple data-act="file" hidden></label>'+
+      '<label>None (weight) <input type="number" min="0" step="any" value="'+L.empty+'" data-act="empty"></label><span>'+noneOf(L).toFixed(1)+'% empty</span>'+
+      '<span class="drop">or drop images here. Higher weight = more common.</span></div></div>')+
+      '</div>';
+  }).join('');
+}
+function relayer(){ curCombo = null; renderLayers(); renderSum(); renderRules(); renderPreview(); markDirty(); }
+function dropRulesFor(ids){ P.rules = P.rules.filter(function(r){ return ids.indexOf(r.a)<0 && ids.indexOf(r.b)<0; }); }
+$('addLayer').onclick = function(){ if (!P) return; P.layers.push({ id:uid(), name:'Layer '+(P.layers.length+1), hidden:false, empty:0, traits:[] }); relayer(); };
+var layersEl = $('layers');
+layersEl.addEventListener('click', function(e){
+  var b = e.target.closest('[data-act]'); if (!b) return;
+  var box = e.target.closest('.layer'); if (!box) return;
+  var li = +box.getAttribute('data-l'), act = b.getAttribute('data-act'), L = P.layers[li];
+  if (act==='del') { if (confirm('Delete the layer "'+L.name+'" and its images?')) { dropRulesFor(L.traits.map(function(t){ return t.id; })); L.traits.forEach(function(t){ URL.revokeObjectURL(t.url); }); P.layers.splice(li,1); if (sel.l===li) sel = {l:-1,t:-1}; relayer(); } }
+  else if (act==='up' && li>0) { var t = P.layers[li]; P.layers[li] = P.layers[li-1]; P.layers[li-1] = t; sel = {l:-1,t:-1}; relayer(); }
+  else if (act==='down' && li<P.layers.length-1) { var t2 = P.layers[li]; P.layers[li] = P.layers[li+1]; P.layers[li+1] = t2; sel = {l:-1,t:-1}; relayer(); }
+  else if (act==='eye') { L.hidden = !L.hidden; relayer(); }
+  else if (act==='fold') { L.folded = !L.folded; renderLayers(); }
+  else if (act==='rmt') { e.stopPropagation(); var ti = +b.closest('.trait').getAttribute('data-t'), T = L.traits[ti]; dropRulesFor([T.id]); URL.revokeObjectURL(T.url); L.traits.splice(ti,1); sel = {l:-1,t:-1}; relayer(); }
+  else if (act==='sel') { if (e.target.tagName==='INPUT') return; var tj = +b.getAttribute('data-t'); sel = {l:li,t:tj}; renderLayers(); if ($('pMode').value==='trait') renderPreview(); openTrait(li,tj); }
+});
+layersEl.addEventListener('change', function(e){
+  var b = e.target, act = b.getAttribute('data-act'); if (!act) return;
+  var box = b.closest('.layer'), li = +box.getAttribute('data-l'), L = P.layers[li];
+  if (act==='rename') { L.name = b.value.trim() || ('Layer '+(li+1)); renderRules(); markDirty(); }
+  else if (act==='w') { var ti = +b.closest('.trait').getAttribute('data-t'); L.traits[ti].weight = Math.max(0, parseFloat(b.value)||0); renderLayers(); curCombo = null; markDirty(); renderPreview(); }
+  else if (act==='empty') { L.empty = Math.max(0, parseFloat(b.value)||0); renderLayers(); curCombo = null; markDirty(); renderPreview(); }
+  else if (act==='file') { addFiles(li, b.files); b.value = ''; }
+});
+/* drag to reorder layers, and drop images on a layer */
+var dragFrom = -1;
+layersEl.addEventListener('mousedown', function(e){ var g = e.target.closest('[data-act="grip"]'); if (g) g.closest('.layer').draggable = true; });
+layersEl.addEventListener('dragstart', function(e){ var box = e.target.closest && e.target.closest('.layer'); if (!box || !box.draggable) return; dragFrom = +box.getAttribute('data-l'); try { e.dataTransfer.setData('text/plain','layer'); e.dataTransfer.effectAllowed = 'move'; } catch(x){} });
+layersEl.addEventListener('dragend', function(){ dragFrom = -1; layersEl.querySelectorAll('.layer').forEach(function(x){ x.draggable = false; x.classList.remove('dragover'); }); });
+layersEl.addEventListener('dragover', function(e){ var box = e.target.closest('.layer'); if (!box) return; e.preventDefault(); box.classList.add('dragover'); });
+layersEl.addEventListener('dragleave', function(e){ var box = e.target.closest('.layer'); if (box) box.classList.remove('dragover'); });
+layersEl.addEventListener('drop', function(e){
+  var box = e.target.closest('.layer'); if (!box) return; e.preventDefault(); box.classList.remove('dragover');
+  var to = +box.getAttribute('data-l'), files = e.dataTransfer && e.dataTransfer.files;
+  if (files && files.length) { addFiles(to, files); return; }
+  if (dragFrom>=0 && dragFrom!==to) { var m = P.layers.splice(dragFrom,1)[0]; P.layers.splice(to,0,m); sel = {l:-1,t:-1}; relayer(); }
+  dragFrom = -1;
+});
+function cleanName(fn){ return fn.replace(/\.[^.]+$/,'').replace(/[_]+/g,' ').trim() || 'Trait'; }
+async function addFiles(li, files){
+  var L = P.layers[li]; if (!L) return;
+  var arr = Array.prototype.slice.call(files).filter(function(f){ return /^image\/(png|jpe?g|webp|gif)$/.test(f.type) && f.size < 25e6; })
+    .sort(function(a,b){ return a.name.localeCompare(b.name, undefined, {numeric:true}); });
+  if (!arr.length) { alert('Please choose PNG, JPG, WebP or GIF images (under 25 MB each).'); return; }
+  for (var i=0;i<arr.length;i++) {
+    try {
+      var ab = await arr[i].arrayBuffer(), hash = await sha256buf(ab);
+      var T = { id:uid(), name:cleanName(arr[i].name), weight:1, hash:hash, type:arr[i].type, blob:new Blob([ab], {type:arr[i].type}) };
+      await hydrate({layers:[{traits:[T]}]});
+      L.traits.push(T);
+    } catch(e){}
+  }
+  autoSize(); relayer();
+}
+function possible(){ var n = 1, any = false; P.layers.forEach(function(L){ if (L.hidden||!L.traits.length) return; any = true; n *= L.traits.length + (L.empty>0?1:0); }); return any ? n : 0; }
+function renderSum(){
+  if (!P) return;
+  var act = activeLayers(), tr = act.reduce(function(n,L){ return n+L.traits.length; },0), pos = possible();
+  var s = '<b>'+act.length+'</b> layer'+(act.length===1?'':'s')+' · <b>'+tr+'</b> traits · <b>'+(pos?fmtNum(pos):0)+'</b> possible combinations (before rules) · collection size <b>'+P.size.toLocaleString()+'</b>';
+  var warn = P.settings.unique && pos && P.size>pos;
+  if (warn) s += '<br>Your collection size is bigger than the possible unique combinations. Add traits, or lower the size, or turn off "unique".';
+  $('sum').innerHTML = s; $('sum').classList.toggle('warn', !!warn);
+}
+
+/* ---------- trait editor ---------- */
+function locOf(id){ for (var li=0;li<P.layers.length;li++) for (var ti=0;ti<P.layers[li].traits.length;ti++) if (P.layers[li].traits[ti].id===id) return [li,ti]; return null; }
+function traitLabel(id){ var l = locOf(id); return l ? P.layers[l[0]].name+' — '+P.layers[l[0]].traits[l[1]].name : '?'; }
+function openTrait(li, ti){
+  var T = P.layers[li] && P.layers[li].traits[ti]; if (!T) return;
+  $('tTitle').textContent = 'EDIT TRAIT'; $('mTrait').classList.add('open'); $('mTrait').setAttribute('data-l', li); $('mTrait').setAttribute('data-t', ti);
+  renderTraitEd();
+}
+function renderTraitEd(){
+  var li = +$('mTrait').getAttribute('data-l'), ti = +$('mTrait').getAttribute('data-t'), L = P.layers[li], T = L && L.traits[ti]; if (!T) { $('mTrait').classList.remove('open'); return; }
+  var others = [];
+  P.layers.forEach(function(L2,l2){ if (l2===li) return; L2.traits.forEach(function(T2){ others.push('<option value="'+esc(T2.id)+'">'+esc(L2.name+' — '+T2.name)+'</option>'); }); });
+  var mine = P.rules.filter(function(r){ return r.a===T.id || r.b===T.id; });
+  $('tBody').innerHTML = '<img class="tbig" src="'+esc(T.url)+'" alt="">'+
+    '<div class="grid2"><div class="field"><label class="label" for="tName">Name</label><input class="input" id="tName" value="'+esc(T.name)+'" maxlength="60"></div>'+
+    '<div class="field"><label class="label" for="tW">Weight (higher = more common)</label><input class="input" id="tW" type="number" min="0" step="any" value="'+T.weight+'"></div></div>'+
+    '<p class="vid" style="margin-bottom:1rem">Chance in the layer "'+esc(L.name)+'": <b>'+pctOf(L,T).toFixed(2)+'%</b> · file '+(T.w||'?')+'×'+(T.h||'?')+' px</p>'+
+    '<h4 style="font-family:var(--fh);font-size:.8rem;margin:.5rem 0">RULES FOR THIS TRAIT</h4>'+
+    (mine.length ? mine.map(function(r,i){ var other = r.a===T.id ? r.b : r.a; return '<div class="rcard"><span>Can\'t appear with <b>'+esc(traitLabel(other))+'</b></span><button class="mini" data-ract="'+P.rules.indexOf(r)+'" type="button">Remove</button></div>'; }).join('') : '<p style="color:var(--text2);margin-bottom:.5rem">No rules yet.</p>')+
+    (others.length ? '<div style="display:flex;gap:.5rem;margin:.6rem 0 1rem"><select class="select" id="tRuleSel">'+others.join('')+'</select><button class="btn" id="tRuleAdd" type="button" style="white-space:nowrap">Can\'t appear together</button></div>' : '')+
+    '<div style="display:flex;gap:.6rem;justify-content:space-between"><button class="btn ghost" id="tDel" type="button">Delete trait</button><button class="btn" data-close="mTrait" type="button">Done</button></div>';
+  $('tBody').querySelector('[data-close]').onclick = function(){ $('mTrait').classList.remove('open'); };
+}
+$('tBody').addEventListener('change', function(e){
+  var li = +$('mTrait').getAttribute('data-l'), ti = +$('mTrait').getAttribute('data-t'), L = P.layers[li], T = L && L.traits[ti]; if (!T) return;
+  if (e.target.id==='tName') { T.name = e.target.value.trim() || 'Trait'; }
+  else if (e.target.id==='tW') { T.weight = Math.max(0, parseFloat(e.target.value)||0); }
+  else return;
+  renderLayers(); renderTraitEd(); renderRules(); curCombo = null; renderPreview(); markDirty();
+});
+$('tBody').addEventListener('click', function(e){
+  var li = +$('mTrait').getAttribute('data-l'), ti = +$('mTrait').getAttribute('data-t'), L = P.layers[li], T = L && L.traits[ti]; if (!T) return;
+  var rb = e.target.closest('[data-ract]');
+  if (rb) { P.rules.splice(+rb.getAttribute('data-ract'),1); renderTraitEd(); renderRules(); curCombo = null; markDirty(); return; }
+  if (e.target.id==='tRuleAdd') { var other = $('tRuleSel').value; addRuleIds(T.id, other); renderTraitEd(); return; }
+  if (e.target.id==='tDel') { if (!confirm('Delete this trait?')) return; dropRulesFor([T.id]); URL.revokeObjectURL(T.url); L.traits.splice(ti,1); sel = {l:-1,t:-1}; $('mTrait').classList.remove('open'); relayer(); }
+});
+
+/* ---------- rules ---------- */
+function addRuleIds(a, b){
+  var la = locOf(a), lb = locOf(b);
+  if (!la || !lb) return false;
+  if (la[0]===lb[0]) { alert('Pick traits from two different layers.'); return false; }
+  if (P.rules.some(function(r){ return (r.a===a&&r.b===b)||(r.a===b&&r.b===a); })) return false;
+  P.rules.push({a:a,b:b}); renderRules(); curCombo = null; renderPreview(); markDirty(); return true;
+}
+function fillRuleSelects(){
+  var o = [];
+  P.layers.forEach(function(L){ L.traits.forEach(function(T){ o.push('<option value="'+esc(T.id)+'">'+esc(L.name+' — '+T.name)+'</option>'); }); });
+  $('rA').innerHTML = o.join(''); $('rB').innerHTML = o.join('');
+}
+function renderRules(){
+  if (!P) return;
+  fillRuleSelects();
+  P.rules = P.rules.filter(function(r){ return locOf(r.a) && locOf(r.b); });
+  $('rules').innerHTML = P.rules.length ? P.rules.map(function(r,i){
+    return '<div class="rcard"><span>'+esc(traitLabel(r.a))+' <b>can\'t be with</b> '+esc(traitLabel(r.b))+'</span><button class="mini" data-i="'+i+'" type="button">Remove</button></div>';
+  }).join('') : '<p style="color:var(--text2)">No rules yet.</p>';
+}
+$('addRule').onclick = function(){ if ($('rA').value && $('rB').value) addRuleIds($('rA').value, $('rB').value); };
+$('rules').addEventListener('click', function(e){ var b = e.target.closest('button[data-i]'); if (!b) return; P.rules.splice(+b.getAttribute('data-i'),1); renderRules(); curCombo = null; renderPreview(); markDirty(); });
+
+/* ---------- combos (seeded, so the same version always gives the same collection) ---------- */
+function rulesIdx(){
+  var loc = {};
+  P.layers.forEach(function(L,li){ L.traits.forEach(function(T,ti){ loc[T.id] = [li,ti]; }); });
+  return P.rules.map(function(r){
+    var a = loc[r.a], b = loc[r.b]; if (!a || !b) return null;
+    if (a[0]>b[0] || (a[0]===b[0] && a[1]>b[1])) { var t = a; a = b; b = t; }
+    return { al:a[0], at:a[1], bl:b[0], bt:b[1] };
+  }).filter(Boolean).sort(function(x,y){ return canon([x.al,x.at,x.bl,x.bt]) < canon([y.al,y.at,y.bl,y.bt]) ? -1 : 1; });
+}
+function genKey(){
+  return canon({ seed:P.seed, size:P.size, unique:!!P.settings.unique,
+    layers: P.layers.map(function(L){ return { h:L.hidden?1:0, e:L.empty, t:L.traits.map(function(T){ return [T.hash, T.weight]; }) }; }),
+    rules: rulesIdx().map(function(r){ return [r.al,r.at,r.bl,r.bt]; }) });
+}
+function fingerprint(){ return sha256hex(genKey()+'|'+(P.settings.W||0)+'x'+(P.settings.H||0)); }
+function pickIndex(L, rnd){
+  if (L.hidden || !L.traits.length) return -1;
+  var total = L.empty; L.traits.forEach(function(t){ total += t.weight; });
+  if (total<=0) return Math.floor(rnd()*L.traits.length);
+  var r = rnd()*total;
+  for (var i=0;i<L.traits.length;i++){ r -= L.traits[i].weight; if (r<0) return i; }
+  return L.empty>0 ? -1 : L.traits.length-1;
+}
+function comboOK(c, rl){ for (var i=0;i<rl.length;i++){ var r = rl[i]; if (c[r.al]===r.at && c[r.bl]===r.bt) return false; } return true; }
+function randomCombo(rnd, rl){
+  for (var tries=0; tries<50; tries++){ var c = P.layers.map(function(L){ return pickIndex(L, rnd); }); if (comboOK(c, rl)) return c; }
+  return null;
+}
+async function buildCombos(){
+  var rng = mulberry(P.seed), rl = rulesIdx(), size = P.size, combos = [], seen = new Set(), attempts = 0, cap = size*30+100;
   while (combos.length<size && attempts<cap) {
     attempts++;
-    var c = randomCombo(); if (!c) break;
+    var c = randomCombo(rng, rl); if (!c) break;
     var key = c.join(',');
-    if (unique && seen.has(key)) continue;
+    if (P.settings.unique && seen.has(key)) continue;
     seen.add(key); combos.push(c);
-    if (attempts%500===0) await tick();
+    if (attempts%2000===0) await tick();
   }
-  if (!combos.length) { say('No valid combinations. Check your rules.'); $('go').disabled=false; $('stop').style.display='none'; return; }
-  var short = combos.length<size;
-  // 2. rarity numbers
-  var counts = layers.map(function(L){ var m = {}; return m; });
+  return { combos:combos, short: combos.length<size };
+}
+function ensureCombos(){
+  var key = genKey();
+  if (CC.key===key && CC.combos) return Promise.resolve(CC);
+  if (CC.promise && CC.pkey===key) return CC.promise;
+  CC.pkey = key;
+  CC.promise = buildCombos().then(function(r){ CC.key = key; CC.combos = r.combos; CC.short = r.short; CC.promise = null; return CC; });
+  return CC.promise;
+}
+function rarityData(combos){
+  var counts = P.layers.map(function(){ return {}; });
   combos.forEach(function(c){ c.forEach(function(ti,li){ counts[li][ti] = (counts[li][ti]||0)+1; }); });
-  var scores = combos.map(function(c){ var s = 0; c.forEach(function(ti,li){ if (layers[li].traits.length) s += combos.length/counts[li][ti]; }); return s; });
+  var n = combos.length;
+  var scores = combos.map(function(c){ var s = 0; c.forEach(function(ti,li){ if (P.layers[li].traits.length && !P.layers[li].hidden) s += n/counts[li][ti]; }); return s; });
   var order = scores.map(function(s,i){ return i; }).sort(function(a,b){ return scores[b]-scores[a]; });
   var rank = []; order.forEach(function(i,r){ rank[i] = r+1; });
-  // 3. render
-  var cv = document.createElement('canvas'); cv.width = W; cv.height = H; var ctx = cv.getContext('2d');
-  var zip = new JSZip(), batches = [], meta = [], inBatch = 0, batchStart = start;
-  for (var i=0;i<combos.length;i++){
-    if (gen.stop) break;
-    var id = start+i, c2 = combos[i];
-    if (ext==='jpg') { ctx.fillStyle = '#fff'; ctx.fillRect(0,0,W,H); }
-    draw(ctx, W, H, c2);
-    var blob = await toBlob(cv);
-    zip.file(id+'.'+ext, blob);
-    meta.push({ name: $('sName').value.trim()+' #'+id, description: $('sDesc').value.trim(), image: $('sCid').value.trim().replace(/\/$/,'')+'/'+id+'.'+ext,
-      external_url: $('sUrl').value.trim() || undefined,
-      attributes: c2.map(function(ti,li){ return ti>=0 ? {trait_type:layers[li].name, value:layers[li].traits[ti].name} : null; }).filter(Boolean) });
-    inBatch++;
-    if (inBatch===BATCH) { batches.push({from:batchStart, to:id, blob: await zip.generateAsync({type:'blob', compression:'STORE'})}); zip = new JSZip(); inBatch = 0; batchStart = id+1; }
-    $('barI').style.width = ((i+1)/combos.length*100)+'%';
-    say('Generated '+(i+1)+' of '+combos.length+'…');
-    if (i%3===0) await tick();
+  return { counts:counts, scores:scores, rank:rank, order:order };
+}
+
+/* ---------- preview ---------- */
+function drawTraits(ctx, W, H, c){ P.layers.forEach(function(L,i){ if (L.hidden) return; var t = c[i]>=0 ? L.traits[c[i]] : null; if (t && t.img) ctx.drawImage(t.img,0,0,W,H); }); }
+function renderPreview(newCombo){
+  if (!P || $('studio').hidden) return;
+  var cv = $('prev'), ctx = cv.getContext('2d'), Wd = P.settings.W||1000, Hd = P.settings.H||1000;
+  cv.width = 600; cv.height = Math.max(1, Math.round(600*Hd/Wd));
+  ctx.clearRect(0,0,cv.width,cv.height);
+  var mode = $('pMode').value;
+  if (mode==='trait') {
+    var T = sel.l>=0 && P.layers[sel.l] && P.layers[sel.l].traits[sel.t];
+    $('pHint').textContent = T ? '' : 'Click a trait on the left to see it here.';
+    if (T && T.img) { ctx.drawImage(T.img,0,0,cv.width,cv.height); $('prevInfo').textContent = P.layers[sel.l].name+' — '+T.name; } else $('prevInfo').textContent = '';
+    return;
   }
-  if (inBatch>0 && meta.length) batches.push({from:batchStart, to:start+meta.length-1, blob: await zip.generateAsync({type:'blob', compression:'STORE'})});
-  // 4. files to download
-  var done = meta.length;
-  var mz = new JSZip(), rows = ['token,rarity_score,rank'];
-  meta.forEach(function(m,i){ mz.file((start+i)+'.json', JSON.stringify(m,null,2)); rows.push((start+i)+','+scores[i].toFixed(2)+','+rank[i]); });
-  mz.file('metadata.json', JSON.stringify(meta,null,2)); mz.file('rarity.csv', rows.join('\n'));
-  var layerRows = ['layer,trait,count,percent'];
-  layers.forEach(function(L,li){ L.traits.forEach(function(T,ti){ var n = counts[li][ti]||0; layerRows.push([L.name,T.name,n,(n/done*100).toFixed(1)].map(csvCell).join(',')); }); });
-  mz.file('layers.csv', layerRows.join('\n'));
-  var metaBlob = await mz.generateAsync({type:'blob'});
-  $('dls').innerHTML = '';
-  batches.forEach(function(b){ var btn = document.createElement('button'); btn.className='btn'; btn.type='button'; btn.textContent = 'Images '+b.from+'–'+b.to; btn.onclick = function(){ save('images-'+b.from+'-'+b.to+'.zip', b.blob); }; $('dls').appendChild(btn); });
-  var mb = document.createElement('button'); mb.className='btn dark'; mb.type='button'; mb.textContent='Metadata + rarity'; mb.onclick = function(){ save('metadata.zip', metaBlob); }; $('dls').appendChild(mb);
-  say((gen.stop?'Stopped. ':'Done. ')+done+' NFTs ready.'+(short?' (Only '+combos.length+' unique combinations were possible, so the collection is smaller than you asked for.)':''));
-  showRarity(combos.slice(0,done), counts, scores, rank, start);
-  $('go').disabled = false; $('stop').style.display = 'none';
+  $('pHint').textContent = '';
+  if (!activeLayers().length) { $('prevInfo').textContent = 'Add trait images to a layer to see your first preview.'; return; }
+  if (newCombo || !curCombo || curCombo.length!==P.layers.length) curCombo = randomCombo(Math.random, rulesIdx());
+  if (!curCombo) { $('prevInfo').textContent = 'These rules leave no valid combination. Remove a rule.'; return; }
+  drawTraits(ctx, cv.width, cv.height, curCombo);
+  $('prevInfo').textContent = P.layers.filter(function(L){ return !L.hidden && L.traits.length; }).map(function(L){ var i = P.layers.indexOf(L); return L.name+': '+(curCombo[i]>=0?L.traits[curCombo[i]].name:'none'); }).join('  ·  ');
+}
+$('shuffle').onclick = function(){ if (P) renderPreview(true); };
+$('pMode').onchange = function(){ renderPreview(); };
+
+/* ---------- metadata ---------- */
+function parseExtra(s){
+  return String(s||'').split(';').map(function(x){ var i = x.indexOf(':'); if (i<1) return null; return { trait_type:x.slice(0,i).trim(), value:x.slice(i+1).trim() }; }).filter(function(a){ return a && a.trait_type && a.value!==''; });
+}
+function autoAttrs(c){
+  var a = [];
+  P.layers.forEach(function(L,li){ if (L.hidden || !L.traits.length) return; var ti = c[li]; if (ti>=0) a.push({ trait_type:L.name, value:L.traits[ti].name }); });
+  return a;
+}
+function buildMeta(i, c, ext){
+  var id = P.settings.start+i, ov = P.overrides[id] || {}, attrs = autoAttrs(c);
+  parseExtra(ov.extra).forEach(function(x){ var k = -1; attrs.forEach(function(a,j){ if (a.trait_type===x.trait_type) k = j; }); if (k>=0) attrs[k] = x; else attrs.push(x); });
+  var base = (P.settings.base||'').replace(/\/$/,'');
+  var m = { name: ov.name || (P.name+' #'+id), description: ov.description ? ov.description : P.settings.desc, image: base+'/'+id+'.'+ext };
+  if (P.settings.url) m.external_url = P.settings.url;
+  m.attributes = attrs;
+  return m;
+}
+async function renderMeta(){
+  var wrap = $('metaWrap');
+  if (!activeLayers().length) { wrap.innerHTML = '<p style="padding:1rem;color:var(--text2)">Add layers and trait images first. Then each NFT appears here and you can edit its name, description and extra attributes.</p>'; $('mPageInfo').textContent = ''; return; }
+  wrap.innerHTML = '<p style="padding:1rem;color:var(--text2)">Working out your collection…</p>';
+  var cc = await ensureCombos(), total = cc.combos.length, pages = Math.max(1, Math.ceil(total/META_PER));
+  metaPage = Math.max(0, Math.min(pages-1, metaPage));
+  var from = metaPage*META_PER, to = Math.min(total, from+META_PER), ext = P.settings.fmt, rows = '';
+  for (var i=from;i<to;i++){
+    var id = P.settings.start+i, ov = P.overrides[id] || {}, c = cc.combos[i];
+    rows += '<tr data-i="'+i+'"><td>#'+id+'</td><td><input data-f="name" value="'+esc(ov.name||'')+'" placeholder="'+esc(P.name+' #'+id)+'" maxlength="100"></td>'+
+      '<td><input data-f="description" value="'+esc(ov.description||'')+'" placeholder="'+esc(P.settings.desc||'(collection description)')+'" maxlength="500"></td>'+
+      '<td><input data-f="extra" value="'+esc(ov.extra||'')+'" placeholder="Trait: value; Trait: value" maxlength="300"><small>'+esc(autoAttrs(c).map(function(a){ return a.trait_type+': '+a.value; }).join(' · '))+'</small></td></tr>';
+  }
+  wrap.innerHTML = '<table class="t"><tr><th>Token</th><th>Name</th><th>Description</th><th>Extra attributes</th></tr>'+rows+'</table>'+
+    (cc.short ? '<p class="note" style="margin-top:1rem">Only '+total.toLocaleString()+' unique combinations are possible, so the collection is smaller than the size you asked for.</p>' : '');
+  $('mPageInfo').textContent = (from+1)+'–'+to+' of '+total.toLocaleString();
+}
+$('metaWrap').addEventListener('change', function(e){
+  var inp = e.target.closest('input[data-f]'); if (!inp) return;
+  var tr = inp.closest('tr'), id = P.settings.start + (+tr.getAttribute('data-i')), f = inp.getAttribute('data-f');
+  var ov = P.overrides[id] || (P.overrides[id] = {});
+  ov[f] = inp.value.trim();
+  if (!ov.name && !ov.description && !ov.extra) delete P.overrides[id];
+  markDirty();
+});
+$('mPrevP').onclick = function(){ metaPage--; renderMeta(); };
+$('mNextP').onclick = function(){ metaPage++; renderMeta(); };
+$('mJump').addEventListener('change', function(){ var v = parseInt($('mJump').value,10); if (isNaN(v)) return; metaPage = Math.max(0, Math.floor((v-P.settings.start)/META_PER)); renderMeta(); });
+$('mClear').onclick = function(){ if (confirm('Remove all your edited names, descriptions and extra attributes?')) { P.overrides = {}; markDirty(); renderMeta(); } };
+function csvCell(v){ v = String(v==null?'':v); return /[",\n\r]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
+function parseCSV(text){
+  var rows = [], row = [], cur = '', q = false;
+  for (var i=0;i<text.length;i++){
+    var ch = text[i];
+    if (q) { if (ch==='"') { if (text[i+1]==='"') { cur += '"'; i++; } else q = false; } else cur += ch; }
+    else if (ch==='"') q = true;
+    else if (ch===',') { row.push(cur); cur = ''; }
+    else if (ch==='\n') { row.push(cur); rows.push(row); row = []; cur = ''; }
+    else if (ch!=='\r') cur += ch;
+  }
+  if (cur!=='' || row.length) { row.push(cur); rows.push(row); }
+  return rows;
+}
+$('mCsvOut').onclick = async function(){
+  var cc = await ensureCombos(), lines = ['token,name,description,extra_attributes'];
+  for (var i=0;i<cc.combos.length;i++){ var id = P.settings.start+i, ov = P.overrides[id] || {}; lines.push([id, ov.name||'', ov.description||'', ov.extra||''].map(csvCell).join(',')); }
+  saveFile('metadata-template.csv', new Blob([lines.join('\n')], {type:'text/csv'}));
 };
-function showRarity(combos, counts, scores, rank, start){
-  var n = combos.length, top = scores.map(function(s,i){ return i; }).sort(function(a,b){ return rank[a]-rank[b]; }).slice(0,10);
-  var html = '<h2>RARITY</h2><h4 style="font-family:var(--fh);font-size:.85rem;margin-bottom:.4rem">TOP 10 RAREST</h4><table class="t"><tr><th>Rank</th><th>Token</th><th>Score</th></tr>'+
-    top.map(function(i){ return '<tr><td>#'+rank[i]+'</td><td>'+(start+i)+'</td><td>'+scores[i].toFixed(1)+'</td></tr>'; }).join('')+'</table><div style="height:1.2rem"></div>';
-  layers.forEach(function(L,li){
-    if (!L.traits.length) return;
+$('mCsvIn').addEventListener('change', async function(e){
+  var f = e.target.files[0]; e.target.value = ''; if (!f) return;
+  var rows = parseCSV(await f.text()); if (rows.length<2) { alert('That CSV has no rows.'); return; }
+  var head = rows[0].map(function(h){ return h.trim().toLowerCase(); });
+  var ci = { token:head.indexOf('token'), name:head.indexOf('name'), description:head.indexOf('description'), extra:head.indexOf('extra_attributes') };
+  if (ci.token<0) { alert('The CSV needs a "token" column. Download the template to see the format.'); return; }
+  var done = 0, lo = P.settings.start, hi = P.settings.start+P.size-1;
+  rows.slice(1).forEach(function(r){
+    var id = parseInt(r[ci.token],10); if (isNaN(id) || id<lo || id>hi) return;
+    var ov = { name: ci.name>=0 ? (r[ci.name]||'').trim() : '', description: ci.description>=0 ? (r[ci.description]||'').trim() : '', extra: ci.extra>=0 ? (r[ci.extra]||'').trim() : '' };
+    if (ov.name || ov.description || ov.extra) { P.overrides[id] = ov; done++; } else delete P.overrides[id];
+  });
+  markDirty(); renderMeta(); alert('Imported '+done+' row'+(done===1?'':'s')+'.');
+});
+
+/* ---------- rarity ---------- */
+$('btnRarity').onclick = async function(){
+  if (!activeLayers().length) { alert('Add layers and images first.'); return; }
+  $('rarBody').innerHTML = '<p>Working out your collection…</p>'; $('mRarity').classList.add('open');
+  var cc = await ensureCombos(), R = rarityData(cc.combos), n = cc.combos.length, start = P.settings.start;
+  var top = R.order.slice(0,10);
+  var html = '<h4 style="font-family:var(--fh);font-size:.8rem;margin-bottom:.4rem">TOP 10 RAREST</h4><table class="t"><tr><th>Rank</th><th>Token</th><th>Score</th></tr>'+
+    top.map(function(i){ return '<tr><td>#'+R.rank[i]+'</td><td>'+(start+i)+'</td><td>'+R.scores[i].toFixed(1)+'</td></tr>'; }).join('')+'</table><div style="height:1.2rem"></div>';
+  P.layers.forEach(function(L,li){
+    if (!L.traits.length || L.hidden) return;
     html += '<div class="dist"><h4>'+esc(L.name)+'</h4>';
-    L.traits.forEach(function(T,ti){ var c = counts[li][ti]||0, p = c/n*100; html += '<div class="r"><em title="'+esc(T.name)+'">'+esc(T.name)+'</em><s style="width:'+Math.max(2,p*2)+'px"></s><span>'+p.toFixed(1)+'%</span></div>'; });
-    if (counts[li][-1]) html += '<div class="r"><em>none</em><s style="width:'+Math.max(2,counts[li][-1]/n*200)+'px;background:var(--gray3)"></s><span>'+(counts[li][-1]/n*100).toFixed(1)+'%</span></div>';
+    L.traits.forEach(function(T,ti){ var c = R.counts[li][ti]||0, p = c/n*100; html += '<div class="r"><em title="'+esc(T.name)+'">'+esc(T.name)+'</em><s style="width:'+Math.max(2,p*2)+'px"></s><span>'+p.toFixed(1)+'% ('+c.toLocaleString()+')</span></div>'; });
+    if (R.counts[li][-1]) html += '<div class="r"><em>none</em><s style="width:'+Math.max(2,R.counts[li][-1]/n*200)+'px;background:var(--gray3)"></s><span>'+(R.counts[li][-1]/n*100).toFixed(1)+'%</span></div>';
     html += '</div>';
   });
-  $('rarity').innerHTML = html; $('rarity').style.display = 'block';
+  $('rarBody').innerHTML = html;
+};
+</script>
+<script>
+/* ================= PAYMENT / LICENSE ================= */
+var refTimer = 0;
+function scheduleRefresh(){ clearTimeout(refTimer); refTimer = setTimeout(refreshAll, 500); }
+async function refreshAll(){
+  if (!P || $('studio').hidden) return;
+  renderSum(); renderRight();
+  var fp = await fingerprint(); LIC.fp = fp;
+  $('rVer').textContent = fp.slice(0,16)+'…';
+  await refreshLicense(fp);
+  renderRight();
 }
-['sSize','sW','sH','sFmt','sName'].forEach(function(id){ $(id).addEventListener('input', function(){ if ($('p-generate').classList.contains('on')) genInfo(); if (id==='sW'||id==='sH') preview(); }); });
+function api(method, path, body){
+  var url = CFG.supabaseUrl.replace(/\/$/,'')+'/rest/v1/studio_exports'+(path||'');
+  var h = { apikey:CFG.supabaseKey, Authorization:'Bearer '+CFG.supabaseKey };
+  if (body) { h['Content-Type'] = 'application/json'; h.Prefer = 'return=minimal'; }
+  return fetch(url, { method:method, headers:h, body: body?JSON.stringify(body):undefined }).then(function(r){
+    if (r.status===409) return null;
+    if (!r.ok) return r.text().then(function(t){ throw new Error('Server '+r.status+': '+t.slice(0,160)); });
+    return method==='GET' ? r.json() : null;
+  });
+}
+function postRow(rec){
+  if (rec.posting || rec.posted) return Promise.resolve();
+  rec.posting = true;
+  return api('POST','',{ wallet:rec.wallet, fingerprint:rec.fp, size:rec.size, fee:rec.fee, chain_id:rec.chain, tx_hash:rec.tx, message:rec.message, signature:rec.signature })
+    .then(function(){ rec.posted = true; rec.posting = false; return dbPut('licenses', rec); })
+    .catch(function(){ rec.posted = false; rec.posting = false; return dbPut('licenses', rec); });
+}
+function rpcCall(chain, method, params){
+  if (W.prov && W.chainId===chain.id) return req(method, params);
+  return fetch(chain.rpc, { method:'POST', headers:{'content-type':'application/json'}, body:JSON.stringify({jsonrpc:'2.0',id:1,method:method,params:params}) })
+    .then(function(r){ return r.json(); }).then(function(j){ if (j.error) throw new Error(j.error.message||'RPC error'); return j.result; });
+}
+var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+function receiptPays(rc, chain, fee){
+  var need = unitsFor(fee, chain.decimals), to = '0x'+pad32(CFG.receiver), from = '0x'+pad32(W.addr);
+  return (rc.logs||[]).some(function(l){
+    return l.address && l.address.toLowerCase()===chain.usdc.toLowerCase() && l.topics && l.topics[0]===TRANSFER_TOPIC &&
+      String(l.topics[1]).toLowerCase()===from && String(l.topics[2]).toLowerCase()===to && BigInt(l.data||'0x0')>=need;
+  });
+}
+async function pollReceipt(rec){
+  if (polling[rec.key]) return; polling[rec.key] = 1;
+  var chain = chainById(rec.chain);
+  try {
+    for (var n=0;n<120 && chain;n++){
+      var rc = null; try { rc = await rpcCall(chain, 'eth_getTransactionReceipt', [rec.tx]); } catch(e){}
+      if (rc) {
+        if (rc.status==='0x1' && receiptPays(rc, chain, rec.fee)) { rec.state = 'paid'; await dbPut('licenses', rec); }
+        else { await dbDel('licenses', rec.key); }
+        break;
+      }
+      await sleep(3000);
+    }
+  } finally { delete polling[rec.key]; }
+  if (P) refreshAll();
+}
+async function refreshLicense(fp){
+  var key = W.addr+':'+fp, rec = await dbGet('licenses', key);
+  if (rec && rec.state==='paid') { LIC = { fp:fp, state:'paid', rec:rec }; if (rec.posted===false && payEnabled()) postRow(rec); return; }
+  if (rec && rec.state==='pending') { LIC = { fp:fp, state:'pending', rec:rec }; if (rec.posted===false && payEnabled()) postRow(rec); pollReceipt(rec); return; }
+  LIC = { fp:fp, state:'none', rec:null };
+  if (payEnabled() && !remoteChecked[fp]) {
+    remoteChecked[fp] = true;
+    try {
+      var rows = await api('GET','?wallet=eq.'+W.addr+'&fingerprint=eq.'+fp+'&verified=eq.true&select=id,tx_hash');
+      if (rows && rows.length) { var r = { key:key, wallet:W.addr, fp:fp, state:'paid', tx:rows[0].tx_hash, posted:true, created:Date.now() }; await dbPut('licenses', r); LIC = { fp:fp, state:'paid', rec:r }; }
+    } catch(e){ delete remoteChecked[fp]; }
+  }
+}
+function renderRight(){
+  if (!P) return;
+  var size = P.size, price = priceFor(size), st = $('rState'), ex = $('btnExport');
+  $('rPrice').textContent = '$'+price+' USDC';
+  $('rSub').textContent = size.toLocaleString()+' NFTs · one clean export of this exact version';
+  $('folderRow').style.display = window.showDirectoryPicker ? 'flex' : 'none';
+  st.classList.remove('paid');
+  var label, off = busy;
+  if (!payEnabled()) { st.textContent = 'Paid export is coming soon. The free watermarked preview works now.'; label = 'Export — coming soon'; off = true; }
+  else if (LIC.state==='paid') { st.textContent = 'Paid ✓ You can export this exact version again any time.'; st.classList.add('paid'); label = 'Export — no watermark (paid)'; }
+  else if (LIC.state==='pending') { st.textContent = 'Payment sent. Waiting for the network to confirm it…'; label = 'Waiting for payment…'; off = true; }
+  else { st.textContent = 'Not paid yet. Free previews carry a watermark. Changing layers, rules, size or seed makes a new version.'; label = 'Export — no watermark ($'+price+')'; }
+  ex.textContent = label; ex.disabled = off; $('btnGen').disabled = busy;
+}
+$('btnExport').onclick = async function(){
+  if (!P || busy || !payEnabled()) return;
+  var fp = await fingerprint(); LIC.fp = fp;
+  if (LIC.state==='paid') return generate(true);
+  if (LIC.state==='pending') return;
+  if (!activeLayers().length) { say('Add at least one layer with images first.'); return; }
+  openPay(fp);
+};
+function pLog(t){ var l = $('payLog'); l.style.display = 'block'; l.textContent += (l.textContent?'\n':'')+t; }
+function openPay(fp){
+  var size = P.size, price = priceFor(size);
+  $('payLog').style.display = 'none'; $('payLog').textContent = '';
+  $('payBody').innerHTML = '<table class="t" style="margin-bottom:1rem"><tr><th>Collection</th><td>'+esc(P.name)+'</td></tr><tr><th>Size</th><td>'+size.toLocaleString()+' NFTs</td></tr><tr><th>Version ID</th><td class="vid">'+esc(fp.slice(0,24))+'…</td></tr><tr><th>Price</th><td><b>'+price+' USDC</b></td></tr></table>'+
+    '<div class="field"><label class="label" for="payChain">Pay on</label><select class="select" id="payChain">'+CFG.chains.map(function(c){ return '<option value="'+c.id+'">'+esc(c.name)+'</option>'; }).join('')+'</select></div>'+
+    '<p class="note" style="margin-bottom:1rem">You sign a free message, then send '+price+' USDC to the Crypto Asia wallet. After that you can export this exact version again any time. Changing the layers, rules, size or seed makes a new version that needs a new payment. Editing metadata never does.</p>'+
+    '<button class="btn" id="payGo" type="button">Pay '+price+' USDC &amp; export</button>';
+  $('payGo').onclick = function(){ doPay(fp); };
+  $('mPay').classList.add('open');
+}
+async function doPay(fp){
+  var btn = $('payGo'); btn.disabled = true; $('payLog').textContent = '';
+  var chain = chainById(+$('payChain').value), size = P.size, price = priceFor(size), need = unitsFor(price, chain.decimals);
+  try {
+    pLog('1/4  Switching your wallet to '+chain.name+'…');
+    await switchChain(chain);
+    pLog('2/4  Checking your USDC balance…');
+    var bal = await req('eth_call',[{to:chain.usdc, data:'0x70a08231'+pad32(W.addr)},'latest']);
+    if (BigInt(bal||'0x0') < need) throw new Error('Not enough USDC on '+chain.name+'. You need '+price+' USDC plus a little '+chain.native.symbol+' for the network fee.');
+    pLog('3/4  Please sign the free message in your wallet…');
+    var message = 'Crypto Asia NFT Studio — export\nWallet: '+W.addr+'\nVersion: '+fp+'\nSize: '+size+'\nChain: '+chain.id+'\nFee: '+price+' USDC\nIssued: '+new Date().toISOString();
+    var signature = await req('personal_sign',[toHex(message), W.addr]);
+    pLog('4/4  Please confirm the '+price+' USDC payment in your wallet…');
+    var calldata = '0xa9059cbb'+pad32(CFG.receiver)+need.toString(16).padStart(64,'0');
+    var hash = String(await req('eth_sendTransaction',[{from:W.addr, to:chain.usdc, data:calldata}])).toLowerCase();
+    var rec = { key:W.addr+':'+fp, wallet:W.addr, fp:fp, size:size, fee:price, chain:chain.id, tx:hash, message:message, signature:signature, state:'pending', posted:false, created:Date.now() };
+    await dbPut('licenses', rec);          // saved first, so a closed tab never loses the payment
+    LIC = { fp:fp, state:'pending', rec:rec }; renderRight();
+    pLog('Payment sent: '+hash.slice(0,12)+'… waiting for the network to confirm (usually under a minute).');
+    postRow(rec);
+    for (var n=0;n<120;n++){
+      var rc = null; try { rc = await rpcCall(chain, 'eth_getTransactionReceipt', [hash]); } catch(e){}
+      if (rc) {
+        if (rc.status==='0x1' && receiptPays(rc, chain, price)) { rec.state = 'paid'; await dbPut('licenses', rec); LIC = { fp:fp, state:'paid', rec:rec }; break; }
+        await dbDel('licenses', rec.key); LIC = { fp:fp, state:'none', rec:null }; throw new Error('The payment failed on-chain. You were not charged for an export.');
+      }
+      await sleep(3000);
+    }
+    renderRight();
+    if (LIC.state!=='paid') { pLog('Still waiting. You can close this window. Your payment is saved and the export unlocks as soon as it confirms.'); btn.disabled = false; return; }
+    $('mPay').classList.remove('open');
+    refreshAll();
+    generate(true);
+  } catch(e){ pLog(errText(e)); btn.disabled = false; renderRight(); }
+}
 
-addLayer('Background'); addLayer('Body'); addLayer('Eyes');
+/* ================= GENERATE / EXPORT ================= */
+var stopFlag = false;
+function say(t){ $('status').textContent = t; }
+function mime(){ return P.settings.fmt==='png' ? 'image/png' : 'image/jpeg'; }
+function toBlob(cv){ return new Promise(function(res){ cv.toBlob(res, mime(), 0.92); }); }
+function watermark(ctx, Wd, Hd){
+  ctx.save();
+  var fs = Math.max(14, Math.round(Wd/16)), txt = SCFG.watermarkText || 'CRYPTO ASIA · PREVIEW';
+  ctx.globalAlpha = 0.38; ctx.font = '900 '+fs+'px Orbitron, Arial, sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.translate(Wd/2, Hd/2); ctx.rotate(-Math.PI/6);
+  ctx.lineWidth = Math.max(2, fs/10); ctx.strokeStyle = '#000'; ctx.fillStyle = '#fff'; ctx.lineJoin = 'round';
+  var tw = ctx.measureText(txt).width, stepX = tw+fs*1.2, stepY = fs*3, span = Math.hypot(Wd,Hd), row = 0;
+  for (var y=-span/2; y<=span/2; y+=stepY, row++) for (var x=-span/2+(row%2?stepX/2:0); x<=span/2; x+=stepX) { ctx.strokeText(txt,x,y); ctx.fillText(txt,x,y); }
+  ctx.restore();
+}
+function zipSink(){
+  var zip = new JSZip(), meta = new JSZip(), n = 0, from = null, last = null, kept = [], keptBytes = 0, auto = false;
+  async function flush(){
+    if (!n) return;
+    var blob = await zip.generateAsync({type:'blob', compression:'STORE'}), name = 'images-'+from+'-'+last+'.zip';
+    zip = new JSZip(); n = 0; from = null;
+    if (auto || keptBytes+blob.size > KEEP_LIMIT) {
+      if (!auto) { auto = true; for (var i=0;i<kept.length;i++){ saveFile(kept[i].name, kept[i].blob); await sleep(500); } kept = []; keptBytes = 0; }
+      saveFile(name, blob); await sleep(500);
+    } else { kept.push({name:name, blob:blob}); keptBytes += blob.size; }
+  }
+  return {
+    kind:'zip',
+    image: async function(id, ext, blob){ if (from===null) from = id; last = id; zip.file(id+'.'+ext, blob); n++; if (n>=BATCH) await flush(); },
+    meta: async function(path, text){ meta.file(path, text); },
+    finish: async function(hasMeta){
+      await flush();
+      if (hasMeta) kept.push({ name:'metadata.zip', blob: await meta.generateAsync({type:'blob'}) });
+      else { var keys = Object.keys(meta.files); if (keys.length) kept.push({ name:'rarity.zip', blob: await meta.generateAsync({type:'blob'}) }); }
+      return { files:kept, auto:auto };
+    }
+  };
+}
+function folderSink(root){
+  var dirs = {};
+  async function dir(path){
+    if (dirs[path]) return dirs[path];
+    var h = root, parts = path.split('/');
+    for (var i=0;i<parts.length;i++) h = await h.getDirectoryHandle(parts[i], {create:true});
+    return (dirs[path] = h);
+  }
+  async function put(path, data){
+    var i = path.lastIndexOf('/'), d = i>=0 ? await dir(path.slice(0,i)) : root;
+    var fh = await d.getFileHandle(path.slice(i+1), {create:true}), w = await fh.createWritable();
+    await w.write(data); await w.close();
+  }
+  return { kind:'folder', image: function(id, ext, blob){ return put('images/'+id+'.'+ext, blob); }, meta: function(path, text){ return put(path, text); }, finish: async function(){ return { files:[], auto:false }; } };
+}
+$('btnStop').onclick = function(){ stopFlag = true; };
+$('btnGen').onclick = function(){ generate(false); };
+async function generate(clean){
+  if (busy || !P) return;
+  if (typeof JSZip === 'undefined') { say('The zip library did not load. Check your internet connection and reload the page.'); return; }
+  if (!activeLayers().length) { say('Add at least one layer with images first.'); return; }
+  var S = P.settings;
+  if (!S.W || !S.H) autoSize();
+  var Wd = S.W||1000, Hd = S.H||1000, ext = S.fmt, start = S.start;
+  if (clean) {
+    if (S.royalty>0 && !isAddr(S.royaltyAddr)) { say('You set a royalty but the recipient wallet is missing or not a valid 0x address. Fix it in Settings.'); return; }
+    if (S.creator && !isAddr(S.creator)) { say('The creator wallet is not a valid 0x address. Fix it in Settings or clear it.'); return; }
+  }
+  var dirHandle = null;
+  if ($('chkFolder').checked && window.showDirectoryPicker) {
+    try { dirHandle = await window.showDirectoryPicker({mode:'readwrite'}); } catch(e){ say('Cancelled.'); return; }
+  }
+  busy = true; stopFlag = false; renderRight();
+  $('btnStop').style.display = 'inline-flex'; $('dls').innerHTML = ''; $('barI').style.width = '0';
+  var sink = dirHandle ? folderSink(dirHandle) : zipSink();
+  try {
+    say('Choosing the NFTs…');
+    var cc = await ensureCombos(), combos = cc.combos, n = combos.length;
+    if (!n) throw new Error('No valid combinations. Check your rules.');
+    var R = rarityData(combos);
+    var cv = document.createElement('canvas'); cv.width = Wd; cv.height = Hd; var ctx = cv.getContext('2d'), done = 0;
+    for (var i=0;i<n;i++){
+      if (stopFlag) break;
+      ctx.clearRect(0,0,Wd,Hd);
+      if (ext==='jpg') { ctx.fillStyle = '#fff'; ctx.fillRect(0,0,Wd,Hd); }
+      drawTraits(ctx, Wd, Hd, combos[i]);
+      if (!clean) watermark(ctx, Wd, Hd);
+      await sink.image(start+i, ext, await toBlob(cv));
+      done++;
+      $('barI').style.width = (done/n*100)+'%';
+      say((clean?'Exporting ':'Generating preview ')+done.toLocaleString()+' of '+n.toLocaleString()+'…');
+      if (i%3===0) await tick();
+    }
+    // rarity + (for clean exports) metadata
+    var rows = ['token,rarity_score,rank'];
+    for (var k=0;k<done;k++) rows.push((start+k)+','+R.scores[k].toFixed(2)+','+R.rank[k]);
+    await sink.meta('metadata/rarity.csv', rows.join('\n'));
+    if (clean && done) {
+      say('Writing metadata…');
+      var all = [];
+      for (var m=0;m<done;m++){ var md = buildMeta(m, combos[m], ext); all.push(md); await sink.meta('metadata/json/'+(start+m)+'.json', JSON.stringify(md,null,2)); }
+      await sink.meta('metadata/metadata.json', JSON.stringify(all,null,2));
+      var lr = ['layer,trait,count,percent'];
+      P.layers.forEach(function(L,li){ if (L.hidden) return; L.traits.forEach(function(T,ti){ var c = R.counts[li][ti]||0; lr.push([L.name,T.name,c,(c/done*100).toFixed(1)].map(csvCell).join(',')); }); });
+      await sink.meta('metadata/layers.csv', lr.join('\n'));
+      var col = { name:P.name, description:S.desc||'' };
+      if (S.symbol) col.symbol = S.symbol;
+      if (S.url) col.external_link = S.url;
+      if (S.royalty>0) { col.seller_fee_basis_points = Math.round(S.royalty*100); col.fee_recipient = S.royaltyAddr; }
+      if (S.creator) col.creator = S.creator;
+      await sink.meta('metadata/collection.json', JSON.stringify(col,null,2));
+    }
+    var out = await sink.finish(clean && done>0);
+    P.stats.generated += done; if (clean && done) P.stats.exports = (P.stats.exports||0)+1; markDirty();
+    var shortMsg = cc.short ? ' (Only '+n.toLocaleString()+' unique combinations were possible, so the collection is smaller than you asked for.)' : '';
+    say((stopFlag?'Stopped. ':'Done. ')+done.toLocaleString()+' NFTs '+(clean?'exported clean':'generated with a watermark')+(dirHandle?' into your folder.':'.')+shortMsg+(out.auto?' Image zips were downloaded automatically as each one finished. Allow multiple downloads if your browser asks.':''));
+    out.files.forEach(function(f){ var b = document.createElement('button'); b.className = 'btn'+(f.name==='metadata.zip'?' dark':''); b.type = 'button'; b.textContent = 'Download '+f.name.replace('.zip',''); b.onclick = function(){ saveFile(f.name, f.blob); }; $('dls').appendChild(b); });
+    if (!clean) { var tip = document.createElement('p'); tip.className = 'note'; tip.textContent = 'These images have a watermark. Use "Export — no watermark" for the clean images and the full metadata.'; $('dls').appendChild(tip); }
+  } catch(e){ say('Problem: '+((e&&e.message)||e)); }
+  finally { busy = false; $('btnStop').style.display = 'none'; renderRight(); }
+}
+
+/* ================= START ================= */
+(async function init(){
+  await idbOpen();
+  try { CFG = Object.assign(CFG, await fetchJson('jobs-config.json')); } catch(e){}
+  try { SCFG = Object.assign(SCFG, await fetchJson('studio-config.json')); } catch(e){}
+  renderLanding();
+  var ok = await restoreSession();
+  if (ok) enterDash(); else show('landing');
+})();
 </script>
 </body>
 </html>

@@ -24,7 +24,13 @@ To take a listing down: Supabase > Table editor > submissions > set `hidden` to 
 Curated jobs you add yourself still go in `jobs.json`.
 
 ## NFT Studio (nft-studio.html)
-Runs fully in the browser. Needs internet for the zip library (cdnjs). Free, no login. Max 5,000 NFTs per run.
+Connect wallet > dashboard > full-page studio. Everything is built in the visitor's browser (images never leave the device). Needs internet for the zip library (cdnjs).
+- Free: unlimited generation with a watermark. Paid: one clean export of one collection version, in USDC.
+- Prices are in `studio-config.json` ($50 up to 4,999 NFTs, $75 for 5,000-9,999, $100 for 10,000+; max size 20,000). Payments go to the `receiver` and Supabase project in `jobs-config.json` (the same ones the jobs board uses).
+- A "version" = seed + size + images + weights + rules + dimensions. Changing any of those needs a new payment. Names, metadata, royalties and format do not. Re-exporting the same version is free for the paying wallet.
+- To switch paid export on: fill in `jobs-config.json` (receiver, supabaseUrl, supabaseKey), run the new part at the bottom of `supabase/schema.sql` (table `studio_exports`), and upload `scripts/verify-exports.mjs` plus the updated `.github/workflows/verify.yml`. The `SUPABASE_SERVICE_KEY` secret is the same one as for jobs. Until then the Export button says "coming soon" and free previews still work.
+- Browsers can be forced to save big collections into a folder (Chrome/Edge "Save straight into a folder"). Other browsers get image zips of 500, downloaded automatically when memory would get tight.
+- Heads up: the watermark and the paid check run in the browser, so a skilled developer can bypass them by editing the page code. The on-chain payment records give you a trail; true enforcement would need server-side generation.
 
 ## Homepage sections removed
 The removed sections (Venture/Collect/Build, Our HODL, What We've Built, Token Portfolio) are saved in `homepage-sections-backup.html` (kept outside this folder; do not upload it).

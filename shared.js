@@ -13,7 +13,7 @@
   var page = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
 
   /* ---- theme ---- */
-  function getTheme(){ try { return localStorage.getItem('ca-theme') || 'light'; } catch(e){ return 'light'; } }
+  function getTheme(){ try { return localStorage.getItem('ca-theme') || 'dark'; } catch(e){ return 'dark'; } }
   function setTheme(t){
     root.setAttribute('data-theme', t);
     try { localStorage.setItem('ca-theme', t); } catch(e){}
@@ -57,7 +57,7 @@
   if(footHost){
     footHost.outerHTML =
       '<footer class="foot"><img class="foot-logo" src="logos/ca-round.png" alt="Crypto Asia" loading="lazy">'+
-      '&copy; 2026 <a href="index.html">CRYPTO ASIA</a> &mdash; CRYPTOASIA.NET &middot; <a href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">@CryptoAsiaBTC</a>'+
+      '&copy; 2026 <a href="index.html">CRYPTO ASIA</a> &mdash; CRYPTOASIABTC.COM &middot; <a href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">@CryptoAsiaBTC</a>'+
       '<div class="disc">For information and entertainment only. Nothing on this site is financial, legal or tax advice. Crypto is volatile and you can lose money. Do your own research.</div></footer>';
   }
 

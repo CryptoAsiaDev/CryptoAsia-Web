@@ -9,7 +9,7 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="logos/favicon-180.png">
 <meta name="theme-color" content="#F5C518">
-<script>try{var t=localStorage.getItem('ca-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
 
 <meta name="description" content="Your free daily crypto fortune based on the Chinese zodiac: lucky number, colour, direction and hour. For fun only.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -323,7 +323,7 @@ function drawCard(withLogo){
   // mantra
   c.fillStyle='#FAFAF7'; c.font='italic 600 44px Rajdhani, sans-serif'; c.fillText('“'+f.mantra+'”', W/2, 1130);
 
-  c.textAlign='left'; c.fillStyle='#F5C518'; c.font='900 32px Orbitron, monospace'; c.fillText('CRYPTOASIA.NET', 90, H-80);
+  c.textAlign='left'; c.fillStyle='#F5C518'; c.font='900 32px Orbitron, monospace'; c.fillText('CRYPTOASIABTC.COM', 90, H-80);
   c.textAlign='right'; c.fillStyle='rgba(250,250,247,0.45)'; c.font='500 24px "Share Tech Mono", monospace'; c.fillText('FOR FUN ONLY', W-90, H-84);
   if(withLogo!==false && logoImg.complete && logoImg.naturalWidth){
     var lh=64, lw=logoImg.naturalWidth/logoImg.naturalHeight*lh;

@@ -9,7 +9,7 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="logos/favicon-180.png">
 <meta name="theme-color" content="#F5C518">
-<script>try{var t=localStorage.getItem('ca-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
 <meta name="description" content="Crypto Asia — live crypto news, airdrop tools, Web3 jobs and more.">
 <meta property="og:title" content="Crypto Asia — Decentralized + Revolution">
 <meta property="og:description" content="Live crypto news, airdrop tools, Web3 jobs and more.">
@@ -29,7 +29,7 @@
 .scan-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:scan 5s linear infinite;z-index:3;opacity:.6}
 @keyframes scan{0%{top:-2px}100%{top:100%}}
 .hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto}
-.hero-logo{width:min(560px,92%);height:auto;display:block;margin:0 auto 1.6rem;filter:drop-shadow(0 0 34px rgba(245,197,24,.45))}
+.hero-logo{width:min(560px,92%);height:auto;display:block;margin:0 auto 1.6rem;border-radius:20px;border:2px solid rgba(245,197,24,.6);box-shadow:0 0 44px rgba(245,197,24,.35)}
 .hero-eyebrow{font-family:var(--fm);font-size:.85rem;color:var(--gold);letter-spacing:.25em;text-transform:uppercase;margin-bottom:1.2rem}
 .hero-desc{font-family:var(--fs);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.75rem);color:rgba(250,250,247,.82);line-height:1.5;margin:0 auto 2rem;max-width:700px}
 .hero-pillars{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}

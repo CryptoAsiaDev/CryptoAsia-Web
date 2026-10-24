@@ -9,7 +9,7 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="apple-touch-icon" href="logos/favicon-180.png">
 <meta name="theme-color" content="#F5C518">
-<script>try{var t=localStorage.getItem('ca-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
 
 <meta name="description" content="Short crypto news briefs updated through the day, with live prices. Every brief links to the original publisher.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,10 +92,10 @@
 
   /* ---- news ---- */
   function renderChips(){
-    var cats = ['All','Airdrops']; items.forEach(function(i){ var c = catOf(i); if (cats.indexOf(c)<0) cats.push(c); });
+    var cats = TABS.slice();
     if (cats.indexOf(cat) < 0) cat = 'All';
     document.getElementById('chips').innerHTML = cats.map(function(c){
-      return '<button type="button" class="chip'+(c===cat?' on':'')+'" data-c="'+esc(c)+'">'+esc(c)+'</button>';
+      return '<button type="button" class="chip'+(c===cat?' on':'')+'" data-c="'+esc(c)+'">'+esc(LABEL[c]||c)+'</button>';
     }).join('');
   }
   var SHOW_SOURCE_IMAGES = true;    // true = show the article's own preview image (credited to the source); false = only Crypto Asia graphics
@@ -103,7 +103,10 @@
   var COIN_WORDS = [['BTC',/bitcoin|\bbtc\b/i],['ETH',/ethereum|\beth\b|ether\b/i],['SOL',/solana|\bsol\b/i],['XRP',/\bxrp\b|ripple/i],['BNB',/\bbnb\b|binance/i],['DOGE',/doge/i],['USDT',/tether|usdt/i],['USDC',/usdc|circle/i]];
   var AIRDROP_RE = /airdrop|air-drop|token claim|retroactive|points program|claim(?:s|ing)? (?:your )?tokens?/i;
   function hash(s){ var h=0; for (var i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0; return Math.abs(h); }
-  function catOf(i){ return AIRDROP_RE.test((i.headline||'')+' '+(i.summary||'')) ? 'Airdrops' : (i.category||'Other'); }
+  var TABS = ['All','Markets','Tech','Bitcoin','Altcoins','Asia','Regulation','Exchanges','Airdrops'];
+  var LABEL = {Markets:'Market',Altcoins:'Altcoin',Airdrops:'Airdrop'};
+  var LEGACY = {'Ethereum':'Altcoins','DeFi':'Altcoins','NFTs & Ordinals':'Altcoins'};
+  function catOf(i){ if (AIRDROP_RE.test((i.headline||'')+' '+(i.summary||''))) return 'Airdrops'; var c = i.category||'Other'; return LEGACY[c]||c; }
 
   /* one simple illustration per topic, drawn in gold on black; position/rotation vary per story */
   var MOTIFS = {
@@ -147,7 +150,7 @@
     if (!list.length){ el.innerHTML = '<div class="empty" style="grid-column:1/-1"><h3>'+(cat==='Airdrops'?'No airdrop stories right now':'No stories yet')+'</h3><p>Check back soon.</p></div>'; return; }
     var html = list.slice(0, shown).map(function(i, n){
       return '<article class="card'+(n===0?' lead-card':'')+'"><div class="vis">'+vis(i)+'</div><div class="body">'+
-        '<div class="meta"><span class="tag gold">'+esc(catOf(i))+'</span>'+
+        '<div class="meta"><span class="tag gold">'+esc(LABEL[catOf(i)]||catOf(i))+'</span>'+
         (i.sample?'<span class="tag sample">Sample</span>':'')+
         '<span>'+esc(i.source||'')+'</span><span>'+esc(ago(i.published))+'</span></div>'+
         '<h3>'+esc(i.headline)+'</h3><p>'+esc(i.summary)+'</p>'+
