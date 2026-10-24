@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T22:54:54.942Z",
+  "updated": "2026-10-24T01:12:17.421Z",
   "skipped": [
     "a08955d050c85b6d",
     "70dd2a65a17f1719",
@@ -38,6 +38,17 @@
       "published": "2026-10-23T20:30:00.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/10/fca-crypto-algorithm-control.webp",
       "sourceTitle": "UK’s FCA says crypto apps may need licenses when algorithms choose trade routes"
+    },
+    {
+      "id": "2a0427c5f980512b",
+      "headline": "Senator Blumenthal Seeks Tether Records on Payments to Nxum",
+      "summary": "Sen. Richard Blumenthal has requested Tether's records concerning payments made to Nxum, a firm co-owned by former White House crypto adviser Bo Hines.",
+      "category": "Regulation",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/381755/senate-democrat-tether-payments-ex-white-house-crypto-adviser",
+      "published": "2026-10-23T20:16:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/US-Capitol-decrypt-style-02-gID_7.png",
+      "sourceTitle": "Senate Democrat Probes Tether Payments to Ex-White House Crypto Adviser’s Firm"
     },
     {
       "id": "5d8e4440e663bed9",
@@ -93,6 +104,17 @@
       "published": "2026-10-23T17:06:32.000Z",
       "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Bitcoin-Core-Ends-Long-Embargoes-for-Bugs-AI-Can-Rediscover.jpg",
       "sourceTitle": "Bitcoin Core Ends Long Embargoes for Bugs AI Can Rediscover"
+    },
+    {
+      "id": "a1e8218910b893b9",
+      "headline": "Bitcoin ETFs See Large Outflows After Oil Price Jump",
+      "summary": "Bitcoin ETFs reportedly lost more than $635 million in a single day, after investors who had been buying all week reversed course on Thursday. The excerpt does not give further detail on the cause.",
+      "category": "Markets",
+      "source": "Bitcoin Magazine",
+      "url": "https://bitcoinmagazine.com/news/bitcoin-etfs-lose-over-635-million",
+      "published": "2026-10-23T16:46:36.000Z",
+      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Pics-23.jpg",
+      "sourceTitle": "Bitcoin ETFs Lose Over $635M In One Day Following Oil Price Spike"
     }
   ]
 }
