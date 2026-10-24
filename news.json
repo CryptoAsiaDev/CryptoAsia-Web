@@ -1,6 +1,10 @@
 {
-  "updated": "2026-10-24T14:40:56.698Z",
+  "updated": "2026-10-24T17:41:48.410Z",
   "skipped": [
+    "1406f5c70f6458db",
+    "e35d997654073e5b",
+    "01765e01090b8e3c",
+    "14cdf5b43829db24",
     "d8cf8eb11972f711",
     "2d8db9690ad4f40f",
     "8071e8ccb709a07a",
@@ -10,6 +14,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "6df470193d9e3916",
+      "headline": "NYSE parent backs round-the-clock tokenized stock trading",
+      "summary": "The owner of the New York Stock Exchange is reportedly supporting stock tokens that would let people trade shares at any time. The move is framed as a response to growing demand for always-on trading seen in crypto and other tokenized assets.",
+      "category": "Tech",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/nyses-owner-is-backing-24-7-stock-tokens-without-wall-streets-usual-price-rules/",
+      "published": "2026-10-24T17:00:27.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/stock-token-pricing-divide.webp",
+      "sourceTitle": "NYSE’s owner is backing 24/7 stock tokens without Wall Street’s usual price rules"
+    },
+    {
+      "id": "df6d79ad7991b718",
+      "headline": "Strategy and Strive weigh bitcoin purchases against preferred dividend payments",
+      "summary": "Preferred stock has funded nearly 136,000 bitcoin purchases for Strategy and Strive. Analysts expect this funding channel to complement the larger ETF market.",
+      "category": "Markets",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/business/2026/10/24/strategy-strive-face-balancing-act-between-bitcoin-buying-and-preferred-stock-dividends",
+      "published": "2026-10-24T16:00:00.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/dc1a0236f5c1c10010c2b1e42f39c41736508170-6000x3375.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Strategy, Strive face balancing act between bitcoin buying and preferred stock dividends"
+    },
+    {
+      "id": "5d8aed6b88bfe626",
+      "headline": "Bitcoin dips below $80,000 amid Middle East evacuation news",
+      "summary": "Bitcoin has fallen to its lowest level in over a month, dropping below $80,000 over the weekend. The decline coincides with U.S. evacuations linked to the Middle East.",
+      "category": "Markets",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/10/24/crypto-under-weekend-pressure-bitcoin-slides-below-usd80-000-on-u-s-middle-east-evacuations",
+      "published": "2026-10-24T15:11:24.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/3cbbb05ae60659ef1c46287aae06ad1132421ba3-2280x1284.png?auto=format&fit=crop&crop=focalpoint&w=1200&h=675&q=75",
+      "sourceTitle": "Crypto under weekend pressure, bitcoin slides below $80,000 on U.S. Middle East evacuations"
+    },
     {
       "id": "652beee0d14a471c",
       "headline": "Argentine judge closes criminal case against Milei over LIBRA token",
