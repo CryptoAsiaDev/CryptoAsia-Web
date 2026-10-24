@@ -1,11 +1,34 @@
 {
-  "updated": "2026-10-24T01:12:17.421Z",
+  "updated": "2026-10-24T11:19:31.623Z",
   "skipped": [
+    "819d204d5b70c941",
     "a08955d050c85b6d",
     "70dd2a65a17f1719",
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "d44048bbcc24784f",
+      "headline": "Senator seeks records on Tether payments to ex-adviser's firm",
+      "summary": "Senator Richard Blumenthal, the top Democrat on a Senate investigations subcommittee, has requested records on stablecoin issuer Tether's reported payments to Nxum, a consulting firm co-founded by Bo Hines, a former White House crypto adviser.",
+      "category": "Regulation",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/senator-probes-tethers-reported-6-million-payments-to-ex-white-house-crypto-advisers-firm/",
+      "published": "2026-10-24T11:00:33.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2025/08/bo-hines-tether.jpg",
+      "sourceTitle": "Senator probes Tether’s reported $6 million payments to ex-White House crypto adviser’s firm"
+    },
+    {
+      "id": "7f5533f2e777c256",
+      "headline": "Franklin Templeton moves $150M in fund shares onto XRP Ledger",
+      "summary": "Franklin Templeton added about $150 million in fund tokens to the XRP Ledger through two subscriptions on Thursday, nearly quadrupling its existing tokens on the network. All of them landed in a single wallet.",
+      "category": "Altcoins",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/10/24/franklin-templeton-adds-usd150-million-in-fund-shares-to-xrp-ledger-all-in-one-wallet",
+      "published": "2026-10-24T04:45:43.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/38b95887c36694f1eb6785def8e9fef7464fc126-7680x4320.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Franklin Templeton adds $150 million in fund shares to XRP Ledger, all in one wallet"
+    },
     {
       "id": "015bf6f0dacaa12e",
       "headline": "OCC stablecoin rule changes redemption timing and bank obligations",
@@ -16,6 +39,28 @@
       "published": "2026-10-23T22:50:04.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/10/occ-seven-day-reversal.webp",
       "sourceTitle": "New OCC stablecoin rule resets redemptions, and banks face big shifts"
+    },
+    {
+      "id": "a6478486025e01e9",
+      "headline": "Wells Fargo and Five Others Oppose OKX-ICE Tokenized Stock Plan",
+      "summary": "Reportedly, Wells Fargo and five other firms have objected to the OKX-ICE joint venture's proposed tokenized stock platform. The objections were filed under the SEC's innovation exemption.",
+      "category": "Regulation",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/nasdaq-companies-object-tokenized-stock-listings-okx-ice?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-23T21:32:16.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5N19TPWN37A162FFHMQDBR2/hi-cover-imagereview-of-us-stocks.jpg",
+      "sourceTitle": "Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report"
+    },
+    {
+      "id": "22e2e8fcee400961",
+      "headline": "New York Seeks $1.37B Judgment Against NovaTech Crypto Operators",
+      "summary": "New York's attorney general is asking a court to order the operators of a crypto Ponzi scheme to repay investors, with interest. The alleged frauds took more than $1.1 billion from investors.",
+      "category": "Regulation",
+      "source": "Bitcoin Magazine",
+      "url": "https://bitcoinmagazine.com/news/ny-seeks-1-37-b-judgement-novatech",
+      "published": "2026-10-23T21:21:46.000Z",
+      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Pics-24.jpg",
+      "sourceTitle": "NY Seeks $1.37 Billion Judgment Against Operators of NovaTech Crypto Ponzi Scheme"
     },
     {
       "id": "c71e88cafcf31073",
