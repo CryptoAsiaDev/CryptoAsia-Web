@@ -4,15 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crypto Fortune — Daily Chinese Zodiac Reading | Crypto Asia</title>
+<link rel="icon" type="image/png" sizes="32x32" href="logos/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logos/favicon-16.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="logos/favicon-180.png">
+<meta name="theme-color" content="#F5C518">
+<script>try{var t=localStorage.getItem('ca-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+
 <meta name="description" content="Your free daily crypto fortune based on the Chinese zodiac: lucky number, colour, direction and hour. For fun only.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 <style>
 .signs{display:grid;grid-template-columns:repeat(6,1fr);gap:.6rem;margin-top:1.4rem}
-.sign-btn{background:var(--white);border:1px solid var(--border);padding:.8rem .4rem;cursor:pointer;text-align:center;font:inherit;color:inherit;transition:all .15s}
+.sign-btn{background:var(--surface);border:1px solid var(--border);padding:.8rem .4rem;cursor:pointer;text-align:center;font:inherit;color:inherit;transition:all .15s}
 .sign-btn:hover{border-color:var(--gold);transform:translateY(-2px)}
-.sign-btn.on{background:var(--black);color:var(--gold);border-color:var(--black)}
+.sign-btn.on{background:var(--act-bg);color:var(--act-fg);border-color:var(--act-bg)}
 .sign-btn .e{display:block;font-size:2rem;line-height:1.1}
 .sign-btn .n{display:block;font-family:var(--fm);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;margin-top:.2rem}
 .pick-row{display:flex;gap:.8rem;flex-wrap:wrap;align-items:flex-end}
@@ -276,7 +283,7 @@ function show(signIdx){
 })();
 
 // ---- share card ----
-var logoImg=new Image(); logoImg.src='CRYPTO_ASIA_PAVIA.png';
+var logoImg=new Image(); logoImg.src='logos/ca-round.png';
 function drawCard(withLogo){
   if(!current) return;
   var f=current, cv=$('cv'), c=cv.getContext('2d'), W=cv.width, H=cv.height;

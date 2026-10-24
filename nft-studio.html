@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NFT Studio — Generative NFT Collection Maker | Crypto Asia</title>
+<link rel="icon" type="image/png" sizes="32x32" href="logos/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logos/favicon-16.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="logos/favicon-180.png">
+<meta name="theme-color" content="#F5C518">
+<script>try{var t=localStorage.getItem('ca-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<meta name="description" content="Build a generative NFT collection in your browser. Upload trait layers, set rarity and rules, generate images and metadata. Your files never leave your device.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:0 0 2rem}
+.stat{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1rem 1.2rem}
+.stat b{display:block;font-family:var(--fh);font-size:1.2rem;color:var(--ink)}
+.stat span{font-family:var(--fm);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
+.how{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem}
+.how div{background:var(--surface);border:1px solid var(--border);padding:1rem 1.2rem}
+.how b{font-family:var(--fh);color:var(--gold-d);font-size:1.1rem}
+.how p{font-size:1.05rem;color:var(--text2)}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:1.2rem;border-bottom:2px solid var(--border)}
+.tb{font-family:var(--fh);font-size:.82rem;letter-spacing:.06em;background:none;border:none;border-bottom:4px solid transparent;color:var(--text2);padding:.8rem 1.1rem;cursor:pointer;margin-bottom:-2px}
+.tb.on{color:var(--ink);border-bottom-color:var(--gold)}
+.pane{display:none}.pane.on{display:block}
+.studio{display:grid;grid-template-columns:1fr 340px;gap:1.5rem;align-items:start}
+.layer{background:var(--surface);border:1px solid var(--border);border-left:5px solid var(--gold);padding:1rem 1.2rem;margin-bottom:1rem}
+.layer-head{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin-bottom:.8rem}
+.layer-head .input{max-width:240px;padding:.45rem .7rem;font-size:1.05rem}
+.mini{background:none;border:2px solid var(--border);color:var(--ink);font-family:var(--fm);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .6rem;cursor:pointer}
+.mini:hover{border-color:var(--gold)}
+.traits{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:.7rem}
+.trait{border:1px solid var(--border);background:var(--field);padding:.5rem;text-align:center;position:relative}
+.trait img{width:100%;aspect-ratio:1;object-fit:contain;background:repeating-conic-gradient(#8884 0 25%,transparent 0 50%) 50%/16px 16px;display:block}
+.trait .nm{font-size:.85rem;margin:.3rem 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--ink)}
+.trait input{width:100%;border:1px solid var(--border);background:var(--surface);color:var(--ink);padding:.2rem .4rem;font-family:var(--fm);font-size:.8rem}
+.trait .rm{position:absolute;top:2px;right:2px;background:#080807;color:var(--gold);border:none;width:22px;height:22px;cursor:pointer;line-height:1}
+.addrow{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem;align-items:center}
+.prev{position:sticky;top:90px}
+.prev canvas{width:100%;display:block;border:2px solid var(--gold);background:repeating-conic-gradient(#8884 0 25%,transparent 0 50%) 50%/20px 20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{margin-bottom:1rem}
+.bar{height:14px;background:var(--gray);border:1px solid var(--border);margin:1rem 0}
+.bar i{display:block;height:100%;width:0;background:var(--gold);transition:width .1s}
+table.t{width:100%;border-collapse:collapse;font-size:1rem}
+table.t th,table.t td{border-bottom:1px solid var(--border);padding:.45rem .6rem;text-align:left}
+table.t th{font-family:var(--fm);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2)}
+.dist{margin-bottom:1.2rem}
+.dist h4{font-family:var(--fh);font-size:.85rem;letter-spacing:.05em;margin-bottom:.4rem;color:var(--ink)}
+.dist .r{display:flex;gap:.6rem;align-items:center;font-size:.95rem;margin:.15rem 0}
+.dist .r em{flex:0 0 140px;font-style:normal;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dist .r s{display:block;height:10px;background:var(--gold);text-decoration:none}
+.dl{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+@media(max-width:900px){.studio{grid-template-columns:1fr}.prev{position:static}.stats,.how{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.stats,.how,.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main>
+  <div class="eyebrow">Create</div>
+  <h1>NFT <span class="gold">STUDIO</span></h1>
+  <p class="lead">Build a generative NFT collection right in your browser. Upload your trait layers, set rarity and rules, then download the images and metadata. Your files never leave your device.</p>
+
+  <div class="stats">
+    <div class="stat"><b>5,000</b><span>Max collection size</span></div>
+    <div class="stat"><b>100%</b><span>Runs on your device</span></div>
+    <div class="stat"><b>PNG / JPG</b><span>Export formats</span></div>
+    <div class="stat"><b>FREE</b><span>No sign-up needed</span></div>
+  </div>
+
+  <div class="how">
+    <div><b>01</b><p>Add layers (Background, Body, Eyes…) and upload trait images.</p></div>
+    <div><b>02</b><p>Set how rare each trait is, and add rules for traits that can't mix.</p></div>
+    <div><b>03</b><p>Generate the collection and check rarity ranks.</p></div>
+    <div><b>04</b><p>Download images and OpenSea-style metadata.</p></div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tb on" data-p="layers" type="button">LAYERS</button>
+    <button class="tb" data-p="rules" type="button">RULES</button>
+    <button class="tb" data-p="settings" type="button">SETTINGS</button>
+    <button class="tb" data-p="generate" type="button">GENERATE</button>
+  </div>
+
+  <div class="pane on" id="p-layers">
+    <div class="studio">
+      <div>
+        <div id="layers"></div>
+        <button class="btn" id="addLayer" type="button">+ Add layer</button>
+        <p class="note" style="margin-top:1rem">Layers are drawn from the top of the list to the bottom, so put the Background first. All images should have the same size, ideally with transparent backgrounds (PNG).</p>
+      </div>
+      <div class="prev panel">
+        <h2>PREVIEW</h2>
+        <canvas id="prev" width="400" height="400"></canvas>
+        <div class="dl"><button class="btn" id="shuffle" type="button">Shuffle</button></div>
+        <p class="note" id="prevInfo" style="margin-top:.8rem"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="pane" id="p-rules">
+    <div class="panel">
+      <h2>RULES: TRAITS THAT CAN'T APPEAR TOGETHER</h2>
+      <div class="grid2">
+        <div class="field"><label class="label" for="rA">If a NFT has</label><select class="select" id="rA"></select></div>
+        <div class="field"><label class="label" for="rB">then it can't have</label><select class="select" id="rB"></select></div>
+      </div>
+      <button class="btn" id="addRule" type="button">Add rule</button>
+      <div id="rules" style="margin-top:1rem"></div>
+    </div>
+  </div>
+
+  <div class="pane" id="p-settings">
+    <div class="panel">
+      <h2>COLLECTION SETTINGS</h2>
+      <div class="grid2">
+        <div class="field"><label class="label" for="sName">Collection name</label><input class="input" id="sName" value="My Collection"></div>
+        <div class="field"><label class="label" for="sSize">Collection size</label><input class="input" id="sSize" type="number" min="1" max="5000" value="100"></div>
+        <div class="field"><label class="label" for="sW">Width (px)</label><input class="input" id="sW" type="number" min="64" max="4000" value="1000"></div>
+        <div class="field"><label class="label" for="sH">Height (px)</label><input class="input" id="sH" type="number" min="64" max="4000" value="1000"></div>
+        <div class="field"><label class="label" for="sStart">First token number</label><input class="input" id="sStart" type="number" min="0" value="1"></div>
+        <div class="field"><label class="label" for="sFmt">Image format</label><select class="select" id="sFmt"><option value="png">PNG (transparent, bigger files)</option><option value="jpg">JPG (smaller files)</option></select></div>
+      </div>
+      <div class="field"><label class="label" for="sDesc">Description</label><textarea class="textarea" id="sDesc"></textarea></div>
+      <div class="field"><label class="label" for="sUrl">External URL (optional)</label><input class="input" id="sUrl" placeholder="https://"></div>
+      <div class="field"><label class="label" for="sCid">Image link in the metadata</label><input class="input" id="sCid" value="ipfs://REPLACE_WITH_YOUR_CID"><p class="note" style="margin-top:.5rem">After you upload the images to IPFS or your host, replace this with the real folder link. Each token will point to <code>&lt;link&gt;/&lt;number&gt;.png</code>.</p></div>
+      <label style="display:flex;gap:.6rem;align-items:center;font-size:1.1rem"><input type="checkbox" id="sUnique" checked> Make every NFT unique (no duplicates)</label>
+    </div>
+  </div>
+
+  <div class="pane" id="p-generate">
+    <div class="panel">
+      <h2>GENERATE</h2>
+      <p id="genInfo" style="margin-bottom:1rem"></p>
+      <button class="btn" id="go" type="button">Generate collection</button>
+      <button class="btn ghost" id="stop" type="button" style="display:none">Stop</button>
+      <div class="bar"><i id="barI"></i></div>
+      <p class="note" id="status">Ready.</p>
+      <div class="dl" id="dls"></div>
+    </div>
+    <div class="panel" id="rarity" style="margin-top:1.5rem;display:none"></div>
+  </div>
+</main>
+
+<div id="site-foot"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="shared.js"></script>
+<script>
+/* NFT Studio — everything runs in the browser. Nothing is uploaded anywhere. */
+var MAX = 5000, BATCH = 500;
+var layers = [];        // {name, empty:0, traits:[{name, weight, img, url}]}
+var rules = [];         // {a:[l,t], b:[l,t]}
+var gen = { list:null, stop:false };
+function $(id){ return document.getElementById(id); }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+function num(id, d){ var v = parseInt($(id).value,10); return isNaN(v) ? d : v; }
+
+/* ---- tabs ---- */
+document.querySelectorAll('.tb').forEach(function(b){ b.onclick = function(){
+  document.querySelectorAll('.tb').forEach(function(x){ x.classList.toggle('on', x===b); });
+  document.querySelectorAll('.pane').forEach(function(p){ p.classList.toggle('on', p.id==='p-'+b.getAttribute('data-p')); });
+  if (b.getAttribute('data-p')==='generate') genInfo();
+  if (b.getAttribute('data-p')==='rules') fillRuleSelects();
+}; });
+
+/* ---- layers ---- */
+function addLayer(name){ layers.push({name:name||('Layer '+(layers.length+1)), empty:0, traits:[]}); renderLayers(); }
+function renderLayers(){
+  var el = $('layers');
+  if (!layers.length) { el.innerHTML = '<div class="panel" style="margin-bottom:1rem"><p>No layers yet. Click <b>Add layer</b>, name it (for example Background) and upload your trait images.</p></div>'; return; }
+  el.innerHTML = layers.map(function(L,li){
+    return '<div class="layer" data-l="'+li+'"><div class="layer-head">'+
+      '<input class="input nm" value="'+esc(L.name)+'" data-act="rename" aria-label="Layer name">'+
+      '<button class="mini" data-act="up" type="button">&uarr;</button><button class="mini" data-act="down" type="button">&darr;</button>'+
+      '<button class="mini" data-act="del" type="button">Delete layer</button></div>'+
+      '<div class="traits">'+L.traits.map(function(T,ti){
+        return '<div class="trait" data-t="'+ti+'"><button class="rm" data-act="rmt" type="button" aria-label="Remove">&times;</button><img src="'+esc(T.url)+'" alt=""><div class="nm" title="'+esc(T.name)+'">'+esc(T.name)+'</div><input type="number" min="0" step="1" value="'+T.weight+'" data-act="w" aria-label="Weight"></div>';
+      }).join('')+'</div>'+
+      '<div class="addrow"><label class="btn ghost" style="cursor:pointer">+ Upload images<input type="file" accept="image/png,image/jpeg,image/webp" multiple data-act="file" style="display:none"></label>'+
+      '<label style="font-family:var(--fm);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase">Chance of NONE (weight) <input type="number" min="0" value="'+L.empty+'" data-act="empty" style="width:70px;border:1px solid var(--border);background:var(--field);color:var(--ink);padding:.2rem .4rem"></label>'+
+      '<span style="font-size:.95rem;color:var(--text2)">Weight = how common. Higher number = more common.</span></div></div>';
+  }).join('');
+}
+$('layers').addEventListener('click', function(e){
+  var b = e.target.closest('[data-act]'); if (!b) return;
+  var box = e.target.closest('.layer'); if (!box) return;
+  var li = +box.getAttribute('data-l'), act = b.getAttribute('data-act');
+  if (act==='del') { if (confirm('Delete this layer and its images?')) { layers.splice(li,1); rules = []; renderLayers(); renderRules(); preview(); } }
+  else if (act==='up' && li>0) { var t=layers[li]; layers[li]=layers[li-1]; layers[li-1]=t; rules=[]; renderLayers(); renderRules(); preview(); }
+  else if (act==='down' && li<layers.length-1) { var t2=layers[li]; layers[li]=layers[li+1]; layers[li+1]=t2; rules=[]; renderLayers(); renderRules(); preview(); }
+  else if (act==='rmt') { var ti = +e.target.closest('.trait').getAttribute('data-t'); URL.revokeObjectURL(layers[li].traits[ti].url); layers[li].traits.splice(ti,1); rules=[]; renderLayers(); renderRules(); preview(); }
+});
+$('layers').addEventListener('change', function(e){
+  var b = e.target; var act = b.getAttribute('data-act'); if (!act) return;
+  var box = b.closest('.layer'), li = +box.getAttribute('data-l');
+  if (act==='rename') { layers[li].name = b.value.trim() || ('Layer '+(li+1)); }
+  else if (act==='w') { var ti = +b.closest('.trait').getAttribute('data-t'); layers[li].traits[ti].weight = Math.max(0, parseFloat(b.value)||0); }
+  else if (act==='empty') { layers[li].empty = Math.max(0, parseFloat(b.value)||0); }
+  else if (act==='file') { loadFiles(li, b.files); b.value=''; return; }
+  preview();
+});
+function loadFiles(li, files){
+  var arr = Array.prototype.slice.call(files).filter(function(f){ return /^image\//.test(f.type); }).sort(function(a,b){ return a.name.localeCompare(b.name, undefined, {numeric:true}); });
+  var pending = arr.length, loaded = []; if (!pending) return;
+  var layer = layers[li];
+  function finish(){
+    if (--pending>0) return;
+    loaded.forEach(function(t){ if (t) layer.traits.push(t); });       // keep the file-name order
+    rules=[]; renderLayers(); renderRules(); autoSize(); preview();
+  }
+  arr.forEach(function(f,i){
+    var url = URL.createObjectURL(f), img = new Image();
+    img.onload = function(){ loaded[i] = {name:f.name.replace(/\.[^.]+$/,'').replace(/[_]+/g,' '), weight:1, img:img, url:url}; finish(); };
+    img.onerror = function(){ URL.revokeObjectURL(url); finish(); };
+    img.src = url;
+  });
+}
+function autoSize(){
+  if (autoSize.done) return;
+  for (var i=0;i<layers.length;i++) if (layers[i].traits.length) { var im = layers[i].traits[0].img; $('sW').value = im.naturalWidth; $('sH').value = im.naturalHeight; autoSize.done = true; return; }
+}
+$('addLayer').onclick = function(){ addLayer(); };
+
+/* ---- picking ---- */
+function pickIndex(L){
+  var total = L.empty; L.traits.forEach(function(t){ total += t.weight; });
+  if (total<=0) return L.traits.length ? Math.floor(Math.random()*L.traits.length) : -1;
+  var r = Math.random()*total;
+  for (var i=0;i<L.traits.length;i++){ r -= L.traits[i].weight; if (r<0) return i; }
+  return L.empty>0 ? -1 : L.traits.length-1;      // -1 = NONE
+}
+function ruleOK(c){
+  for (var i=0;i<rules.length;i++){ var r=rules[i]; if (c[r.a[0]]===r.a[1] && c[r.b[0]]===r.b[1]) return false; }
+  return true;
+}
+function randomCombo(){
+  for (var tries=0; tries<50; tries++){
+    var c = layers.map(pickIndex);
+    if (ruleOK(c)) return c;
+  }
+  return null;
+}
+function draw(ctx, W, H, c){
+  ctx.clearRect(0,0,W,H);
+  layers.forEach(function(L,i){ var t = c[i]>=0 ? L.traits[c[i]] : null; if (t) ctx.drawImage(t.img,0,0,W,H); });
+}
+
+/* ---- preview ---- */
+var curCombo = null;
+function preview(newCombo){
+  var cv = $('prev'), ctx = cv.getContext('2d');
+  var usable = layers.filter(function(L){ return L.traits.length; });
+  if (!usable.length) { ctx.clearRect(0,0,cv.width,cv.height); $('prevInfo').textContent = 'Upload images to see a preview.'; return; }
+  if (newCombo || !curCombo || curCombo.length!==layers.length) curCombo = randomCombo();
+  if (!curCombo) { $('prevInfo').textContent = 'These rules leave no valid combination. Remove a rule.'; return; }
+  var W = num('sW',1000), H = num('sH',1000);
+  cv.height = Math.round(400*H/W) || 400;
+  draw(ctx, cv.width, cv.height, curCombo);
+  $('prevInfo').textContent = layers.map(function(L,i){ return L.name+': '+(curCombo[i]>=0?L.traits[curCombo[i]].name:'none'); }).join('  ·  ');
+}
+$('shuffle').onclick = function(){ preview(true); };
+
+/* ---- rules ---- */
+function traitOptions(){
+  var o = [];
+  layers.forEach(function(L,li){ L.traits.forEach(function(T,ti){ o.push('<option value="'+li+':'+ti+'">'+esc(L.name+' — '+T.name)+'</option>'); }); });
+  return o.join('');
+}
+function fillRuleSelects(){ var o = traitOptions(); $('rA').innerHTML = o; $('rB').innerHTML = o; }
+function renderRules(){
+  fillRuleSelects();
+  $('rules').innerHTML = rules.length ? '<table class="t"><tr><th>Rule</th><th></th></tr>'+rules.map(function(r,i){
+    var A = layers[r.a[0]].traits[r.a[1]], B = layers[r.b[0]].traits[r.b[1]];
+    return '<tr><td>'+esc(layers[r.a[0]].name+' — '+A.name)+' <b>can\'t be with</b> '+esc(layers[r.b[0]].name+' — '+B.name)+'</td><td><button class="mini" data-i="'+i+'" type="button">Remove</button></td></tr>';
+  }).join('')+'</table>' : '<p style="color:var(--text2)">No rules yet.</p>';
+}
+$('addRule').onclick = function(){
+  var a = $('rA').value.split(':').map(Number), b = $('rB').value.split(':').map(Number);
+  if (!$('rA').value || !$('rB').value) return;
+  if (a[0]===b[0]) { alert('Pick traits from two different layers.'); return; }
+  rules.push({a:a,b:b}); renderRules(); curCombo = null; preview();
+};
+$('rules').addEventListener('click', function(e){ var b=e.target.closest('button[data-i]'); if(!b) return; rules.splice(+b.getAttribute('data-i'),1); renderRules(); });
+
+/* ---- generate ---- */
+function possible(){
+  var n = 1; layers.forEach(function(L){ var c = L.traits.length + (L.empty>0?1:0); if (c>0) n *= c; });
+  return n;
+}
+function genInfo(){
+  var size = Math.min(MAX, Math.max(1,num('sSize',100))), p = possible();
+  var w = num('sW',1000), h = num('sH',1000);
+  var mb = Math.round(size*w*h*4/1e6/ (($('sFmt').value==='png')?6:12));
+  $('genInfo').innerHTML = 'Collection: <b>'+esc($('sName').value)+'</b> &middot; '+size+' NFTs &middot; '+w+'&times;'+h+' px &middot; up to <b>'+p.toLocaleString()+'</b> possible combinations (before rules).'+
+    '<br><span style="color:var(--text2)">Rough download size: '+(mb>1000?(mb/1000).toFixed(1)+' GB':mb+' MB')+'. Large collections need a computer with plenty of free memory; try a smaller size first.</span>';
+}
+function say(t){ $('status').textContent = t; }
+function mime(){ return $('sFmt').value==='png' ? 'image/png' : 'image/jpeg'; }
+function toBlob(cv){ return new Promise(function(res){ cv.toBlob(res, mime(), 0.92); }); }
+function tick(){ return new Promise(function(r){ setTimeout(r,0); }); }
+function save(name, blob){
+  var a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = name; document.body.appendChild(a); a.click();
+  setTimeout(function(){ URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+}
+function csvCell(v){ v = String(v); return /[",\n]/.test(v) ? '"'+v.replace(/"/g,'""')+'"' : v; }
+
+$('stop').onclick = function(){ gen.stop = true; };
+$('go').onclick = async function(){
+  if (typeof JSZip === 'undefined') { say('The zip library did not load. Check your internet connection and reload the page.'); return; }
+  var used = layers.filter(function(L){ return L.traits.length; });
+  if (!used.length) { say('Add at least one layer with images first.'); return; }
+  var size = Math.min(MAX, Math.max(1,num('sSize',100))), start = num('sStart',1), W = num('sW',1000), H = num('sH',1000);
+  var ext = $('sFmt').value, unique = $('sUnique').checked;
+  $('go').disabled = true; $('stop').style.display = 'inline-flex'; $('dls').innerHTML = ''; $('rarity').style.display='none'; gen.stop = false;
+  // 1. choose the combinations
+  say('Choosing combinations…');
+  var combos = [], seen = new Set(), attempts = 0, cap = size*30;
+  while (combos.length<size && attempts<cap) {
+    attempts++;
+    var c = randomCombo(); if (!c) break;
+    var key = c.join(',');
+    if (unique && seen.has(key)) continue;
+    seen.add(key); combos.push(c);
+    if (attempts%500===0) await tick();
+  }
+  if (!combos.length) { say('No valid combinations. Check your rules.'); $('go').disabled=false; $('stop').style.display='none'; return; }
+  var short = combos.length<size;
+  // 2. rarity numbers
+  var counts = layers.map(function(L){ var m = {}; return m; });
+  combos.forEach(function(c){ c.forEach(function(ti,li){ counts[li][ti] = (counts[li][ti]||0)+1; }); });
+  var scores = combos.map(function(c){ var s = 0; c.forEach(function(ti,li){ if (layers[li].traits.length) s += combos.length/counts[li][ti]; }); return s; });
+  var order = scores.map(function(s,i){ return i; }).sort(function(a,b){ return scores[b]-scores[a]; });
+  var rank = []; order.forEach(function(i,r){ rank[i] = r+1; });
+  // 3. render
+  var cv = document.createElement('canvas'); cv.width = W; cv.height = H; var ctx = cv.getContext('2d');
+  var zip = new JSZip(), batches = [], meta = [], inBatch = 0, batchStart = start;
+  for (var i=0;i<combos.length;i++){
+    if (gen.stop) break;
+    var id = start+i, c2 = combos[i];
+    if (ext==='jpg') { ctx.fillStyle = '#fff'; ctx.fillRect(0,0,W,H); }
+    draw(ctx, W, H, c2);
+    var blob = await toBlob(cv);
+    zip.file(id+'.'+ext, blob);
+    meta.push({ name: $('sName').value.trim()+' #'+id, description: $('sDesc').value.trim(), image: $('sCid').value.trim().replace(/\/$/,'')+'/'+id+'.'+ext,
+      external_url: $('sUrl').value.trim() || undefined,
+      attributes: c2.map(function(ti,li){ return ti>=0 ? {trait_type:layers[li].name, value:layers[li].traits[ti].name} : null; }).filter(Boolean) });
+    inBatch++;
+    if (inBatch===BATCH) { batches.push({from:batchStart, to:id, blob: await zip.generateAsync({type:'blob', compression:'STORE'})}); zip = new JSZip(); inBatch = 0; batchStart = id+1; }
+    $('barI').style.width = ((i+1)/combos.length*100)+'%';
+    say('Generated '+(i+1)+' of '+combos.length+'…');
+    if (i%3===0) await tick();
+  }
+  if (inBatch>0 && meta.length) batches.push({from:batchStart, to:start+meta.length-1, blob: await zip.generateAsync({type:'blob', compression:'STORE'})});
+  // 4. files to download
+  var done = meta.length;
+  var mz = new JSZip(), rows = ['token,rarity_score,rank'];
+  meta.forEach(function(m,i){ mz.file((start+i)+'.json', JSON.stringify(m,null,2)); rows.push((start+i)+','+scores[i].toFixed(2)+','+rank[i]); });
+  mz.file('metadata.json', JSON.stringify(meta,null,2)); mz.file('rarity.csv', rows.join('\n'));
+  var layerRows = ['layer,trait,count,percent'];
+  layers.forEach(function(L,li){ L.traits.forEach(function(T,ti){ var n = counts[li][ti]||0; layerRows.push([L.name,T.name,n,(n/done*100).toFixed(1)].map(csvCell).join(',')); }); });
+  mz.file('layers.csv', layerRows.join('\n'));
+  var metaBlob = await mz.generateAsync({type:'blob'});
+  $('dls').innerHTML = '';
+  batches.forEach(function(b){ var btn = document.createElement('button'); btn.className='btn'; btn.type='button'; btn.textContent = 'Images '+b.from+'–'+b.to; btn.onclick = function(){ save('images-'+b.from+'-'+b.to+'.zip', b.blob); }; $('dls').appendChild(btn); });
+  var mb = document.createElement('button'); mb.className='btn dark'; mb.type='button'; mb.textContent='Metadata + rarity'; mb.onclick = function(){ save('metadata.zip', metaBlob); }; $('dls').appendChild(mb);
+  say((gen.stop?'Stopped. ':'Done. ')+done+' NFTs ready.'+(short?' (Only '+combos.length+' unique combinations were possible, so the collection is smaller than you asked for.)':''));
+  showRarity(combos.slice(0,done), counts, scores, rank, start);
+  $('go').disabled = false; $('stop').style.display = 'none';
+};
+function showRarity(combos, counts, scores, rank, start){
+  var n = combos.length, top = scores.map(function(s,i){ return i; }).sort(function(a,b){ return rank[a]-rank[b]; }).slice(0,10);
+  var html = '<h2>RARITY</h2><h4 style="font-family:var(--fh);font-size:.85rem;margin-bottom:.4rem">TOP 10 RAREST</h4><table class="t"><tr><th>Rank</th><th>Token</th><th>Score</th></tr>'+
+    top.map(function(i){ return '<tr><td>#'+rank[i]+'</td><td>'+(start+i)+'</td><td>'+scores[i].toFixed(1)+'</td></tr>'; }).join('')+'</table><div style="height:1.2rem"></div>';
+  layers.forEach(function(L,li){
+    if (!L.traits.length) return;
+    html += '<div class="dist"><h4>'+esc(L.name)+'</h4>';
+    L.traits.forEach(function(T,ti){ var c = counts[li][ti]||0, p = c/n*100; html += '<div class="r"><em title="'+esc(T.name)+'">'+esc(T.name)+'</em><s style="width:'+Math.max(2,p*2)+'px"></s><span>'+p.toFixed(1)+'%</span></div>'; });
+    if (counts[li][-1]) html += '<div class="r"><em>none</em><s style="width:'+Math.max(2,counts[li][-1]/n*200)+'px;background:var(--gray3)"></s><span>'+(counts[li][-1]/n*100).toFixed(1)+'%</span></div>';
+    html += '</div>';
+  });
+  $('rarity').innerHTML = html; $('rarity').style.display = 'block';
+}
+['sSize','sW','sH','sFmt','sName'].forEach(function(id){ $(id).addEventListener('input', function(){ if ($('p-generate').classList.contains('on')) genInfo(); if (id==='sW'||id==='sH') preview(); }); });
+
+addLayer('Background'); addLayer('Body'); addLayer('Eyes');
+</script>
+</body>
+</html>

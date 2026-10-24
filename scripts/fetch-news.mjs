@@ -21,7 +21,8 @@ const PER_FEED = Number(process.env.NEWS_PER_FEED || 8);     // newest items rea
 const MAX_AGE_HOURS = Number(process.env.NEWS_MAX_AGE_HOURS || 72);
 const UA = 'CryptoAsiaNewsBot/1.0 (+https://cryptoasia.net)';
 
-export const CATEGORIES = ['Bitcoin','Ethereum','Altcoins','DeFi','NFTs & Ordinals','Regulation','Markets','Exchanges','Tech','Asia','Other'];
+export const CATEGORIES = ['Airdrops','Bitcoin','Ethereum','Altcoins','DeFi','NFTs & Ordinals','Regulation','Markets','Exchanges','Tech','Asia','Other'];
+const MAX_IMAGE_LOOKUPS = Number(process.env.NEWS_MAX_IMAGE_LOOKUPS || 10);   // article-page lookups per run (new + backfill)
 
 /* ---------- helpers ---------- */
 export function decodeEntities(s) {
@@ -102,6 +103,7 @@ Rules:
 - If the excerpt is thin, write one sentence instead of two.
 - Neutral tone. No hype, no price predictions, no advice to buy or sell.
 - Decide whether the story is really about crypto, blockchain, digital assets or their regulation or markets.
+- Use the category "Airdrops" for any story about an airdrop, token distribution to users, points programs, retroactive rewards, claims or eligibility, even if another category could also fit.
 Reply with JSON only, in this exact shape:
 {"relevant": true|false, "headline": "max 12 words, your own words", "summary": "1-2 sentences, max 45 words", "category": "one of: ${CATEGORIES.join(' | ')}"}`;
 
@@ -130,6 +132,27 @@ export async function summarise(item, apiKey, fetchImpl = fetch) {
     summary: summary.slice(0, 400),
     category: CATEGORIES.includes(j.category) ? j.category : 'Other'
   };
+}
+
+/* ---------- thumbnail: the article's own social-preview image ---------- */
+export function extractOgImage(html, pageUrl) {
+  const m = /<meta[^>]+(?:property|name)=["'](?:og:image(?::secure_url)?|twitter:image)["'][^>]*>/i.exec(html)
+         || /<meta[^>]+content=["'][^"']+["'][^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]*>/i.exec(html);
+  if (!m) return '';
+  const c = /content=["']([^"']+)["']/i.exec(m[0]);
+  if (!c) return '';
+  try {
+    const u = new URL(decodeEntities(c[1]), pageUrl);
+    return u.protocol === 'https:' ? u.href.slice(0, 500) : '';
+  } catch { return ''; }
+}
+export async function fetchOgImage(url, fetchImpl = fetch) {
+  try {
+    const r = await fetchImpl(url, { headers: { 'user-agent': UA, accept: 'text/html' }, signal: AbortSignal.timeout(12000), redirect: 'follow' });
+    if (!r.ok) return '';
+    const html = (await r.text()).slice(0, 200000);      // the <head> is at the top
+    return extractOgImage(html, url);
+  } catch { return ''; }
 }
 
 /* ---------- main ---------- */
@@ -177,10 +200,13 @@ export async function run({ fetchImpl = fetch, apiKey = process.env.ANTHROPIC_AP
   // 3. write briefs
   const written = [];
   const newSkipped = [];
+  let lookups = 0;
   for (const item of batch) {
     try {
       const brief = await summarise(item, apiKey, fetchImpl);
       if (!brief) { console.log('  skipped (not crypto):', item.title.slice(0, 60)); newSkipped.push(item.id); continue; }
+      let image = item.image || '';
+      if (!image && lookups < MAX_IMAGE_LOOKUPS) { lookups++; image = await fetchOgImage(item.link, fetchImpl); }
       written.push({
         id: item.id,
         headline: brief.headline,
@@ -189,7 +215,7 @@ export async function run({ fetchImpl = fetch, apiKey = process.env.ANTHROPIC_AP
         source: item.source,
         url: item.link,
         published: item.published,
-        image: item.image || '',
+        image,
         sourceTitle: item.title        // used only to avoid duplicates; the page never shows it
       });
     } catch (e) {
@@ -197,8 +223,18 @@ export async function run({ fetchImpl = fetch, apiKey = process.env.ANTHROPIC_AP
     }
   }
 
+  // 3b. older briefs that never had a thumbnail lookup: try a few per run, then mark them as tried
+  let backfilled = 0;
+  for (const it of realExisting) {
+    if (lookups >= MAX_IMAGE_LOOKUPS) break;
+    if (it.image !== undefined || !it.url) continue;
+    lookups++;
+    it.image = await fetchOgImage(it.url, fetchImpl);   // '' = tried, none found
+    backfilled++;
+  }
+
   // 4. save (only when something changed, so we do not create empty commits)
-  if (!written.length && !newSkipped.length) { console.log('Nothing new to publish.'); return { written: 0 }; }
+  if (!written.length && !newSkipped.length && !backfilled) { console.log('Nothing new to publish.'); return { written: 0 }; }
   const items = [...written, ...realExisting]
     .sort((a, b) => b.published.localeCompare(a.published))
     .slice(0, KEEP);
