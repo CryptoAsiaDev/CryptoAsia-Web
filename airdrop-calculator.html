@@ -306,7 +306,7 @@ function render(){
   $('resDot').innerHTML = dotHTML(current);
   $('resTier').textContent = tierFor(r.airdrop).name;
   const reg=$('btnReg'), link=REFERRALS[current.id];
-  if(link){reg.href=link;reg.textContent='Register on '+current.name+' \u2197';reg.style.display='';}
+  if(link){reg.setAttribute('data-track','ref-'+current.id);reg.href=link;reg.textContent='Register on '+current.name+' \u2197';reg.style.display='';}
   else{reg.style.display='none';reg.removeAttribute('href');}
   renderTiers(r);
   return r;

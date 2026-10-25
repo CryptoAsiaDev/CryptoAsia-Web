@@ -34,3 +34,14 @@ Connect wallet > dashboard > full-page studio. Everything is built in the visito
 
 ## Homepage sections removed
 The removed sections (Venture/Collect/Build, Our HODL, What We've Built, Token Portfolio) are saved in `homepage-sections-backup.html` (kept outside this folder; do not upload it).
+
+## Traffic tracking and reports (Umami)
+
+1. Sign up at umami.is (Cloud, free plan), add website `cryptoasiabtc.com`, copy the **Website ID**.
+2. Paste it into `UMAMI_ID` near the top of the analytics block in `shared.js`. Empty = tracking off.
+3. In Umami Cloud settings create an **API key**. In GitHub: Settings > Secrets and variables > Actions, add `UMAMI_API_KEY` and `UMAMI_WEBSITE_ID`.
+4. Actions > "Traffic report" > Run workflow (type `all` to force). Daily reports run at 01:30 KL; weekly on Mondays; monthly on the 1st.
+5. Open the run, scroll to **Artifacts**, download `traffic-reports` (HTML to print or share, plus CSV and JSON).
+
+Tracking loads after the page finishes, sets no cookies, respects Do Not Track, and is disclosed on `about.html`.
+Buttons with `data-track="name"` send click events (the airdrop Register buttons send `ref-<dex>`).

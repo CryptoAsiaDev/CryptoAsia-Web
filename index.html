@@ -20,7 +20,6 @@
 <style>
 /* HERO — always dark, with extra gold in dark mode */
 .hero{position:relative;overflow:hidden;background:var(--black);padding:5rem 1.5rem 5rem;text-align:center;border-bottom:3px solid var(--gold)}
-.hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(245,197,24,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(245,197,24,.08) 1px,transparent 1px);background-size:56px 56px}
 :root[data-theme="dark"] .hero{background:radial-gradient(ellipse 70% 80% at 50% 0%,rgba(245,197,24,.4),transparent 70%),radial-gradient(ellipse 50% 60% at 90% 100%,rgba(245,197,24,.22),transparent 70%),#181202}
 .hero-video{position:absolute;inset:0;z-index:0;overflow:hidden}
 .hero-video iframe{width:100%;height:100%;pointer-events:none;opacity:.15;transform:scale(1.1)}
@@ -35,29 +34,44 @@
 .hero-pillars{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
 .pillar{font-family:var(--fm);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(245,197,24,.45);padding:.55rem 1.15rem;background:rgba(245,197,24,.08);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%)}
 
-/* BANNER */
-.calc-banner{background:var(--gold);border-bottom:3px solid #080807;padding:1.75rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap}
-.calc-banner h2{font-family:var(--fh);font-size:1.2rem;font-weight:900;color:#080807;letter-spacing:.04em;margin-bottom:.2rem}
-.calc-banner p{color:#080807;font-size:1.1rem}
-.calc-banner a{display:inline-block;background:#080807;color:var(--gold);font-family:var(--fm);font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;font-weight:700;padding:.85rem 1.6rem;clip-path:polygon(0 0,calc(100% - 10px) 0,100% 10px,100% 100%,0 100%)}
-.calc-banner a:hover{background:#222}
-
-/* EXPLORE */
-.explore{max-width:1100px;margin:0 auto;padding:4.5rem 1.5rem 5rem}
-.explore h2{font-family:var(--fh);font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:900;letter-spacing:.03em;margin-bottom:2rem;line-height:1.1}
-.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.tool{display:flex;flex-direction:column;gap:.5rem;background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.8rem 1.6rem;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
-.tool:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(245,197,24,.2)}
-.tool .ic{font-size:2rem;line-height:1}
-.tool h3{font-family:var(--fh);font-size:1rem;letter-spacing:.06em}
-.tool p{color:var(--text2);font-size:1.12rem;flex:1}
-.tool .go{font-family:var(--fm);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:700;border-bottom:2px solid var(--gold);align-self:flex-start}
+/* SECTIONS */
+.sec{max-width:1100px;margin:0 auto;padding:4rem 1.5rem 0}
+.sec:last-of-type{padding-bottom:5rem}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.sec h2{font-family:var(--fh);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;letter-spacing:.03em;line-height:1.1}
+.more{font-family:var(--fm);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:700;border-bottom:2px solid var(--gold);text-decoration:none;white-space:nowrap}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ncard{display:flex;flex-direction:column;gap:.5rem;background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.2rem 1.3rem;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.ncard:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(245,197,24,.2)}
+.ncard .meta{font-family:var(--fm);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.ncard .tag{background:var(--gold);color:#080807;padding:.1rem .5rem;font-weight:700}
+.ncard h3{font-family:var(--fh);font-size:.92rem;letter-spacing:.02em;line-height:1.35}
+.ncard p{color:var(--text2);font-size:1.05rem;flex:1}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.feature{display:flex;flex-direction:column;gap:.7rem;background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.8rem 1.6rem}
+.feature .ic{font-size:2rem;line-height:1}
+.feature h3{font-family:var(--fh);font-size:1.05rem;letter-spacing:.05em}
+.feature p{color:var(--text2);font-size:1.1rem}
+.feature ul{list-style:none;color:var(--text2);font-size:1.05rem;display:flex;flex-direction:column;gap:.25rem}
+.feature li::before{content:'\2192  ';color:var(--gold-d);font-weight:700}
+.feature .grow{flex:1}
+.feature .btn{align-self:flex-start;text-decoration:none}
+.jobs-mini{border-top:1px solid var(--border);padding-top:.7rem;display:flex;flex-direction:column;gap:.35rem;font-size:1rem}
+.jobs-mini a{color:var(--ink);text-decoration:none;font-weight:600}
+.jobs-mini a:hover{text-decoration:underline}
+.jobs-mini small{font-family:var(--fm);font-size:.72rem;color:var(--text2);letter-spacing:.04em}
+.minis{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.mini-t{display:flex;gap:1rem;align-items:center;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);padding:1.1rem 1.3rem;text-decoration:none;color:inherit}
+.mini-t:hover{box-shadow:0 10px 26px rgba(245,197,24,.18)}
+.mini-t .ic{font-size:1.8rem}
+.mini-t h3{font-family:var(--fh);font-size:.9rem;letter-spacing:.05em}
+.mini-t p{color:var(--text2);font-size:1.02rem}
 
 #cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;gap:1rem;font-size:.9rem;color:rgba(250,250,247,.6);font-family:var(--fm);letter-spacing:.04em}
 #cookie-bar button{font-family:var(--fm);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:#080807;border:none;padding:.55rem 1.5rem;cursor:pointer;font-weight:700}
 
-@media(max-width:900px){.tools{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.tools{grid-template-columns:1fr}.hero{padding:3.5rem 1rem}#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem}}
+@media(max-width:900px){.news-grid,.feature-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.news-grid,.feature-grid,.minis{grid-template-columns:1fr}.hero{padding:3.5rem 1rem}#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem}}
 </style>
 </head>
 <body>
@@ -82,24 +96,35 @@
   </div>
 </section>
 
-<div class="calc-banner">
-  <div>
-    <h2>PERP DEX AIRDROP CALCULATOR</h2>
-    <p>Estimate your potential airdrop across 13 perp DEX points programs.</p>
-  </div>
-  <a href="airdrop-calculator.html">Open Calculator &#8594;</a>
-</div>
+<section class="sec" id="newsSec" hidden>
+  <div class="sec-head"><div><div class="eyebrow">Latest</div><h2>CRYPTO <span style="color:var(--gold-d)">NEWS</span></h2></div><a class="more" href="news.html">Read all news &#8594;</a></div>
+  <div class="news-grid" id="newsGrid"></div>
+</section>
 
-<section class="explore" id="explore">
-  <div class="eyebrow">Explore</div>
-  <h2 class="reveal">TOOLS &amp; <span style="color:var(--gold-d)">NEWS</span></h2>
-  <div class="tools">
-    <a class="tool reveal" href="news.html"><div class="ic">&#128240;</div><h3>CRYPTO NEWS</h3><p>Short briefs on what is moving in crypto, updated through the day, with live prices.</p><span class="go">Read news &#8594;</span></a>
-    <a class="tool reveal" href="airdrop-calculator.html"><div class="ic">&#129689;</div><h3>AIRDROP CALCULATOR</h3><p>Estimate your potential airdrop from your points across 13 perp DEX programs.</p><span class="go">Open calculator &#8594;</span></a>
-    <a class="tool reveal" href="jobs.html"><div class="ic">&#128188;</div><h3>WEB3 JOBS</h3><p>Hire talent or find your next role in crypto. Connect your wallet to post.</p><span class="go">Browse jobs &#8594;</span></a>
-    <a class="tool reveal" href="nft-studio.html"><div class="ic">&#127912;</div><h3>NFT STUDIO</h3><p>Build a generative NFT collection in your browser. Layers, rarity and metadata export.</p><span class="go">Open studio &#8594;</span></a>
-    <a class="tool reveal" href="inheritance.html"><div class="ic">&#128273;</div><h3>CRYPTO INHERITANCE KIT</h3><p>Make a plan so the people you trust can reach your crypto if something happens to you.</p><span class="go">Start a plan &#8594;</span></a>
-    <a class="tool reveal" href="fortune.html"><div class="ic">&#128302;</div><h3>CRYPTO FORTUNE</h3><p>Your Chinese zodiac sign and a daily crypto fortune you can share.</p><span class="go">Get fortune &#8594;</span></a>
+<section class="sec" id="tools">
+  <div class="sec-head"><div><div class="eyebrow">Tools</div><h2>BUILT FOR <span style="color:var(--gold-d)">WEB3</span></h2></div></div>
+  <div class="feature-grid">
+    <div class="feature reveal"><div class="ic">&#129689;</div><h3>AIRDROP CALCULATOR</h3>
+      <p>Work out what your points could be worth. Pick a perp DEX, enter your points and an FDV guess, and see your estimated airdrop and tier.</p>
+      <ul><li>13 perp DEX points programs</li><li>Shareable image or video card</li><li>Sign-up links for each protocol</li></ul><div class="grow"></div>
+      <a class="btn" href="airdrop-calculator.html">Open calculator</a></div>
+    <div class="feature reveal"><div class="ic">&#128188;</div><h3>WEB3 JOBS</h3>
+      <p>A job board for crypto. Companies post roles and people post that they are looking for work. Sign in with your wallet, no accounts or passwords.</p>
+      <div class="jobs-mini" id="jobsMini" hidden></div>
+      <ul><li>Employers and job seekers</li><li>Small USDC listing fee</li></ul><div class="grow"></div>
+      <a class="btn" href="jobs.html">Browse jobs</a></div>
+    <div class="feature reveal"><div class="ic">&#127912;</div><h3>NFT STUDIO</h3>
+      <p>Build a generative NFT collection in your browser. Upload layers, set rarity, add rules, then export the images and metadata. Files never leave your device.</p>
+      <ul><li>Free watermarked previews, unlimited</li><li>Pay once to export clean, from $50 USDC</li></ul><div class="grow"></div>
+      <a class="btn" href="nft-studio.html">Open studio</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head"><div><div class="eyebrow">More</div><h2>EXTRAS</h2></div></div>
+  <div class="minis">
+    <a class="mini-t reveal" href="inheritance.html"><div class="ic">&#128273;</div><div><h3>CRYPTO INHERITANCE KIT</h3><p>Make a plan so the people you trust can reach your crypto if something happens to you.</p></div></a>
+    <a class="mini-t reveal" href="fortune.html"><div class="ic">&#128302;</div><div><h3>CRYPTO FORTUNE</h3><p>Your Chinese zodiac sign and a daily crypto fortune you can share.</p></div></a>
   </div>
 </section>
 
@@ -111,6 +136,39 @@
 </div>
 
 <script src="shared.js"></script>
+<script>
+(function(){
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function safe(u){ try { var x = new URL(u); return x.protocol==='https:' ? x.href : '#'; } catch(e){ return '#'; } }
+  function ago(iso){ var m = Math.round((Date.now()-new Date(iso).getTime())/60000); if (isNaN(m)||m<0) return ''; if (m<60) return m+' min ago'; var h = Math.round(m/60); if (h<24) return h+' h ago'; return Math.round(h/24)+' d ago'; }
+  var LABEL = {Markets:'Market',Altcoins:'Altcoin',Airdrops:'Airdrop',Ethereum:'Altcoin',DeFi:'Altcoin','NFTs & Ordinals':'Altcoin'};
+  fetch('news.json?t='+Math.floor(Date.now()/600000)).then(function(r){ if(!r.ok) throw 0; return r.json(); }).then(function(d){
+    var items = (d.items||[]).slice().sort(function(a,b){ return String(b.published).localeCompare(String(a.published)); }).slice(0,6);
+    if (!items.length) return;
+    document.getElementById('newsGrid').innerHTML = items.map(function(i){
+      return '<a class="ncard" href="'+esc(safe(i.url))+'" target="_blank" rel="noopener nofollow"><div class="meta"><span class="tag">'+esc(LABEL[i.category]||i.category||'News')+'</span><span>'+esc(i.source||'')+'</span><span>'+esc(ago(i.published))+'</span></div><h3>'+esc(i.headline)+'</h3><p>'+esc(i.summary)+'</p></a>';
+    }).join('');
+    document.getElementById('newsSec').hidden = false;
+  }).catch(function(){});
+
+  function jobsFromFile(){ return fetch('jobs.json').then(function(r){ return r.ok ? r.json() : {jobs:[]}; }).then(function(d){
+    var today = new Date().toISOString().slice(0,10);
+    return (d.jobs||[]).filter(function(j){ return !j.sample && (!j.expires || j.expires>=today); }).map(function(j){ return {title:j.title,company:j.company,type:j.type,location:j.location,posted:j.posted}; });
+  }).catch(function(){ return []; }); }
+  function jobsFromDb(){ return fetch('jobs-config.json').then(function(r){ return r.ok ? r.json() : {}; }).then(function(c){
+    if (!c.supabaseUrl || !c.supabaseKey) return [];
+    return fetch(c.supabaseUrl.replace(/\/$/,'')+'/rest/v1/submissions?kind=eq.job&select=data,created_at,verified_at&order=created_at.desc&limit=3', {headers:{apikey:c.supabaseKey, Authorization:'Bearer '+c.supabaseKey}})
+      .then(function(r){ return r.ok ? r.json() : []; }).then(function(rows){ return rows.map(function(r){ var d = r.data||{}; return {title:d.title,company:d.company,type:d.type,location:d.location,posted:r.verified_at||r.created_at}; }); });
+  }).catch(function(){ return []; }); }
+  Promise.all([jobsFromDb(), jobsFromFile()]).then(function(r){
+    var all = r[0].concat(r[1]).filter(function(j){ return j.title; }).sort(function(a,b){ return String(b.posted).localeCompare(String(a.posted)); }).slice(0,3);
+    if (!all.length) return;
+    var el = document.getElementById('jobsMini');
+    el.innerHTML = '<small>LATEST LISTINGS</small>'+all.map(function(j){ return '<div><a href="jobs.html">'+esc(j.title)+'</a><br><small>'+esc([j.company,j.type,j.location].filter(Boolean).join(' · '))+'</small></div>'; }).join('');
+    el.hidden = false;
+  });
+})();
+</script>
 <script>
 (function(){
   var bar = document.getElementById('cookie-bar'), ok = false;

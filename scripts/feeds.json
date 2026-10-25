@@ -38,5 +38,25 @@
   {
     "name": "Google News: airdrops",
     "url": "https://news.google.com/rss/search?q=crypto+airdrop+when:2d&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+    "name": "The Block",
+    "url": "https://www.theblock.co/rss.xml"
+  },
+  {
+    "name": "Bitcoin.com News",
+    "url": "https://news.bitcoin.com/feed/"
+  },
+  {
+    "name": "Cointelegraph Asia",
+    "url": "https://cointelegraph.com/rss/tag/asia"
+  },
+  {
+    "name": "DL News",
+    "url": "https://www.dlnews.com/arc/outboundfeeds/rss/"
+  },
+  {
+    "name": "Fintech News Singapore",
+    "url": "https://fintechnews.sg/feed/"
   }
 ]

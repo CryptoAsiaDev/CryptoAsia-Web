@@ -24,8 +24,7 @@
 html{scroll-behavior:smooth}
 body{
   background-color:var(--page);color:var(--text);font-family:var(--fs);font-size:19px;line-height:1.55;min-height:100vh;
-  background-image:var(--glow),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
-  background-size:auto,48px 48px,48px 48px;background-attachment:fixed,scroll,scroll;
+  background-image:var(--glow);background-attachment:fixed;
 }
 a{color:inherit}
 

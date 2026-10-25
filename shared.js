@@ -57,9 +57,29 @@
   if(footHost){
     footHost.outerHTML =
       '<footer class="foot"><img class="foot-logo" src="logos/ca-round.png" alt="Crypto Asia" loading="lazy">'+
-      '&copy; 2026 <a href="index.html">CRYPTO ASIA</a> &mdash; CRYPTOASIABTC.COM &middot; <a href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">@CryptoAsiaBTC</a>'+
+      '&copy; 2026 <a href="index.html">CRYPTO ASIA</a> &mdash; CRYPTOASIABTC.COM &middot; <a href="about.html">About &amp; Privacy</a> &middot; <a href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">@CryptoAsiaBTC</a>'+
       '<div class="disc">For information and entertainment only. Nothing on this site is financial, legal or tax advice. Crypto is volatile and you can lose money. Do your own research.</div></footer>';
   }
+
+  /* ---- visit counting (Umami, cookie-less). Paste your Website ID below to switch it on; leave empty to keep it off. ---- */
+  var UMAMI_ID = '';
+  if(UMAMI_ID){
+    var loadUmami = function(){
+      var u = document.createElement('script');
+      u.defer = true; u.src = 'https://cloud.umami.is/script.js';
+      u.setAttribute('data-website-id', UMAMI_ID);
+      u.setAttribute('data-domains', 'cryptoasiabtc.com');
+      u.setAttribute('data-do-not-track', 'true');
+      document.head.appendChild(u);
+    };
+    var later = function(){ (window.requestIdleCallback || function(f){ setTimeout(f, 800); })(loadUmami); };
+    if(document.readyState === 'complete') later(); else window.addEventListener('load', later);
+  }
+  /* click events: any element with data-track="name" */
+  document.addEventListener('click', function(e){
+    var el = e.target.closest && e.target.closest('[data-track]');
+    if(el && window.umami && umami.track) { try { umami.track(el.getAttribute('data-track')); } catch(x){} }
+  });
 
   /* ---- scroll reveal ---- */
   if('IntersectionObserver' in window){
