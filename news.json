@@ -1,6 +1,7 @@
 {
-  "updated": "2026-10-25T13:59:07.044Z",
+  "updated": "2026-10-25T17:24:17.727Z",
   "skipped": [
+    "a9e813f80b178392",
     "a3f6765a4f228ba3",
     "6d576f661b906531",
     "9dbb8f89ef729a82",
@@ -22,6 +23,50 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "b61fce8eadd43ee0",
+      "headline": "Six More Firms Object to Trading Their Shares as Tokens",
+      "summary": "Twenty-two companies have now objected to their shares being traded on a planned tokenized stock venue run by OKX-ICE. Wells Fargo, Cisco, Intuit and others recently joined the opposition.",
+      "category": "Exchanges",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/381784/wells-fargo-cisco-intuit-more-companies-object-tokenized-stocks",
+      "published": "2026-10-25T16:01:03.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/03/decrypt-style-wells-fargo-gID_7.png",
+      "sourceTitle": "Wells Fargo, Cisco, Intuit Among 6 More Companies Objecting to Tokenized Stocks"
+    },
+    {
+      "id": "d37fddecc3cb6bc4",
+      "headline": "Keystone customers claim breach exposed data that was supposed to be deleted",
+      "summary": "Customers say a breach revealed information the hardware wallet maker had pledged to delete. Keystone has said it generally erases customer data 180 days after orders, though some X users have questioned that claim.",
+      "category": "Exchanges",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/business/2026-10-25-keystone-customers-say-breach-exposed-data-the-hardware-wallet-maker-promised-to-delete-431613",
+      "published": "2026-10-25T15:56:30.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2023/04/20230411_Hack_Generic_1.jpg",
+      "sourceTitle": "Keystone customers say breach exposed data the hardware wallet maker promised to delete"
+    },
+    {
+      "id": "f8f7d32c1a96a386",
+      "headline": "ECB official links digital euro to EU monetary sovereignty",
+      "summary": "Piero Cipollone, an ECB official, says the bloc plans real-transaction tests in 2027 and a possible digital euro rollout as early as 2029. Both timelines depend on legislation expected this year.",
+      "category": "Regulation",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/ecb-official-sees-digital-euro-tool-to-protect-eu-sovereignty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-25T15:11:00.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5SRKMQRMTK1JF6KQQYDH57E/hi-european-mica-regulation-on-digital-euro-where-do-we-stand-1.jpg",
+      "sourceTitle": "ECB official sees digital euro as key to protecting EU ‘sovereignty’"
+    },
+    {
+      "id": "a915f702b0be8a5a",
+      "headline": "Hyperliquid Leads Perps Market as HYPE Token Slides",
+      "summary": "The HYPE token has fallen about 22% from its September peak near $98, even as the decentralized platform holds roughly $7.7 billion in open interest. Analysts note its market share in real-world asset trading is shrinking.",
+      "category": "Altcoins",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/hyperliquid-still-rules-the-perps-market-but-hype-bulls-face-trouble/",
+      "published": "2026-10-25T14:45:28.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/hyperliquid-still-rules-the-perps-market-but-hype-bulls-face-trouble-768x432.png",
+      "sourceTitle": "Hyperliquid Still Rules the Perps Market, but HYPE Bulls Face Trouble"
+    },
     {
       "id": "ebe4a445c48aa6ff",
       "headline": "Netanyahu suggests blockchain could help Israel evade possible sanctions",
