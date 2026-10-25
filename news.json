@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-25T19:47:38.120Z",
+  "updated": "2026-10-25T22:07:34.073Z",
   "skipped": [
+    "56bfcf546e00dd47",
+    "e8744639a7b2d98a",
     "7803b92e5112aec7",
     "a9e813f80b178392",
     "a3f6765a4f228ba3",
@@ -24,6 +26,17 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "d53d2e200f329913",
+      "headline": "Bitcoin's Seven-Day Hashrate Climbs Back to 1 ZH/s",
+      "summary": "Bitcoin's network hashrate has returned to the 1 zettahash per second level, meaning miners are again performing over one sextillion calculations each second. The excerpt notes this comes as miners continue securing the network and competing for newly minted bitcoin.",
+      "category": "Bitcoin",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/mining/bitcoins-7-day-hashrate-returns-to-1-zh-s-after-nearly-8-months/",
+      "published": "2026-10-25T21:45:03.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bitcoins-7-day-hashrate-returns-to-1-zhs-after-nearly-8-months-768x432.png",
+      "sourceTitle": "Bitcoin’s 7-Day Hashrate Returns to 1 ZH/s After Nearly 8 Months"
+    },
     {
       "id": "3cfd18bb761eae93",
       "headline": "US Bitcoin ETFs Post $138M Outflows; Zcash Keeps Inflows",
