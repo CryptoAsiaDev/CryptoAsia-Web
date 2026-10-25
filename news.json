@@ -1,6 +1,7 @@
 {
-  "updated": "2026-10-25T09:33:24.829Z",
+  "updated": "2026-10-25T13:59:07.044Z",
   "skipped": [
+    "a3f6765a4f228ba3",
     "6d576f661b906531",
     "9dbb8f89ef729a82",
     "ac9e55ea5fddfe82",
@@ -21,6 +22,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "ebe4a445c48aa6ff",
+      "headline": "Netanyahu suggests blockchain could help Israel evade possible sanctions",
+      "summary": "Israeli Prime Minister Benjamin Netanyahu said ahead of elections that the country could turn to blockchain and crypto to get around potential international sanctions. The idea drew criticism from opponents and the central bank governor.",
+      "category": "Regulation",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/netanyahu-floats-use-of-blockchain-as-solution-to-potential-financial-sanctions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-25T11:42:00.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5SCA4VS7NKA06DYBPJVW2FM/benjamin-netanyahu.png",
+      "sourceTitle": "Netanyahu floats use of blockchain as solution to potential financial sanctions"
+    },
+    {
+      "id": "44c115f7fc96f972",
+      "headline": "Bitcoin hashrate recovers to 1 ZH/s despite miners shifting toward AI",
+      "summary": "Large public Bitcoin miners are reallocating capacity toward artificial intelligence, yet the network's hashrate is still rising. The seven-day average has reportedly returned to around the 1 ZH/s level.",
+      "category": "Bitcoin",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/mining/miner-weekly-bitcoin-hashrate-shrugs-off-the-ai-unplug-regaining-1-zh-s-level/",
+      "published": "2026-10-25T11:30:17.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/miner-weekly-1022-energymag-768x432.png",
+      "sourceTitle": "Miner Weekly: Bitcoin Hashrate Shrugs off the AI Unplug, Regaining 1 ZH/s Level"
+    },
     {
       "id": "6b89120cb5c8f432",
       "headline": "Brazil's Securities Regulator Backs Mandatory Tokenization for Market Oversight",
