@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T04:58:40.222Z",
+  "updated": "2026-10-25T09:33:24.829Z",
   "skipped": [
     "6d576f661b906531",
     "9dbb8f89ef729a82",
@@ -22,6 +22,50 @@
   ],
   "items": [
     {
+      "id": "6b89120cb5c8f432",
+      "headline": "Brazil's Securities Regulator Backs Mandatory Tokenization for Market Oversight",
+      "summary": "CVM president Otto Lobo argued that required tokenization, paired with AI supervision, is needed to update surveillance methods that no longer keep pace with large fund structures. The regulator defended the approach as a tool for market monitoring.",
+      "category": "Regulation",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/brazil-pushes-mandatory-tokenization-to-overhaul-market-tracking/",
+      "published": "2026-10-25T09:00:44.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/cvm-logo-abstract-768x432.jpg",
+      "sourceTitle": "Brazil Pushes Mandatory Tokenization to Overhaul Market Tracking"
+    },
+    {
+      "id": "67b3e27edab63d27",
+      "headline": "Heatbit Unveils Water Heater That Doubles as Bitcoin Miner",
+      "summary": "Heatbit has launched the Bitwater, an $899 device that replaces a standard heating element with 20 mining chips. The product aims to let household water heaters also generate bitcoin.",
+      "category": "Tech",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/mining/heatbits-new-water-heater-miner-turns-hot-showers-into-bitcoin/",
+      "published": "2026-10-25T08:00:19.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/heatbits-new-water-heater-miner-turns-hot-showers-into-bitcoin-768x432.png",
+      "sourceTitle": "Heatbit’s New Water Heater Miner Turns Hot Showers Into Bitcoin"
+    },
+    {
+      "id": "8c7b460da1433b24",
+      "headline": "Kraken parent Payward to buy Finnish owner of Saldo Bank",
+      "summary": "Payward, the parent company of Kraken, agreed on Oct. 14 to acquire Saldo Finance Oy, which owns Lithuania's Saldo Bank. The deal is expected to close in 2027, subject to regulatory approval.",
+      "category": "Exchanges",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/kraken-wants-to-be-your-bank-but-who-would-protect-your-money/",
+      "published": "2026-10-25T08:00:04.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/kraken-saldo-bank-deposit-protection.webp",
+      "sourceTitle": "Kraken wants to be your bank, but who will protect your money?"
+    },
+    {
+      "id": "7ae00828d05bda84",
+      "headline": "Ripple Legal Chief Warns of Investor Losses in New Token Sales",
+      "summary": "Ripple's legal chief Stuart Alderoty is urging clearer project commitments and issuer accountability over losses in new crypto offerings. His remarks come as the SEC weighs new fundraising rules.",
+      "category": "Regulation",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/crypto-news/ripple-legal-chief-raises-alarm-over-losses-in-new-crypto-offerings/",
+      "published": "2026-10-25T03:30:56.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ripple-4-1-768x432.jpg",
+      "sourceTitle": "Ripple Legal Chief Raises Alarm Over Losses in New Crypto Offerings"
+    },
+    {
       "id": "7f59d62e85b0d684",
       "headline": "Real World Assets explained: what RWA means in crypto",
       "summary": "An explainer on real world assets (RWA), a term covering traditional assets represented on blockchains. The source excerpt is brief, so details beyond the basic definition are not provided.",
@@ -31,6 +75,17 @@
       "published": "2026-10-25T03:16:48.000Z",
       "image": "",
       "sourceTitle": "Real World Assets explained: what RWA really are - CryptoTicker"
+    },
+    {
+      "id": "46f244899b671c89",
+      "headline": "Electrum Patch Fixes Flaw Used to Steal Bitcoin via Fee Bumps",
+      "summary": "A malicious wallet server could swap a legitimate payment for a thief's transaction and wait for the owner's approval. Electrum's latest security update closes the loophole after attackers exploited it and stole funds.",
+      "category": "Bitcoin",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/security/electrum-wallet-attack-hid-bitcoin-theft-behind-a-fee-increase/",
+      "published": "2026-10-25T02:30:17.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/electrum-wallet-attack-hid-bitcoin-theft-behind-a-fee-increase-768x432.png",
+      "sourceTitle": "Electrum Wallet Attack Hid Bitcoin Theft Behind a Fee Increase"
     },
     {
       "id": "182a8a2a2a9a5555",
