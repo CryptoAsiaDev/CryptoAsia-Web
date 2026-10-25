@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-24T22:01:50.664Z",
+  "updated": "2026-10-25T00:23:44.046Z",
   "skipped": [
+    "ac9e55ea5fddfe82",
+    "20ed9aa240c3ddd2",
     "1d86220321ffc825",
     "f6b5d603baeb28bb",
     "aa731226c3b8e867",
@@ -82,6 +84,17 @@
       "published": "2026-10-24T15:47:22.000Z",
       "image": "https://assets.beincrypto.com/img/na7YAtbzpI1K5iw3FoOs_g6PvKM=/smart/bc3114cf22df43ff9cbfc6e9ea25a64e",
       "sourceTitle": "Bitcoin Loses $80,000 as $200 Million in Leverage Unwinds in an Hour"
+    },
+    {
+      "id": "1d03593e673a0690",
+      "headline": "Bitcoin Whipsaws as Most Altcoins Slide Lower",
+      "summary": "Bitcoin has swung between roughly $80,000 and $84,000 during October, with each rebound fading quickly. The excerpt suggests the weakness runs deeper across the wider token market than Bitcoin's price shows.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-price-volatility-crypto-market-crash-analysis/",
+      "published": "2026-10-24T15:23:21.000Z",
+      "image": "https://assets.beincrypto.com/img/QwjjLAlPTe9RBY7ROCZtymbz_c4=/smart/8d9bd750f2c64d5ea672898534a59779",
+      "sourceTitle": "Bitcoin Keeps Reversing. Why Are 80% of Crypto Tokens Falling?"
     },
     {
       "id": "5d8aed6b88bfe626",
