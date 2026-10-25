@@ -62,7 +62,7 @@
   }
 
   /* ---- visit counting (Umami, cookie-less). Paste your Website ID below to switch it on; leave empty to keep it off. ---- */
-  var UMAMI_ID = '';
+  var UMAMI_ID = 'a42572df-5c83-4dbd-ab8c-6acf099ffcb0';
   if(UMAMI_ID){
     var loadUmami = function(){
       var u = document.createElement('script');
