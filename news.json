@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-25T00:23:44.046Z",
+  "updated": "2026-10-25T04:58:40.222Z",
   "skipped": [
+    "6d576f661b906531",
+    "9dbb8f89ef729a82",
     "ac9e55ea5fddfe82",
     "20ed9aa240c3ddd2",
     "1d86220321ffc825",
@@ -19,6 +21,17 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "7f59d62e85b0d684",
+      "headline": "Real World Assets explained: what RWA means in crypto",
+      "summary": "An explainer on real world assets (RWA), a term covering traditional assets represented on blockchains. The source excerpt is brief, so details beyond the basic definition are not provided.",
+      "category": "Other",
+      "source": "Google News: airdrops",
+      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9SdGhNVGd1Z2FDd2xwTUxfWmpvaFR4dFlpVGVvX2stcWVnNGxQNFlOUm1lQzJqeFY3UXRqWmZoWGM5azdBcmpMS3Y3Q1BBTjltenhsalJ0bmpUWVVacXdLc3hBdzl2SU04Wmw0?oc=5",
+      "published": "2026-10-25T03:16:48.000Z",
+      "image": "",
+      "sourceTitle": "Real World Assets explained: what RWA really are - CryptoTicker"
+    },
     {
       "id": "182a8a2a2a9a5555",
       "headline": "Circle launches USDC auctions letting institutions earn redemption fee rebates",
