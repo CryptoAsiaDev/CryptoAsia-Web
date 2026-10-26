@@ -1,6 +1,9 @@
 {
-  "updated": "2026-10-25T22:07:34.073Z",
+  "updated": "2026-10-26T00:30:06.353Z",
   "skipped": [
+    "f0023788e745307b",
+    "fb5c8b5839950d0b",
+    "48145066042f4170",
     "56bfcf546e00dd47",
     "e8744639a7b2d98a",
     "7803b92e5112aec7",
@@ -26,6 +29,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "0607737fff170e18",
+      "headline": "Bank of Israel Turns Down Netanyahu's Crypto Sanctions Workaround Idea",
+      "summary": "The Bank of Israel said the country should focus on preventing possible international sanctions from affecting its economy rather than seeking crypto-based ways around them. Netanyahu had said other alternatives to crypto could achieve the same goal.",
+      "category": "Regulation",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/crypto-news/bank-of-israel-rejects-netanyahus-crypto-sanction-evasion-plan/",
+      "published": "2026-10-25T23:45:00.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bank-of-israel-logo-768x432.jpg",
+      "sourceTitle": "Bank of Israel Rejects Netanyahu’s Crypto Sanction-Evasion Plan"
+    },
+    {
+      "id": "29b7516e16505103",
+      "headline": "Bitcoin and gold rank as worst major assets of 2026",
+      "summary": "Charlie Bilello's data shows Bitcoin and gold as the weakest major assets of 2026, a first in his records. The excerpt links the performance to oil prices and Federal Reserve policy.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-gold-worst-assets-2026/",
+      "published": "2026-10-25T23:40:00.000Z",
+      "image": "https://assets.beincrypto.com/img/g2RAZk9FxrGnTEg95pvPV_SLLW8=/smart/757fb6df64ca4a478ab1bcffcb1515f9",
+      "sourceTitle": "Bitcoin and Gold Hit a Historic First in 2026. The Two “Safe Havens” Are Now the Worst Assets"
+    },
     {
       "id": "d53d2e200f329913",
       "headline": "Bitcoin's Seven-Day Hashrate Climbs Back to 1 ZH/s",
