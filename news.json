@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-26T11:18:57.917Z",
+  "updated": "2026-10-26T17:29:08.976Z",
   "skipped": [
+    "14b68aeaf346fd73",
+    "0558c7de93186fa2",
     "6adc7071f1d0f452",
     "9a00076a65db0c2a",
     "5745dbfd3302765f",
@@ -36,6 +38,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "68cae43637cbd13e",
+      "headline": "CoinDCX Admits $16 Million Loss After Earlier Dismissal",
+      "summary": "Indian exchange CoinDCX says 15.99 million USDT was drained from wallets it had retired following a prior hack, pushing total losses near $60 million. The firm says it will cover the loss itself.",
+      "category": "Asia",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/381834/india-coindcx-confirms-16-million-loss-ceo-called-false-alarm",
+      "published": "2026-10-26T16:36:03.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/coindcx-decrypt-style-gID_7.jpg",
+      "sourceTitle": "India’s CoinDCX Confirms $16 Million Loss Days After CEO Called It a ‘False Alarm’"
+    },
+    {
+      "id": "716a7627b6274fb2",
+      "headline": "South Korea may again delay crypto income tax to 2029",
+      "summary": "South Korean lawmakers are reportedly considering postponing a crypto income tax policy first set in 2020. The reported reason is concerns about receiving data from US officials.",
+      "category": "Asia",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/south-korea-implementation-crypto-tax-2029?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-26T16:18:09.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5WCFCMYFBV1HM5DA9T73R6P/hi-south-korea-virtual-currency-taxes-explained-basic-knowledge-for-beginners-including-calculation-methods-1.jpg",
+      "sourceTitle": "South Korea lawmakers mull pushing crypto tax implementation to 2029"
+    },
     {
       "id": "e489248ea75dcd05",
       "headline": "Card Fraud Scheme Tied to Bitcoin Ends in Prison Sentence",
