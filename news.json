@@ -1,6 +1,12 @@
 {
-  "updated": "2026-10-26T00:30:06.353Z",
+  "updated": "2026-10-26T05:09:13.336Z",
   "skipped": [
+    "9a00076a65db0c2a",
+    "5745dbfd3302765f",
+    "52ba2992147681d7",
+    "b421cb0894aee24d",
+    "a893b3e73a3c0faf",
+    "6f9bb62e3bfc0cb0",
     "f0023788e745307b",
     "fb5c8b5839950d0b",
     "48145066042f4170",
@@ -29,6 +35,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "e489248ea75dcd05",
+      "headline": "Card Fraud Scheme Tied to Bitcoin Ends in Prison Sentence",
+      "summary": "A Rochester man received a prison sentence after running a fraud scheme that pushed unauthorized card payments through bank accounts to fund bitcoin purchases. He was named as Timothy Wadsworth.",
+      "category": "Regulation",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/regulation-and-legal/from-stripe-to-bitcoin-card-fraud-case-ends-in-prison-sentence/",
+      "published": "2026-10-26T03:30:25.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/doj-1-2-768x432.jpg",
+      "sourceTitle": "From Stripe to Bitcoin: Card Fraud Case Ends in Prison Sentence"
+    },
+    {
+      "id": "ba7dd8215347f142",
+      "headline": "Hong Kong picks Nasdaq-listed Solana firm as strategic enterprise",
+      "summary": "A Nasdaq-listed company focused on Solana plans to set up validator operations in Hong Kong. The excerpt does not give further details about the designation.",
+      "category": "Asia",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/hong-kong-names-nasdaq-listed-solana-company-a-strategic-enterprise?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-26T03:21:26.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5V29PC31CCCR3TY3KBGFNVX/hi-an-overview-of-the-cryptocurrency-regulations-in-hong-kong.jpg",
+      "sourceTitle": "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
+    },
+    {
+      "id": "8232ef435bb8c2c6",
+      "headline": "Bitcoin slips under $80,000 as analyst's bearish roadmap gains attention",
+      "summary": "Bitcoin dropped below $80,000, and analyst Benjamin Cowen has reportedly marked two of nine bearish steps as complete. Upcoming Federal Reserve and PCE data are also being watched as possible catalysts.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-below-80000-cowen-bearish-roadmap/",
+      "published": "2026-10-26T03:20:51.000Z",
+      "image": "https://assets.beincrypto.com/img/bdgj4_CjzeeG3Bl7ydJv3fLMaY4=/smart/1c704331e5d44db499847f53d23438b1",
+      "sourceTitle": "Bitcoin Falls Below $80,000: Is Benjamin Cowen's Bearish Q4 Roadmap Playing Out?"
+    },
     {
       "id": "0607737fff170e18",
       "headline": "Bank of Israel Turns Down Netanyahu's Crypto Sanctions Workaround Idea",
