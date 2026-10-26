@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-26T17:29:08.976Z",
+  "updated": "2026-10-26T21:45:56.250Z",
   "skipped": [
+    "1c02e5f03a336cda",
+    "893cde68fa6060a4",
     "14b68aeaf346fd73",
     "0558c7de93186fa2",
     "6adc7071f1d0f452",
@@ -38,6 +40,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "74af46f719b6cd5b",
+      "headline": "US banking regulator urges community banks to issue payment stablecoins",
+      "summary": "The Office of the Comptroller of the Currency is encouraging community banks to become issuers of payment stablecoins. The move follows the regulator finalizing its rules under the GENIUS Act, a stablecoin law set to take effect in January.",
+      "category": "Regulation",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/occ-community-banks-stablecoin-issuers-genius-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-26T21:38:30.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5WZ9ZYBPWXY53Q33BECCJE8/hi-coin-entering-bank.png",
+      "sourceTitle": "US OCC calls on community banks to become payment stablecoin issuers"
+    },
+    {
+      "id": "07e631c5eeaa9aca",
+      "headline": "Injective debuts onchain futures tied to Nvidia GPU rental prices",
+      "summary": "Injective has launched a futures market that tracks rental costs for five Nvidia GPUs. The product offers leveraged trading and could serve as a hedge against swings in AI computing expenses.",
+      "category": "Altcoins",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/injective-launches-onchain-futures-market-tracking-nvidia-gpu-rental-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-26T21:23:32.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5WWZSHJKJSXHRGBMZY1WZXE/hi-how-to-train-an-ai-bot-to-day-trade-crypto2.png",
+      "sourceTitle": "Injective launches onchain futures market tracking Nvidia GPU rental costs"
+    },
+    {
+      "id": "e30414a96539ef35",
+      "headline": "Vultisig wallet update fixes critical private key leak risk",
+      "summary": "An August update addressed a flaw that could let an already-compromised signer recover a private key through many malicious signing messages. The bug involved an application ignoring a critical stop condition.",
+      "category": "Tech",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/august-updates-block-critical-private-key-leak-in-crypto-wallet-vultisig/",
+      "published": "2026-10-26T21:10:35.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/vultisig-wallet-lock-failure.webp",
+      "sourceTitle": "August updates block critical private key leak in crypto wallet Vultisig"
+    },
     {
       "id": "68cae43637cbd13e",
       "headline": "CoinDCX Admits $16 Million Loss After Earlier Dismissal",
