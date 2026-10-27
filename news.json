@@ -1,6 +1,10 @@
 {
-  "updated": "2026-10-27T00:57:54.909Z",
+  "updated": "2026-10-27T05:53:40.048Z",
   "skipped": [
+    "e3634ad536d0496a",
+    "a81bb215bb981748",
+    "836e345c4cbde584",
+    "315bb5e8ce92e179",
     "5aace7b18720344c",
     "2859fa7a125de6e0",
     "1c02e5f03a336cda",
@@ -42,6 +46,17 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "58b1d41456044f7f",
+      "headline": "Ripple receives final approval for U.S. national trust bank",
+      "summary": "The Office of the Comptroller of the Currency has approved Ripple National Trust Bank, according to an announcement by Ripple CEO Brad Garlinghouse on X. The excerpt is brief and gives no further details.",
+      "category": "Regulation",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/10/27/ripple-gets-a-final-go-ahead-to-launch-its-own-u-s-national-trust-bank",
+      "published": "2026-10-27T04:28:49.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/08996a3dca840a6a70f04df3ee9284ea39cc0a81-3579x2013.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
+    },
     {
       "id": "4ef0f397031e0168",
       "headline": "Ripple Extends RLUSD Stablecoin Into Corporate Cash Management",
