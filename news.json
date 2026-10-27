@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-27T11:08:39.776Z",
+  "updated": "2026-10-27T16:44:46.630Z",
   "skipped": [
+    "b04109321b071bba",
+    "fb5f130bcfbe9628",
     "39d7d032f4750ad1",
     "e3634ad536d0496a",
     "a81bb215bb981748",
@@ -47,6 +49,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "cb69ec1b2364c3bb",
+      "headline": "Bitcoin Holds Near $80K Amid Election and Fed Concerns",
+      "summary": "Bitcoin is trading in a narrow range around $80,000 after repeatedly struggling at $80,500. Traders are cautious ahead of the US midterm elections and macro uncertainty weighs on sentiment.",
+      "category": "Markets",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/bitcoin-price-stalls-80k-us-midterm-election-fed-jitters-mount/",
+      "published": "2026-10-27T16:29:24.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bitcoin-price-oct27-2026-768x432.png",
+      "sourceTitle": "Bitcoin Price Stalls at $80K as US Midterm Election, Fed Jitters Mount"
+    },
+    {
+      "id": "1744c3dbbd07f1d5",
+      "headline": "Gamdom Hit With $15M Bitcoin Ransom Demand After Alleged Breach",
+      "summary": "Crypto casino Gamdom has received a $15 million bitcoin ransom demand from the extortion group Whitearmor, which claims to hold records for 15.4 million accounts. Gamdom disputes the size of the alleged database, and the claim follows a separate hot-wallet attack that cost the platform over $3 million.",
+      "category": "Exchanges",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/security/crypto-casino-gamdom-faces-15m-bitcoin-ransom-after-multimillion-dollar-hack/",
+      "published": "2026-10-27T15:35:09.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/crypto-casino-gamdom-faces-15m-bitcoin-ransom-after-multimillion-dollar-hack-768x432.png",
+      "sourceTitle": "Crypto Casino Gamdom Faces $15M Bitcoin Ransom After Multimillion-Dollar Hack"
+    },
     {
       "id": "5c37abb262c566e4",
       "headline": "Ripple gains final OCC approval for trust bank backing RLUSD",
