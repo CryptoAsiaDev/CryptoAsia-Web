@@ -1,6 +1,7 @@
 {
-  "updated": "2026-10-27T05:53:40.048Z",
+  "updated": "2026-10-27T11:08:39.776Z",
   "skipped": [
+    "39d7d032f4750ad1",
     "e3634ad536d0496a",
     "a81bb215bb981748",
     "836e345c4cbde584",
@@ -46,6 +47,50 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "5c37abb262c566e4",
+      "headline": "Ripple gains final OCC approval for trust bank backing RLUSD",
+      "summary": "Ripple has received final approval from the OCC for a federally supervised trust bank. The bank will manage reserves for the RLUSD stablecoin and provide custody services, as banking groups challenge crypto charters in court.",
+      "category": "Regulation",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/381899/ripple-wins-final-occ-approval-for-trust-bank-behind-2-6b-rlusd-stablecoin",
+      "published": "2026-10-27T10:16:46.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/ripple-logo-decrypt-style-01-gID_7.png",
+      "sourceTitle": "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
+    },
+    {
+      "id": "548b4b9f9260f058",
+      "headline": "Zcash co-founder urges halting grants program funding",
+      "summary": "Sean Bowe argues the Zcash Community Grants program already has sufficient funds to keep supporting projects. He proposes redirecting its share of newly issued ZEC into a network reserve instead.",
+      "category": "Altcoins",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/zcash-co-founder-ending-zcg-funding-125m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-27T10:00:31.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5YAV7RDWSCT55YSE6J17RKG/hi-update-overview-of-software-wallets-the-easy-way-to-store-crypto-zcash-1.jpg",
+      "sourceTitle": "Zcash co-founder calls to stop funding ‘over $125M’ grants program"
+    },
+    {
+      "id": "0a6b1bc3b05acee9",
+      "headline": "Crypto wallets shift focus away from simply adding more tokens",
+      "summary": "Wallet providers once competed by listing the hottest coins first, but a flood of short-lived meme coins has changed that approach. The piece examines why token count alone is no longer a winning strategy.",
+      "category": "Tech",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/crypto-wallet-trends-user-growth-strategy/",
+      "published": "2026-10-27T09:44:27.000Z",
+      "image": "https://assets.beincrypto.com/img/S61udqqW4m3kpaVZhvBg0Upg64w=/smart/34c386915f2340d18fe22efe51652d9c",
+      "sourceTitle": "Why Having More Tokens Is No Longer Enough for Crypto Wallets"
+    },
+    {
+      "id": "f43465e3eab7aed0",
+      "headline": "Strategy Shareholders Vote on Daily Dividends for STRC Preferred Stock",
+      "summary": "Strategy shareholders will vote Wednesday on whether STRC becomes what the company describes as the first security paying dividends every calendar day. The special meeting starts at 10:00 a.m. ET on October 28.",
+      "category": "Markets",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/strategy-strc-daily-dividends-vote-october-28/",
+      "published": "2026-10-27T09:30:05.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/michael-saylor-1-1-768x432.jpg",
+      "sourceTitle": "Saylor Has 33% of the Vote and Needs 17% More for STRC Daily Dividends"
+    },
     {
       "id": "58b1d41456044f7f",
       "headline": "Ripple receives final approval for U.S. national trust bank",
