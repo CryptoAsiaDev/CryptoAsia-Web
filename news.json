@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-26T21:45:56.250Z",
+  "updated": "2026-10-27T00:57:54.909Z",
   "skipped": [
+    "5aace7b18720344c",
+    "2859fa7a125de6e0",
     "1c02e5f03a336cda",
     "893cde68fa6060a4",
     "14b68aeaf346fd73",
@@ -40,6 +42,50 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "4ef0f397031e0168",
+      "headline": "Ripple Extends RLUSD Stablecoin Into Corporate Cash Management",
+      "summary": "Ripple Treasury is offering returns on qualifying holdings of its dollar-backed stablecoin RLUSD, aimed at idle corporate operating cash. The expansion also includes around-the-clock operation and AI tools for cash and payments management.",
+      "category": "Altcoins",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/featured/ripple-takes-rlusd-into-corporate-cash-management-with-24-7-returns/",
+      "published": "2026-10-27T00:45:00.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ripple-labs-1-6-768x432.jpg",
+      "sourceTitle": "Ripple Takes RLUSD Into Corporate Cash Management With 24/7 Returns"
+    },
+    {
+      "id": "90b157fd0dfbfaff",
+      "headline": "Ripple receives final US approval for national trust bank charter",
+      "summary": "Ripple has gained final US approval for a national trust bank. The approval allows the firm to manage reserves backing its RLUSD stablecoin and offer digital asset custody.",
+      "category": "Regulation",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-27T00:06:41.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5XAPPMS0KPKFXTRBD88QJZH/hi-pnc-uses-ripplenet.jpg",
+      "sourceTitle": "Ripple wins final US approval for national trust bank"
+    },
+    {
+      "id": "16695eefc866c4a6",
+      "headline": "Three payment rules shape Aave's native Bitcoin market, only WBTC settles them",
+      "summary": "A proposed direct route from Babylon could bypass pool funding for Aave's native Bitcoin market. Fees, borrower surplus and WBTC-denominated debt still carry separate payment requirements.",
+      "category": "Altcoins",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/3-payment-rules-control-aaves-native-bitcoin-market-but-only-wbtc-settles-them/",
+      "published": "2026-10-26T23:50:22.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/wbtc-vault-funding-constraint.webp",
+      "sourceTitle": "3 payment rules control Aave’s native Bitcoin market, but only WBTC settles them"
+    },
+    {
+      "id": "bcfc77179c73cbf6",
+      "headline": "Moody's Flags Crypto Crash Among Likeliest Economic Risks",
+      "summary": "Moody's risk matrix ranks a crypto crash as one of the most likely economic risks. Concerns about AI, Iran and bonds have also grown ahead of the Fed's rate decision.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/crypto-crash-moodys-risk-matrix-fomc/",
+      "published": "2026-10-26T22:55:44.000Z",
+      "image": "https://assets.beincrypto.com/img/H--X1BY5Rlu1jDZ2_8ZXXSxk8mo=/smart/41fd2ed8fb0c418c998a6ef9f3b16386",
+      "sourceTitle": "Moody’s Warns Crypto Crash Is Among the Most Likely Economic Risks"
+    },
     {
       "id": "74af46f719b6cd5b",
       "headline": "US banking regulator urges community banks to issue payment stablecoins",
