@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T16:44:46.630Z",
+  "updated": "2026-10-27T21:01:57.284Z",
   "skipped": [
     "b04109321b071bba",
     "fb5f130bcfbe9628",
@@ -49,6 +49,105 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "edf6238bccb59f59",
+      "headline": "Robinhood Chain raises $26 million as crypto revenue climbs in Q3",
+      "summary": "Robinhood's blockchain helped lift the company's crypto revenue during the third quarter. Separately, its prediction markets generated $173 million in the same period.",
+      "category": "Markets",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/business/2026-10-27-robinhood-chain-brings-in-26-million-crypto-revenue-rises-20-q2-431935",
+      "published": "2026-10-27T20:55:35.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2025/12/20251208_Robinhood_News.jpg",
+      "sourceTitle": "Robinhood Chain brings in $26 million as crypto revenue rises 20% in Q3"
+    },
+    {
+      "id": "5a9ca00648ee5dfd",
+      "headline": "Robinhood Earnings Fall Short as Crypto Revenue Climbs",
+      "summary": "Robinhood reported record revenue of $1.42 billion but earnings per share of $0.51 came in below expectations. Crypto revenue edged higher, while prediction market activity on sports and elections grew to $173 million.",
+      "category": "Markets",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382004/robinhood-misses-q3-earnings-crypto-prediction-markets",
+      "published": "2026-10-27T20:42:11.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/robinhood-vlad-tenev-decrypt-style-01-gID_7.jpg",
+      "sourceTitle": "Robinhood Misses Q3 Earnings as Crypto Revenue Rises and Prediction Market Bets Grow"
+    },
+    {
+      "id": "27a3de2a4c8c6c51",
+      "headline": "Robinhood's Crypto Revenue Falls 55% in Q3 Despite Record Total",
+      "summary": "Robinhood posted record overall quarterly revenue of $1.42 billion, driven by options and prediction markets, while crypto transaction revenue fell 55% year over year. The company also expanded its blockchain and digital asset businesses.",
+      "category": "Markets",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/crypto-news/robinhood-crypto-revenue-plunges-55-percent-q3-record-overall/",
+      "published": "2026-10-27T20:42:07.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/07/robinhood-chain-768x432.jpg",
+      "sourceTitle": "Robinhood Crypto Revenue Plunges 55% in Q3 Despite Record $1.42B Overall Revenue"
+    },
+    {
+      "id": "6d1529edadadeeb1",
+      "headline": "Bessent frames crypto as a tool to sustain dollar dominance",
+      "summary": "Speaking at Ripple's conference, the U.S. Treasury Secretary said SEC and CFTC action could fill a gap left by the stalled Clarity Act. He also addressed curbing crypto debanking.",
+      "category": "Regulation",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/policy/2026/10/27/treasury-s-bessent-sees-crypto-as-america-s-next-tool-for-keeping-the-u-s-dollar-on-top",
+      "published": "2026-10-27T20:41:33.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/528b526a6142370bcf93434bcb75c0a0c371fa8c-5270x3513.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Treasury's Bessent sees crypto as America's next tool for keeping the U.S. dollar on top"
+    },
+    {
+      "id": "29f2a94e8babd916",
+      "headline": "Stacks founder says quantum concerns may be curbing Bitcoin growth",
+      "summary": "Muneeb Ali, speaking on Cointelegraph's Chain Reaction podcast, cautioned that doubts about Bitcoin's resilience to quantum computing could discourage institutional investors.",
+      "category": "Bitcoin",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/quantum-fears-already-limiting-bitcoins-growth-stacks-founder-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-27T20:33:19.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5ZF47DDZ978GBXA3FCAVDQG/hi-bitcoins-quantum-upgrade-path-what-bip-360-changes-and-what-it-doesnt-1.jpg",
+      "sourceTitle": "Quantum fears already limiting Bitcoin’s growth, Stacks founder says"
+    },
+    {
+      "id": "31c7e593ed471e99",
+      "headline": "Robinhood's crypto revenue drops 55% yearly yet beats analyst expectations",
+      "summary": "Robinhood's crypto revenue declined 55% compared with a year earlier but still came in above Wall Street forecasts. Crypto trading volume fell 38% from the prior-year level, while its broader blockchain business reportedly gained traction.",
+      "category": "Exchanges",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/10/27/robinhood-s-crypto-revenue-plunges-55-even-as-trading-platform-posts-record-sales",
+      "published": "2026-10-27T20:32:21.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/a92db287f1805105761bc517860540b2fdd5b741-2600x1302.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Robinhood's crypto revenue fell 55% from last year, but topped Street forecasts"
+    },
+    {
+      "id": "63d8565012bf582d",
+      "headline": "Robinhood Adopts Ripple's Stablecoin, Treasury Software and Lending",
+      "summary": "Ripple's RLUSD stablecoin now runs on Robinhood Chain and Bitstamp, with a planned rollout to the Robinhood app later this year. The companies are also expanding their work together in treasury and institutional trading.",
+      "category": "Exchanges",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382002/robinhood-taps-ripple-stablecoin-treasury-software-trading-loans",
+      "published": "2026-10-27T20:16:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/robinhood-decrypt-style-01-gID_7.png",
+      "sourceTitle": "Robinhood Taps Ripple's Stablecoin, Treasury Software and Trading Loans"
+    },
+    {
+      "id": "3d631e22e3d7bad6",
+      "headline": "Robinhood Shares Drop After Q3 Miss Despite Crypto Revenue Beat",
+      "summary": "Robinhood stock fell after hours after its third-quarter earnings missed estimates, even though crypto revenue came in above analyst forecasts.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/robinhood-stock-falls-q3-earnings-miss/",
+      "published": "2026-10-27T20:14:47.000Z",
+      "image": "https://assets.beincrypto.com/img/SPSPn5IgAN1oFU41Aus8W2xsHhM=/smart/515c8debc9e348318ba496855cdd5d08",
+      "sourceTitle": "Robinhood Stock Falls After Q3 Earnings Miss: Why Didn't the Crypto Beat Help?"
+    },
+    {
+      "id": "a1e2e17eb7177e0d",
+      "headline": "Ripple wins final US approval for national trust bank",
+      "summary": "Ripple said the US Office of the Comptroller of the Currency granted final approval for its national trust bank, which will manage RLUSD reserves. The decision came despite objections from traditional banking groups.",
+      "category": "Regulation",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/ripple-gets-final-us-trust-bank-approval-what-does-xrp-gain/",
+      "published": "2026-10-27T20:00:02.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/ripple-institutional-charter.webp",
+      "sourceTitle": "Ripple gets final US trust bank approval. What does XRP gain?"
+    },
     {
       "id": "cb69ec1b2364c3bb",
       "headline": "Bitcoin Holds Near $80K Amid Election and Fed Concerns",
