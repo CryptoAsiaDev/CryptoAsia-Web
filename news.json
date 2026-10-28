@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-27T21:01:57.284Z",
+  "updated": "2026-10-28T00:35:19.377Z",
   "skipped": [
+    "75cf2d28b3df2103",
+    "7dd873d0ecf5049e",
     "b04109321b071bba",
     "fb5f130bcfbe9628",
     "39d7d032f4750ad1",
@@ -49,6 +51,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "be787d3fd88cb1d8",
+      "headline": "Bitcoin Miner Luxor Secures $16 Million to Grow AI Business",
+      "summary": "Bitcoin mining technology firm Luxor raised $16 million in a funding round led by CMT Digital. The money will support its push into artificial intelligence infrastructure.",
+      "category": "Markets",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/crypto-news/bitcoin-mining-firm-luxor-raises-16-million-accelerate-ai-expansion/",
+      "published": "2026-10-27T22:45:30.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/06/gomining-mines-first-live-stratum-v2-bitcoin-block-shifting-control-to-miners-768x432.png",
+      "sourceTitle": "Bitcoin Mining Firm Luxor Raises $16 Million to Accelerate AI Expansion"
+    },
+    {
+      "id": "d596c3998df1aab5",
+      "headline": "Ripple and C2FO Plan Faster Invoice Settlement on XRP Ledger",
+      "summary": "Ripple and C2FO are bringing invoice financing and settlement to the XRP Ledger, using Ripple's dollar-backed stablecoin RLUSD. The aim is to cut bank transfer delays that can leave suppliers waiting days for early payments.",
+      "category": "Altcoins",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/featured/ripple-c2fo-tap-xrp-ledger-turn-payment-delays-seconds/",
+      "published": "2026-10-27T22:05:00.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ripple-c2fo-768x432.jpg",
+      "sourceTitle": "Ripple and C2FO Tap XRP Ledger to Turn Payment Delays Into Seconds"
+    },
+    {
+      "id": "50f0a759397ed93b",
+      "headline": "VanEck debuts multi-asset ETF with stocks, bonds and Bitcoin",
+      "summary": "VanEck has launched a new Wealth Builder ETF that mixes stocks, bonds and Bitcoin exposure. The fund targets a 2% Bitcoin allocation, within a permitted range of 1% to 5%, via a spot Bitcoin ETP.",
+      "category": "Markets",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/vaneck-launches-diversified-etf-combining-stocks-bonds-and-bitcoin-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-27T21:28:22.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5ZJHJBWY657RY1S76WDA6QD/hi-goldman-sachs-and-bitcoin-etf.png",
+      "sourceTitle": "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
+    },
     {
       "id": "edf6238bccb59f59",
       "headline": "Robinhood Chain raises $26 million as crypto revenue climbs in Q3",
