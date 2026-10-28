@@ -1,6 +1,7 @@
 {
-  "updated": "2026-10-28T06:24:18.843Z",
+  "updated": "2026-10-28T13:16:33.606Z",
   "skipped": [
+    "87d849ddd072cd34",
     "f8ab70b055d02931",
     "d6e734a47e284881",
     "6435bccea6761d2f",
@@ -54,6 +55,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "36d0ead1103e00bb",
+      "headline": "DTCC moves toward blockchain for securities with major banks",
+      "summary": "The DTCC's tokenization service has gone live on the Canton Network and the Besu private chain. Twenty firms, including JPMorgan, Citi and Morgan Stanley, have signed up to use it.",
+      "category": "Tech",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/business/2026/10/28/wall-street-backbone-dtcc-brings-usd30-trillion-securities-closer-to-blockchain-with-major-banks",
+      "published": "2026-10-28T13:14:37.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/017c04b0a6f702fccd76ffd5aa923321e5b66146-2048x1152.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Wall Street backbone DTCC brings $30 trillion securities closer to blockchain with major banks"
+    },
+    {
+      "id": "80df8a3c29641adb",
+      "headline": "Former Goldman and BlackRock Staff Raise $4M for Onchain Loans",
+      "summary": "Birch Hill, founded by alumni of Goldman Sachs and BlackRock, closed a $4 million seed round led by Multicoin Capital. The startup aims to bring U.S. loans onto blockchain rails through a regulated approach.",
+      "category": "Tech",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382007/goldman-blackrock-alumni-raise-4-million-loans-onchain",
+      "published": "2026-10-28T13:01:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/decrypt-style-wall-street-gID_7.png",
+      "sourceTitle": "Goldman, BlackRock Alumni Raise $4 Million to Put Farm and Apartment Loans Onchain"
+    },
+    {
+      "id": "6b87837649dd244f",
+      "headline": "Spiral Says Bitcoin Payments Face Demand Problem, Not Technology",
+      "summary": "Spiral, the Bitcoin team linked to Block, argues that Bitcoin payments are held back by weak demand rather than technical limits. The group points to Stripe and Visa turning to stablecoins instead.",
+      "category": "Bitcoin",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-payments-stablecoins-spiral-report/",
+      "published": "2026-10-28T12:39:08.000Z",
+      "image": "https://assets.beincrypto.com/img/RcXcGEItjGlpUNbjvmLotyBLEA8=/smart/c1075ff28cfe40449a3e6e6bca977819",
+      "sourceTitle": "The Real Threat to Bitcoin Payments Isn’t Tech, Jack Dorsey’s Team Says"
+    },
     {
       "id": "bf00c23e528eb34e",
       "headline": "Bitcoin apps may overpay fees due to two library bugs",
@@ -900,39 +934,6 @@
       "published": "2026-10-23T20:16:02.000Z",
       "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/US-Capitol-decrypt-style-02-gID_7.png",
       "sourceTitle": "Senate Democrat Probes Tether Payments to Ex-White House Crypto Adviser’s Firm"
-    },
-    {
-      "id": "5d8e4440e663bed9",
-      "headline": "SEC Lists AI Superintelligence and Tokenization Among Market Risks",
-      "summary": "The SEC's Division of Examinations has named advanced technologies such as superintelligence, alongside tokenization risks, as areas of focus. The excerpt is brief and gives no further detail.",
-      "category": "Regulation",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/381745/sec-ai-super-intelligence-tokenization-2027-exam-list",
-      "published": "2026-10-23T18:54:55.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/12/SEC2-gID_7.jpg",
-      "sourceTitle": "SEC Flags AI 'Super Intelligence' and Tokenization as Systemic Market Risks"
-    },
-    {
-      "id": "90bf0ce4ccd22a1b",
-      "headline": "Initia pauses its blockchain after reported exploit",
-      "summary": "The Initia network suspended its layer-1 chain and rollups after security researchers flagged unauthorized token minting and asset transfers to Ethereum. The reported losses are said to exceed $2.6 million.",
-      "category": "Tech",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/initia-halts-blockchain-exploit-drained?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-23T18:39:02.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5MZKF3C8AJPVBYK5JQWCAWW/hi-got-crypto-losses-wallet.png",
-      "sourceTitle": "Initia halts blockchain after exploit reportedly drains over $2.6M"
-    },
-    {
-      "id": "f83dd8fecc8605fa",
-      "headline": "Spot Bitcoin ETFs see $635M outflows as BTC nears cost basis",
-      "summary": "US spot Bitcoin ETFs recorded about $635 million in net outflows on Thursday, the largest daily outflow since June 25, as bitcoin traded near the estimated cost basis of the funds' holdings. The withdrawals reversed nearly 60% of the inflows from the prior three sessions.",
-      "category": "Markets",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/bitcoin-etf-outflows-holdings-cost-basis/",
-      "published": "2026-10-23T18:10:49.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoin-etf-liquidity-drain.webp",
-      "sourceTitle": "Bitcoin ETFs shed $635 million as BTC tests their holdings’ estimated $81,500 cost basis"
     }
   ]
 }
