@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-28T18:57:13.306Z",
+  "updated": "2026-10-28T22:55:33.046Z",
   "skipped": [
+    "12a1e39bb96c1c72",
+    "1844534c07b050e5",
     "c32109048767c524",
     "af8b2bbd5fb4a36b",
     "87d849ddd072cd34",
@@ -57,6 +59,50 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "7b45cbdd0621ad66",
+      "headline": "Ibis Emerges From Stealth With $250M FalconX Credit Facility",
+      "summary": "Onchain credit platform Ibis has launched publicly, backed by a $250 million credit facility from FalconX. The company also closed a pre-seed funding round.",
+      "category": "Markets",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/250m-falconx-facility-powers-ibis-push-onchain-credit/",
+      "published": "2026-10-28T22:30:33.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/250m-falconx-facility-powers-ibis-push-into-onchain-credit-768x432.png",
+      "sourceTitle": "$250M FalconX Facility Powers Ibis Push Into Onchain Credit"
+    },
+    {
+      "id": "8c2c16f01a19792e",
+      "headline": "Ethena Pay's 11x leverage loop raises concerns over hidden losses",
+      "summary": "The story examines how borrowing costs and funded exits affect the returns left for users of the Ethena Pay vault. It notes that the vault's actual leverage and controls have not been verified.",
+      "category": "Altcoins",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/ethena-pays-11x-leverage-loop-promises-high-yield-but-risks-hidden-losses/",
+      "published": "2026-10-28T22:10:04.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/ethena-earn-plus-usde-price-lenses-standard-v4.jpg",
+      "sourceTitle": "Ethena Pay’s 11x leverage loop promises high yield, but risks hidden losses"
+    },
+    {
+      "id": "e708110a861bc83d",
+      "headline": "Datavault AI Reports Losing Access to Its Bitcoin Holdings",
+      "summary": "Datavault AI says it has been unable to withdraw its Bitcoin from Biconomy since June. The company also plans to restate four financial reports linked to a Scilex deal.",
+      "category": "Exchanges",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382116/bitcoin-treasury-datavault-ai-stock-crashes-cant-access-btc",
+      "published": "2026-10-28T21:46:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/10/bitcoin-dollar-decrypt-style-gID_7.jpg",
+      "sourceTitle": "Bitcoin Treasury Datavault AI Says It Can’t Access Its BTC, Stock Tanks"
+    },
+    {
+      "id": "e770149c858883be",
+      "headline": "Aviva Investors adds tokenized share class to liquidity fund",
+      "summary": "Aviva Investors is adding a tokenized share class to its Sterling Liquidity Fund on the XRP Ledger, backed by a £50 million commitment. The fund is described as being worth £22 billion.",
+      "category": "Tech",
+      "source": "DL News",
+      "url": "https://www.dlnews.com/articles/markets/aviva-tokenized-liquidity-fund-explained/",
+      "published": "2026-10-28T20:48:13.000Z",
+      "image": "https://dl-assets-backup.s3.eu-central-1.amazonaws.com/images/1793209010605-asset.webp",
+      "sourceTitle": "Aviva’s £50m tokenized fund: What changes for investors"
+    },
     {
       "id": "b8fe8f547c5e94cf",
       "headline": "Strategy shareholders back daily dividends on four preferred stocks",
@@ -892,50 +938,6 @@
       "published": "2026-10-24T11:00:33.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2025/08/bo-hines-tether.jpg",
       "sourceTitle": "Senator probes Tether’s reported $6 million payments to ex-White House crypto adviser’s firm"
-    },
-    {
-      "id": "7f5533f2e777c256",
-      "headline": "Franklin Templeton moves $150M in fund shares onto XRP Ledger",
-      "summary": "Franklin Templeton added about $150 million in fund tokens to the XRP Ledger through two subscriptions on Thursday, nearly quadrupling its existing tokens on the network. All of them landed in a single wallet.",
-      "category": "Altcoins",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/10/24/franklin-templeton-adds-usd150-million-in-fund-shares-to-xrp-ledger-all-in-one-wallet",
-      "published": "2026-10-24T04:45:43.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/38b95887c36694f1eb6785def8e9fef7464fc126-7680x4320.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Franklin Templeton adds $150 million in fund shares to XRP Ledger, all in one wallet"
-    },
-    {
-      "id": "015bf6f0dacaa12e",
-      "headline": "OCC stablecoin rule changes redemption timing and bank obligations",
-      "summary": "A new OCC rule for stablecoin issuers sets how the two-business-day redemption limit ends, with bank availability assessed separately. The excerpt gives few further details.",
-      "category": "Regulation",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/new-occ-stablecoin-rule-resets-redemptions-and-banks-face-big-shifts/",
-      "published": "2026-10-23T22:50:04.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/occ-seven-day-reversal.webp",
-      "sourceTitle": "New OCC stablecoin rule resets redemptions, and banks face big shifts"
-    },
-    {
-      "id": "a6478486025e01e9",
-      "headline": "Wells Fargo and Five Others Oppose OKX-ICE Tokenized Stock Plan",
-      "summary": "Reportedly, Wells Fargo and five other firms have objected to the OKX-ICE joint venture's proposed tokenized stock platform. The objections were filed under the SEC's innovation exemption.",
-      "category": "Regulation",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/nasdaq-companies-object-tokenized-stock-listings-okx-ice?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-23T21:32:16.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5N19TPWN37A162FFHMQDBR2/hi-cover-imagereview-of-us-stocks.jpg",
-      "sourceTitle": "Wells Fargo and five others object to OKX-ICE tokenized stock listings: Report"
-    },
-    {
-      "id": "22e2e8fcee400961",
-      "headline": "New York Seeks $1.37B Judgment Against NovaTech Crypto Operators",
-      "summary": "New York's attorney general is asking a court to order the operators of a crypto Ponzi scheme to repay investors, with interest. The alleged frauds took more than $1.1 billion from investors.",
-      "category": "Regulation",
-      "source": "Bitcoin Magazine",
-      "url": "https://bitcoinmagazine.com/news/ny-seeks-1-37-b-judgement-novatech",
-      "published": "2026-10-23T21:21:46.000Z",
-      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Pics-24.jpg",
-      "sourceTitle": "NY Seeks $1.37 Billion Judgment Against Operators of NovaTech Crypto Ponzi Scheme"
     }
   ]
 }
