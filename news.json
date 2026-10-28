@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-28T13:16:33.606Z",
+  "updated": "2026-10-28T18:57:13.306Z",
   "skipped": [
+    "c32109048767c524",
+    "af8b2bbd5fb4a36b",
     "87d849ddd072cd34",
     "f8ab70b055d02931",
     "d6e734a47e284881",
@@ -55,6 +57,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "b8fe8f547c5e94cf",
+      "headline": "Strategy shareholders back daily dividends on four preferred stocks",
+      "summary": "Strategy, the largest Bitcoin treasury company, has won shareholder approval for daily dividend payments on its preferred securities. Payments on STRC are set to start in November, with three other preferred stocks following in January 2027.",
+      "category": "Bitcoin",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/strategy-shareholders-approve-daily-dividends-for-four-preferred-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-10-28T18:00:54.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M61RMMV26WRZDXS27BN2ZMZH/hi-strategyb-3.jpg",
+      "sourceTitle": "Strategy shareholders approve daily dividends for four preferred stocks"
+    },
+    {
+      "id": "53a2ac0b5f36d177",
+      "headline": "GRVT Burns 1.1 Million Tokens Ahead of Grvt 2.0 Launch",
+      "summary": "Grvt, a self-custodial trading platform on its own zero-knowledge chain, said its Foundation completed a first token buyback, burning 1.1 million GRVT tokens on the open market. The buyback is roughly 1% of circulating supply and comes before four planned product milestones leading to Grvt 2.0.",
+      "category": "Altcoins",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/press-releases/grvt-burns-1-1-million-tokens-as-countdown-to-grvt-2-0-begins/",
+      "published": "2026-10-28T17:57:18.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/grv_nwmk-768x432.jpg",
+      "sourceTitle": "GRVT Burns 1.1 Million Tokens as Countdown to Grvt 2.0 Begins"
+    },
+    {
+      "id": "5a78f36dee695de7",
+      "headline": "Exchange and DeFi Breaches Drive Most 2026 Crypto Hack Losses",
+      "summary": "Lightning.news data cited by Bitcoin Magazine puts net 2026 crypto hack losses near $2.35 billion after freezes and returns. September alone accounted for about $768 million, led by a Bitget wallet drain and a Liquid Network bug.",
+      "category": "Exchanges",
+      "source": "Bitcoin Magazine",
+      "url": "https://bitcoinmagazine.com/technical/centralized-exchange-and-defi-losses-dominate-2026-crypto-hacks-despite-hardware-wallet-failures",
+      "published": "2026-10-28T17:43:02.000Z",
+      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/tn-6.webp",
+      "sourceTitle": "Centralized Exchange and DeFi Losses Dominate 2026 Crypto Hacks Despite Hardware Wallet Failures"
+    },
     {
       "id": "36d0ead1103e00bb",
       "headline": "DTCC moves toward blockchain for securities with major banks",
@@ -901,39 +936,6 @@
       "published": "2026-10-23T21:21:46.000Z",
       "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Pics-24.jpg",
       "sourceTitle": "NY Seeks $1.37 Billion Judgment Against Operators of NovaTech Crypto Ponzi Scheme"
-    },
-    {
-      "id": "c71e88cafcf31073",
-      "headline": "Blockstream Starts Institutional Consulting Arm and Opens Lugano Office",
-      "summary": "Blockstream plans to offer its engineering expertise to banks and asset managers from a new office in Lugano, Switzerland.",
-      "category": "Exchanges",
-      "source": "Bitcoin Magazine",
-      "url": "https://bitcoinmagazine.com/news/blockstream-launches-institutional-service",
-      "published": "2026-10-23T21:20:39.000Z",
-      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Blockstream-Launches-Institutional-Consulting-Services-Opens-Lugano-Office.jpg",
-      "sourceTitle": "Blockstream Launches Institutional Consulting Services, Opens Lugano Office"
-    },
-    {
-      "id": "7ee2e4604a21ef2b",
-      "headline": "UK regulator says some crypto apps may need licences for automated routing",
-      "summary": "The FCA's proposed guidance distinguishes between technical access and substantive involvement in transactions, as firms prepare for the UK's crypto regime starting October 2027.",
-      "category": "Regulation",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/uks-fca-says-crypto-apps-may-need-licenses-when-algorithms-choose-trade-routes/",
-      "published": "2026-10-23T20:30:00.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/fca-crypto-algorithm-control.webp",
-      "sourceTitle": "UK’s FCA says crypto apps may need licenses when algorithms choose trade routes"
-    },
-    {
-      "id": "2a0427c5f980512b",
-      "headline": "Senator Blumenthal Seeks Tether Records on Payments to Nxum",
-      "summary": "Sen. Richard Blumenthal has requested Tether's records concerning payments made to Nxum, a firm co-owned by former White House crypto adviser Bo Hines.",
-      "category": "Regulation",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/381755/senate-democrat-tether-payments-ex-white-house-crypto-adviser",
-      "published": "2026-10-23T20:16:02.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/US-Capitol-decrypt-style-02-gID_7.png",
-      "sourceTitle": "Senate Democrat Probes Tether Payments to Ex-White House Crypto Adviser’s Firm"
     }
   ]
 }
