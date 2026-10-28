@@ -1,6 +1,9 @@
 {
-  "updated": "2026-10-28T00:35:19.377Z",
+  "updated": "2026-10-28T06:24:18.843Z",
   "skipped": [
+    "f8ab70b055d02931",
+    "d6e734a47e284881",
+    "6435bccea6761d2f",
     "75cf2d28b3df2103",
     "7dd873d0ecf5049e",
     "b04109321b071bba",
@@ -51,6 +54,72 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "bf00c23e528eb34e",
+      "headline": "Bitcoin apps may overpay fees due to two library bugs",
+      "summary": "Wallet and other apps that import PSBTs can miscalculate miner fees and miss excessive-fee warnings when they depend on a vulnerable library's accounting. The issue is tied to two bugs in that library.",
+      "category": "Tech",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/bitcoin-apps-risk-massive-fee-drain-and-2-library-bugs-are-blamed/",
+      "published": "2026-10-28T05:30:00.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoinjs-lib-psbt-fee-bugs-standard.jpg",
+      "sourceTitle": "Bitcoin apps risk massive fee drain, and 2 library bugs are blamed"
+    },
+    {
+      "id": "2cc5194e3bbf22b8",
+      "headline": "Bithumb breached via employee system amid South Korean cyberattacks",
+      "summary": "Crypto exchange Bithumb was hacked through an internal employee system, which it says is separate from its trading platform. The exchange is still determining whether customer information was exposed.",
+      "category": "Exchanges",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/tech/2026/10/28/bithumb-hacked-through-employee-system-as-south-korean-financial-firms-face-cyberattacks",
+      "published": "2026-10-28T05:10:36.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/2a16283e14520ecf28ccb2e6520db675f9d4fb1e-1200x621.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Bithumb hacked through employee system as South Korean financial firms face cyberattacks"
+    },
+    {
+      "id": "41337714a223d019",
+      "headline": "CFTC reportedly revives Polymarket probe amid soldier insider-betting case",
+      "summary": "The US derivatives regulator is reportedly reopening an investigation into Polymarket. A soldier's insider-betting case involving a VPN is being used to test the agency's authority over swaps.",
+      "category": "Regulation",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/polymarket-probe-cftc-soldier-vpn-case/",
+      "published": "2026-10-28T05:02:00.000Z",
+      "image": "https://assets.beincrypto.com/img/uumottdZsdgoHBLKcCz0sPgwjSM=/smart/19bb5ede567a4ce4a1788fe96d1a25fd",
+      "sourceTitle": "The Soldier, VPN and $400K Test To CFTC's Reach as Polymarket Probe Returns"
+    },
+    {
+      "id": "4d4208b9a6c36d66",
+      "headline": "Why Crypto Firm Due Diligence Goes Beyond Blockchain Analytics",
+      "summary": "The piece argues that compliance teams assessing virtual asset service providers must look beyond blockchain analytics to understand who they are dealing with. It uses banking and payments scenarios to illustrate the point.",
+      "category": "Regulation",
+      "source": "Fintech News Singapore",
+      "url": "https://fintechnews.sg/139559/bigdata/vasp-due-diligence/",
+      "published": "2026-10-28T04:57:27.000Z",
+      "image": "https://fintechnewssg-22e90.kxcdn.com/wp-content/uploads/2026/10/Why-VASP-Due-Diligence-Goes-Beyond-Blockchain-Analytics-3.webp",
+      "sourceTitle": "Why VASP Due Diligence Goes Beyond Blockchain Analytics"
+    },
+    {
+      "id": "d762a7a115d58bd8",
+      "headline": "Why crypto depositors may lose everything in bankruptcy",
+      "summary": "Offshore corporate structures used by some crypto platforms can leave retail depositors exposed to losses when those platforms fail. Roshan Dharia says customers may unknowingly give up legal ownership of their assets, making them unsecured creditors in bankruptcy.",
+      "category": "Exchanges",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/interview/why-crypto-depositors-could-lose-everything-in-bankruptcy/",
+      "published": "2026-10-28T04:45:34.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/why-crypto-depositors-could-lose-everything-in-bankruptcy-768x432.jpg",
+      "sourceTitle": "Why Crypto Depositors Could Lose Everything in Bankruptcy"
+    },
+    {
+      "id": "44995bd9317234ef",
+      "headline": "Bitcoin approaches $81,000 before Fed decision; ZEC rises 8%",
+      "summary": "Bitcoin is nearing the $81,000 level ahead of a Federal Reserve decision, while ZEC gained about 8%. Other major tokens outperformed bitcoin as tech stocks also rose.",
+      "category": "Markets",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-nears-usd81-000-ahead-of-fed-decision-as-zec-jumps-8",
+      "published": "2026-10-28T04:15:20.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/7e48c395545734f88a8940a71375c640cc1d8b21-1516x852.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Bitcoin nears $81,000 ahead of Fed decision as ZEC jumps 8%"
+    },
     {
       "id": "be787d3fd88cb1d8",
       "headline": "Bitcoin Miner Luxor Secures $16 Million to Grow AI Business",
@@ -864,39 +933,6 @@
       "published": "2026-10-23T18:10:49.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoin-etf-liquidity-drain.webp",
       "sourceTitle": "Bitcoin ETFs shed $635 million as BTC tests their holdings’ estimated $81,500 cost basis"
-    },
-    {
-      "id": "346edf2e7d317b48",
-      "headline": "Bitcoin Core Updates Security Policy Amid AI-Driven Bug Discovery",
-      "summary": "Bitcoin Core developers will now backport fixes and release updates immediately for flaws considered easily discoverable, dropping long embargo periods. The change responds to bugs that an attacker could find with a single AI prompt.",
-      "category": "Tech",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/381715/bitcoin-core-security-policy-ai-threats",
-      "published": "2026-10-23T17:16:03.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/bitcoin-decrypt-style-screen-gID_7.png",
-      "sourceTitle": "Bitcoin Core Rewrites Its Security Policy for a World Where AI Finds Bugs in One Prompt"
-    },
-    {
-      "id": "732a2c4dd6a6a40b",
-      "headline": "Bitcoin Core Shortens Disclosure Timelines for AI-Discoverable Bugs",
-      "summary": "Bitcoin Core will now fast-track fixes and disclosures for vulnerabilities that AI tools can easily rediscover, moving away from long embargo periods. The change applies to those bugs.",
-      "category": "Tech",
-      "source": "Bitcoin Magazine",
-      "url": "https://bitcoinmagazine.com/news/bitcoin-core-ends-long-embargoes",
-      "published": "2026-10-23T17:06:32.000Z",
-      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Bitcoin-Core-Ends-Long-Embargoes-for-Bugs-AI-Can-Rediscover.jpg",
-      "sourceTitle": "Bitcoin Core Ends Long Embargoes for Bugs AI Can Rediscover"
-    },
-    {
-      "id": "a1e8218910b893b9",
-      "headline": "Bitcoin ETFs See Large Outflows After Oil Price Jump",
-      "summary": "Bitcoin ETFs reportedly lost more than $635 million in a single day, after investors who had been buying all week reversed course on Thursday. The excerpt does not give further detail on the cause.",
-      "category": "Markets",
-      "source": "Bitcoin Magazine",
-      "url": "https://bitcoinmagazine.com/news/bitcoin-etfs-lose-over-635-million",
-      "published": "2026-10-23T16:46:36.000Z",
-      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/Pics-23.jpg",
-      "sourceTitle": "Bitcoin ETFs Lose Over $635M In One Day Following Oil Price Spike"
     }
   ]
 }
