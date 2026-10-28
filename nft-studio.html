@@ -161,15 +161,15 @@ body.in-studio{overflow:hidden}
   </div>
 
   <div class="cta">
-    <button class="btn" id="btnConnect" type="button">Connect wallet &amp; start</button>
+    <button class="btn" id="btnConnect" type="button">Start building</button>
     <span class="note" id="cfgNote" hidden></span>
   </div>
 
   <div class="how">
-    <div><b>01</b><p>Connect your wallet and sign in. It is free and sends no transaction.</p></div>
+    <div><b>01</b><p>Start building right away. No wallet or sign-up needed.</p></div>
     <div><b>02</b><p>Add layers and trait images, set rarity, add rules and fill in the metadata.</p></div>
     <div><b>03</b><p>Generate as many times as you like. Previews carry a watermark.</p></div>
-    <div><b>04</b><p>Pay once for the version you want and export it clean, with metadata.</p></div>
+    <div><b>04</b><p>When you want it clean, connect your wallet, pay once and export with metadata.</p></div>
   </div>
 
   <div class="panel">
@@ -187,7 +187,7 @@ body.in-studio{overflow:hidden}
   <div class="cta" style="margin:1rem 0 1.5rem">
     <button class="btn" id="btnNew" type="button">+ New project</button>
     <label class="btn ghost" style="cursor:pointer">Open a saved project file<input type="file" id="fOpenDash" accept=".zip,application/zip" hidden></label>
-    <button class="btn ghost" id="btnLogout" type="button">Disconnect</button>
+    <button class="btn ghost" id="btnLogout" type="button">Connect wallet</button>
   </div>
   <div class="stats">
     <div class="stat"><b id="sProj">0</b><span>Projects</span></div>
@@ -196,7 +196,7 @@ body.in-studio{overflow:hidden}
     <div class="stat"><b>Creator</b><span>Account type</span></div>
   </div>
   <div class="panel"><h2>MY PROJECTS</h2><div id="projList" class="projs"></div>
-    <p class="note" style="margin-top:1rem">Projects are saved in this browser, linked to your wallet. Use <b>Save project</b> inside the studio to keep a backup file or move to another computer.</p></div>
+    <p class="note" style="margin-top:1rem">Projects are saved in this browser. Use <b>Save project</b> inside the studio to keep a backup file or move to another computer.</p></div>
 </main>
 
 <div id="site-foot"></div>
@@ -312,7 +312,7 @@ body.in-studio{overflow:hidden}
 
 <!-- modals -->
 <div class="modal" id="mConnect"><div class="sheet"><div class="sheet-head"><h3>CONNECT YOUR WALLET</h3><button class="x" data-close="mConnect" aria-label="Close">&#10005;</button></div>
-  <p style="margin-bottom:1rem;color:var(--text2)">Pick a wallet. You will be asked to sign a free message to sign in. No transaction is sent.</p>
+  <p style="margin-bottom:1rem;color:var(--text2)">Connect a wallet to pay and export. You sign a free message to sign in. No transaction is sent.</p>
   <div id="walList"></div><p class="log" id="cLog"></p></div></div>
 
 <div class="modal" id="mNew"><div class="sheet"><div class="sheet-head"><h3>NEW PROJECT</h3><button class="x" data-close="mNew" aria-label="Close">&#10005;</button></div>
@@ -412,7 +412,7 @@ function dbAll(store){
 /* ---------- project model ---------- */
 function defaultSettings(){ return { W:0, H:0, start:1, fmt:'png', unique:true, desc:'', url:'', base:'ipfs://REPLACE_WITH_YOUR_CID', symbol:'', royalty:0, royaltyAddr:'', creator:'' }; }
 function newProject(name, size){
-  return { id: uid(), wallet: W.addr, name: name||'My Collection', size: size, seed: randSeed(), created: Date.now(), updated: Date.now(),
+  return { id: uid(), wallet: W.addr||'', name: name||'My Collection', size: size, seed: randSeed(), created: Date.now(), updated: Date.now(),
     settings: defaultSettings(),
     layers: ['Background','Body','Eyes'].map(function(n){ return { id:uid(), name:n, hidden:false, empty:0, traits:[] }; }),
     rules: [], overrides: {}, stats: { generated:0, exports:0 } };
@@ -480,6 +480,14 @@ function openWalletModal(){
   box.querySelectorAll('.wal').forEach(function(b){ b.onclick = function(){ connectWith(l[+b.getAttribute('data-i')]); }; });
 }
 function cLog(t){ var l = $('cLog'); l.style.display = 'block'; l.textContent = t; }
+var walletWaiter = null;
+function closeConnect(ok){ $('mConnect').classList.remove('open'); if (walletWaiter) { var r = walletWaiter; walletWaiter = null; r(!!ok); } }
+function ensureWallet(){ if (W.addr) return Promise.resolve(true); return new Promise(function(res){ walletWaiter = res; openWalletModal(); }); }
+function uiWallet(){
+  var on = !!W.addr, pill = $('stWallet');
+  pill.textContent = on ? short(W.addr) : 'No wallet'; pill.title = on ? 'Wallet connected. Click to disconnect.' : 'Click to connect a wallet (needed only to pay and export)';
+  $('btnLogout').textContent = on ? 'Disconnect wallet' : 'Connect wallet';
+}
 function connectWith(item){
   W.prov = item.prov; W.name = item.name;
   cLog('Opening your wallet…');
@@ -495,8 +503,10 @@ function connectWith(item){
   }).then(function(){
     lsSet('ca-studio-sess', { addr:W.addr, name:W.name });
     bindProvider();
-    $('mConnect').classList.remove('open');
-    return enterDash();
+    closeConnect(true);
+    uiWallet();
+    if (!$('dash').hidden) enterDash();
+    if (P && !$('studio').hidden) { LIC = {fp:'',state:'none',rec:null}; remoteChecked = {}; refreshAll(); }
   }).catch(function(e){ W.addr=''; cLog(errText(e)); });
 }
 var bound = false;
@@ -507,10 +517,10 @@ function bindProvider(){
 }
 function logout(){
   lsSet('ca-studio-sess', null);
-  W.addr = '';
-  if (P) { saveNow(); release(P); P = null; }
-  $('studio').hidden = true; document.body.classList.remove('in-studio');
-  show('landing');
+  W.addr = ''; LIC = {fp:'',state:'none',rec:null}; remoteChecked = {};
+  uiWallet();
+  if (!$('dash').hidden) enterDash();
+  if (P && !$('studio').hidden) refreshAll();
 }
 function restoreSession(){
   var s = lsGet('ca-studio-sess'); if (!s || !isAddr(s.addr)) return Promise.resolve(false);
@@ -537,10 +547,11 @@ function show(v){
 }
 async function enterDash(){
   show('dash');
-  $('dWelcome').textContent = 'Welcome back, '+short(W.addr);
-  $('dAddr').textContent = W.addr;
-  var all = (await dbAll('projects')).filter(function(p){ return p.wallet===W.addr; }).sort(function(a,b){ return b.updated-a.updated; });
-  var lic = (await dbAll('licenses')).filter(function(l){ return l.wallet===W.addr && l.state==='paid'; });
+  uiWallet();
+  $('dWelcome').textContent = W.addr ? 'Welcome back, '+short(W.addr) : 'Your projects';
+  $('dAddr').textContent = W.addr || 'No wallet connected. You only need one when you export without a watermark.';
+  var all = (await dbAll('projects')).sort(function(a,b){ return b.updated-a.updated; });
+  var lic = (await dbAll('licenses')).filter(function(l){ return W.addr && l.wallet===W.addr && l.state==='paid'; });
   $('sProj').textContent = all.length;
   $('sGen').textContent = all.reduce(function(n,p){ return n+((p.stats&&p.stats.generated)||0); },0).toLocaleString();
   $('sExp').textContent = lic.length;
@@ -569,10 +580,12 @@ function renderLanding(){
   }).join('');
   if (!payEnabled()) { $('cfgNote').hidden = false; $('cfgNote').textContent = 'Paid export is coming soon. Free watermarked generation works now.'; }
 }
-$('btnConnect').onclick = openWalletModal;
-$('btnLogout').onclick = logout;
-document.querySelectorAll('[data-close]').forEach(function(b){ b.onclick = function(){ $(b.getAttribute('data-close')).classList.remove('open'); }; });
-document.querySelectorAll('.modal').forEach(function(m){ m.addEventListener('mousedown', function(e){ if (e.target===m) m.classList.remove('open'); }); });
+$('btnConnect').onclick = function(){ enterDash(); };
+$('btnLogout').onclick = function(){ if (W.addr) logout(); else openWalletModal(); };
+$('stWallet').onclick = function(){ if (W.addr) logout(); else openWalletModal(); };
+$('stWallet').style.cursor = 'pointer';
+document.querySelectorAll('[data-close]').forEach(function(b){ b.onclick = function(){ var id = b.getAttribute('data-close'); if (id==='mConnect') closeConnect(false); else $(id).classList.remove('open'); }; });
+document.querySelectorAll('.modal').forEach(function(m){ m.addEventListener('mousedown', function(e){ if (e.target===m) { if (m.id==='mConnect') closeConnect(false); else m.classList.remove('open'); } }); });
 
 /* ---------- new project ---------- */
 $('btnNew').onclick = function(){ $('nName').value=''; $('nSize').value=100; nPrice(); $('mNew').classList.add('open'); $('nName').focus(); };
@@ -612,7 +625,7 @@ async function openProjectFile(file){
     var jf = zip.file('project.json'); if (!jf) throw new Error('This is not a Crypto Asia NFT Studio project file.');
     var data = JSON.parse(await jf.async('string'));
     if (data.format!=='ca-nft-studio' || !data.project) throw new Error('This is not a Crypto Asia NFT Studio project file.');
-    var p = data.project; p.id = uid(); p.wallet = W.addr; p.updated = Date.now(); p.name = p.name+' (opened)';
+    var p = data.project; p.id = uid(); p.wallet = W.addr||''; p.updated = Date.now(); p.name = p.name+' (opened)';
     p.size = clampSize(p.size);
     p.settings = Object.assign(defaultSettings(), p.settings||{}); p.rules = p.rules||[]; p.overrides = p.overrides||{}; p.stats = p.stats||{generated:0,exports:0};
     for (var i=0;i<p.layers.length;i++) for (var j=0;j<p.layers[i].traits.length;j++) {
@@ -638,7 +651,7 @@ async function openStudio(rec){
   P = await hydrate(rec);
   sel = {l:-1,t:-1}; curCombo = null; CC.key = ''; CC.combos = null; LIC = {fp:'',state:'none',rec:null}; remoteChecked = {}; metaPage = 0;
   show('studio');
-  $('stWallet').textContent = short(W.addr);
+  uiWallet();
   setLeftTab('layers'); setMidTab('prev');
   fillSettings(); renderAll(); autoSize();
   refreshAll();
@@ -1091,6 +1104,7 @@ async function pollReceipt(rec){
   if (P) refreshAll();
 }
 async function refreshLicense(fp){
+  if (!W.addr) { LIC = { fp:fp, state:'none', rec:null }; return; }
   var key = W.addr+':'+fp, rec = await dbGet('licenses', key);
   if (rec && rec.state==='paid') { LIC = { fp:fp, state:'paid', rec:rec }; if (rec.posted===false && payEnabled()) postRow(rec); return; }
   if (rec && rec.state==='pending') { LIC = { fp:fp, state:'pending', rec:rec }; if (rec.posted===false && payEnabled()) postRow(rec); pollReceipt(rec); return; }
@@ -1114,11 +1128,13 @@ function renderRight(){
   if (!payEnabled()) { st.textContent = 'Paid export is coming soon. The free watermarked preview works now.'; label = 'Export — coming soon'; off = true; }
   else if (LIC.state==='paid') { st.textContent = 'Paid ✓ You can export this exact version again any time.'; st.classList.add('paid'); label = 'Export — no watermark (paid)'; }
   else if (LIC.state==='pending') { st.textContent = 'Payment sent. Waiting for the network to confirm it…'; label = 'Waiting for payment…'; off = true; }
-  else { st.textContent = 'Not paid yet. Free previews carry a watermark. Changing layers, rules, size or seed makes a new version.'; label = 'Export — no watermark ($'+price+')'; }
+  else { st.textContent = (W.addr ? 'Not paid yet. ' : 'No wallet needed until you export. ')+'Free previews carry a watermark. Changing layers, rules, size or seed makes a new version.'; label = 'Export — no watermark ($'+price+')'; }
   ex.textContent = label; ex.disabled = off; $('btnGen').disabled = busy;
 }
 $('btnExport').onclick = async function(){
   if (!P || busy || !payEnabled()) return;
+  if (!activeLayers().length) { say('Add at least one layer with images first.'); return; }
+  if (!W.addr) { say('Connect your wallet to continue. It is free and sends no transaction.'); if (!(await ensureWallet())) { say(''); return; } await refreshAll(); }
   var fp = await fingerprint(); LIC.fp = fp;
   if (LIC.state==='paid') return generate(true);
   if (LIC.state==='pending') return;
@@ -1299,7 +1315,9 @@ async function generate(clean){
   try { SCFG = Object.assign(SCFG, await fetchJson('studio-config.json')); } catch(e){}
   renderLanding();
   var ok = await restoreSession();
-  if (ok) enterDash(); else show('landing');
+  var any = (await dbAll('projects')).length;
+  uiWallet();
+  if (ok || any) enterDash(); else show('landing');
 })();
 </script>
 </body>

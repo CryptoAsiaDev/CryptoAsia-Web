@@ -57,3 +57,9 @@ Buttons with `data-track="name"` send click events (the airdrop Register buttons
 ## Page layout
 - `index.html` = News (front page). `about.html` = About page (tools intro and privacy, link `about.html#privacy`).
 - The menu order is set in `shared.js` (LINKS). About is last.
+
+## Token logos (tierlist.html)
+Token logos in `logos/tokens/` come from the open-source Web3Icons set (MIT licence, github.com/0xa3k5/web3icons). Logos are trademarks of their projects. To add or replace one: save `logos/tokens/<ticker>.svg` (or png) and add the ticker to the `HAVE` list in `tierlist.html`. Tokens without a file show a coloured badge.
+
+## NFT Studio access
+No wallet is needed to build, preview or save projects (free, watermarked). The wallet is asked for only when someone chooses to export without a watermark. Projects live in the browser; the paid license is tied to the wallet that paid.
