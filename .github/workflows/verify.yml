@@ -1,0 +1,29 @@
+name: Verify submissions and exports
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'     # every 15 minutes
+  workflow_dispatch:
+
+concurrency:
+  group: verify
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install signature library
+        run: npm install --no-save --no-audit --no-fund ethers@6
+      - name: Verify new submissions
+        run: node scripts/verify-submissions.mjs
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+      - name: Verify NFT Studio export payments
+        run: node scripts/verify-exports.mjs
+        env:
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
