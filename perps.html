@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perp DEX Rankings — Open Interest, Volume and Fees | Crypto Asia</title>
+<meta name="description" content="Daily-updated ranking of perp DEXs by open interest and volume, with fees, token status and trends.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.wrap{max-width:1200px;margin:0 auto;padding:2.5rem 1.2rem 5rem}
+h1{font-family:var(--fh);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.1}
+h2{font-family:var(--fh);font-size:1.1rem;letter-spacing:.05em;margin:2.2rem 0 .8rem}
+.lead{color:var(--text2);margin:.6rem 0 1.4rem;font-size:1.15rem}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.card{background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1rem 1.1rem}
+.card small{font-family:var(--fm);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2)}
+.card b{display:block;font-family:var(--fh);font-size:1.5rem;margin-top:.2rem}
+.chart{background:var(--surface);border:1px solid var(--border);padding:1rem}
+.chart svg{width:100%;height:180px;display:block}
+.sig{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.sig .card ul{list-style:none;margin-top:.5rem;font-size:1.02rem}
+.sig .card li{display:flex;justify-content:space-between;gap:.5rem}
+.up{color:#1f9d55}.dn{color:#d33}
+.tw{overflow-x:auto;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;min-width:960px;background:var(--surface)}
+th{font-family:var(--fm);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-align:right;padding:.7rem .6rem;border-bottom:2px solid var(--gold);cursor:pointer;white-space:nowrap;user-select:none}
+th:nth-child(-n+2),th.l{text-align:left}
+td{padding:.55rem .6rem;border-bottom:1px solid var(--border);text-align:right;font-size:1.02rem;white-space:nowrap}
+td:nth-child(-n+2),td.l{text-align:left}
+.pn{display:flex;align-items:center;gap:.6rem;font-weight:700}
+.pn img{width:28px;height:28px;border-radius:50%;background:#111;object-fit:cover}
+.pn i{width:28px;height:28px;border-radius:50%;background:var(--gold);color:#080807;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-size:.75rem;font-family:var(--fh)}
+.na{color:var(--text2)}
+.go{font-family:var(--fm);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink);border-bottom:2px solid var(--gold);text-decoration:none}
+.note{font-size:.95rem;color:var(--text2);margin-top:.8rem}
+@media(max-width:800px){.cards,.sig{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.cards,.sig{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+<main class="wrap">
+  <div class="eyebrow">Perp DEXs</div>
+  <h1>PERP DEX <span style="color:var(--gold-d)">RANKINGS</span></h1>
+  <p class="lead">Open interest, volume, fees and token status for perp DEXs. Numbers refresh once a day.</p>
+  <div id="empty" class="card" hidden>Data will appear after the first daily update runs. Check back soon.</div>
+  <div id="main" hidden>
+    <div class="cards">
+      <div class="card"><small>Open interest</small><b id="cOi">--</b></div>
+      <div class="card"><small>24h volume</small><b id="cV24">--</b></div>
+      <div class="card"><small>7d volume</small><b id="cV7">--</b></div>
+      <div class="card"><small>Tracked</small><b id="cTr">--</b></div>
+    </div>
+    <h2>TOTAL OPEN INTEREST TREND</h2>
+    <div class="chart"><svg id="oiChart" viewBox="0 0 800 180" preserveAspectRatio="none"></svg><div class="note" id="oiNote"></div></div>
+    <h2>DAILY SIGNALS</h2>
+    <div class="sig" id="sig"></div>
+    <h2>RANKING <span class="note" style="font-family:var(--fs);letter-spacing:0">(click a heading to sort)</span></h2>
+    <div class="tw"><table id="tbl"><thead><tr>
+      <th data-k="rank">#</th><th data-k="name">Protocol</th><th data-k="oi">Open interest</th><th data-k="v24">Vol 24h</th><th data-k="v7">Vol 7d</th><th data-k="v30">Vol 30d</th>
+      <th data-k="maker">Maker</th><th data-k="taker">Taker</th><th class="l" data-k="season">Season</th><th class="l" data-k="token">Token</th><th>OI trend</th><th></th></tr></thead><tbody id="tb"></tbody></table></div>
+    <p class="note" id="foot"></p>
+  </div>
+  <p class="note">Data from DefiLlama, refreshed daily. Fees, season and token status are entered by hand and may be out of date. "--" means the figure is not available. Not financial advice. Some links are referral links: we may earn a reward at no cost to you.</p>
+</main>
+<div id="site-foot"></div>
+<script src="shared.js"></script>
+<script>
+(function(){
+function $(i){return document.getElementById(i)}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function usd(n){if(n==null)return '--';var a=Math.abs(n);return '$'+(a>=1e9?(n/1e9).toFixed(2)+'B':a>=1e6?(n/1e6).toFixed(1)+'M':a>=1e3?(n/1e3).toFixed(0)+'K':Math.round(n))}
+function fee(n){return n==null?'--':n+'%'}
+var data,sortK='oi',dir=-1;
+function spark(a){var v=a.filter(function(x){return x!=null});if(v.length<2)return '<span class="na">--</span>';
+  var mn=Math.min.apply(0,v),mx=Math.max.apply(0,v),r=(mx-mn)||1,pts=v.map(function(x,i){return (i/(v.length-1)*70).toFixed(1)+','+(22-(x-mn)/r*20).toFixed(1)}).join(' ');
+  var up=v[v.length-1]>=v[0];return '<svg width="74" height="24" viewBox="-2 0 76 24"><polyline fill="none" stroke="'+(up?'#1f9d55':'#d33')+'" stroke-width="2" points="'+pts+'"/></svg>'}
+function rows(){var ps=data.protocols.filter(function(p){return p.listed||p.ours});
+  ps.sort(function(a,b){var x=a[sortK],y=b[sortK];if(sortK==='rank'){x=a.oi==null?-1:a.oi;y=b.oi==null?-1:b.oi;dir=-1}
+    if(x==null&&y==null)return 0;if(x==null)return 1;if(y==null)return -1;
+    if(typeof x==='string')return dir*x.localeCompare(y);return dir*(x-y)});return ps}
+function render(){var ps=rows(),i=0;
+  $('tb').innerHTML=ps.map(function(p){i++;
+    var logo=p.ours?'<img src="logos/'+esc(p.id)+'.png" alt="" onerror="this.outerHTML=\'<i>'+esc(p.name.slice(0,2))+'</i>\'">':(p.logo?'<img src="'+esc(p.logo)+'" alt="" referrerpolicy="no-referrer" onerror="this.outerHTML=\'<i>'+esc(p.name.slice(0,2))+'</i>\'">':'<i>'+esc(p.name.slice(0,2))+'</i>');
+    var act=p.ref?'<a class="go" href="'+esc(p.ref)+'" target="_blank" rel="noopener sponsored" data-track="ref-'+esc(p.id)+'">Trade</a>':'';
+    return '<tr><td>'+i+'</td><td><div class="pn">'+logo+esc(p.name)+'</div></td><td>'+usd(p.oi)+'</td><td>'+usd(p.v24)+'</td><td>'+usd(p.v7)+'</td><td>'+usd(p.v30)+'</td><td>'+fee(p.maker)+'</td><td>'+fee(p.taker)+'</td><td class="l">'+(esc(p.season)||'<span class="na">--</span>')+'</td><td class="l">'+(esc(p.token)||'<span class="na">--</span>')+'</td><td>'+spark(p.trend)+'</td><td>'+act+'</td></tr>'}).join('')}
+function chart(){var t=data.oiTrend||[],s=$('oiChart');if(t.length<2){s.outerHTML='<div class="na" style="padding:2rem 0">Trend builds up day by day. Check back after a few updates.</div>';return}
+  var v=t.map(function(x){return x[1]}),mn=Math.min.apply(0,v),mx=Math.max.apply(0,v),r=(mx-mn)||1;
+  var pts=v.map(function(x,i){return (i/(v.length-1)*780+10).toFixed(1)+','+(165-(x-mn)/r*150).toFixed(1)}).join(' ');
+  s.innerHTML='<polygon fill="rgba(245,197,24,.2)" points="10,170 '+pts+' 790,170"/><polyline fill="none" stroke="#F5C518" stroke-width="3" points="'+pts+'"/>';
+  $('oiNote').textContent=t[0][0]+' to '+t[t.length-1][0]+' · low '+usd(mn)+' · high '+usd(mx)}
+function sigs(){var S=data.signals||{},defs=[['oiUp','OI heating up','up',function(v){return '+'+v.toFixed(0)+'% 7d'}],['volUp','Volume spike','up',function(v){return v.toFixed(1)+'x avg'}],['oiDown','OI cooling down','dn',function(v){return v.toFixed(0)+'% 7d'}],['volDown','Volume slowdown','dn',function(v){return v.toFixed(1)+'x avg'}]];
+  $('sig').innerHTML=defs.map(function(d){var a=S[d[0]]||[];return '<div class="card"><small>'+d[1]+'</small>'+(a.length?'<ul>'+a.map(function(x){return '<li><span>'+esc(x.name)+'</span><span class="'+d[2]+'">'+d[3](x.v)+'</span></li>'}).join('')+'</ul>':'<div class="na" style="margin-top:.5rem">Collecting data</div>')+'</div>'}).join('')}
+fetch('perps-data.json?t='+Math.floor(Date.now()/600000)).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+  data=d;$('main').hidden=false;
+  $('cOi').textContent=usd(d.totals.oi);$('cV24').textContent=usd(d.totals.v24);$('cV7').textContent=usd(d.totals.v7);$('cTr').textContent=d.totals.tracked;
+  $('foot').textContent='Last updated '+new Date(d.updated).toLocaleString('en-GB',{dateStyle:'medium',timeStyle:'short'})+' · Source: '+d.source;
+  chart();sigs();render();
+  document.querySelectorAll('#tbl th[data-k]').forEach(function(th){th.onclick=function(){var k=th.dataset.k;if(k===sortK)dir=-dir;else{sortK=k;dir=(k==='name'||k==='season'||k==='token')?1:-1}render()}})
+}).catch(function(){$('empty').hidden=false});
+})();
+</script>
+</body></html>

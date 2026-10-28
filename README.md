@@ -5,11 +5,11 @@ Upload everything in this folder to the GitHub repo (keep the folder structure).
 ## Pages
 index, news, jobs, airdrop-calculator, nft-studio, inheritance, fortune. `shared.css` / `shared.js` hold the menu, footer and the light/dark switch. The menu order is the LINKS list at the top of `shared.js`.
 
-## Automatic news (news.html)
-1. Files: `news.html`, `scripts/` folder, `.github/workflows/news.yml`.
+## Automatic news (now the front page, index.html; news.html redirects to it)
+1. Files: `index.html`, `scripts/` folder, `.github/workflows/news.yml`.
 2. Repo > Settings > Secrets and variables > Actions > New repository secret: `ANTHROPIC_API_KEY`.
 3. Actions tab > "Update crypto news" > Run workflow. It then runs by itself every ~30 minutes.
-4. Thumbnails: the bot saves each article's own preview image; `news.html` shows it (credited to the source) and falls back to a Crypto Asia graphic. To turn publisher images off, set `SHOW_SOURCE_IMAGES = false` in `news.html`.
+4. Thumbnails: the bot saves each article's own preview image; `index.html` shows it (credited to the source) and falls back to a Crypto Asia graphic. To turn publisher images off, set `SHOW_SOURCE_IMAGES = false` in `news.html`.
 5. Airdrop stories get the "Airdrops" category automatically. Feeds are listed in `scripts/feeds.json`.
 
 ## Jobs board with wallet login and USDC fee (jobs.html)
@@ -45,3 +45,15 @@ The removed sections (Venture/Collect/Build, Our HODL, What We've Built, Token P
 
 Tracking loads after the page finishes, sets no cookies, respects Do Not Track, and is disclosed on `about.html`.
 Buttons with `data-track="name"` send click events (the airdrop Register buttons send `ref-<dex>`).
+
+## Perp DEX rankings (perps.html)
+
+- `.github/workflows/perps.yml` runs daily (08:15 KL), runs `scripts/fetch-perps.mjs`, and commits `perps-data.json` and `data/perps-history.json`.
+- Data comes from DefiLlama's open endpoints (override with PERPS_VOL_URL / PERPS_OI_URL; optional secret DEFILLAMA_API_KEY).
+- After the first run, open the run's summary: it lists any DEX not found on DefiLlama. Those show "--".
+- Edit `perps-meta.json` to add fees, season, token status, referral links, or to add a DEX (use `match` words from its DefiLlama name).
+- Trend and the daily signals (OI up/down, volume spike/slowdown) build from the saved history, so they fill in after a few days.
+
+## Page layout
+- `index.html` = News (front page). `about.html` = About page (tools intro and privacy, link `about.html#privacy`).
+- The menu order is set in `shared.js` (LINKS). About is last.

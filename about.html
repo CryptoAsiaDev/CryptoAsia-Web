@@ -3,29 +3,171 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About &amp; Privacy | Crypto Asia</title>
-<meta name="description" content="About Crypto Asia and how this site handles privacy.">
+<title>About Crypto Asia — Tools, Privacy | Crypto Asia</title>
+<link rel="icon" type="image/png" sizes="32x32" href="logos/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logos/favicon-16.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="logos/favicon-180.png">
+<meta name="theme-color" content="#F5C518">
+<script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
+<meta name="description" content="Crypto Asia — live crypto news, airdrop tools, Web3 jobs and more.">
+<meta property="og:title" content="Crypto Asia — Decentralized + Revolution">
+<meta property="og:description" content="Live crypto news, airdrop tools, Web3 jobs and more.">
+<meta property="og:image" content="logos/ca-wide.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
-<style>.doc{max-width:760px;margin:0 auto;padding:3rem 1.5rem 5rem}.doc h1{font-family:var(--fh);font-size:2rem;font-weight:900;margin-bottom:1rem}.doc h2{font-family:var(--fh);font-size:1.1rem;margin:2rem 0 .5rem;letter-spacing:.04em}.doc p,.doc li{font-size:1.15rem;color:var(--text2);margin-bottom:.6rem}.doc ul{padding-left:1.3rem}.doc a{color:var(--ink)}</style>
+<style>
+/* HERO — always dark, with extra gold in dark mode */
+.hero{position:relative;overflow:hidden;background:var(--black);padding:5rem 1.5rem 5rem;text-align:center;border-bottom:3px solid var(--gold)}
+:root[data-theme="dark"] .hero{background:radial-gradient(ellipse 70% 80% at 50% 0%,rgba(245,197,24,.4),transparent 70%),radial-gradient(ellipse 50% 60% at 90% 100%,rgba(245,197,24,.22),transparent 70%),#181202}
+.hero-video{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-video iframe{width:100%;height:100%;pointer-events:none;opacity:.15;transform:scale(1.1)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,8,7,.94) 35%,rgba(8,8,7,.55) 100%);z-index:1}
+:root[data-theme="dark"] .hero-overlay{background:linear-gradient(135deg,rgba(24,18,2,.7) 20%,rgba(24,18,2,.25) 100%)}
+.scan-line{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--gold),transparent);animation:scan 5s linear infinite;z-index:3;opacity:.6}
+@keyframes scan{0%{top:-2px}100%{top:100%}}
+.hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto}
+.hero-logo{width:min(560px,92%);height:auto;display:block;margin:0 auto 1.6rem;border-radius:20px;border:2px solid rgba(245,197,24,.6);box-shadow:0 0 44px rgba(245,197,24,.35)}
+.hero-eyebrow{font-family:var(--fm);font-size:.85rem;color:var(--gold);letter-spacing:.25em;text-transform:uppercase;margin-bottom:1.2rem}
+.hero-desc{font-family:var(--fs);font-weight:500;font-size:clamp(1.3rem,2.6vw,1.75rem);color:rgba(250,250,247,.82);line-height:1.5;margin:0 auto 2rem;max-width:700px}
+.hero-pillars{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.pillar{font-family:var(--fm);font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(245,197,24,.45);padding:.55rem 1.15rem;background:rgba(245,197,24,.08);clip-path:polygon(0 0,calc(100% - 8px) 0,100% 8px,100% 100%,0 100%)}
+
+/* SECTIONS */
+.sec{max-width:1100px;margin:0 auto;padding:4rem 1.5rem 0}
+.sec:last-of-type{padding-bottom:5rem}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem}
+.sec h2{font-family:var(--fh);font-size:clamp(1.5rem,3vw,2.2rem);font-weight:900;letter-spacing:.03em;line-height:1.1}
+.more{font-family:var(--fm);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);font-weight:700;border-bottom:2px solid var(--gold);text-decoration:none;white-space:nowrap}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ncard{display:flex;flex-direction:column;gap:.5rem;background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.2rem 1.3rem;text-decoration:none;color:inherit;transition:transform .2s,box-shadow .2s}
+.ncard:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(245,197,24,.2)}
+.ncard .meta{font-family:var(--fm);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}
+.ncard .tag{background:var(--gold);color:#080807;padding:.1rem .5rem;font-weight:700}
+.ncard h3{font-family:var(--fh);font-size:.92rem;letter-spacing:.02em;line-height:1.35}
+.ncard p{color:var(--text2);font-size:1.05rem;flex:1}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.feature{display:flex;flex-direction:column;gap:.7rem;background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);padding:1.8rem 1.6rem}
+.feature .ic{font-size:2rem;line-height:1}
+.feature h3{font-family:var(--fh);font-size:1.05rem;letter-spacing:.05em}
+.feature p{color:var(--text2);font-size:1.1rem}
+.feature ul{list-style:none;color:var(--text2);font-size:1.05rem;display:flex;flex-direction:column;gap:.25rem}
+.feature li::before{content:'\2192  ';color:var(--gold-d);font-weight:700}
+.feature .grow{flex:1}
+.feature .btn{align-self:flex-start;text-decoration:none}
+.jobs-mini{border-top:1px solid var(--border);padding-top:.7rem;display:flex;flex-direction:column;gap:.35rem;font-size:1rem}
+.jobs-mini a{color:var(--ink);text-decoration:none;font-weight:600}
+.jobs-mini a:hover{text-decoration:underline}
+.jobs-mini small{font-family:var(--fm);font-size:.72rem;color:var(--text2);letter-spacing:.04em}
+.minis{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+.mini-t{display:flex;gap:1rem;align-items:center;background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);padding:1.1rem 1.3rem;text-decoration:none;color:inherit}
+.mini-t:hover{box-shadow:0 10px 26px rgba(245,197,24,.18)}
+.mini-t .ic{font-size:1.8rem}
+.mini-t h3{font-family:var(--fh);font-size:.9rem;letter-spacing:.05em}
+.mini-t p{color:var(--text2);font-size:1.02rem}
+
+#cookie-bar{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--black);border-top:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;gap:1rem;font-size:.9rem;color:rgba(250,250,247,.6);font-family:var(--fm);letter-spacing:.04em}
+#cookie-bar button{font-family:var(--fm);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:#080807;border:none;padding:.55rem 1.5rem;cursor:pointer;font-weight:700}
+
+@media(max-width:900px){.news-grid,.feature-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.news-grid,.feature-grid,.minis{grid-template-columns:1fr}.hero{padding:3.5rem 1rem}#cookie-bar{flex-direction:column;align-items:flex-start;padding:1rem 1.25rem}}
+.doc2{max-width:760px}.doc2 h3{font-family:var(--fh);font-size:1.05rem;margin:1.6rem 0 .5rem;letter-spacing:.04em}.doc2 p,.doc2 li{font-size:1.15rem;color:var(--text2);margin-bottom:.6rem}.doc2 ul{padding-left:1.3rem}.doc2 a{color:var(--ink)}
+</style>
 </head>
 <body>
+
 <div id="site-nav"></div>
-<main class="doc">
-<h1>ABOUT &amp; PRIVACY</h1>
-<h2>About Crypto Asia</h2>
+
+<section class="hero" id="top">
+  <div class="scan-line"></div>
+  <div class="hero-video">
+    <iframe src="https://player.vimeo.com/video/564123870?h=08fd0ecb77&autoplay=1&loop=1&autopause=0&muted=1&title=0&byline=0&portrait=0&controls=0"
+      allow="autoplay; fullscreen" frameborder="0" title="Background" loading="lazy"></iframe>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <img class="hero-logo" src="logos/ca-wide.png" alt="Crypto Asia — Decentralized + Revolution" width="1200" height="800">
+    <h1 class="hero-desc" style="font-size:clamp(1.3rem,2.6vw,1.75rem);letter-spacing:0;color:rgba(250,250,247,.82)">Exploring the frontiers of blockchain, digital ownership, and decentralized finance — globally.</h1>
+    <div class="hero-pillars">
+      <div class="pillar">Freedom of Choice</div>
+      <div class="pillar">Financial Sovereignty</div>
+      <div class="pillar">Decentralization</div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="tools" style="padding-top:3rem">
+  <div class="sec-head"><div><div class="eyebrow">Tools</div><h2>BUILT FOR <span style="color:var(--gold-d)">WEB3</span></h2></div></div>
+  <div class="feature-grid">
+    <div class="feature reveal"><div class="ic">&#129689;</div><h3>AIRDROP CALCULATOR</h3>
+      <p>Work out what your points could be worth. Pick a perp DEX, enter your points and an FDV guess, and see your estimated airdrop and tier.</p>
+      <ul><li>14 perp DEX points programs</li><li>Shareable image or video card</li><li>Sign-up links for each protocol</li></ul><div class="grow"></div>
+      <a class="btn" href="airdrop-calculator.html">Open calculator</a></div>
+    <div class="feature reveal"><div class="ic">&#128188;</div><h3>WEB3 JOBS</h3>
+      <p>A job board for crypto. Companies post roles and people post that they are looking for work. Sign in with your wallet, no accounts or passwords.</p>
+      <div class="jobs-mini" id="jobsMini" hidden></div>
+      <ul><li>Employers and job seekers</li><li>Small USDC listing fee</li></ul><div class="grow"></div>
+      <a class="btn" href="jobs.html">Browse jobs</a></div>
+    <div class="feature reveal"><div class="ic">&#127912;</div><h3>NFT STUDIO</h3>
+      <p>Build a generative NFT collection in your browser. Upload layers, set rarity, add rules, then export the images and metadata. Files never leave your device.</p>
+      <ul><li>Free watermarked previews, unlimited</li><li>Pay once to export clean, from $50 USDC</li></ul><div class="grow"></div>
+      <a class="btn" href="nft-studio.html">Open studio</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="sec-head"><div><div class="eyebrow">More</div><h2>EXTRAS</h2></div></div>
+  <div class="minis">
+    <a class="mini-t reveal" href="inheritance.html"><div class="ic">&#128273;</div><div><h3>CRYPTO INHERITANCE KIT</h3><p>Make a plan so the people you trust can reach your crypto if something happens to you.</p></div></a>
+    <a class="mini-t reveal" href="fortune.html"><div class="ic">&#128302;</div><div><h3>CRYPTO FORTUNE</h3><p>Your Chinese zodiac sign and a daily crypto fortune you can share.</p></div></a>
+  </div>
+</section>
+
+<section class="sec" id="privacy">
+  <div class="sec-head"><div><div class="eyebrow">About</div><h2>ABOUT &amp; PRIVACY</h2></div></div>
+  <div class="doc2">
+<h3>About Crypto Asia</h3>
 <p>Crypto Asia is an independent site with crypto news, an airdrop calculator, a Web3 jobs board and a few free tools. Find us on X at <a href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">@CryptoAsiaBTC</a>.</p>
-<h2>Visit counting</h2>
+<h3>Visit counting</h3>
 <p>We count visits to see which pages people use. We use Umami, a privacy-focused tool. It sets no cookies, does not follow you across other sites and does not collect your name, email or wallet address. It records things like the page visited, the referring site, and your approximate country and device type. If your browser sends a Do Not Track signal, we do not count you.</p>
 <p>We share only combined totals (for example, monthly visitors) with partners and sponsors, never individual visitors.</p>
-<h2>Your files and wallet</h2>
+<h3>Your files and wallet</h3>
 <ul><li>NFT Studio images and layers are processed in your browser and are not uploaded to us.</li><li>Connecting a wallet only lets you sign a message and send a payment you approve. We never ask for your seed phrase or private key. Anyone who does is not us.</li><li>Job posts you submit are stored so they can be shown on the jobs board.</li></ul>
-<h2>Referral links</h2>
+<h3>Referral links</h3>
 <p>Some links, such as sign-up links on the airdrop calculator, are referral links. We may earn a reward if you sign up through them, at no cost to you.</p>
-<h2>Contact</h2>
+<h3>Contact</h3>
 <p>Message us on X: <a href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">@CryptoAsiaBTC</a>.</p>
-</main>
+</div>
+</section>
+
 <div id="site-foot"></div>
+
+
 <script src="shared.js"></script>
-</body></html>
+<script>
+(function(){
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function safe(u){ try { var x = new URL(u); return x.protocol==='https:' ? x.href : '#'; } catch(e){ return '#'; } }
+  function ago(iso){ var m = Math.round((Date.now()-new Date(iso).getTime())/60000); if (isNaN(m)||m<0) return ''; if (m<60) return m+' min ago'; var h = Math.round(m/60); if (h<24) return h+' h ago'; return Math.round(h/24)+' d ago'; }
+  var LABEL = {Markets:'Market',Altcoins:'Altcoin',Airdrops:'Airdrop',Ethereum:'Altcoin',DeFi:'Altcoin','NFTs & Ordinals':'Altcoin'};
+  function jobsFromFile(){ return fetch('jobs.json').then(function(r){ return r.ok ? r.json() : {jobs:[]}; }).then(function(d){
+    var today = new Date().toISOString().slice(0,10);
+    return (d.jobs||[]).filter(function(j){ return !j.sample && (!j.expires || j.expires>=today); }).map(function(j){ return {title:j.title,company:j.company,type:j.type,location:j.location,posted:j.posted}; });
+  }).catch(function(){ return []; }); }
+  function jobsFromDb(){ return fetch('jobs-config.json').then(function(r){ return r.ok ? r.json() : {}; }).then(function(c){
+    if (!c.supabaseUrl || !c.supabaseKey) return [];
+    return fetch(c.supabaseUrl.replace(/\/$/,'')+'/rest/v1/submissions?kind=eq.job&select=data,created_at,verified_at&order=created_at.desc&limit=3', {headers:{apikey:c.supabaseKey, Authorization:'Bearer '+c.supabaseKey}})
+      .then(function(r){ return r.ok ? r.json() : []; }).then(function(rows){ return rows.map(function(r){ var d = r.data||{}; return {title:d.title,company:d.company,type:d.type,location:d.location,posted:r.verified_at||r.created_at}; }); });
+  }).catch(function(){ return []; }); }
+  Promise.all([jobsFromDb(), jobsFromFile()]).then(function(r){
+    var all = r[0].concat(r[1]).filter(function(j){ return j.title; }).sort(function(a,b){ return String(b.posted).localeCompare(String(a.posted)); }).slice(0,3);
+    if (!all.length) return;
+    var el = document.getElementById('jobsMini');
+    el.innerHTML = '<small>LATEST LISTINGS</small>'+all.map(function(j){ return '<div><a href="jobs.html">'+esc(j.title)+'</a><br><small>'+esc([j.company,j.type,j.location].filter(Boolean).join(' · '))+'</small></div>'; }).join('');
+    el.hidden = false;
+  });
+})();
+</script>
+</body>
+</html>

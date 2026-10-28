@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tier List Maker — Rank Perp DEXs and Crypto Tokens | Crypto Asia</title>
+<meta name="description" content="Rank perp DEXs and crypto tokens into S to D tiers. Drag and drop, then download or share your tier list.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.wrap{max-width:1000px;margin:0 auto;padding:2.5rem 1.2rem 5rem}
+h1{font-family:var(--fh);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line-height:1.1}
+.lead{color:var(--text2);margin:.6rem 0 1.4rem;font-size:1.15rem}
+.tabs{display:flex;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap}
+.tab{font-family:var(--fm);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1.1rem;border:2px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer}
+.tab.on{background:var(--gold);color:#080807;border-color:var(--gold);font-weight:700}
+.titlein{width:100%;font-family:var(--fh);font-size:1.1rem;font-weight:700;padding:.6rem .8rem;background:var(--field);color:var(--text);border:2px solid var(--border);margin-bottom:.8rem}
+.board{border:2px solid #000;background:#1b1b17}
+.row{display:flex;min-height:84px;border-bottom:2px solid #000}
+.row:last-child{border-bottom:none}
+.lab{flex:0 0 84px;display:flex;align-items:center;justify-content:center;font-family:var(--fs);font-size:1.7rem;font-weight:700;color:#222}
+.zone{flex:1;display:flex;flex-wrap:wrap;gap:6px;padding:6px;align-content:flex-start;min-height:84px}
+.zone.over{background:rgba(245,197,24,.18)}
+.chip{width:72px;height:72px;border-radius:50%;flex:none;position:relative;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:900;font-size:1.05rem;color:#fff;overflow:hidden}
+.chip img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
+.chip.drag{opacity:.35}
+.ghost{position:fixed;z-index:999;pointer-events:none;transform:translate(-50%,-50%) scale(1.1);box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.pool{margin-top:1.2rem}
+.pool h2{font-family:var(--fm);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text2);margin-bottom:.4rem;font-weight:400}
+.pool .zone{background:var(--surface);border:2px dashed var(--border);min-height:96px}
+.names{display:flex;flex-wrap:wrap;gap:.3rem .8rem;margin:.6rem 0 0;font-size:.95rem;color:var(--text2)}
+.bar{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.2rem;align-items:center}
+.add{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1.2rem;align-items:center}
+.add input[type=text]{padding:.55rem .7rem;background:var(--field);color:var(--text);border:2px solid var(--border);font-size:1rem;width:150px}
+.add label{font-size:.95rem;color:var(--text2)}
+.hint{font-size:.95rem;color:var(--text2);margin-top:.6rem}
+@media(max-width:560px){.lab{flex-basis:56px;font-size:1.3rem}.chip{width:58px;height:58px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+<main class="wrap">
+  <div class="eyebrow">Tier list</div>
+  <h1>RANK YOUR <span style="color:var(--gold-d)">FAVOURITES</span></h1>
+  <p class="lead">Drag each logo into a tier, from S (best) to D. Switch between perp DEXs and crypto tokens, then download your list or share it on X.</p>
+  <div class="tabs" id="tabs"></div>
+  <input class="titlein" id="title" maxlength="60" aria-label="Tier list title">
+  <div class="board" id="board"></div>
+  <div class="pool"><h2>Not ranked yet</h2><div class="zone" id="pool" data-zone="pool"></div></div>
+  <div class="names" id="names"></div>
+  <div class="add">
+    <input type="text" id="addName" maxlength="12" placeholder="Add your own">
+    <label class="btn ghost" style="padding:.55rem .9rem">Logo (optional)<input type="file" id="addImg" accept="image/*" hidden></label>
+    <button class="btn" id="addBtn">Add</button>
+  </div>
+  <div class="bar">
+    <button class="btn" id="dl">Download image</button>
+    <a class="btn dark" id="shareX" target="_blank" rel="noopener">Share on X</a>
+    <button class="btn ghost" id="reset">Reset</button>
+  </div>
+  <p class="hint">Your list is saved in this browser only. Nothing is uploaded. Tier lists are personal opinions, not financial advice.</p>
+</main>
+<div id="site-foot"></div>
+<script src="shared.js"></script>
+<script>
+(function(){
+var TIERS=[['S','#ff7f7f'],['A','#ffbf7f'],['B','#ffdf7f'],['C','#ffff7f'],['D','#bfff7f']];
+var PERPS=[['aftermath','Aftermath Fi'],['bulk','Bulk Trade'],['drake','Drake'],['extended','Extended'],['hibachi','Hibachi'],['imperial','Imperial'],['miracle','Miracle'],['n1','N1'],['nado','Nado'],['pacifica','Pacifica'],['perpl','PERPL'],['risex','RiseX'],['txflow','TxFlow'],['variational','Variational']].map(function(a){return {id:a[0],name:a[1],img:'logos/'+a[0]+'.png'};});
+var COLORS=['#3b6fd8','#8a4fd0','#d0503f','#1f9d78','#c78a10','#cc4a8a','#2f8fb8','#6b7a1f'];
+var TOK='BTC Bitcoin|ETH Ethereum|SOL Solana|BNB BNB|XRP XRP|DOGE Dogecoin|ADA Cardano|AVAX Avalanche|LINK Chainlink|TON Toncoin|SUI Sui|HYPE Hyperliquid|TRX Tron|DOT Polkadot|LTC Litecoin|NEAR NEAR|APT Aptos|ARB Arbitrum|OP Optimism|UNI Uniswap|AAVE Aave|PEPE Pepe|SHIB Shiba Inu|INJ Injective|TIA Celestia|ONDO Ondo|ENA Ethena|JUP Jupiter|WLD Worldcoin|TAO Bittensor'.split('|').map(function(s,i){var p=s.split(' ');return {id:'t-'+p[0].toLowerCase(),name:p.slice(1).join(' '),sym:p[0],color:COLORS[i%COLORS.length]};});
+var CATS={perps:{label:'Perp DEXs',title:'My Perp DEX Tier List',items:PERPS},tokens:{label:'Crypto Tokens',title:'My Crypto Token Tier List',items:TOK}};
+var KEY='ca-tierlist-v1', cat='perps', st=load();
+function load(){try{var d=JSON.parse(localStorage.getItem(KEY));if(d&&d.cats)return d}catch(e){}return {cats:{}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}}
+function cs(){var c=st.cats[cat]||(st.cats[cat]={title:CATS[cat].title,place:{},custom:[]});return c}
+function items(){return CATS[cat].items.concat(cs().custom)}
+function $(i){return document.getElementById(i)}
+function chip(it){var d=document.createElement('div');d.className='chip';d.dataset.id=it.id;d.title=it.name;
+  if(it.img){var im=document.createElement('img');im.src=it.img;im.alt=it.name;im.draggable=false;d.appendChild(im);d.style.background='#111'}
+  else{d.style.background=it.color||'#555';d.textContent=(it.sym||it.name.slice(0,3)).toUpperCase()}
+  d.addEventListener('pointerdown',down);return d}
+function render(){
+  var c=cs();$('title').value=c.title;
+  $('tabs').innerHTML='';Object.keys(CATS).forEach(function(k){var b=document.createElement('button');b.className='tab'+(k===cat?' on':'');b.textContent=CATS[k].label;b.onclick=function(){cat=k;render()};$('tabs').appendChild(b)});
+  var bd=$('board');bd.innerHTML='';
+  TIERS.forEach(function(t){var r=document.createElement('div');r.className='row';r.innerHTML='<div class="lab" style="background:'+t[1]+'">'+t[0]+'</div><div class="zone" data-zone="'+t[0]+'"></div>';bd.appendChild(r)});
+  var pool=$('pool');pool.innerHTML='';
+  var names=[];
+  items().forEach(function(it){var z=c.place[it.id];var host=(z&&TIERS.some(function(t){return t[0]===z}))?bd.querySelector('[data-zone="'+z+'"]'):pool;host.appendChild(chip(it));names.push(it.name)});
+  $('names').textContent=names.join(' · ');
+  var txt=encodeURIComponent(c.title+' — make yours at https://cryptoasiabtc.com/tierlist.html @CryptoAsiaBTC');
+  $('shareX').href='https://x.com/intent/post?text='+txt;
+}
+var drag=null;
+function down(e){if(e.button>0)return;var el=e.currentTarget;e.preventDefault();
+  var g=el.cloneNode(true);g.className='chip ghost';g.style.width=el.offsetWidth+'px';g.style.height=el.offsetHeight+'px';document.body.appendChild(g);
+  el.classList.add('drag');drag={el:el,g:g};move(e);
+  window.addEventListener('pointermove',move);window.addEventListener('pointerup',up);window.addEventListener('pointercancel',up)}
+function zoneAt(x,y){var e=document.elementFromPoint(x,y);return e&&e.closest?e.closest('[data-zone]'):null}
+var last=null;
+function move(e){if(!drag)return;drag.g.style.left=e.clientX+'px';drag.g.style.top=e.clientY+'px';
+  var z=zoneAt(e.clientX,e.clientY);if(last&&last!==z)last.classList.remove('over');if(z)z.classList.add('over');last=z}
+function up(e){window.removeEventListener('pointermove',move);window.removeEventListener('pointerup',up);window.removeEventListener('pointercancel',up);
+  if(!drag)return;var z=zoneAt(e.clientX,e.clientY),c=cs();
+  if(last)last.classList.remove('over');last=null;
+  if(z&&e.type==='pointerup'){var id=drag.el.dataset.id;if(z.dataset.zone==='pool')delete c.place[id];else c.place[id]=z.dataset.zone;save()}
+  drag.g.remove();drag=null;render()}
+$('title').addEventListener('input',function(){cs().title=this.value;save();$('shareX').href='https://x.com/intent/post?text='+encodeURIComponent(this.value+' — make yours at https://cryptoasiabtc.com/tierlist.html @CryptoAsiaBTC')});
+$('reset').onclick=function(){if(confirm('Clear this tier list?')){var c=cs();c.place={};c.title=CATS[cat].title;save();render()}};
+function shrink(file,cb){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var s=96,cv=document.createElement('canvas');cv.width=cv.height=s;var x=cv.getContext('2d'),m=Math.min(im.width,im.height);x.drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,s,s);cb(cv.toDataURL('image/png'))};im.src=r.result};r.readAsDataURL(file)}
+$('addBtn').onclick=function(){var n=$('addName').value.trim();if(!n)return;var f=$('addImg').files[0];
+  function add(img){var c=cs();c.custom.push({id:'c-'+Date.now(),name:n,img:img||null,color:COLORS[c.custom.length%COLORS.length]});save();$('addName').value='';$('addImg').value='';render()}
+  if(f)shrink(f,add);else add(null)};
+$('dl').onclick=function(){
+  var c=cs(),all=items(),S=96,LW=110,W=1000,pad=8,per=Math.floor((W-LW-pad)/(S+pad));
+  var rows=TIERS.map(function(t){var its=all.filter(function(i){return c.place[i.id]===t[0]});return {t:t,its:its,h:Math.max(1,Math.ceil(its.length/per))*(S+pad)+pad}});
+  var top=90,foot=60,H=top+rows.reduce(function(a,r){return a+r.h},0)+foot;
+  var cv=document.createElement('canvas');cv.width=W;cv.height=H;var x=cv.getContext('2d');
+  x.fillStyle='#1b1b17';x.fillRect(0,0,W,H);
+  x.fillStyle='#F5C518';x.font='900 34px Orbitron, sans-serif';x.textBaseline='middle';x.fillText(c.title.slice(0,40),24,45);
+  var y=top,jobs=[];
+  rows.forEach(function(r){x.fillStyle=r.t[1];x.fillRect(0,y,LW,r.h);x.fillStyle='#222';x.font='700 44px Rajdhani, sans-serif';x.textAlign='center';x.fillText(r.t[0],LW/2,y+r.h/2);x.textAlign='left';
+    x.strokeStyle='#000';x.lineWidth=2;x.strokeRect(0,y,W,r.h);
+    r.its.forEach(function(it,i){jobs.push({it:it,x:LW+pad+(i%per)*(S+pad),y:y+pad+Math.floor(i/per)*(S+pad)})});y+=r.h});
+  x.fillStyle='#F5C518';x.font='700 22px "Share Tech Mono", monospace';x.textAlign='center';x.fillText('CRYPTOASIABTC.COM',W/2,H-foot/2);
+  var pend=jobs.length;
+  function done(){var a=document.createElement('a');a.download='crypto-asia-tier-list.png';a.href=cv.toDataURL('image/png');document.body.appendChild(a);a.click();a.remove()}
+  function circle(j){x.save();x.beginPath();x.arc(j.x+S/2,j.y+S/2,S/2,0,7);x.clip();return}
+  jobs.forEach(function(j){
+    if(j.it.img){var im=new Image();im.onload=function(){x.save();circle(j);x.fillStyle='#111';x.fillRect(j.x,j.y,S,S);x.drawImage(im,j.x,j.y,S,S);x.restore();if(!--pend)done()};im.onerror=function(){if(!--pend)done()};im.src=j.it.img}
+    else{x.save();circle(j);x.fillStyle=j.it.color||'#555';x.fillRect(j.x,j.y,S,S);x.restore();x.fillStyle='#fff';x.font='900 24px Orbitron, sans-serif';x.textAlign='center';x.fillText((j.it.sym||j.it.name.slice(0,3)).toUpperCase(),j.x+S/2,j.y+S/2);x.textAlign='left';pend--}});
+  if(!pend||!jobs.some(function(j){return j.it.img}))done();
+};
+render();
+})();
+</script>
+</body></html>

@@ -1,0 +1,220 @@
+{
+ "_readme": "Hand-edited details per perp DEX. 'match' = words to find the protocol in DefiLlama names/slugs (lowercase). Add a line here to show a new DEX. Fees are percent. 'season' and 'token' are free text (e.g. 'Season 1', 'TGE done'). Fees, season and token are left empty until you fill them in; empty shows as '--'. Check each DEX's own site before entering.",
+ "protocols": [
+  {
+   "id": "hyperliquid",
+   "name": "Hyperliquid",
+   "match": [
+    "hyperliquid"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": "Live (HYPE)"
+  },
+  {
+   "id": "aster",
+   "name": "Aster",
+   "match": [
+    "aster"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "lighter",
+   "name": "Lighter",
+   "match": [
+    "lighter"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "edgex",
+   "name": "edgeX",
+   "match": [
+    "edgex"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "paradex",
+   "name": "Paradex",
+   "match": [
+    "paradex"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "variational",
+   "name": "Variational",
+   "match": [
+    "variational"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": "",
+   "ref": ""
+  },
+  {
+   "id": "extended",
+   "name": "Extended",
+   "match": [
+    "extended"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": "",
+   "ref": ""
+  },
+  {
+   "id": "pacifica",
+   "name": "Pacifica",
+   "match": [
+    "pacifica"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": "",
+   "ref": "https://app.pacifica.fi?referral=CryptoAsia"
+  },
+  {
+   "id": "nado",
+   "name": "Nado",
+   "match": [
+    "nado"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "hibachi",
+   "name": "Hibachi",
+   "match": [
+    "hibachi"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "bulk",
+   "name": "Bulk Trade",
+   "match": [
+    "bulk"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "drake",
+   "name": "Drake Exchange",
+   "match": [
+    "drake"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "imperial",
+   "name": "Imperial Trade",
+   "match": [
+    "imperial"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": "",
+   "ref": "https://imperial.trade/invite/CryptoAsia"
+  },
+  {
+   "id": "miracle",
+   "name": "Miracle Trade",
+   "match": [
+    "miracle"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "n1",
+   "name": "N1",
+   "match": [
+    "n1"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "perpl",
+   "name": "PERPL",
+   "match": [
+    "perpl"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "risex",
+   "name": "RiseX",
+   "match": [
+    "risex",
+    "rise x"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "txflow",
+   "name": "TxFlow",
+   "match": [
+    "txflow"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": ""
+  },
+  {
+   "id": "aftermath",
+   "name": "Aftermath Fi",
+   "match": [
+    "aftermath"
+   ],
+   "maker": null,
+   "taker": null,
+   "season": "",
+   "token": "",
+   "ref": "https://aftermath.finance/referrals/afterref"
+  }
+ ]
+}
