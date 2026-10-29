@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-29T01:59:34.936Z",
+  "updated": "2026-10-29T08:04:00.234Z",
   "skipped": [
+    "c0a73325517b420a",
+    "59a817f4a9e6147b",
     "820aea6e6b070621",
     "d715412dd27b5ed6",
     "6b5bf5e2365c4e28",
@@ -62,6 +64,50 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "e2316f19df769144",
+      "headline": "A chart bitcoin traders should watch closely right now",
+      "summary": "An analyst highlights a market at an inflection point that could influence inflation trends and risk assets, including bitcoin and tech stocks.",
+      "category": "Markets",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/10/29/the-chart-bitcoin-traders-should-be-paying-attention-to",
+      "published": "2026-10-29T07:44:44.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/9a3df88b822ccd36c4983c47b34c3466952f3fa2-5854x3908.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "The chart bitcoin traders should be paying attention to"
+    },
+    {
+      "id": "76a4bbe0cb023e25",
+      "headline": "Chainlink Falls 21% in October Despite Steady Exchange Outflows",
+      "summary": "LINK has seen tokens leave Binance for 18 straight days, yet its price is down about 21% this month. A large earlier deposit may account for part of the outflow streak.",
+      "category": "Altcoins",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/chainlink-price-exchange-outflows-binance/",
+      "published": "2026-10-29T06:51:25.000Z",
+      "image": "https://assets.beincrypto.com/img/wRH3rdIGlRIJuYcfQ8YcVf9XVg0=/smart/14bd50f7fb094628930544598d369f96",
+      "sourceTitle": "Chainlink Loses 21% in October Even as Tokens Keep Leaving Exchanges"
+    },
+    {
+      "id": "2a3c4c42f2d034c8",
+      "headline": "UNI slips below $7 as new wallet addresses hit six-year high",
+      "summary": "Uniswap's UNI token has fallen back under $7 after briefly recovering above that level this week. Meanwhile, new UNI addresses reached a six-year high, though the excerpt does not say what this signals for price.",
+      "category": "Altcoins",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/uniswap-new-addresses-2020-high/",
+      "published": "2026-10-29T06:16:46.000Z",
+      "image": "https://assets.beincrypto.com/img/PP1MW6vJH9c2X1LvTrRYj94XQns=/smart/18eea6b726be4623b99164fa25a0ae1e",
+      "sourceTitle": "UNI’s 6-Year Wallet Spike May Not Mean What It Looks Like"
+    },
+    {
+      "id": "f2713dfd80c41501",
+      "headline": "AI-discovered flaws can crash bitcoin nodes on Windows and Macs",
+      "summary": "Three vulnerabilities found by a language-model scan have been made public. They are the first disclosed under Bitcoin Core's new rules for bugs that are easy to find.",
+      "category": "Tech",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/tech/2026/10/29/ai-found-a-way-to-crash-bitcoin-nodes-on-windows-and-macs-it-s-now-public",
+      "published": "2026-10-29T05:54:39.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/0fd512cd2b3b63152562fab784b9d94b8b8b56ea-1500x994.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "AI found a way to crash bitcoin nodes on Windows and Macs. It's now public"
+    },
     {
       "id": "0210f361902150f8",
       "headline": "Ripple Nears $900M Revenue Run Rate as XRP Expands",
@@ -897,50 +943,6 @@
       "published": "2026-10-24T15:11:24.000Z",
       "image": "https://cdn.sanity.io/images/s3y3vcno/production/3cbbb05ae60659ef1c46287aae06ad1132421ba3-2280x1284.png?auto=format&fit=crop&crop=focalpoint&w=1200&h=675&q=75",
       "sourceTitle": "Crypto under weekend pressure, bitcoin slides below $80,000 on U.S. Middle East evacuations"
-    },
-    {
-      "id": "96e263edf8737c32",
-      "headline": "Big Firms' Opposition to Tokenized Stocks May Not Be Decisive",
-      "summary": "Several major companies, including McDonald's, Microsoft and Google, objected to being listed on a new tokenized securities venue under an SEC innovation exemption. Commentary suggests the pushback may reflect issuer caution rather than a broad rejection of tokenization.",
-      "category": "Regulation",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/business/2026/10/23/why-mcdonalds-microsoft-and-google-saying-no-to-tokenized-stocks-isn-t-a-dealbreaker",
-      "published": "2026-10-24T15:00:00.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/5f5b4bcc5ab7ba1437f88bb9961bbd70e3bbb448-5624x3749.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Why McDonalds, Microsoft and Google saying no to tokenized stocks isn't a dealbreaker"
-    },
-    {
-      "id": "652beee0d14a471c",
-      "headline": "Argentine judge closes criminal case against Milei over LIBRA token",
-      "summary": "A judge found that President Milei's promotion of the LIBRA memecoin did not amount to fraud, even though his backing drew attention to the token. The token has since crashed.",
-      "category": "Regulation",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/business/2026/10/24/argentina-drops-criminal-probe-into-president-milei-over-crashed-memecoin-libra",
-      "published": "2026-10-24T14:38:47.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/d5be50574b7c98b10befa8ee5f9704bd3fba1aa4-960x640.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Argentina drops criminal probe into President Milei over crashed memecoin LIBRA"
-    },
-    {
-      "id": "940e55205b44222d",
-      "headline": "Wealthy Bitcoin holders shift toward loans and yield products",
-      "summary": "Long-term investors are increasingly borrowing against their bitcoin and seeking income to grow their BTC holdings, according to Xapo Bank CEO Seamus Rocca.",
-      "category": "Markets",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/",
-      "published": "2026-10-24T14:00:00.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/cfea8454f56671dd812bbb4b292509a390b476d3-2400x1260.jpg?auto=format&fit=crop&crop=focalpoint&w=1200&h=675&q=75",
-      "sourceTitle": "Bitcoin’s wealthy holders turning to loans and yield as investment habits mature: Xapo CEO"
-    },
-    {
-      "id": "d749b32e132c0e24",
-      "headline": "HSBC Rolls Out Hong Kong Dollar Stablecoin Within PayMe App",
-      "summary": "HSBC has launched its Hong Kong dollar stablecoin inside the PayMe app, a move that tests whether a bank-issued token can serve as everyday money.",
-      "category": "Asia",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/381760/hong-kong-bank-hsbc-stablecoin-3-million-wallets",
-      "published": "2026-10-24T13:01:02.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/hong-kong-decrypt-style-gID_7.jpg",
-      "sourceTitle": "Hong Kong’s Biggest Bank Puts a Stablecoin in 3 Million Wallets"
     }
   ]
 }
