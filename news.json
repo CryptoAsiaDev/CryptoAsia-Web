@@ -1,6 +1,9 @@
 {
-  "updated": "2026-10-28T22:55:33.046Z",
+  "updated": "2026-10-29T01:59:34.936Z",
   "skipped": [
+    "820aea6e6b070621",
+    "d715412dd27b5ed6",
+    "6b5bf5e2365c4e28",
     "12a1e39bb96c1c72",
     "1844534c07b050e5",
     "c32109048767c524",
@@ -59,6 +62,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "0210f361902150f8",
+      "headline": "Ripple Nears $900M Revenue Run Rate as XRP Expands",
+      "summary": "Ripple is reportedly approaching a projected $900 million annualized product revenue run rate, driven by expanding institutional custody and payment channels for XRP. The company's strategy spans payments, trading, treasury management and digital asset infrastructure.",
+      "category": "Altcoins",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/featured/ripple-roars-toward-900m-milestone-as-xrp-gains-wall-street-access/",
+      "published": "2026-10-29T00:30:52.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ripple-labs-1-8-768x432.jpg",
+      "sourceTitle": "Ripple Roars Toward $900M Milestone as XRP Gains Wall Street Access"
+    },
+    {
+      "id": "9acb6165e16f0090",
+      "headline": "33 major firms block tokenized stocks; Apple and Tesla silent",
+      "summary": "JPMorgan, Coca-Cola and 31 other companies reportedly used a new SEC veto to stop tokenized shares trading on OKX and ICE's venue. Apple and Tesla have not commented.",
+      "category": "Regulation",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/wall-street-giants-block-tokenized-stock/",
+      "published": "2026-10-29T00:08:14.000Z",
+      "image": "https://assets.beincrypto.com/img/1sfIdqTefxW8wJq3A1PBF6C8lAI=/smart/df4303171b0b46cdbd67f527df4c0474",
+      "sourceTitle": "33 Wall Street Giants Block Tokenized Stocks, But Apple and Tesla Stay Silent"
+    },
+    {
+      "id": "d30d8804e5dc6fca",
+      "headline": "Analysts Debate Whether Bitcoin Could Fall Like Silver",
+      "summary": "Benjamin Cowen warns Bitcoin could follow silver after a fake-out, while Charles Edwards expects limited downside. The excerpt gives no further detail on either view.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-price-warning-sign-silver-crash/",
+      "published": "2026-10-28T23:32:47.000Z",
+      "image": "https://assets.beincrypto.com/img/zWwrOsS-9z3fsRPxfPC4MKTCAog=/smart/ebc1394a537349c788bfe67a81bdade6",
+      "sourceTitle": "Could Bitcoin Price Crash Like Silver? Warning Signs Are Showing"
+    },
     {
       "id": "7b45cbdd0621ad66",
       "headline": "Ibis Emerges From Stealth With $250M FalconX Credit Facility",
@@ -905,39 +941,6 @@
       "published": "2026-10-24T13:01:02.000Z",
       "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/hong-kong-decrypt-style-gID_7.jpg",
       "sourceTitle": "Hong Kong’s Biggest Bank Puts a Stablecoin in 3 Million Wallets"
-    },
-    {
-      "id": "e419971bc7b4e4a7",
-      "headline": "Arthur Hayes Sells About $22M in Crypto, Expects Market Pain",
-      "summary": "Arthur Hayes, chief investment officer of Maelstrom, has sold roughly $22.28 million in crypto from the firm's directional book. He confirmed the exit on X and said he plans to stay out of the market.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/arthur-hayes-dumps-crypto-sidelines/",
-      "published": "2026-10-24T13:00:05.000Z",
-      "image": "https://assets.beincrypto.com/img/Cnc2QfsKtiTq9AvaFObBTyn9PsQ=/smart/5718414bf5114b2093e7c3fb805706b6",
-      "sourceTitle": "Arthur Hayes Dumps $22 Million in Crypto, Warns of More Pain"
-    },
-    {
-      "id": "ea43bed0597f16fa",
-      "headline": "Apex Group CEO says stalled U.S. Clarity Act favors Asia, Middle East",
-      "summary": "Apex Group CEO Peter Hughes argued that the U.S. Clarity Act's failure could push digital asset firms toward faster-moving jurisdictions in Asia and the Middle East.",
-      "category": "Regulation",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/policy/2026/10/24/u-s-clarity-act-failure-gives-asia-and-middle-east-a-competitive-edge-says-apex-group-ceo",
-      "published": "2026-10-24T12:00:00.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/cb2a91ec8eda764f9a0f74f30550a6a716563fda-2517x1416.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "U.S. Clarity Act failure gives Asia and Middle East a competitive edge, says Apex Group CEO"
-    },
-    {
-      "id": "d44048bbcc24784f",
-      "headline": "Senator seeks records on Tether payments to ex-adviser's firm",
-      "summary": "Senator Richard Blumenthal, the top Democrat on a Senate investigations subcommittee, has requested records on stablecoin issuer Tether's reported payments to Nxum, a consulting firm co-founded by Bo Hines, a former White House crypto adviser.",
-      "category": "Regulation",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/senator-probes-tethers-reported-6-million-payments-to-ex-white-house-crypto-advisers-firm/",
-      "published": "2026-10-24T11:00:33.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2025/08/bo-hines-tether.jpg",
-      "sourceTitle": "Senator probes Tether’s reported $6 million payments to ex-White House crypto adviser’s firm"
     }
   ]
 }
