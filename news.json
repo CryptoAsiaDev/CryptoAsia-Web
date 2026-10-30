@@ -1,6 +1,7 @@
 {
-  "updated": "2026-10-29T20:22:45.117Z",
+  "updated": "2026-10-30T00:00:26.887Z",
   "skipped": [
+    "039dc1ff57b71769",
     "4605b960dcab92b3",
     "c0a73325517b420a",
     "59a817f4a9e6147b",
@@ -65,6 +66,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "656843c632ba1542",
+      "headline": "Onchain lending fees fall about half as Morpho diverges",
+      "summary": "A 1kx report says user-paid fees in onchain lending markets dropped roughly 50% year over year in 2026. New Market Trading CEO Frank Hepworth warns against locking up bitcoin for low fixed yields due to smart contract and counterparty risks.",
+      "category": "Altcoins",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/onchain-lending-fees-plunge-50-as-morpho-bucks-the-trend/",
+      "published": "2026-10-29T23:43:41.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/on-chain-lending-fees-plunge-50-as-morpho-bucks-the-trend-768x432.jpg",
+      "sourceTitle": "Onchain Lending Fees Plunge 50% as Morpho Bucks the Trend"
+    },
+    {
+      "id": "4dfed0431a035dab",
+      "headline": "Suspected Binance hacker moves funds through DeFi exchanges",
+      "summary": "Etherscan data shows wallets linked to the suspected Binance hack swapping freezable stablecoins for Ethereum on decentralized exchanges. Some DeFi platforms have reportedly paused markets.",
+      "category": "Exchanges",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382194/binance-hack-exit-ramps-defi-exchange-ethereum",
+      "published": "2026-10-29T22:57:48.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/Hacker-decrypt-style-02-gID_7.png",
+      "sourceTitle": "Binance Hacker Hunts for Exit Ramps as DeFi Exchanges Pause Markets"
+    },
     {
       "id": "ae15560f28f670bc",
       "headline": "ICE and Trade[XYZ] plan US perpetual futures market on Hyperliquid",
@@ -922,28 +945,6 @@
       "published": "2026-10-25T14:45:28.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/hyperliquid-still-rules-the-perps-market-but-hype-bulls-face-trouble-768x432.png",
       "sourceTitle": "Hyperliquid Still Rules the Perps Market, but HYPE Bulls Face Trouble"
-    },
-    {
-      "id": "ebe4a445c48aa6ff",
-      "headline": "Netanyahu suggests blockchain could help Israel evade possible sanctions",
-      "summary": "Israeli Prime Minister Benjamin Netanyahu said ahead of elections that the country could turn to blockchain and crypto to get around potential international sanctions. The idea drew criticism from opponents and the central bank governor.",
-      "category": "Regulation",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/netanyahu-floats-use-of-blockchain-as-solution-to-potential-financial-sanctions?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-25T11:42:00.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5SCA4VS7NKA06DYBPJVW2FM/benjamin-netanyahu.png",
-      "sourceTitle": "Netanyahu floats use of blockchain as solution to potential financial sanctions"
-    },
-    {
-      "id": "44c115f7fc96f972",
-      "headline": "Bitcoin hashrate recovers to 1 ZH/s despite miners shifting toward AI",
-      "summary": "Large public Bitcoin miners are reallocating capacity toward artificial intelligence, yet the network's hashrate is still rising. The seven-day average has reportedly returned to around the 1 ZH/s level.",
-      "category": "Bitcoin",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/mining/miner-weekly-bitcoin-hashrate-shrugs-off-the-ai-unplug-regaining-1-zh-s-level/",
-      "published": "2026-10-25T11:30:17.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/miner-weekly-1022-energymag-768x432.png",
-      "sourceTitle": "Miner Weekly: Bitcoin Hashrate Shrugs off the AI Unplug, Regaining 1 ZH/s Level"
     }
   ]
 }
