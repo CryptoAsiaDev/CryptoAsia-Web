@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-31T18:04:13.840Z",
+  "updated": "2026-10-31T21:45:30.200Z",
   "skipped": [
+    "f3ec3fed8c8cc2c8",
+    "abbdb0d274fded59",
     "d4f7e3373c333e48",
     "c8257561fda9594e",
     "1d0a2f7dc5494e74",
@@ -76,6 +78,17 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "58ee688f3744bc2c",
+      "headline": "Binance says ten cryptos fully backed after hack recovery",
+      "summary": "Binance said ten cryptocurrencies are now fully backed after replenishing 90% of stolen assets. The exchange is sourcing less liquid tokens to cover the remaining shortfall and is targeting a Sunday withdrawal restart.",
+      "category": "Exchanges",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/security/binance-says-btc-eth-xrp-and-7-other-cryptos-fully-backed-after-hack/",
+      "published": "2026-10-31T17:45:33.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/binance-4-2-768x432.jpg",
+      "sourceTitle": "Binance Says BTC, ETH, XRP and 7 Other Cryptos Fully Backed After Hack"
+    },
     {
       "id": "6aefb753d975b2a1",
       "headline": "Chainalysis data breach exposes customer names, emails and roles",
@@ -944,17 +957,6 @@
       "published": "2026-10-26T03:21:26.000Z",
       "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5V29PC31CCCR3TY3KBGFNVX/hi-an-overview-of-the-cryptocurrency-regulations-in-hong-kong.jpg",
       "sourceTitle": "Hong Kong names Nasdaq-listed Solana Company a strategic enterprise"
-    },
-    {
-      "id": "8232ef435bb8c2c6",
-      "headline": "Bitcoin slips under $80,000 as analyst's bearish roadmap gains attention",
-      "summary": "Bitcoin dropped below $80,000, and analyst Benjamin Cowen has reportedly marked two of nine bearish steps as complete. Upcoming Federal Reserve and PCE data are also being watched as possible catalysts.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-below-80000-cowen-bearish-roadmap/",
-      "published": "2026-10-26T03:20:51.000Z",
-      "image": "https://assets.beincrypto.com/img/bdgj4_CjzeeG3Bl7ydJv3fLMaY4=/smart/1c704331e5d44db499847f53d23438b1",
-      "sourceTitle": "Bitcoin Falls Below $80,000: Is Benjamin Cowen's Bearish Q4 Roadmap Playing Out?"
     }
   ]
 }
