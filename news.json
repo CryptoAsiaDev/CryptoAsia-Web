@@ -1,6 +1,9 @@
 {
-  "updated": "2026-10-31T01:54:30.818Z",
+  "updated": "2026-10-31T07:36:53.221Z",
   "skipped": [
+    "c85589ecbcda8a9c",
+    "29764196e0cab575",
+    "ffaaa36664964e56",
     "5152d1d0f33ef990",
     "3cfc2caf1469b0f9",
     "c4016f72c621e922",
@@ -69,6 +72,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "6333a6de5b515569",
+      "headline": "Aave reopens frozen markets but restricts new collateral-backed loans",
+      "summary": "Aave has reopened previously frozen markets, according to LlamaRisk, after main emergency batches were executed. Practical access will still depend on available liquidity and collateral rules.",
+      "category": "Altcoins",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/aave-reopens-frozen-markets-but-blocks-new-collateral-loans/",
+      "published": "2026-10-31T03:40:43.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/aave-emergency-cap-cuts-standard-image.jpg",
+      "sourceTitle": "Aave reopens frozen markets but blocks new collateral loans"
+    },
+    {
+      "id": "1b0a8fa0c8465b50",
+      "headline": "Blockchain Revenue Forecast to Fall, DeFi Still Leads",
+      "summary": "Global blockchain revenues are projected to drop to about $100 billion in 2026 from roughly $140 billion in 2025. DeFi and finance still generate about two-thirds of the total, while infrastructure revenue has hit its lowest level since 2020.",
+      "category": "Altcoins",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/defi/blockchain-revenues-plunge-30-but-new-growth-engine-emerges/",
+      "published": "2026-10-31T03:05:49.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/blockchain-revenues-plunge-30-but-a-new-growth-engine-emerges-768x432.jpg",
+      "sourceTitle": "Blockchain Revenues Plunge 30%, but a New Growth Engine Emerges"
+    },
     {
       "id": "9339e1f9cc68c221",
       "headline": "Maple locks XRP collateral as loan maturities approach in December and January",
@@ -926,28 +951,6 @@
       "published": "2026-10-25T21:45:03.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bitcoins-7-day-hashrate-returns-to-1-zhs-after-nearly-8-months-768x432.png",
       "sourceTitle": "Bitcoin’s 7-Day Hashrate Returns to 1 ZH/s After Nearly 8 Months"
-    },
-    {
-      "id": "3cfd18bb761eae93",
-      "headline": "US Bitcoin ETFs Post $138M Outflows; Zcash Keeps Inflows",
-      "summary": "U.S. bitcoin ETFs recorded about $137.94 million in net outflows on Friday, closing a week marked by sharp swings between inflows and selling. Ether saw modest inflows, while Zcash and NEAR also drew fresh capital.",
-      "category": "Markets",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/bitcoin-etf/bitcoin-etfs-lose-138m-as-zcash-extends-3-day-inflow-streak/",
-      "published": "2026-10-25T18:43:50.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bitcoin-etfs-lose-138m-as-zcash-extends-3-day-inflow-streak-768x432.jpg",
-      "sourceTitle": "Bitcoin ETFs Lose $138M as Zcash Extends 3-Day Inflow Streak"
-    },
-    {
-      "id": "a39cfbdbd5128570",
-      "headline": "Fed Week Sets Up Key Moves for Stocks, Bitcoin and DXY",
-      "summary": "A busy week of central bank decisions and PCE inflation data comes alongside an $11 billion Bitcoin options expiry. The excerpt does not detail specific outcomes or expectations.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/fed-week-bitcoin-dollar-options-expiry/",
-      "published": "2026-10-25T17:54:38.000Z",
-      "image": "https://assets.beincrypto.com/img/Lrjcb68c06SSXopM7RhW-7v1x9E=/smart/9b561530446441eda1ed33ebb481f7ab",
-      "sourceTitle": "Fed Week Puts Stocks, Bitcoin, and DXY on Collision Course Before $11 Billion Expiry"
     }
   ]
 }
