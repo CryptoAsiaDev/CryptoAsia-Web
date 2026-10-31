@@ -1,6 +1,7 @@
 {
-  "updated": "2026-10-30T22:41:59.941Z",
+  "updated": "2026-10-31T01:54:30.818Z",
   "skipped": [
+    "5152d1d0f33ef990",
     "3cfc2caf1469b0f9",
     "c4016f72c621e922",
     "039dc1ff57b71769",
@@ -68,6 +69,17 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "9339e1f9cc68c221",
+      "headline": "Maple locks XRP collateral as loan maturities approach in December and January",
+      "summary": "About 225 million XRP backs three stablecoin loan positions on Maple, with December and January maturity dates. The excerpt notes that maturities do not automatically release the collateral, raising liquidation concerns.",
+      "category": "Altcoins",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/maple-locks-280m-in-xrp-collateral-and-upcoming-maturity-dates-threaten-liquidations/",
+      "published": "2026-10-31T00:10:43.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/maple-finance-xrp-collateral-standard-image-v2.jpg",
+      "sourceTitle": "Maple locks $280M in XRP collateral and upcoming maturity dates threaten liquidations"
+    },
     {
       "id": "e64c5b0907a1ad16",
       "headline": "Strategy plans more Bitcoin buys as Saylor cites $30B credit",
@@ -936,17 +948,6 @@
       "published": "2026-10-25T17:54:38.000Z",
       "image": "https://assets.beincrypto.com/img/Lrjcb68c06SSXopM7RhW-7v1x9E=/smart/9b561530446441eda1ed33ebb481f7ab",
       "sourceTitle": "Fed Week Puts Stocks, Bitcoin, and DXY on Collision Course Before $11 Billion Expiry"
-    },
-    {
-      "id": "8f0c4950e9644d1c",
-      "headline": "Bitcoin Challenge Site Offers $2,000 to Hackers, Unclaimed So Far",
-      "summary": "A website offering $2,000 in bitcoin to anyone who can steal it remains unclaimed. An independent review suggests the challenge may be practically impossible to crack.",
-      "category": "Bitcoin",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/featured/website-dares-hackers-to-steal-bitcoin-as-the-clock-keeps-ticking/",
-      "published": "2026-10-25T17:40:45.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/website-dares-hackers-to-steal-bitcoin-as-the-clock-keeps-ticking-768x432.png",
-      "sourceTitle": "Website Dares Hackers to Steal Bitcoin as the Clock Keeps Ticking"
     }
   ]
 }
