@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-31T07:36:53.221Z",
+  "updated": "2026-10-31T13:56:45.285Z",
   "skipped": [
+    "1d0a2f7dc5494e74",
+    "b6317eb46e457af7",
     "c85589ecbcda8a9c",
     "29764196e0cab575",
     "ffaaa36664964e56",
@@ -72,6 +74,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "7e6c70fb6f8d0d7a",
+      "headline": "AI Tools Could Speed Up Crypto Hacks as Billions Remain Exposed",
+      "summary": "Security researchers warn that attackers are already using autonomous AI tools to automate phishing, vulnerability research and credential theft. They note that recent large breaches are not all AI-driven.",
+      "category": "Tech",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/security/ai-gives-crypto-hackers-machine-speed-as-billions-sit-at-risk/",
+      "published": "2026-10-31T13:00:58.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ai-gives-crypto-hackers-machine-speed-as-billions-sit-at-risk-768x432.png",
+      "sourceTitle": "AI Gives Crypto Hackers Machine Speed as Billions Sit at Risk"
+    },
+    {
+      "id": "6c9ba010133dfdc3",
+      "headline": "Chainalysis says attacker used AI agents to access client data",
+      "summary": "Blockchain analytics firm Chainalysis reportedly suffered a breach in which AI agents helped an attacker obtain client names, emails and job roles.",
+      "category": "Other",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/chainalysis-hacked-ai-agents-client-data/",
+      "published": "2026-10-31T12:25:56.000Z",
+      "image": "https://assets.beincrypto.com/img/cPi5rDtxFsizqmorDd3blp_gvXc=/smart/ac5f8d44c5fd4a5eb23140fbd317e093",
+      "sourceTitle": "Chainalysis, the Firm That Hunts Crypto Hackers, Got Hacked With AI Agents"
+    },
     {
       "id": "6333a6de5b515569",
       "headline": "Aave reopens frozen markets but restricts new collateral-backed loans",
@@ -929,28 +953,6 @@
       "published": "2026-10-25T23:45:00.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bank-of-israel-logo-768x432.jpg",
       "sourceTitle": "Bank of Israel Rejects Netanyahu’s Crypto Sanction-Evasion Plan"
-    },
-    {
-      "id": "29b7516e16505103",
-      "headline": "Bitcoin and gold rank as worst major assets of 2026",
-      "summary": "Charlie Bilello's data shows Bitcoin and gold as the weakest major assets of 2026, a first in his records. The excerpt links the performance to oil prices and Federal Reserve policy.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-gold-worst-assets-2026/",
-      "published": "2026-10-25T23:40:00.000Z",
-      "image": "https://assets.beincrypto.com/img/g2RAZk9FxrGnTEg95pvPV_SLLW8=/smart/757fb6df64ca4a478ab1bcffcb1515f9",
-      "sourceTitle": "Bitcoin and Gold Hit a Historic First in 2026. The Two “Safe Havens” Are Now the Worst Assets"
-    },
-    {
-      "id": "d53d2e200f329913",
-      "headline": "Bitcoin's Seven-Day Hashrate Climbs Back to 1 ZH/s",
-      "summary": "Bitcoin's network hashrate has returned to the 1 zettahash per second level, meaning miners are again performing over one sextillion calculations each second. The excerpt notes this comes as miners continue securing the network and competing for newly minted bitcoin.",
-      "category": "Bitcoin",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/mining/bitcoins-7-day-hashrate-returns-to-1-zh-s-after-nearly-8-months/",
-      "published": "2026-10-25T21:45:03.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bitcoins-7-day-hashrate-returns-to-1-zhs-after-nearly-8-months-768x432.png",
-      "sourceTitle": "Bitcoin’s 7-Day Hashrate Returns to 1 ZH/s After Nearly 8 Months"
     }
   ]
 }
