@@ -1,0 +1,48 @@
+name: Post news to X
+
+on:
+  schedule:
+    # 5 posts a day at different times (Kuala Lumpur 08:10, 11:40, 15:20, 19:05, 22:30)
+    - cron: '10 0 * * *'
+    - cron: '40 3 * * *'
+    - cron: '20 7 * * *'
+    - cron: '5 11 * * *'
+    - cron: '30 14 * * *'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'true = write the tweet but do not post it'
+        required: false
+        default: 'true'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: post-x
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Pick the biggest story and post it
+        run: node scripts/post-x.mjs
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_SECRET: ${{ secrets.X_ACCESS_SECRET }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.dry_run || 'false' }}
+          X_INCLUDE_LINK: 'false'
+      - name: Save the posted list
+        run: |
+          git config user.name "crypto-asia-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/x-posted.json
+          git diff --cached --quiet || (git commit -m "Record posted tweet" && git pull --rebase && git push)

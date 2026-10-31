@@ -63,3 +63,12 @@ Token logos in `logos/tokens/` come from the open-source Web3Icons set (MIT lice
 
 ## NFT Studio access
 No wallet is needed to build, preview or save projects (free, watermarked). The wallet is asked for only when someone chooses to export without a watermark. Projects live in the browser; the paid license is tied to the wallet that paid.
+
+### Perp data sources (updated)
+DefiLlama now charges for its perp volume data (HTTP 402), but open interest is still free. So: open interest comes from DefiLlama; 24h volume comes from each exchange's own public API (`scripts/perps-sources.mjs`, endpoints taken from DefiLlama's open-source adapters; CoinGecko is the fallback). Hibachi, Nado, Imperial, Bulk, RiseX and Extended also give 7-day / 30-day / total volume directly. 7-day, 30-day and total volume are added up from our daily records in `data/perps-history.json`, so they grow more complete each day (marked with *). After each run, open the run summary: "Volume sources" shows which exchanges answered and which failed.
+
+## Auto-posting to X (@CryptoAsiaBTC)
+`.github/workflows/post-x.yml` runs 5 times a day (KL 08:10, 11:40, 15:20, 19:05, 22:30). `scripts/post-x.mjs` asks Claude to pick the biggest unposted story from `news.json` of the last 24 hours, writes a tweet (no link, "via source" + hashtags) and posts it. Posted stories are logged in `data/x-posted.json` so nothing repeats; max 6 a day.
+Secrets needed: `ANTHROPIC_API_KEY` (already set), `X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_SECRET`.
+Test first: Actions > Post news to X > Run workflow with dry_run = true (writes the tweet in the run summary, posts nothing).
+X charges per post; posts that contain a link cost far more, so links are off (`X_INCLUDE_LINK: 'false'`).

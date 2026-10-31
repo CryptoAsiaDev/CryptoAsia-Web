@@ -1,0 +1,62 @@
+[
+  {
+    "name": "CoinDesk",
+    "url": "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  },
+  {
+    "name": "Cointelegraph",
+    "url": "https://cointelegraph.com/rss"
+  },
+  {
+    "name": "Decrypt",
+    "url": "https://decrypt.co/feed"
+  },
+  {
+    "name": "Bitcoin Magazine",
+    "url": "https://bitcoinmagazine.com/.rss/full/"
+  },
+  {
+    "name": "CryptoSlate",
+    "url": "https://cryptoslate.com/feed/"
+  },
+  {
+    "name": "Blockworks",
+    "url": "https://blockworks.co/feed"
+  },
+  {
+    "name": "BeInCrypto",
+    "url": "https://beincrypto.com/feed/"
+  },
+  {
+    "name": "Forkast",
+    "url": "https://forkast.news/feed/"
+  },
+  {
+    "name": "Cointelegraph Airdrops",
+    "url": "https://cointelegraph.com/rss/tag/airdrop"
+  },
+  {
+    "name": "Google News: airdrops",
+    "url": "https://news.google.com/rss/search?q=crypto+airdrop+when:2d&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+    "name": "The Block",
+    "url": "https://www.theblock.co/rss.xml"
+  },
+  {
+    "name": "Bitcoin.com News",
+    "url": "https://news.bitcoin.com/feed/"
+  },
+  {
+    "name": "Cointelegraph Asia",
+    "url": "https://cointelegraph.com/rss/tag/asia"
+  },
+  {
+    "name": "DL News",
+    "url": "https://www.dlnews.com/arc/outboundfeeds/rss/"
+  },
+  {
+    "name": "Fintech News Singapore",
+    "url": "https://fintechnews.sg/feed/"
+  }
+]

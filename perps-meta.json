@@ -1,5 +1,5 @@
 {
- "_readme": "Hand-edited details per perp DEX. 'match' = words to find the protocol in DefiLlama names/slugs (lowercase). Add a line here to show a new DEX. Fees are percent. 'season' and 'token' are free text (e.g. 'Season 1', 'TGE done'). Fees, season and token are left empty until you fill them in; empty shows as '--'. Check each DEX's own site before entering.",
+ "_readme": "Hand-edited details per perp DEX. 'match' = words to find the protocol in DefiLlama names/slugs (lowercase). Add a line here to show a new DEX. Fees are percent. 'season' and 'token' are free text (e.g. 'Season 1', 'TGE done'). Fees, season and token are left empty until you fill them in; empty shows as '--'. Check each DEX's own site before entering. 'exclude' = words in a DefiLlama name that mark something that is not a perp DEX (prediction markets, options); those are hidden.",
  "protocols": [
   {
    "id": "hyperliquid",
@@ -216,5 +216,11 @@
    "token": "",
    "ref": "https://aftermath.finance/referrals/afterref"
   }
+ ],
+ "exclude": [
+  "kalshi",
+  "polymarket",
+  "options",
+  "prediction"
  ]
 }

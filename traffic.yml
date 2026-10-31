@@ -1,0 +1,35 @@
+name: Traffic report
+
+on:
+  schedule:
+    - cron: '30 17 * * *'      # 01:30 Kuala Lumpur, every day
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Force a report: daily, weekly, monthly or all (leave empty for normal schedule)'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build reports
+        run: node scripts/traffic-report.mjs
+        env:
+          UMAMI_API_KEY: ${{ secrets.UMAMI_API_KEY }}
+          UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
+          REPORT_FORCE: ${{ github.event.inputs.force }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: traffic-reports
+          path: reports/
+          retention-days: 90
+          if-no-files-found: ignore
