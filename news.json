@@ -1,6 +1,8 @@
 {
-  "updated": "2026-10-31T13:56:45.285Z",
+  "updated": "2026-10-31T18:04:13.840Z",
   "skipped": [
+    "d4f7e3373c333e48",
+    "c8257561fda9594e",
     "1d0a2f7dc5494e74",
     "b6317eb46e457af7",
     "c85589ecbcda8a9c",
@@ -74,6 +76,17 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "6aefb753d975b2a1",
+      "headline": "Chainalysis data breach exposes customer names, emails and roles",
+      "summary": "Blockchain analytics firm Chainalysis says a breach exposed customer names, email addresses and company roles. It is urging customers to watch for unexpected authentication prompts while it determines which records were accessed.",
+      "category": "Exchanges",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/chainalysis-breach-customer-names-emails-roles/",
+      "published": "2026-10-31T16:45:59.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/chainalysis-data-alert.webp",
+      "sourceTitle": "Chainalysis breach exposed customer names, emails and company roles"
+    },
     {
       "id": "7e6c70fb6f8d0d7a",
       "headline": "AI Tools Could Speed Up Crypto Hacks as Billions Remain Exposed",
@@ -942,17 +955,6 @@
       "published": "2026-10-26T03:20:51.000Z",
       "image": "https://assets.beincrypto.com/img/bdgj4_CjzeeG3Bl7ydJv3fLMaY4=/smart/1c704331e5d44db499847f53d23438b1",
       "sourceTitle": "Bitcoin Falls Below $80,000: Is Benjamin Cowen's Bearish Q4 Roadmap Playing Out?"
-    },
-    {
-      "id": "0607737fff170e18",
-      "headline": "Bank of Israel Turns Down Netanyahu's Crypto Sanctions Workaround Idea",
-      "summary": "The Bank of Israel said the country should focus on preventing possible international sanctions from affecting its economy rather than seeking crypto-based ways around them. Netanyahu had said other alternatives to crypto could achieve the same goal.",
-      "category": "Regulation",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/crypto-news/bank-of-israel-rejects-netanyahus-crypto-sanction-evasion-plan/",
-      "published": "2026-10-25T23:45:00.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bank-of-israel-logo-768x432.jpg",
-      "sourceTitle": "Bank of Israel Rejects Netanyahu’s Crypto Sanction-Evasion Plan"
     }
   ]
 }
