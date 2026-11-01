@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-01T18:38:51.529Z",
+  "updated": "2026-11-01T22:29:30.085Z",
   "skipped": [
+    "d43714e1aa2ebc0c",
+    "59f7828ebda20800",
     "e593e64074adb272",
     "079289e03ca8c32d",
     "96ef9c57adf76cc1",
@@ -85,6 +87,50 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "faaf53eba53b964d",
+      "headline": "Cardano Alerts Operators to Serious Linux Vulnerability",
+      "summary": "A critical Linux flaw has put Cardano stake pools holding 21.5 billion staked ADA on alert. The excerpt does not detail what holders could lose.",
+      "category": "Altcoins",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/cardano-critical-security-warning-staked-ada-risk/",
+      "published": "2026-11-01T20:49:15.000Z",
+      "image": "https://assets.beincrypto.com/img/zWXrRawBJQ8znnTskdN_5JQ_S7o=/smart/956cf8e08422408e9af7777ae8ebbb98",
+      "sourceTitle": "Cardano Warns of Critical Linux Flaw: Is Your ADA at Risk?"
+    },
+    {
+      "id": "62144807ac601a8e",
+      "headline": "Scammers allegedly abused SEC website to lure investors into fraud",
+      "summary": "The SEC has filed a complaint seeking a targeted future filing bar and monetary relief over an alleged crypto fraud. The scheme reportedly used the regulator's website to attract investors.",
+      "category": "Regulation",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/crypto-scammers-used-secs-website-to-lure-investors-into-alleged-130-million-fraud/",
+      "published": "2026-11-01T20:00:49.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/sec-filing-facade.webp",
+      "sourceTitle": "Crypto scammers used SEC’s website to lure investors into alleged $130 million fraud"
+    },
+    {
+      "id": "1320a15a6ccbf37d",
+      "headline": "Crypto guide to the 2026 US midterms and policy stakes",
+      "summary": "An explainer previews how the 2026 midterm elections could shape crypto legislation and regulation over the next two years. It outlines what readers should know about the vote.",
+      "category": "Regulation",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/policy/2026/11/01/the-crypto-reader-s-guide-to-the-2026-midterm-election-state-of-crypto",
+      "published": "2026-11-01T19:30:00.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/3d14ee5efae01770bbbc627c6ecb94cb0e826a8d-4027x2265.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "The crypto reader's guide to the 2026 midterm election: State of Crypto"
+    },
+    {
+      "id": "ceede95cb49d0607",
+      "headline": "Variational_io token and points airdrop may arrive sooner than expected",
+      "summary": "Ran Neuner said a token and points airdrop from Variational_io could come earlier than anticipated. The excerpt provides no further details.",
+      "category": "Airdrops",
+      "source": "Google News: airdrops",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRTFxcFJ1b0ZKdEtrWFR4dGQ0MmpfSlBNdnpFSmx5Q2J0N3hidzBpcDRUdXc2dWk5SVg5UFFPdHhXY1RWRzlTUWxqMzd4dm03V1E1SlZ4N2tBSm03UnVKdFpCQkppU3BjTFBTZFVYOXdWQmZqaHFnTEtVTEJTV1lTLWpZT1ZsRjQwb2VXc0R3?oc=5",
+      "published": "2026-11-01T19:20:24.000Z",
+      "image": "",
+      "sourceTitle": "Ran Neuner: Token and points airdrop from variational_io could arrive earlier than expected - Traders Union"
+    },
     {
       "id": "eff0ace7403b1cf4",
       "headline": "Analyst says North Korean hackers laundered Binance-linked funds through Tron",
@@ -920,50 +966,6 @@
       "published": "2026-10-27T09:30:05.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/michael-saylor-1-1-768x432.jpg",
       "sourceTitle": "Saylor Has 33% of the Vote and Needs 17% More for STRC Daily Dividends"
-    },
-    {
-      "id": "58b1d41456044f7f",
-      "headline": "Ripple receives final approval for U.S. national trust bank",
-      "summary": "The Office of the Comptroller of the Currency has approved Ripple National Trust Bank, according to an announcement by Ripple CEO Brad Garlinghouse on X. The excerpt is brief and gives no further details.",
-      "category": "Regulation",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/10/27/ripple-gets-a-final-go-ahead-to-launch-its-own-u-s-national-trust-bank",
-      "published": "2026-10-27T04:28:49.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/08996a3dca840a6a70f04df3ee9284ea39cc0a81-3579x2013.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Ripple gets a final go-ahead to launch its own U.S. national trust bank"
-    },
-    {
-      "id": "4ef0f397031e0168",
-      "headline": "Ripple Extends RLUSD Stablecoin Into Corporate Cash Management",
-      "summary": "Ripple Treasury is offering returns on qualifying holdings of its dollar-backed stablecoin RLUSD, aimed at idle corporate operating cash. The expansion also includes around-the-clock operation and AI tools for cash and payments management.",
-      "category": "Altcoins",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/featured/ripple-takes-rlusd-into-corporate-cash-management-with-24-7-returns/",
-      "published": "2026-10-27T00:45:00.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ripple-labs-1-6-768x432.jpg",
-      "sourceTitle": "Ripple Takes RLUSD Into Corporate Cash Management With 24/7 Returns"
-    },
-    {
-      "id": "90b157fd0dfbfaff",
-      "headline": "Ripple receives final US approval for national trust bank charter",
-      "summary": "Ripple has gained final US approval for a national trust bank. The approval allows the firm to manage reserves backing its RLUSD stablecoin and offer digital asset custody.",
-      "category": "Regulation",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-27T00:06:41.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5XAPPMS0KPKFXTRBD88QJZH/hi-pnc-uses-ripplenet.jpg",
-      "sourceTitle": "Ripple wins final US approval for national trust bank"
-    },
-    {
-      "id": "16695eefc866c4a6",
-      "headline": "Three payment rules shape Aave's native Bitcoin market, only WBTC settles them",
-      "summary": "A proposed direct route from Babylon could bypass pool funding for Aave's native Bitcoin market. Fees, borrower surplus and WBTC-denominated debt still carry separate payment requirements.",
-      "category": "Altcoins",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/3-payment-rules-control-aaves-native-bitcoin-market-but-only-wbtc-settles-them/",
-      "published": "2026-10-26T23:50:22.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/wbtc-vault-funding-constraint.webp",
-      "sourceTitle": "3 payment rules control Aave’s native Bitcoin market, but only WBTC settles them"
     }
   ]
 }
