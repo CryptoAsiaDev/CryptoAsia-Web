@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-01T06:56:18.359Z",
+  "updated": "2026-11-01T13:55:15.574Z",
   "skipped": [
+    "96ef9c57adf76cc1",
+    "935c44596db4b759",
+    "9419c0100735e66c",
+    "be0bc9450e39edc3",
     "c17a642187d42261",
     "f3ec3fed8c8cc2c8",
     "abbdb0d274fded59",
@@ -79,6 +83,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "91f7460f93bc456c",
+      "headline": "Whether Noncustodial Crypto Firms Need Money Transmitter Licenses",
+      "summary": "A legal opinion piece asks whether a noncustodial crypto business, such as a wallet startup whose users sign transactions on their own devices, must obtain a money transmitter license.",
+      "category": "Regulation",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/regulation-and-legal/does-your-noncustodial-crypto-business-need-a-money-transmitter-license/",
+      "published": "2026-11-01T12:30:16.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/does-your-noncustodial-crypto-business-need-a-money-transmitter-license-768x432.png",
+      "sourceTitle": "Does Your Noncustodial Crypto Business Need a Money Transmitter License?"
+    },
+    {
+      "id": "2a05de95d0967d3b",
+      "headline": "AI firms eye Bitcoin miners' power access and who profits",
+      "summary": "Bitcoin miners have built up cheap electricity and grid connections that AI companies now want, making their sites valuable. The article examines how contracts for these power assets determine who ultimately benefits.",
+      "category": "Bitcoin",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/ai-wants-bitcoin-miners-power-but-the-contracts-reveal-who-really-gets-paid/",
+      "published": "2026-11-01T11:20:22.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoin-mining-gpu-conversion.webp",
+      "sourceTitle": "AI wants Bitcoin miners’ power, but the contracts reveal who really gets paid"
+    },
     {
       "id": "2b39efa04ec0d52c",
       "headline": "Solana reward records lack validator fee data, complicating stake verification",
@@ -936,28 +962,6 @@
       "published": "2026-10-26T21:23:32.000Z",
       "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5WWZSHJKJSXHRGBMZY1WZXE/hi-how-to-train-an-ai-bot-to-day-trade-crypto2.png",
       "sourceTitle": "Injective launches onchain futures market tracking Nvidia GPU rental costs"
-    },
-    {
-      "id": "e30414a96539ef35",
-      "headline": "Vultisig wallet update fixes critical private key leak risk",
-      "summary": "An August update addressed a flaw that could let an already-compromised signer recover a private key through many malicious signing messages. The bug involved an application ignoring a critical stop condition.",
-      "category": "Tech",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/august-updates-block-critical-private-key-leak-in-crypto-wallet-vultisig/",
-      "published": "2026-10-26T21:10:35.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/vultisig-wallet-lock-failure.webp",
-      "sourceTitle": "August updates block critical private key leak in crypto wallet Vultisig"
-    },
-    {
-      "id": "68cae43637cbd13e",
-      "headline": "CoinDCX Admits $16 Million Loss After Earlier Dismissal",
-      "summary": "Indian exchange CoinDCX says 15.99 million USDT was drained from wallets it had retired following a prior hack, pushing total losses near $60 million. The firm says it will cover the loss itself.",
-      "category": "Asia",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/381834/india-coindcx-confirms-16-million-loss-ceo-called-false-alarm",
-      "published": "2026-10-26T16:36:03.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/coindcx-decrypt-style-gID_7.jpg",
-      "sourceTitle": "India’s CoinDCX Confirms $16 Million Loss Days After CEO Called It a ‘False Alarm’"
     }
   ]
 }
