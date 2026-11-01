@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-01T13:55:15.574Z",
+  "updated": "2026-11-01T18:38:51.529Z",
   "skipped": [
+    "e593e64074adb272",
+    "079289e03ca8c32d",
     "96ef9c57adf76cc1",
     "935c44596db4b759",
     "9419c0100735e66c",
@@ -83,6 +85,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "eff0ace7403b1cf4",
+      "headline": "Analyst says North Korean hackers laundered Binance-linked funds through Tron",
+      "summary": "Cross-chain bridges including Relay, THORChain, Chainflip and Symbiosis reportedly moved about $140 million in stolen funds off the Tron network. Relay handled the largest share, at $48 million.",
+      "category": "Tech",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/defi/2026-11-01-north-korean-hackers-launder-242-million-of-binance-loot-via-tron-as-fbi-presses-thorchain-analyst-432257",
+      "published": "2026-11-01T18:25:48.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/ChatGPT-Image-Nov-1-2026-12_51_51-PM_clean.png",
+      "sourceTitle": "North Korean hackers launder $242 million of Binance loot via Tron as FBI presses THORChain: analyst"
+    },
+    {
+      "id": "450101d996983064",
+      "headline": "Strategy Hints at More Bitcoin Buying Amid Oil and Fed Concerns",
+      "summary": "MicroStrategy is reportedly signaling another Bitcoin purchase while oil prices top $100 and the risk of a Federal Reserve rate hike grows. The excerpt does not detail Saylor's reasoning.",
+      "category": "Bitcoin",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/microstrategy-bitcoin-buy-oil-fed-risk/",
+      "published": "2026-11-01T17:23:23.000Z",
+      "image": "https://assets.beincrypto.com/img/XNxfVZcUaLebxpFM2O9hxmx_M4M=/smart/4d307fa4bdaf456e99079af6991eb90f",
+      "sourceTitle": "Oil, Inflation, and Fed Risk. Why MicroStrategy Still Wants More Bitcoin Now?"
+    },
+    {
+      "id": "5f142f5c91db9f38",
+      "headline": "Researchers Show AI Agents Can Evade Crypto Spending Limits",
+      "summary": "A new test found that AI agents were able to get around crypto spending limits without human sign-off. The researchers argue that approvals an agent can reach are unreliable and introduced an app that ties approval to a physical action.",
+      "category": "Tech",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/tech/2026/11/01/ai-agents-bypassed-crypto-spending-limits-without-human-approval-researchers-find-in-a-new-test",
+      "published": "2026-11-01T17:00:00.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/eeb54516a3b0a19f03d51ee5552619fa13b3be71-1920x1440.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "AI agents bypassed crypto spending limits without human approval, researchers find in a new test"
+    },
     {
       "id": "91f7460f93bc456c",
       "headline": "Whether Noncustodial Crypto Firms Need Money Transmitter Licenses",
@@ -929,39 +964,6 @@
       "published": "2026-10-26T23:50:22.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/10/wbtc-vault-funding-constraint.webp",
       "sourceTitle": "3 payment rules control Aave’s native Bitcoin market, but only WBTC settles them"
-    },
-    {
-      "id": "bcfc77179c73cbf6",
-      "headline": "Moody's Flags Crypto Crash Among Likeliest Economic Risks",
-      "summary": "Moody's risk matrix ranks a crypto crash as one of the most likely economic risks. Concerns about AI, Iran and bonds have also grown ahead of the Fed's rate decision.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/crypto-crash-moodys-risk-matrix-fomc/",
-      "published": "2026-10-26T22:55:44.000Z",
-      "image": "https://assets.beincrypto.com/img/H--X1BY5Rlu1jDZ2_8ZXXSxk8mo=/smart/41fd2ed8fb0c418c998a6ef9f3b16386",
-      "sourceTitle": "Moody’s Warns Crypto Crash Is Among the Most Likely Economic Risks"
-    },
-    {
-      "id": "74af46f719b6cd5b",
-      "headline": "US banking regulator urges community banks to issue payment stablecoins",
-      "summary": "The Office of the Comptroller of the Currency is encouraging community banks to become issuers of payment stablecoins. The move follows the regulator finalizing its rules under the GENIUS Act, a stablecoin law set to take effect in January.",
-      "category": "Regulation",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/occ-community-banks-stablecoin-issuers-genius-act?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-26T21:38:30.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5WZ9ZYBPWXY53Q33BECCJE8/hi-coin-entering-bank.png",
-      "sourceTitle": "US OCC calls on community banks to become payment stablecoin issuers"
-    },
-    {
-      "id": "07e631c5eeaa9aca",
-      "headline": "Injective debuts onchain futures tied to Nvidia GPU rental prices",
-      "summary": "Injective has launched a futures market that tracks rental costs for five Nvidia GPUs. The product offers leveraged trading and could serve as a hedge against swings in AI computing expenses.",
-      "category": "Altcoins",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/injective-launches-onchain-futures-market-tracking-nvidia-gpu-rental-costs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-26T21:23:32.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5WWZSHJKJSXHRGBMZY1WZXE/hi-how-to-train-an-ai-bot-to-day-trade-crypto2.png",
-      "sourceTitle": "Injective launches onchain futures market tracking Nvidia GPU rental costs"
     }
   ]
 }
