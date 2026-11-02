@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-02T08:29:38.889Z",
+  "updated": "2026-11-02T18:41:19.015Z",
   "skipped": [
+    "ab029f0bf856df8e",
+    "9ffe187828fb46f1",
     "0c068367e968bd1f",
     "d6dcb6a35a628611",
     "cfea89506bd0d504",
@@ -90,6 +92,72 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "7d8ca012ea28877c",
+      "headline": "Bitcoin traders watch for rebound after midterms, citing outflows",
+      "summary": "Traders are monitoring short positions, exchange withdrawals and key price levels for signs of a bitcoin rebound following the midterm elections. Falling exchange balances are being read as a possible supply squeeze.",
+      "category": "Markets",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/11/02/bitcoin-traders-eye-post-election-rally-as-exchange-outflows-point-to-supply-squeeze",
+      "published": "2026-11-02T18:13:57.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/496e985a634ba1aeb9b7f9402a83952eaaa48b4c-6000x4000.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Bitcoin traders eye post-election rally as exchange outflows point to supply squeeze"
+    },
+    {
+      "id": "a77d56687dde6b6b",
+      "headline": "Animoca Brands gains final approval for Abu Dhabi fund management",
+      "summary": "Animoca Brands, a former mobile games firm, is expanding its fund management arm in Abu Dhabi. The move targets institutional interest in stablecoins and tokenized assets.",
+      "category": "Asia",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/animoca-brands-expands-asset-management-business-with-abu-dhabi-approval?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-02T18:00:16.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6EKKJWC0SAK1Q9MXWA0N87Y/ai-abu-dhabi-businessmen-2.png",
+      "sourceTitle": "Animoca Brands clears final hurdle for Abu Dhabi fund management"
+    },
+    {
+      "id": "6aa29116f0830e4f",
+      "headline": "Bitcoin Dips Under $77K as Binance Restores Hack Losses",
+      "summary": "Bitcoin fell below $77,000 on Monday, even after Binance said it had fully replaced assets lost in a recent hack using its own funds. A smaller exchange hack was also reported the same day.",
+      "category": "Markets",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/binance-hack-fallout-keeps-bitcoin-price-under-pressure-77k/",
+      "published": "2026-11-02T17:49:35.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-price-nov2-2026-768x432.png",
+      "sourceTitle": "Binance Hack Fallout Keeps Bitcoin Price Under Pressure Below $77K"
+    },
+    {
+      "id": "2e213fa08cefa160",
+      "headline": "Eclair tightens Bitcoin funding rules to protect Lightning payments",
+      "summary": "A recent Eclair release now requires confirmed peer inputs for splices by default and improves recovery when a channel must close while funding is still pending. The changes address risks tied to unconfirmed inputs on the Lightning Network.",
+      "category": "Tech",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/eclair-tightens-bitcoin-funding-rules-after-unconfirmed-inputs-put-lightning-payments-at-risk/",
+      "published": "2026-11-02T17:40:27.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/eclair-lightning-splice.webp",
+      "sourceTitle": "Eclair tightens Bitcoin funding rules after unconfirmed inputs put Lightning payments at risk"
+    },
+    {
+      "id": "d9c92b68a99075ba",
+      "headline": "Nvidia and Nike Among Latest Firms Opposing Tokenized Stock Trading",
+      "summary": "Twelve more companies, including Nvidia, Costco and Nike, have objected to their shares being traded on a planned OKX-ICE tokenized stock venue. The total number of objections now stands at 50.",
+      "category": "Exchanges",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382348/nvidia-nike-biggest-wave-yet-tokenized-stock-objections",
+      "published": "2026-11-02T17:36:03.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/decrypt-style-nvidia-jensen-huang-gID_7.png",
+      "sourceTitle": "Nvidia and Nike Lead Biggest Wave Yet of Tokenized Stock Objections"
+    },
+    {
+      "id": "d420904f7c2304d1",
+      "headline": "Blockchain sleuth says EU entity may have lost $106 million",
+      "summary": "Onchain investigator ZachXBT suggests an EU-based entity lost about $106 million from crypto exchange accounts. The attacker reportedly moved the funds through ether, instant exchanges and Monero, while the victim and affected exchanges remain unidentified.",
+      "category": "Exchanges",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/tech/2026/11/02/eu-entity-suspected-of-losing-usd106-million-from-crypto-exchange-accounts-zachxbt-says",
+      "published": "2026-11-02T17:21:04.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/c18c9af8ef94bcbc9a17fac89a01b83bfc76fd8f-5472x3648.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "EU entity suspected of losing $106 million from crypto exchange accounts, ZachXBT says"
+    },
     {
       "id": "ad8c04c9f9dc8c99",
       "headline": "BTCPay Server team links wallet drains to older versions",
@@ -903,72 +971,6 @@
       "published": "2026-10-27T20:32:21.000Z",
       "image": "https://cdn.sanity.io/images/s3y3vcno/production/a92db287f1805105761bc517860540b2fdd5b741-2600x1302.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
       "sourceTitle": "Robinhood's crypto revenue fell 55% from last year, but topped Street forecasts"
-    },
-    {
-      "id": "63d8565012bf582d",
-      "headline": "Robinhood Adopts Ripple's Stablecoin, Treasury Software and Lending",
-      "summary": "Ripple's RLUSD stablecoin now runs on Robinhood Chain and Bitstamp, with a planned rollout to the Robinhood app later this year. The companies are also expanding their work together in treasury and institutional trading.",
-      "category": "Exchanges",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382002/robinhood-taps-ripple-stablecoin-treasury-software-trading-loans",
-      "published": "2026-10-27T20:16:02.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/robinhood-decrypt-style-01-gID_7.png",
-      "sourceTitle": "Robinhood Taps Ripple's Stablecoin, Treasury Software and Trading Loans"
-    },
-    {
-      "id": "3d631e22e3d7bad6",
-      "headline": "Robinhood Shares Drop After Q3 Miss Despite Crypto Revenue Beat",
-      "summary": "Robinhood stock fell after hours after its third-quarter earnings missed estimates, even though crypto revenue came in above analyst forecasts.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/robinhood-stock-falls-q3-earnings-miss/",
-      "published": "2026-10-27T20:14:47.000Z",
-      "image": "https://assets.beincrypto.com/img/SPSPn5IgAN1oFU41Aus8W2xsHhM=/smart/515c8debc9e348318ba496855cdd5d08",
-      "sourceTitle": "Robinhood Stock Falls After Q3 Earnings Miss: Why Didn't the Crypto Beat Help?"
-    },
-    {
-      "id": "a1e2e17eb7177e0d",
-      "headline": "Ripple wins final US approval for national trust bank",
-      "summary": "Ripple said the US Office of the Comptroller of the Currency granted final approval for its national trust bank, which will manage RLUSD reserves. The decision came despite objections from traditional banking groups.",
-      "category": "Regulation",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/ripple-gets-final-us-trust-bank-approval-what-does-xrp-gain/",
-      "published": "2026-10-27T20:00:02.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/ripple-institutional-charter.webp",
-      "sourceTitle": "Ripple gets final US trust bank approval. What does XRP gain?"
-    },
-    {
-      "id": "cb69ec1b2364c3bb",
-      "headline": "Bitcoin Holds Near $80K Amid Election and Fed Concerns",
-      "summary": "Bitcoin is trading in a narrow range around $80,000 after repeatedly struggling at $80,500. Traders are cautious ahead of the US midterm elections and macro uncertainty weighs on sentiment.",
-      "category": "Markets",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/market-updates/bitcoin-price-stalls-80k-us-midterm-election-fed-jitters-mount/",
-      "published": "2026-10-27T16:29:24.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bitcoin-price-oct27-2026-768x432.png",
-      "sourceTitle": "Bitcoin Price Stalls at $80K as US Midterm Election, Fed Jitters Mount"
-    },
-    {
-      "id": "1744c3dbbd07f1d5",
-      "headline": "Gamdom Hit With $15M Bitcoin Ransom Demand After Alleged Breach",
-      "summary": "Crypto casino Gamdom has received a $15 million bitcoin ransom demand from the extortion group Whitearmor, which claims to hold records for 15.4 million accounts. Gamdom disputes the size of the alleged database, and the claim follows a separate hot-wallet attack that cost the platform over $3 million.",
-      "category": "Exchanges",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/security/crypto-casino-gamdom-faces-15m-bitcoin-ransom-after-multimillion-dollar-hack/",
-      "published": "2026-10-27T15:35:09.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/crypto-casino-gamdom-faces-15m-bitcoin-ransom-after-multimillion-dollar-hack-768x432.png",
-      "sourceTitle": "Crypto Casino Gamdom Faces $15M Bitcoin Ransom After Multimillion-Dollar Hack"
-    },
-    {
-      "id": "5c37abb262c566e4",
-      "headline": "Ripple gains final OCC approval for trust bank backing RLUSD",
-      "summary": "Ripple has received final approval from the OCC for a federally supervised trust bank. The bank will manage reserves for the RLUSD stablecoin and provide custody services, as banking groups challenge crypto charters in court.",
-      "category": "Regulation",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/381899/ripple-wins-final-occ-approval-for-trust-bank-behind-2-6b-rlusd-stablecoin",
-      "published": "2026-10-27T10:16:46.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/ripple-logo-decrypt-style-01-gID_7.png",
-      "sourceTitle": "Ripple Wins Final OCC Approval for Trust Bank Behind $2.6B RLUSD Stablecoin"
     }
   ]
 }
