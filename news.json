@@ -1,6 +1,7 @@
 {
-  "updated": "2026-11-01T22:29:30.085Z",
+  "updated": "2026-11-02T01:41:48.104Z",
   "skipped": [
+    "cfea89506bd0d504",
     "d43714e1aa2ebc0c",
     "59f7828ebda20800",
     "e593e64074adb272",
@@ -87,6 +88,28 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "325088d1a026246c",
+      "headline": "Cardano budget proposal for 2027 would let funding stewards apply for grants",
+      "summary": "A proposed Cardano budget for 2027 would allow funding stewards to seek grants as well. Under the plan, stewards could influence assessments while DReps keep voting power over spending.",
+      "category": "Altcoins",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/cardanos-2027-budget-proposal-would-let-funding-stewards-seek-grants-too/",
+      "published": "2026-11-02T00:20:43.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/cardano-budget-compass.webp",
+      "sourceTitle": "Cardano’s 2027 budget proposal would let funding stewards seek grants too"
+    },
+    {
+      "id": "24f126807fff1762",
+      "headline": "Bitcoin's usual October rally fails as other markets diverge",
+      "summary": "Bitcoin finished October down 7%, as oil, bonds and AI-related trades moved away from their typical patterns. The excerpt does not explain the specific causes.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-uptober-october-oil-ai-bonds/",
+      "published": "2026-11-01T22:32:38.000Z",
+      "image": "https://assets.beincrypto.com/img/QPq4HffmQS5_vk4XL9aGH4PP_hE=/smart/992f02f1e02044e7878f05b879d6c5d7",
+      "sourceTitle": "Bitcoin Uptober Failed as Oil, Bonds and AI Broke Pattern: What Changed?"
+    },
     {
       "id": "faaf53eba53b964d",
       "headline": "Cardano Alerts Operators to Serious Linux Vulnerability",
@@ -944,28 +967,6 @@
       "published": "2026-10-27T10:00:31.000Z",
       "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5YAV7RDWSCT55YSE6J17RKG/hi-update-overview-of-software-wallets-the-easy-way-to-store-crypto-zcash-1.jpg",
       "sourceTitle": "Zcash co-founder calls to stop funding ‘over $125M’ grants program"
-    },
-    {
-      "id": "0a6b1bc3b05acee9",
-      "headline": "Crypto wallets shift focus away from simply adding more tokens",
-      "summary": "Wallet providers once competed by listing the hottest coins first, but a flood of short-lived meme coins has changed that approach. The piece examines why token count alone is no longer a winning strategy.",
-      "category": "Tech",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/crypto-wallet-trends-user-growth-strategy/",
-      "published": "2026-10-27T09:44:27.000Z",
-      "image": "https://assets.beincrypto.com/img/S61udqqW4m3kpaVZhvBg0Upg64w=/smart/34c386915f2340d18fe22efe51652d9c",
-      "sourceTitle": "Why Having More Tokens Is No Longer Enough for Crypto Wallets"
-    },
-    {
-      "id": "f43465e3eab7aed0",
-      "headline": "Strategy Shareholders Vote on Daily Dividends for STRC Preferred Stock",
-      "summary": "Strategy shareholders will vote Wednesday on whether STRC becomes what the company describes as the first security paying dividends every calendar day. The special meeting starts at 10:00 a.m. ET on October 28.",
-      "category": "Markets",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/finance/strategy-strc-daily-dividends-vote-october-28/",
-      "published": "2026-10-27T09:30:05.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/michael-saylor-1-1-768x432.jpg",
-      "sourceTitle": "Saylor Has 33% of the Vote and Needs 17% More for STRC Daily Dividends"
     }
   ]
 }
