@@ -1,6 +1,7 @@
 {
-  "updated": "2026-11-03T01:22:21.585Z",
+  "updated": "2026-11-03T08:03:37.470Z",
   "skipped": [
+    "e4b321566f787f30",
     "4ef3fdcfc2316900",
     "143fde08ebd4a0c0",
     "6d26752366d671d4",
@@ -95,6 +96,61 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "88a417d764e71f93",
+      "headline": "Dollar stablecoin use stays high after capital controls lift, research finds",
+      "summary": "New research suggests that dollar stablecoin usage did not detectably reverse after capital controls were removed. The monetary-policy implications of this pattern remain unresolved.",
+      "category": "Regulation",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/dollar-stablecoin-use-stayed-elevated-after-capital-controls-ended-new-research-suggests/",
+      "published": "2026-11-03T08:00:58.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/stablecoin-dollar-imprint.webp",
+      "sourceTitle": "Dollar stablecoin use stayed elevated after capital controls ended, new research suggests"
+    },
+    {
+      "id": "08081a47cdafdfda",
+      "headline": "BlackRock's Bitcoin ETF records its largest outflow since June",
+      "summary": "BlackRock's IBIT Bitcoin fund lost $405.3 million on Monday. US spot Bitcoin ETFs opened November with close to $399 million in net outflows overall.",
+      "category": "Markets",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/markets/blackrocks-ibit-biggest-bitcoin-etf-outflow-june?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-03T07:49:51.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/09/01M3PB1SXVHKJ0HQNAKV23AYKN/hi-blackrocks-bitcoin-etf-how-it-works-benefits-and-opportunities-1.jpg",
+      "sourceTitle": "BlackRock’s IBIT sees biggest Bitcoin ETF outflows since June"
+    },
+    {
+      "id": "7283507a9990ed66",
+      "headline": "Wirex names Lord Ranger as board adviser before UK crypto rules",
+      "summary": "Wirex, a stablecoin infrastructure provider, has appointed Lord Ranger of Northwood as a board adviser. The move comes ahead of the UK bringing digital asset firms under full regulation next year.",
+      "category": "Regulation",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/wirex-appoints-lord-ranger-northwood/",
+      "published": "2026-11-03T07:34:45.000Z",
+      "image": "https://assets.beincrypto.com/img/O4PIbh-Ge-Ea-sROnYQ1VWYo7MY=/smart/a296b2d5c9fa4067a76d4b3cc2af4124",
+      "sourceTitle": "WIREX APPOINTS LORD RANGER OF NORTHWOOD AS BOARD ADVISER, AHEAD OF NEW UK DIGITAL ASSET RULES"
+    },
+    {
+      "id": "5cf5c9cec5ac0a59",
+      "headline": "XTEN token launch features 30% airdrop and 1 billion supply",
+      "summary": "An analysis piece asks why the XTEN token launch stands out, pointing to a 30% airdrop allocation and a 1 billion token supply. The excerpt gives no further details.",
+      "category": "Airdrops",
+      "source": "Google News: airdrops",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEEyWVpWQTZITDZxSmNHa1pPZmsyb3lSWl9GYS1wRFc1MFNVT1lDRmxwRnBkM1JSSE1OZDh3eWtFalNrekhtT2MyY0JyS091UmVoSUEwZjZfUm0yT2VHZnhGWFJHUUY1MjFOaEZuZFNSZkJFejk4dVZNZzdIMUhoVzk0QWJkV3c?oc=5",
+      "published": "2026-11-03T07:15:00.000Z",
+      "image": "",
+      "sourceTitle": "Extended Token Launch: Why 30% XTEN Airdrop and 1B Supply Stands Out? - Coin Gabbar"
+    },
+    {
+      "id": "ad898f828aecd01a",
+      "headline": "Study finds wider spreads outside aggregators at most Solana pools",
+      "summary": "A September comparison found non-aggregator round-trip spreads were wider at five of six sampled venues. The study does not establish current per-swap savings.",
+      "category": "Altcoins",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/solana-study-finds-wider-spreads-outside-aggregators-at-five-of-six-sampled-pools/",
+      "published": "2026-11-03T06:50:46.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/solana-pool-routing-spreads.webp",
+      "sourceTitle": "Solana study finds wider spreads outside aggregators at five of six sampled pools"
+    },
     {
       "id": "ecfb341934613e4c",
       "headline": "SEC Staff Signal Easier Path for Governance Tokens",
@@ -919,61 +975,6 @@
       "published": "2026-10-27T22:45:30.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/06/gomining-mines-first-live-stratum-v2-bitcoin-block-shifting-control-to-miners-768x432.png",
       "sourceTitle": "Bitcoin Mining Firm Luxor Raises $16 Million to Accelerate AI Expansion"
-    },
-    {
-      "id": "d596c3998df1aab5",
-      "headline": "Ripple and C2FO Plan Faster Invoice Settlement on XRP Ledger",
-      "summary": "Ripple and C2FO are bringing invoice financing and settlement to the XRP Ledger, using Ripple's dollar-backed stablecoin RLUSD. The aim is to cut bank transfer delays that can leave suppliers waiting days for early payments.",
-      "category": "Altcoins",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/featured/ripple-c2fo-tap-xrp-ledger-turn-payment-delays-seconds/",
-      "published": "2026-10-27T22:05:00.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ripple-c2fo-768x432.jpg",
-      "sourceTitle": "Ripple and C2FO Tap XRP Ledger to Turn Payment Delays Into Seconds"
-    },
-    {
-      "id": "50f0a759397ed93b",
-      "headline": "VanEck debuts multi-asset ETF with stocks, bonds and Bitcoin",
-      "summary": "VanEck has launched a new Wealth Builder ETF that mixes stocks, bonds and Bitcoin exposure. The fund targets a 2% Bitcoin allocation, within a permitted range of 1% to 5%, via a spot Bitcoin ETP.",
-      "category": "Markets",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/vaneck-launches-diversified-etf-combining-stocks-bonds-and-bitcoin-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-27T21:28:22.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M5ZJHJBWY657RY1S76WDA6QD/hi-goldman-sachs-and-bitcoin-etf.png",
-      "sourceTitle": "VanEck launches diversified ETF combining stocks, bonds and Bitcoin exposure"
-    },
-    {
-      "id": "edf6238bccb59f59",
-      "headline": "Robinhood Chain raises $26 million as crypto revenue climbs in Q3",
-      "summary": "Robinhood's blockchain helped lift the company's crypto revenue during the third quarter. Separately, its prediction markets generated $173 million in the same period.",
-      "category": "Markets",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/business/2026-10-27-robinhood-chain-brings-in-26-million-crypto-revenue-rises-20-q2-431935",
-      "published": "2026-10-27T20:55:35.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2025/12/20251208_Robinhood_News.jpg",
-      "sourceTitle": "Robinhood Chain brings in $26 million as crypto revenue rises 20% in Q3"
-    },
-    {
-      "id": "5a9ca00648ee5dfd",
-      "headline": "Robinhood Earnings Fall Short as Crypto Revenue Climbs",
-      "summary": "Robinhood reported record revenue of $1.42 billion but earnings per share of $0.51 came in below expectations. Crypto revenue edged higher, while prediction market activity on sports and elections grew to $173 million.",
-      "category": "Markets",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382004/robinhood-misses-q3-earnings-crypto-prediction-markets",
-      "published": "2026-10-27T20:42:11.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/robinhood-vlad-tenev-decrypt-style-01-gID_7.jpg",
-      "sourceTitle": "Robinhood Misses Q3 Earnings as Crypto Revenue Rises and Prediction Market Bets Grow"
-    },
-    {
-      "id": "27a3de2a4c8c6c51",
-      "headline": "Robinhood's Crypto Revenue Falls 55% in Q3 Despite Record Total",
-      "summary": "Robinhood posted record overall quarterly revenue of $1.42 billion, driven by options and prediction markets, while crypto transaction revenue fell 55% year over year. The company also expanded its blockchain and digital asset businesses.",
-      "category": "Markets",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/crypto-news/robinhood-crypto-revenue-plunges-55-percent-q3-record-overall/",
-      "published": "2026-10-27T20:42:07.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/07/robinhood-chain-768x432.jpg",
-      "sourceTitle": "Robinhood Crypto Revenue Plunges 55% in Q3 Despite Record $1.42B Overall Revenue"
     }
   ]
 }
