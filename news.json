@@ -1,6 +1,7 @@
 {
-  "updated": "2026-11-03T08:03:37.470Z",
+  "updated": "2026-11-03T16:22:55.053Z",
   "skipped": [
+    "31c31ae63b6a7f7d",
     "e4b321566f787f30",
     "4ef3fdcfc2316900",
     "143fde08ebd4a0c0",
@@ -96,6 +97,50 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "4ac7f049792cad82",
+      "headline": "Hong Kong bank pilot enables round-the-clock settlement for tokenized fund deals",
+      "summary": "A pilot in Hong Kong lets participating institutions settle tokenized deposit transactions in central bank money outside conventional hours. The service is aimed at supporting treasury and fund activity.",
+      "category": "Asia",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/hong-kong-bank-pilot-opens-24-7-cash-settlement-for-tokenized-fund-deals/",
+      "published": "2026-11-03T16:00:28.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/hong-kong-settlement-window.webp",
+      "sourceTitle": "Hong Kong bank pilot opens 24/7 cash settlement for tokenized fund deals"
+    },
+    {
+      "id": "e4043bbb95a35f6a",
+      "headline": "Quickex Rolls Out Private Swap to Limit Visible Wallet Links",
+      "summary": "Quickex, a crypto swap service active since 2018, has launched Private Swap, which aims to reduce the public on-chain connection between sending and receiving wallets. The feature uses the same basic conversion steps as a standard Quickex swap.",
+      "category": "Exchanges",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/press-releases/quickex-launches-private-swap-to-reduce-direct-on-chain-linkage-between-wallets/",
+      "published": "2026-11-03T15:48:21.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/f_nwmk-768x432.png",
+      "sourceTitle": "Quickex Launches Private Swap to Reduce Direct On-Chain Linkage Between Wallets"
+    },
+    {
+      "id": "744d1274691a56d5",
+      "headline": "Bitcoin holds near $76K lows as US midterms loom",
+      "summary": "Bitcoin posted modest gains at the open of Wall Street trading on Tuesday while markets looked ahead to the US midterm elections for direction.",
+      "category": "Markets",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/markets/bitcoin-price-defends-76k-lows-as-analysis-sees-stocks-pricing-in-political-gridlock?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-03T15:44:42.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6GYWTMJRC5WVDCDG7QCTRRJ/article-covers-180463-us-cpi-lower-expected-rate-cuts-coming-1280x853-960x640.webp",
+      "sourceTitle": "Bitcoin price defends $76K lows as analysts see stocks pricing in ‘political gridlock’"
+    },
+    {
+      "id": "b18a35944f89c160",
+      "headline": "US regulator clears perpetual futures on single stocks for first time",
+      "summary": "The CFTC has allowed American exchanges to list perpetual futures contracts linked to individual stocks. The move marks the first time such products have been approved in the US.",
+      "category": "Regulation",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/regulation/2026-11-03-cftc-approves-individual-stock-perpetual-futures-trading-in-us-for-first-time-432422",
+      "published": "2026-11-03T15:37:50.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2020/04/CFTC.jpg",
+      "sourceTitle": "CFTC approves individual stock perpetual futures trading in US for the first time"
+    },
     {
       "id": "88a417d764e71f93",
       "headline": "Dollar stablecoin use stays high after capital controls lift, research finds",
@@ -931,50 +976,6 @@
       "published": "2026-10-28T05:02:00.000Z",
       "image": "https://assets.beincrypto.com/img/uumottdZsdgoHBLKcCz0sPgwjSM=/smart/19bb5ede567a4ce4a1788fe96d1a25fd",
       "sourceTitle": "The Soldier, VPN and $400K Test To CFTC's Reach as Polymarket Probe Returns"
-    },
-    {
-      "id": "4d4208b9a6c36d66",
-      "headline": "Why Crypto Firm Due Diligence Goes Beyond Blockchain Analytics",
-      "summary": "The piece argues that compliance teams assessing virtual asset service providers must look beyond blockchain analytics to understand who they are dealing with. It uses banking and payments scenarios to illustrate the point.",
-      "category": "Regulation",
-      "source": "Fintech News Singapore",
-      "url": "https://fintechnews.sg/139559/bigdata/vasp-due-diligence/",
-      "published": "2026-10-28T04:57:27.000Z",
-      "image": "https://fintechnewssg-22e90.kxcdn.com/wp-content/uploads/2026/10/Why-VASP-Due-Diligence-Goes-Beyond-Blockchain-Analytics-3.webp",
-      "sourceTitle": "Why VASP Due Diligence Goes Beyond Blockchain Analytics"
-    },
-    {
-      "id": "d762a7a115d58bd8",
-      "headline": "Why crypto depositors may lose everything in bankruptcy",
-      "summary": "Offshore corporate structures used by some crypto platforms can leave retail depositors exposed to losses when those platforms fail. Roshan Dharia says customers may unknowingly give up legal ownership of their assets, making them unsecured creditors in bankruptcy.",
-      "category": "Exchanges",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/interview/why-crypto-depositors-could-lose-everything-in-bankruptcy/",
-      "published": "2026-10-28T04:45:34.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/why-crypto-depositors-could-lose-everything-in-bankruptcy-768x432.jpg",
-      "sourceTitle": "Why Crypto Depositors Could Lose Everything in Bankruptcy"
-    },
-    {
-      "id": "44995bd9317234ef",
-      "headline": "Bitcoin approaches $81,000 before Fed decision; ZEC rises 8%",
-      "summary": "Bitcoin is nearing the $81,000 level ahead of a Federal Reserve decision, while ZEC gained about 8%. Other major tokens outperformed bitcoin as tech stocks also rose.",
-      "category": "Markets",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/10/28/bitcoin-nears-usd81-000-ahead-of-fed-decision-as-zec-jumps-8",
-      "published": "2026-10-28T04:15:20.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/7e48c395545734f88a8940a71375c640cc1d8b21-1516x852.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Bitcoin nears $81,000 ahead of Fed decision as ZEC jumps 8%"
-    },
-    {
-      "id": "be787d3fd88cb1d8",
-      "headline": "Bitcoin Miner Luxor Secures $16 Million to Grow AI Business",
-      "summary": "Bitcoin mining technology firm Luxor raised $16 million in a funding round led by CMT Digital. The money will support its push into artificial intelligence infrastructure.",
-      "category": "Markets",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/crypto-news/bitcoin-mining-firm-luxor-raises-16-million-accelerate-ai-expansion/",
-      "published": "2026-10-27T22:45:30.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/06/gomining-mines-first-live-stratum-v2-bitcoin-block-shifting-control-to-miners-768x432.png",
-      "sourceTitle": "Bitcoin Mining Firm Luxor Raises $16 Million to Accelerate AI Expansion"
     }
   ]
 }
