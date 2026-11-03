@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-03T16:22:55.053Z",
+  "updated": "2026-11-03T21:52:42.817Z",
   "skipped": [
+    "7572ff442030be96",
+    "4fe7ab4d868948ad",
+    "ee195a8057dcfa54",
+    "b0367025ba38d88e",
     "31c31ae63b6a7f7d",
     "e4b321566f787f30",
     "4ef3fdcfc2316900",
@@ -97,6 +101,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "35ef23fa03d84deb",
+      "headline": "Dormant Bitcoin Wallet Activity Slows Again in October",
+      "summary": "Long-dormant bitcoin wallets moved about 2,159 BTC last month, a second straight monthly decline. Wallets from 2013 accounted for much of the activity, while addresses from the earliest years were largely absent.",
+      "category": "Bitcoin",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/featured/octobers-dormant-bitcoin-awakenings-cool-transfers-plunge-august/",
+      "published": "2026-11-03T21:05:38.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/octobers-dormant-bitcoin-awakenings-cool-as-transfers-plunge-81-from-august-768x432.png",
+      "sourceTitle": "October’s Dormant Bitcoin Awakenings Cool as Transfers Plunge 81% From August"
+    },
+    {
+      "id": "74b290272cdcd8a1",
+      "headline": "Traders Worry About Democratic Midterm Sweep Ahead of Election Day",
+      "summary": "Crypto traders are reportedly concerned that Democrats could win a midterm sweep, with Ohio's outcome seen as significant. The excerpt also points to a Bitcoin price level being watched during the anxiety.",
+      "category": "Markets",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/crypto-traders-fear-democratic-midterm-sweep/",
+      "published": "2026-11-03T20:39:52.000Z",
+      "image": "https://assets.beincrypto.com/img/BTHbEx36-hLZ2eaWpZRE2vO48rs=/smart/55f11683870a4a14a07e13d74b7299c6",
+      "sourceTitle": "Bitcoin's Election Day Panic: Crypto Traders Fear a Democratic Midterm Sweep"
+    },
+    {
+      "id": "dae7ddab6d6ec052",
+      "headline": "Tether CEO Says Bitcoin Holdings Exceed Publicly Reported Amounts",
+      "summary": "Tether CEO Paolo Ardoino disclosed a bitcoin treasury larger than what the stablecoin issuer's financial statements previously showed. He made the remarks at a Swiss crypto conference.",
+      "category": "Bitcoin",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/crypto-news/tethers-bitcoin-fortune-extends-beyond-publicly-identified-wallet/",
+      "published": "2026-11-03T20:05:20.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/tethers-bitcoin-fortune-extends-beyond-its-publicly-identified-wallet-768x432.png",
+      "sourceTitle": "Tether’s Bitcoin Fortune Extends Beyond Its Publicly Identified Wallet"
+    },
     {
       "id": "4ac7f049792cad82",
       "headline": "Hong Kong bank pilot enables round-the-clock settlement for tokenized fund deals",
@@ -943,39 +980,6 @@
       "published": "2026-10-28T12:39:08.000Z",
       "image": "https://assets.beincrypto.com/img/RcXcGEItjGlpUNbjvmLotyBLEA8=/smart/c1075ff28cfe40449a3e6e6bca977819",
       "sourceTitle": "The Real Threat to Bitcoin Payments Isn’t Tech, Jack Dorsey’s Team Says"
-    },
-    {
-      "id": "bf00c23e528eb34e",
-      "headline": "Bitcoin apps may overpay fees due to two library bugs",
-      "summary": "Wallet and other apps that import PSBTs can miscalculate miner fees and miss excessive-fee warnings when they depend on a vulnerable library's accounting. The issue is tied to two bugs in that library.",
-      "category": "Tech",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/bitcoin-apps-risk-massive-fee-drain-and-2-library-bugs-are-blamed/",
-      "published": "2026-10-28T05:30:00.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoinjs-lib-psbt-fee-bugs-standard.jpg",
-      "sourceTitle": "Bitcoin apps risk massive fee drain, and 2 library bugs are blamed"
-    },
-    {
-      "id": "2cc5194e3bbf22b8",
-      "headline": "Bithumb breached via employee system amid South Korean cyberattacks",
-      "summary": "Crypto exchange Bithumb was hacked through an internal employee system, which it says is separate from its trading platform. The exchange is still determining whether customer information was exposed.",
-      "category": "Exchanges",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/tech/2026/10/28/bithumb-hacked-through-employee-system-as-south-korean-financial-firms-face-cyberattacks",
-      "published": "2026-10-28T05:10:36.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/2a16283e14520ecf28ccb2e6520db675f9d4fb1e-1200x621.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Bithumb hacked through employee system as South Korean financial firms face cyberattacks"
-    },
-    {
-      "id": "41337714a223d019",
-      "headline": "CFTC reportedly revives Polymarket probe amid soldier insider-betting case",
-      "summary": "The US derivatives regulator is reportedly reopening an investigation into Polymarket. A soldier's insider-betting case involving a VPN is being used to test the agency's authority over swaps.",
-      "category": "Regulation",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/polymarket-probe-cftc-soldier-vpn-case/",
-      "published": "2026-10-28T05:02:00.000Z",
-      "image": "https://assets.beincrypto.com/img/uumottdZsdgoHBLKcCz0sPgwjSM=/smart/19bb5ede567a4ce4a1788fe96d1a25fd",
-      "sourceTitle": "The Soldier, VPN and $400K Test To CFTC's Reach as Polymarket Probe Returns"
     }
   ]
 }
