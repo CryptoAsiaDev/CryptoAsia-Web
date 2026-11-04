@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-04T16:26:40.797Z",
+  "updated": "2026-11-04T22:00:35.851Z",
   "skipped": [
+    "6336c16886e2d41a",
+    "4a0a30cca5b53c7b",
     "5c449ad8a5867a07",
     "97e3e7265e0674cc",
     "ee25250be19f5180",
@@ -108,6 +110,18 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "476651640843a39e",
+      "headline": "Crypto Groups Challenge Illinois' 0.2% Crypto Tax in Court",
+      "summary": "Crypto industry groups are seeking to have Illinois' 0.2% levy struck down. The tax would be based on asset value rather than gains, and covered brokers would have to collect it from customers.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/regulation/crypto-groups-seek-to-strike-down-illinois-0-2-tax",
+      "published": "2026-11-04T21:39:13.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/b9c77bb05f196c16bb693b405114775d2fba3f7a-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Crypto Groups Seek to Strike Down Illinois’ 0.2% Tax"
+    },
     {
       "id": "d832230ac170588c",
       "headline": "Coinbase Opens Deribit Derivatives to US Prime Institutional Clients",
@@ -981,17 +995,6 @@
       "published": "2026-10-28T23:32:47.000Z",
       "image": "https://assets.beincrypto.com/img/zWwrOsS-9z3fsRPxfPC4MKTCAog=/smart/ebc1394a537349c788bfe67a81bdade6",
       "sourceTitle": "Could Bitcoin Price Crash Like Silver? Warning Signs Are Showing"
-    },
-    {
-      "id": "7b45cbdd0621ad66",
-      "headline": "Ibis Emerges From Stealth With $250M FalconX Credit Facility",
-      "summary": "Onchain credit platform Ibis has launched publicly, backed by a $250 million credit facility from FalconX. The company also closed a pre-seed funding round.",
-      "category": "Markets",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/finance/250m-falconx-facility-powers-ibis-push-onchain-credit/",
-      "published": "2026-10-28T22:30:33.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/250m-falconx-facility-powers-ibis-push-into-onchain-credit-768x432.png",
-      "sourceTitle": "$250M FalconX Facility Powers Ibis Push Into Onchain Credit"
     }
   ]
 }
