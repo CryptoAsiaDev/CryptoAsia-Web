@@ -1,6 +1,9 @@
 {
-  "updated": "2026-11-04T01:44:20.284Z",
+  "updated": "2026-11-04T08:12:38.395Z",
   "skipped": [
+    "97e3e7265e0674cc",
+    "ee25250be19f5180",
+    "cb7ae592fae477c3",
     "de7588cf8dfe374d",
     "4ce46e7e56958453",
     "0a968f5c4349954b",
@@ -104,6 +107,39 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "6fdbbfd4410f8ae2",
+      "headline": "Zcash grants committee scraps plan to redirect 98,000 ZEC",
+      "summary": "The Zcash grants committee has withdrawn its proposal to send 98,000 ZEC toward future mining rewards after community pushback. Competing proposals remain on the table, one to end its funding and another to keep the existing grants system.",
+      "category": "Altcoins",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/11/04/zcash-grants-committee-drops-plan-to-redirect-98-000-zec-to-future-mining-rewards",
+      "published": "2026-11-04T08:04:04.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/6359a9ff83ee7ba7465c0ff2289cb8ae23e7ac43-1500x1000.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Zcash grants committee drops plan to redirect 98,000 ZEC to future mining rewards"
+    },
+    {
+      "id": "3b17a03754654cb1",
+      "headline": "ZachXBT names French bank Crédit Mutuel Arkéa in $133M crypto theft",
+      "summary": "On-chain investigator ZachXBT has identified Crédit Mutuel Arkéa as the alleged victim of a theft he estimates at over $133 million. The bank had not issued a public statement when the report was written.",
+      "category": "Other",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/credit-mutuel-arkea-crypto-theft-zachxbt/",
+      "published": "2026-11-04T07:30:56.000Z",
+      "image": "https://assets.beincrypto.com/img/OjVhRxOjWyrhuxfO5fVYzo2p3gE=/smart/d62bfa60d9cf4ec9aeb89ffdef249ee8",
+      "sourceTitle": "ZachXBT Tracked a $133M Crypto Theft for Two Days. Then He Named the Victim"
+    },
+    {
+      "id": "53cd91c5f7b77e8f",
+      "headline": "Bitcoin rebounds from seven-week low as Democrats sweep Congress",
+      "summary": "Bitcoin dipped to a seven-week low of $75,618 as crypto long liquidations approached $300 million over 24 hours. The article links the price move to the Democratic sweep of Congress.",
+      "category": "Markets",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/markets/bitcoin-bounces-from-7-week-low-under-76k-as-democrats-eye-congress-sweep?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-04T07:25:47.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6JMY7XMBZ97KS5GW9AD860J/regulation-papers-960x640.webp",
+      "sourceTitle": "Bitcoin bounces from 7-week low under $76K as Democrats sweep Congress"
+    },
     {
       "id": "346b1080f381d0af",
       "headline": "1inch lawyer expects US agencies to shape crypto rules amid midterms",
@@ -950,39 +986,6 @@
       "published": "2026-10-28T21:46:02.000Z",
       "image": "https://cdn.decrypt.co/wp-content/uploads/2025/10/bitcoin-dollar-decrypt-style-gID_7.jpg",
       "sourceTitle": "Bitcoin Treasury Datavault AI Says It Can’t Access Its BTC, Stock Tanks"
-    },
-    {
-      "id": "e770149c858883be",
-      "headline": "Aviva Investors adds tokenized share class to liquidity fund",
-      "summary": "Aviva Investors is adding a tokenized share class to its Sterling Liquidity Fund on the XRP Ledger, backed by a £50 million commitment. The fund is described as being worth £22 billion.",
-      "category": "Tech",
-      "source": "DL News",
-      "url": "https://www.dlnews.com/articles/markets/aviva-tokenized-liquidity-fund-explained/",
-      "published": "2026-10-28T20:48:13.000Z",
-      "image": "https://dl-assets-backup.s3.eu-central-1.amazonaws.com/images/1793209010605-asset.webp",
-      "sourceTitle": "Aviva’s £50m tokenized fund: What changes for investors"
-    },
-    {
-      "id": "b8fe8f547c5e94cf",
-      "headline": "Strategy shareholders back daily dividends on four preferred stocks",
-      "summary": "Strategy, the largest Bitcoin treasury company, has won shareholder approval for daily dividend payments on its preferred securities. Payments on STRC are set to start in November, with three other preferred stocks following in January 2027.",
-      "category": "Bitcoin",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/strategy-shareholders-approve-daily-dividends-for-four-preferred-stocks?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-28T18:00:54.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M61RMMV26WRZDXS27BN2ZMZH/hi-strategyb-3.jpg",
-      "sourceTitle": "Strategy shareholders approve daily dividends for four preferred stocks"
-    },
-    {
-      "id": "53a2ac0b5f36d177",
-      "headline": "GRVT Burns 1.1 Million Tokens Ahead of Grvt 2.0 Launch",
-      "summary": "Grvt, a self-custodial trading platform on its own zero-knowledge chain, said its Foundation completed a first token buyback, burning 1.1 million GRVT tokens on the open market. The buyback is roughly 1% of circulating supply and comes before four planned product milestones leading to Grvt 2.0.",
-      "category": "Altcoins",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/press-releases/grvt-burns-1-1-million-tokens-as-countdown-to-grvt-2-0-begins/",
-      "published": "2026-10-28T17:57:18.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/grv_nwmk-768x432.jpg",
-      "sourceTitle": "GRVT Burns 1.1 Million Tokens as Countdown to Grvt 2.0 Begins"
     }
   ]
 }
