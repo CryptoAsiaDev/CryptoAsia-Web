@@ -1,6 +1,7 @@
 {
-  "updated": "2026-11-04T08:12:38.395Z",
+  "updated": "2026-11-04T16:26:40.797Z",
   "skipped": [
+    "5c449ad8a5867a07",
     "97e3e7265e0674cc",
     "ee25250be19f5180",
     "cb7ae592fae477c3",
@@ -107,6 +108,30 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "d832230ac170588c",
+      "headline": "Coinbase Opens Deribit Derivatives to US Prime Institutional Clients",
+      "summary": "Institutional clients in the US can now reach global derivatives through Coinbase Financial Markets. The excerpt notes that shared liquidity does not mean a single margin pool.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/converge/tradfi-and-fintech/coinbase-brings-deribit-options-and-perpetuals-to-us-prime-clients",
+      "published": "2026-11-04T16:12:42.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/31144db7fb1a66f3ffd6b819abc37d6d14b5165c-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Coinbase Brings Deribit Options and Perpetuals to US Prime Clients"
+    },
+    {
+      "id": "50d783eadb4c87a5",
+      "headline": "Bitcoin climbs back above $80,000 as oil falls sharply",
+      "summary": "Bitcoin has regained the $80,000 level while US oil prices dropped about 12% following a Democratic win in Congress. The report also notes factors that could reverse both moves.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-reclaims-80000-oil-price-drops/",
+      "published": "2026-11-04T15:46:15.000Z",
+      "image": "https://assets.beincrypto.com/img/tl4uDUvVc8dW_c9nIW3jTf7BMxg=/smart/9c37b4a1ac64454b9f7216470842ca26",
+      "sourceTitle": "Bitcoin Reclaims $80,000 as Oil Price Drops Sharply"
+    },
     {
       "id": "6fdbbfd4410f8ae2",
       "headline": "Zcash grants committee scraps plan to redirect 98,000 ZEC",
@@ -302,8 +327,9 @@
       "source": "Google News: airdrops",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPTEEyWVpWQTZITDZxSmNHa1pPZmsyb3lSWl9GYS1wRFc1MFNVT1lDRmxwRnBkM1JSSE1OZDh3eWtFalNrekhtT2MyY0JyS091UmVoSUEwZjZfUm0yT2VHZnhGWFJHUUY1MjFOaEZuZFNSZkJFejk4dVZNZzdIMUhoVzk0QWJkV3c?oc=5",
       "published": "2026-11-03T07:15:00.000Z",
-      "image": "",
-      "sourceTitle": "Extended Token Launch: Why 30% XTEN Airdrop and 1B Supply Stands Out? - Coin Gabbar"
+      "image": "https://d3iuzwoiyg9qa8.cloudfront.net/webadmin/storage/public/crypto-news/November2026/extended-token-launch-date-xten-airdrop-tokenomics-9022.webp",
+      "sourceTitle": "Extended Token Launch: Why 30% XTEN Airdrop and 1B Supply Stands Out? - Coin Gabbar",
+      "imgRetry": 1
     },
     {
       "id": "ad898f828aecd01a",
@@ -490,7 +516,8 @@
       "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRTFxcFJ1b0ZKdEtrWFR4dGQ0MmpfSlBNdnpFSmx5Q2J0N3hidzBpcDRUdXc2dWk5SVg5UFFPdHhXY1RWRzlTUWxqMzd4dm03V1E1SlZ4N2tBSm03UnVKdFpCQkppU3BjTFBTZFVYOXdWQmZqaHFnTEtVTEJTV1lTLWpZT1ZsRjQwb2VXc0R3?oc=5",
       "published": "2026-11-01T19:20:24.000Z",
       "image": "",
-      "sourceTitle": "Ran Neuner: Token and points airdrop from variational_io could arrive earlier than expected - Traders Union"
+      "sourceTitle": "Ran Neuner: Token and points airdrop from variational_io could arrive earlier than expected - Traders Union",
+      "imgRetry": 1
     },
     {
       "id": "eff0ace7403b1cf4",
@@ -578,7 +605,8 @@
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEl4a0hiaWlydHJQaHhIMjF3N0FuZjZRbHpGd0l0NkpoLV9BSzJBd0E0R0MyTnlObGhFNmE0LXF2MDM4OEpCeGwzY3RjbGJuSEVvZWd2V1I1d3FVdVo3am54XzlvaU1EUExkZjlUSDVHMk5DYnZQbl9reHVJaHhrWktaQzBWQ2k4NEJfS0l3WjZJdEhnM292bWFxT21Jdw?oc=5",
       "published": "2026-11-01T00:04:16.000Z",
       "image": "",
-      "sourceTitle": "KuCoin launches Prepare for Winter Bootcamp with 100 USDT Futures Airdrop for new users - Traders Union"
+      "sourceTitle": "KuCoin launches Prepare for Winter Bootcamp with 100 USDT Futures Airdrop for new users - Traders Union",
+      "imgRetry": 1
     },
     {
       "id": "58ee688f3744bc2c",
@@ -964,28 +992,6 @@
       "published": "2026-10-28T22:30:33.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/250m-falconx-facility-powers-ibis-push-into-onchain-credit-768x432.png",
       "sourceTitle": "$250M FalconX Facility Powers Ibis Push Into Onchain Credit"
-    },
-    {
-      "id": "8c2c16f01a19792e",
-      "headline": "Ethena Pay's 11x leverage loop raises concerns over hidden losses",
-      "summary": "The story examines how borrowing costs and funded exits affect the returns left for users of the Ethena Pay vault. It notes that the vault's actual leverage and controls have not been verified.",
-      "category": "Altcoins",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/ethena-pays-11x-leverage-loop-promises-high-yield-but-risks-hidden-losses/",
-      "published": "2026-10-28T22:10:04.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/ethena-earn-plus-usde-price-lenses-standard-v4.jpg",
-      "sourceTitle": "Ethena Pay’s 11x leverage loop promises high yield, but risks hidden losses"
-    },
-    {
-      "id": "e708110a861bc83d",
-      "headline": "Datavault AI Reports Losing Access to Its Bitcoin Holdings",
-      "summary": "Datavault AI says it has been unable to withdraw its Bitcoin from Biconomy since June. The company also plans to restate four financial reports linked to a Scilex deal.",
-      "category": "Exchanges",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382116/bitcoin-treasury-datavault-ai-stock-crashes-cant-access-btc",
-      "published": "2026-10-28T21:46:02.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/10/bitcoin-dollar-decrypt-style-gID_7.jpg",
-      "sourceTitle": "Bitcoin Treasury Datavault AI Says It Can’t Access Its BTC, Stock Tanks"
     }
   ]
 }
