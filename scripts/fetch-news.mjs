@@ -21,8 +21,8 @@ const PER_FEED = Number(process.env.NEWS_PER_FEED || 8);     // newest items rea
 const MAX_AGE_HOURS = Number(process.env.NEWS_MAX_AGE_HOURS || 72);
 const UA = 'CryptoAsiaNewsBot/1.0 (+https://cryptoasiabtc.com)';
 
-export const CATEGORIES = ['Markets','Tech','Bitcoin','Altcoins','Asia','Regulation','Exchanges','Airdrops','Other'];
-const MAX_IMAGE_LOOKUPS = Number(process.env.NEWS_MAX_IMAGE_LOOKUPS || 10);   // article-page lookups per run (new + backfill)
+export const CATEGORIES = ['Markets','Tech','Bitcoin','Altcoins','NFTs','Ordinals','Asia','Regulation','Exchanges','Airdrops','Other'];
+const MAX_IMAGE_LOOKUPS = Number(process.env.NEWS_MAX_IMAGE_LOOKUPS || 20);   // article-page lookups per run (new + backfill)
 
 /* ---------- helpers ---------- */
 export function decodeEntities(s) {
@@ -104,9 +104,11 @@ Rules:
 - Neutral tone. No hype, no price predictions, no advice to buy or sell.
 - Decide whether the story is really about crypto, blockchain, digital assets or their regulation or markets.
 - Use the category "Airdrops" for any story about an airdrop, token distribution to users, points programs, retroactive rewards, claims or eligibility, even if another category could also fit.
-- Use "Altcoins" for Ethereum, Solana, DeFi, NFT and other non-Bitcoin token news. Use "Asia" for stories centred on Asian countries or companies. Use "Exchanges" for exchange news (listings, hacks, launches, licences).
+- Use "NFTs" for any NFT news (collections, marketplaces, mints, sales, NFT games or tools) on any blockchain. Use "Ordinals" for Bitcoin Ordinals, inscriptions, Runes, BRC-20 and similar Bitcoin-native asset news (this beats "Bitcoin" and "NFTs").
+- For "NFTs" and "Ordinals" stories also give "chain": the main blockchain the story is about (for example Ethereum, Solana, Bitcoin, Base, Polygon, Sui, Avalanche, BNB Chain, Ronin, Immutable, Other), or "Multi" if several.
+- Use "Altcoins" for Ethereum, Solana, DeFi and other non-Bitcoin token news that is not about NFTs. Use "Asia" for stories centred on Asian countries or companies. Use "Exchanges" for exchange news (listings, hacks, launches, licences).
 Reply with JSON only, in this exact shape:
-{"relevant": true|false, "headline": "max 12 words, your own words", "summary": "1-2 sentences, max 45 words", "category": "one of: ${CATEGORIES.join(' | ')}"}`;
+{"relevant": true|false, "headline": "max 12 words, your own words", "summary": "1-2 sentences, max 45 words", "category": "one of: ${CATEGORIES.join(' | ')}", "chain": "only for NFTs and Ordinals, else empty"}`;
 
 export async function summarise(item, apiKey, fetchImpl = fetch) {
   const res = await fetchImpl('https://api.anthropic.com/v1/messages', {
@@ -131,7 +133,8 @@ export async function summarise(item, apiKey, fetchImpl = fetch) {
   return {
     headline: headline.slice(0, 140),
     summary: summary.slice(0, 400),
-    category: CATEGORIES.includes(j.category) ? j.category : 'Other'
+    category: CATEGORIES.includes(j.category) ? j.category : 'Other',
+    chain: ['NFTs', 'Ordinals'].includes(j.category) ? String(j.chain || '').replace(/[^\w .&-]/g, '').trim().slice(0, 20) : ''
   };
 }
 
@@ -144,11 +147,29 @@ export function extractOgImage(html, pageUrl) {
   if (!c) return '';
   try {
     const u = new URL(decodeEntities(c[1]), pageUrl);
-    return u.protocol === 'https:' ? u.href.slice(0, 500) : '';
+    return u.protocol === 'https:' && !BAD_IMG_HOST.test(u.hostname) ? u.href.slice(0, 500) : '';
+  } catch { return ''; }
+}
+const BAD_IMG_HOST = /(^|\.)(google\.com|gstatic\.com|googleusercontent\.com|ggpht\.com)$/i;
+// Google News links are encoded redirects. Ask Google's own endpoint for the publisher URL (best effort; any failure returns '').
+export async function resolveGoogleNews(url, fetchImpl = fetch) {
+  try {
+    const u = new URL(url);
+    if (u.hostname !== 'news.google.com') return url;
+    const id = u.pathname.split('/').pop();
+    const page = await (await fetchImpl(`https://news.google.com/rss/articles/${id}`, { headers: { 'user-agent': UA }, signal: AbortSignal.timeout(12000) })).text();
+    const sg = /data-n-a-sg="([^"]+)"/.exec(page)?.[1], ts = /data-n-a-ts="([^"]+)"/.exec(page)?.[1];
+    if (!sg || !ts) return '';
+    const inner = JSON.stringify(['garturlreq', [['X', 'X', ['X', 'X'], null, null, 1, 1, 'US:en', null, 1, null, null, null, null, null, 0, 1], 'X', 'X', 1, [1, 1, 1], 1, 1, null, 0, 0, null, 0], id, Number(ts), sg]);
+    const body = 'f.req=' + encodeURIComponent(JSON.stringify([[['Fbv4je', inner, null, 'generic']]]));
+    const r = await fetchImpl('https://news.google.com/_/DotsSplashUi/data/batchexecute', { method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded;charset=UTF-8', 'user-agent': UA }, body, signal: AbortSignal.timeout(12000) });
+    const m = /garturlres\\",\\"(https?:[^"\\]+)/.exec(await r.text());
+    return m ? m[1] : '';
   } catch { return ''; }
 }
 export async function fetchOgImage(url, fetchImpl = fetch) {
   try {
+    if (/^https?:\/\/news\.google\.com\//i.test(url)) { url = await resolveGoogleNews(url, fetchImpl); if (!url) return ''; }
     const r = await fetchImpl(url, { headers: { 'user-agent': UA, accept: 'text/html' }, signal: AbortSignal.timeout(12000), redirect: 'follow' });
     if (!r.ok) return '';
     const html = (await r.text()).slice(0, 200000);      // the <head> is at the top
@@ -213,6 +234,7 @@ export async function run({ fetchImpl = fetch, apiKey = process.env.ANTHROPIC_AP
         headline: brief.headline,
         summary: brief.summary,
         category: brief.category,
+        chain: brief.chain || '',
         source: item.source,
         url: item.link,
         published: item.published,
@@ -228,9 +250,11 @@ export async function run({ fetchImpl = fetch, apiKey = process.env.ANTHROPIC_AP
   let backfilled = 0;
   for (const it of realExisting) {
     if (lookups >= MAX_IMAGE_LOOKUPS) break;
-    if (it.image !== undefined || !it.url) continue;
+    const retry = it.image === '' && !it.imgRetry && /news\.google\.com/.test(it.url || '');   // one more try for Google News links, now that they are resolved
+    if ((it.image !== undefined && !retry) || !it.url) continue;
     lookups++;
     it.image = await fetchOgImage(it.url, fetchImpl);   // '' = tried, none found
+    if (retry) it.imgRetry = 1;
     backfilled++;
   }
 

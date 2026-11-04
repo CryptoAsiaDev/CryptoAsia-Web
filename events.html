@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crypto Events Asia &amp; Worldwide — Conferences, Side Events, Meetups | Crypto Asia</title>
+<link rel="icon" type="image/png" sizes="32x32" href="logos/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="logos/favicon-16.png">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" href="logos/favicon-180.png">
+<meta name="theme-color" content="#F5C518">
+<script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
+<meta name="description" content="Upcoming crypto and Web3 conferences, side events, hackathons and meetups in Asia and worldwide. Submit your own event for free.">
+<link rel="canonical" href="https://cryptoasiabtc.com/events.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Crypto Asia">
+<meta property="og:title" content="Crypto Events Asia &amp; Worldwide — Conferences, Side Events, Meetups">
+<meta property="og:description" content="Upcoming crypto and Web3 conferences, side events, hackathons and meetups in Asia and worldwide. Submit your own event for free.">
+<meta property="og:url" content="https://cryptoasiabtc.com/events.html">
+<meta property="og:image" content="https://cryptoasiabtc.com/logos/ca-wide.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CryptoAsiaBTC">
+<meta name="twitter:title" content="Crypto Events Asia &amp; Worldwide — Conferences, Side Events, Meetups">
+<meta name="twitter:description" content="Upcoming crypto and Web3 conferences, side events, hackathons and meetups in Asia and worldwide. Submit your own event for free.">
+<meta name="twitter:image" content="https://cryptoasiabtc.com/logos/ca-wide.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+.filters{display:grid;grid-template-columns:2fr 1fr 1fr auto;gap:.8rem;margin:1.4rem 0 1rem;align-items:center}
+.chk{font-family:var(--fm);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text2);display:flex;gap:.4rem;align-items:center;white-space:nowrap}
+.count{font-family:var(--fm);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);margin-bottom:1rem}
+.evs{display:grid;gap:1rem}
+.ev{background:var(--surface);border:1px solid var(--border);border-left:5px solid var(--border);padding:1.2rem 1.4rem;display:grid;grid-template-columns:84px 1fr auto;gap:1.2rem;align-items:center}
+.ev.featured{border-left-color:var(--gold)}
+.date{background:var(--black);color:var(--gold);text-align:center;padding:.6rem .3rem;font-family:var(--fh)}
+.date b{display:block;font-size:1.6rem;line-height:1}
+.date span{font-family:var(--fm);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.ev h3{font-family:var(--fh);font-size:1.02rem;letter-spacing:.03em;margin-bottom:.2rem}
+.ev .org{color:var(--text2);font-size:1.1rem;margin-bottom:.5rem}
+.ev .tags{display:flex;gap:.45rem;flex-wrap:wrap}
+.ev .desc{color:var(--text2);font-size:1.05rem;margin-top:.5rem}
+.ev .side{display:flex;flex-direction:column;gap:.5rem;align-items:flex-end}
+.rep{background:none;border:none;color:var(--gray3);font-family:var(--fm);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;text-decoration:underline}
+.empty{text-align:center;padding:3rem 1rem;border:2px dashed var(--border);background:var(--surface)}
+.empty h3{font-family:var(--fh);font-size:1.05rem;margin-bottom:.4rem}
+.modal{position:fixed;inset:0;background:rgba(8,8,7,.78);display:none;align-items:flex-start;justify-content:center;z-index:300;padding:1rem;overflow:auto}
+.modal.open{display:flex}
+.sheet{background:var(--surface);max-width:720px;width:100%;margin:2rem 0;padding:2rem;border-top:4px solid var(--gold)}
+.sheet-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.2rem}
+.sheet-head h3{font-family:var(--fh);font-size:1rem;letter-spacing:.06em}
+.x{background:none;border:none;font-size:1.7rem;cursor:pointer;color:var(--text)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.field{margin-bottom:1rem}
+.hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+.msg{font-family:var(--fm);font-size:.9rem;margin-top:.8rem}
+.msg.err{color:#c0392b}
+@media(max-width:760px){.filters{grid-template-columns:1fr 1fr}.ev{grid-template-columns:70px 1fr}.ev .side{grid-column:1/-1;flex-direction:row;align-items:center;justify-content:space-between}.grid2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+<main>
+  <div class="eyebrow">What's on in crypto</div>
+  <h1>CRYPTO <span class="gold">EVENTS</span></h1>
+  <p class="lead" style="margin-bottom:1rem">Conferences, side events, hackathons and meetups in Asia and around the world. Hosting one? Submit it for free. Every listing is checked before it goes live.</p>
+  <button class="btn" id="btnSubmit" type="button">Submit an event</button>
+
+  <div class="filters">
+    <input class="input" id="q" type="search" placeholder="Search name, city or organizer">
+    <select class="select" id="fType"><option value="">All types</option></select>
+    <select class="select" id="fWhere"><option value="">Anywhere</option><option value="online">Online only</option><option value="asia">Asia only</option></select>
+    <label class="chk"><input type="checkbox" id="fMonth"> This month</label>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="evs" id="list"></div>
+  <p class="note" style="margin-top:1.5rem">Listings are submitted by organizers and checked by Crypto Asia for basic legitimacy, but we cannot guarantee any event. Never connect your wallet or share your seed phrase to "register". Verify the event on the organizer's official channels.</p>
+</main>
+
+<div class="modal" id="modal"><div class="sheet">
+  <div class="sheet-head"><h3>SUBMIT AN EVENT</h3><button class="x" id="btnClose" type="button" aria-label="Close">&times;</button></div>
+  <form id="form" novalidate>
+    <div class="field"><label class="label" for="fTitle">Event name</label><input class="input" id="fTitle" maxlength="120" required></div>
+    <div class="grid2">
+      <div class="field"><label class="label" for="fKind">Type</label><select class="select" id="fKind"></select></div>
+      <div class="field"><label class="label" for="fOrg">Organizer</label><input class="input" id="fOrg" maxlength="80" required></div>
+    </div>
+    <div class="grid2">
+      <div class="field"><label class="label" for="fStart">Start date</label><input class="input" type="date" id="fStart" required></div>
+      <div class="field"><label class="label" for="fEnd">End date (same day if one day)</label><input class="input" type="date" id="fEnd"></div>
+    </div>
+    <div class="field"><label class="chk"><input type="checkbox" id="fOnline"> Online event</label></div>
+    <div class="grid2" id="placeRow">
+      <div class="field"><label class="label" for="fCity">City</label><input class="input" id="fCity" maxlength="80"></div>
+      <div class="field"><label class="label" for="fCountry">Country</label><input class="input" id="fCountry" maxlength="80"></div>
+    </div>
+    <div class="field"><label class="label" for="fUrl">Official event link (https)</label><input class="input" id="fUrl" type="url" placeholder="https://" required></div>
+    <div class="field"><label class="label" for="fDesc">Short description (max 600 characters)</label><textarea class="textarea" id="fDesc" maxlength="600" required></textarea></div>
+    <div class="field"><label class="label" for="fContact">Contact for us, not shown publicly (X handle or email)</label><input class="input" id="fContact" maxlength="80"></div>
+    <div class="hp" aria-hidden="true"><label>Leave empty <input id="fWebsite" tabindex="-1" autocomplete="off"></label></div>
+    <button class="btn" type="submit" id="btnSend">Send for review</button>
+    <div class="msg" id="msg"></div>
+  </form>
+</div></div>
+<div id="site-foot"></div>
+<script src="shared.js"></script>
+<script>
+(function(){
+  var TYPES = ['Conference','Side event','Hackathon','Meetup','AMA / Space','Workshop','Other'];
+  var ASIA = /malaysia|singapore|thailand|vietnam|indonesia|philippines|japan|korea|china|hong kong|taiwan|india|dubai|uae|united arab|pakistan|bangladesh|sri lanka|nepal|cambodia|laos|myanmar|mongolia|kazakhstan|turkey|türkiye|istanbul|bangkok|kuala lumpur|seoul|tokyo|bali|manila|hanoi|ho chi minh/i;
+  var CFG = {}, events = [], MON = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+  function $(id){ return document.getElementById(id); }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
+  function safe(u){ try { var x = new URL(u); return x.protocol==='https:' ? x.href : '#'; } catch(e){ return '#'; } }
+  function today(){ var d = new Date(); return d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2)+'-'+('0'+d.getDate()).slice(-2); }
+  function db(path, opt){
+    opt = opt || {};
+    var h = {apikey:CFG.supabaseKey, Authorization:'Bearer '+CFG.supabaseKey, 'content-type':'application/json'};
+    if (opt.prefer) h.Prefer = opt.prefer;
+    return fetch(CFG.supabaseUrl.replace(/\/$/,'')+'/rest/v1/'+path, {method:opt.method||'GET', headers:h, body:opt.body});
+  }
+  function place(e){ return e.online ? 'Online' : [e.city,e.country].filter(Boolean).join(', ') || 'TBA'; }
+  function dateBox(e){
+    var s = new Date(e.starts_on+'T00:00:00'), same = e.ends_on===e.starts_on;
+    return '<div class="date"><b>'+s.getDate()+'</b><span>'+MON[s.getMonth()]+(same?'':' +')+'</span></div>';
+  }
+  function range(e){
+    var f = function(d){ return new Date(d+'T00:00:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'}); };
+    return e.ends_on===e.starts_on ? f(e.starts_on) : f(e.starts_on)+' – '+f(e.ends_on);
+  }
+  function render(){
+    var q = $('q').value.trim().toLowerCase(), t = $('fType').value, w = $('fWhere').value, m = $('fMonth').checked, td = today(), ym = td.slice(0,7);
+    var list = events.filter(function(e){
+      if (e.ends_on < td) return false;
+      if (t && e.type!==t) return false;
+      if (w==='online' && !e.online) return false;
+      if (w==='asia' && !(ASIA.test((e.city||'')+' '+(e.country||'')))) return false;
+      if (m && e.starts_on.slice(0,7)!==ym && !(e.starts_on<=td && e.ends_on>=td)) return false;
+      if (q && (e.title+' '+e.organizer+' '+(e.city||'')+' '+(e.country||'')).toLowerCase().indexOf(q)<0) return false;
+      return true;
+    }).sort(function(a,b){ return (b.featured?1:0)-(a.featured?1:0) || a.starts_on.localeCompare(b.starts_on); });
+    $('count').textContent = list.length + (list.length===1?' upcoming event':' upcoming events');
+    $('list').innerHTML = list.length ? list.map(function(e){
+      return '<article class="ev'+(e.featured?' featured':'')+'">'+dateBox(e)+'<div><h3>'+esc(e.title)+'</h3><div class="org">'+esc(e.organizer)+'</div>'+
+        '<div class="tags"><span class="tag gold">'+esc(e.type)+'</span><span class="tag">'+esc(range(e))+'</span><span class="tag">'+esc(place(e))+'</span></div>'+
+        '<div class="desc">'+esc(e.description)+'</div></div>'+
+        '<div class="side"><a class="btn" href="'+esc(safe(e.url))+'" target="_blank" rel="noopener nofollow ugc" data-track="event-link">Event page &rarr;</a>'+
+        '<button class="rep" type="button" data-id="'+esc(e.id)+'">Report</button></div></article>';
+    }).join('') : '<div class="empty"><h3>No upcoming events match</h3><p>Know one? Use “Submit an event”.</p></div>';
+    jsonld(list);
+  }
+  function jsonld(list){
+    var old = $('ld'); if (old) old.remove();
+    if (!list.length) return;
+    var s = document.createElement('script'); s.type='application/ld+json'; s.id='ld';
+    s.textContent = JSON.stringify(list.slice(0,30).map(function(e){
+      var o = {'@context':'https://schema.org','@type':'Event',name:e.title,startDate:e.starts_on,endDate:e.ends_on,description:e.description,url:e.url,
+        eventAttendanceMode:e.online?'https://schema.org/OnlineEventAttendanceMode':'https://schema.org/OfflineEventAttendanceMode',
+        eventStatus:'https://schema.org/EventScheduled',organizer:{'@type':'Organization',name:e.organizer}};
+      o.location = e.online ? {'@type':'VirtualLocation',url:e.url} : {'@type':'Place',name:place(e),address:place(e)};
+      return o; }));
+    document.head.appendChild(s);
+  }
+  function load(){
+    fetch('jobs-config.json').then(function(r){ return r.ok?r.json():{}; }).catch(function(){ return {}; }).then(function(c){
+      CFG = c || {};
+      if (CFG.supabaseUrl && CFG.supabaseKey)
+        return db('events?select=id,title,type,starts_on,ends_on,online,city,country,organizer,url,description,featured&order=starts_on.asc&limit=300').then(function(r){ if(!r.ok) throw 0; return r.json(); });
+      return fetch('events.json').then(function(r){ return r.ok?r.json():{events:[]}; }).then(function(d){ return d.events||[]; });
+    }).catch(function(){ return fetch('events.json').then(function(r){return r.json();}).then(function(d){return d.events||[];}).catch(function(){return [];}); })
+    .then(function(rows){ events = rows; render(); });
+  }
+  /* filters */
+  $('fType').innerHTML = '<option value="">All types</option>'+TYPES.map(function(t){return '<option>'+t+'</option>';}).join('');
+  $('fKind').innerHTML = TYPES.map(function(t){return '<option>'+t+'</option>';}).join('');
+  ['q','fType','fWhere','fMonth'].forEach(function(id){ $(id).addEventListener(id==='q'?'input':'change', render); });
+  /* modal */
+  function open(v){ $('modal').classList.toggle('open', v); if (v) { $('msg').textContent=''; $('msg').className='msg'; $('fStart').min = today(); } }
+  $('btnSubmit').onclick = function(){ open(true); };
+  $('btnClose').onclick = function(){ open(false); };
+  $('modal').addEventListener('click', function(e){ if (e.target===$('modal')) open(false); });
+  $('fOnline').onchange = function(){ $('placeRow').style.display = this.checked ? 'none' : ''; };
+  function err(t){ $('msg').textContent = t; $('msg').className = 'msg err'; }
+  function limited(){ try { var a = JSON.parse(localStorage.getItem('ca-ev-sub')||'[]').filter(function(x){ return Date.now()-x < 864e5; }); return a.length>=3; } catch(e){ return false; } }
+  function mark(){ try { var a = JSON.parse(localStorage.getItem('ca-ev-sub')||'[]').filter(function(x){ return Date.now()-x < 864e5; }); a.push(Date.now()); localStorage.setItem('ca-ev-sub', JSON.stringify(a)); } catch(e){} }
+  $('form').addEventListener('submit', function(ev){
+    ev.preventDefault();
+    if ($('fWebsite').value) { $('msg').textContent='Thanks!'; return; }               // spam trap
+    if (!CFG.supabaseUrl || !CFG.supabaseKey) return err('Submissions are not switched on yet.');
+    if (limited()) return err('You have reached today\'s limit of 3 submissions. Please try tomorrow.');
+    var v = function(id){ return $(id).value.trim(); };
+    var o = $('fOnline').checked, start = v('fStart'), end = v('fEnd') || start;
+    var row = {title:v('fTitle'), type:$('fKind').value, organizer:v('fOrg'), starts_on:start, ends_on:end, online:o,
+      city:o?null:(v('fCity')||null), country:o?null:(v('fCountry')||null), url:v('fUrl'), description:v('fDesc'), contact:v('fContact')||null};
+    if (row.title.length<3) return err('Please enter the event name.');
+    if (row.organizer.length<2) return err('Please enter the organizer.');
+    if (!start) return err('Please choose a start date.');
+    if (start < today()) return err('The event must be in the future.');
+    if (end < start) return err('End date cannot be before the start date.');
+    if (!o && !row.city && !row.country) return err('Add a city and country, or tick "Online event".');
+    if (!/^https:\/\/[^ ]{4,400}$/i.test(row.url)) return err('The event link must start with https://');
+    if (row.description.length<10) return err('Please add a short description.');
+    $('btnSend').disabled = true;
+    db('events', {method:'POST', body:JSON.stringify(row), prefer:'return=minimal'}).then(function(r){
+      if (r.ok) { mark(); $('form').reset(); $('placeRow').style.display=''; $('msg').className='msg'; $('msg').textContent='Thank you! Your event was sent for review and will appear once approved.'; }
+      else if (r.status===409) err('This event link has already been submitted.');
+      else err('Could not send right now. Please try again later.');
+    }).catch(function(){ err('Network problem. Please try again.'); }).then(function(){ $('btnSend').disabled = false; });
+  });
+  /* report */
+  $('list').addEventListener('click', function(e){
+    var b = e.target.closest('.rep'); if (!b || !CFG.supabaseUrl) return;
+    var reason = prompt('Why are you reporting this event? (scam, wrong details, cancelled…)');
+    if (reason===null) return;
+    db('event_reports', {method:'POST', body:JSON.stringify({event_id:+b.getAttribute('data-id'), reason:reason.slice(0,200)}), prefer:'return=minimal'})
+      .then(function(r){ b.textContent = r.ok ? 'Reported, thanks' : 'Try again later'; if (r.ok) b.disabled = true; });
+  });
+  load();
+})();
+</script>
+</body>
+</html>

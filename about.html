@@ -10,10 +10,19 @@
 <link rel="apple-touch-icon" href="logos/favicon-180.png">
 <meta name="theme-color" content="#F5C518">
 <script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
-<meta name="description" content="Crypto Asia — live crypto news, airdrop tools, Web3 jobs and more.">
-<meta property="og:title" content="Crypto Asia — Decentralized + Revolution">
-<meta property="og:description" content="Live crypto news, airdrop tools, Web3 jobs and more.">
-<meta property="og:image" content="logos/ca-wide.png">
+<meta name="description" content="Crypto Asia is an Asia-focused crypto hub: news, airdrop calculator, NFT studio, Web3 jobs, events and tier lists. Read how we handle privacy.">
+<link rel="canonical" href="https://cryptoasiabtc.com/about.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Crypto Asia">
+<meta property="og:title" content="About Crypto Asia — Tools, Privacy">
+<meta property="og:description" content="Crypto Asia is an Asia-focused crypto hub: news, airdrop calculator, NFT studio, Web3 jobs, events and tier lists. Read how we handle privacy.">
+<meta property="og:url" content="https://cryptoasiabtc.com/about.html">
+<meta property="og:image" content="https://cryptoasiabtc.com/logos/ca-wide.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CryptoAsiaBTC">
+<meta name="twitter:title" content="About Crypto Asia — Tools, Privacy">
+<meta name="twitter:description" content="Crypto Asia is an Asia-focused crypto hub: news, airdrop calculator, NFT studio, Web3 jobs, events and tier lists. Read how we handle privacy.">
+<meta name="twitter:image" content="https://cryptoasiabtc.com/logos/ca-wide.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
@@ -150,7 +159,7 @@
   function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); }
   function safe(u){ try { var x = new URL(u); return x.protocol==='https:' ? x.href : '#'; } catch(e){ return '#'; } }
   function ago(iso){ var m = Math.round((Date.now()-new Date(iso).getTime())/60000); if (isNaN(m)||m<0) return ''; if (m<60) return m+' min ago'; var h = Math.round(m/60); if (h<24) return h+' h ago'; return Math.round(h/24)+' d ago'; }
-  var LABEL = {Markets:'Market',Altcoins:'Altcoin',Airdrops:'Airdrop',Ethereum:'Altcoin',DeFi:'Altcoin','NFTs & Ordinals':'Altcoin'};
+  var LABEL = {Markets:'Market',Altcoins:'Altcoin',Airdrops:'Airdrop',Ethereum:'Altcoin',DeFi:'Altcoin','NFTs & Ordinals':'NFT',NFTs:'NFT'};
   function jobsFromFile(){ return fetch('jobs.json').then(function(r){ return r.ok ? r.json() : {jobs:[]}; }).then(function(d){
     var today = new Date().toISOString().slice(0,10);
     return (d.jobs||[]).filter(function(j){ return !j.sample && (!j.expires || j.expires>=today); }).map(function(j){ return {title:j.title,company:j.company,type:j.type,location:j.location,posted:j.posted}; });

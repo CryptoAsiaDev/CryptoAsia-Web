@@ -5,7 +5,7 @@
     ['Jobs','jobs.html'],
     ['NFT Studio','nft-studio.html'],
     ['Airdrop Calc','airdrop-calculator.html'],
-    ['Perp Rankings','perps.html'],
+    ['Events','events.html'],
     ['Tier List','tierlist.html'],
     ['Inheritance','inheritance.html'],
     ['Fortune','fortune.html'],

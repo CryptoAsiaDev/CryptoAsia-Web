@@ -58,5 +58,33 @@
   {
     "name": "Fintech News Singapore",
     "url": "https://fintechnews.sg/feed/"
+  },
+  {
+    "name": "Cointelegraph NFT",
+    "url": "https://cointelegraph.com/rss/tag/nft"
+  },
+  {
+    "name": "NFT Plazas",
+    "url": "https://nftplazas.com/feed/"
+  },
+  {
+    "name": "NFT Evening",
+    "url": "https://nftevening.com/feed/"
+  },
+  {
+    "name": "The Defiant",
+    "url": "https://thedefiant.io/api/feed"
+  },
+  {
+    "name": "Cointelegraph Ordinals",
+    "url": "https://cointelegraph.com/rss/tag/ordinals"
+  },
+  {
+    "name": "Google News: NFT",
+    "url": "https://news.google.com/rss/search?q=NFT+(Ethereum+OR+Solana+OR+Bitcoin+OR+Base+OR+Polygon)+when:2d&hl=en-US&gl=US&ceid=US:en"
+  },
+  {
+    "name": "Google News: Ordinals",
+    "url": "https://news.google.com/rss/search?q=(Bitcoin+Ordinals+OR+Runes+OR+inscriptions+OR+BRC-20)+when:3d&hl=en-US&gl=US&ceid=US:en"
   }
 ]

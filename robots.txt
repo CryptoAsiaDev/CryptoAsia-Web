@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /events-admin.html
+
+Sitemap: https://cryptoasiabtc.com/sitemap.xml

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Crypto Asia — Crypto News, Airdrops &amp; Perp DEX Tools</title>
+<title>Crypto Asia — Crypto News, NFTs, Ordinals &amp; Airdrops</title>
 <link rel="icon" type="image/png" sizes="32x32" href="logos/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="logos/favicon-16.png">
 <link rel="shortcut icon" href="favicon.ico">
@@ -11,7 +11,21 @@
 <meta name="theme-color" content="#F5C518">
 <script>var t='dark';try{t=localStorage.getItem('ca-theme')||'dark'}catch(e){}document.documentElement.setAttribute('data-theme',t)</script>
 
-<meta name="description" content="Short crypto news briefs updated through the day, with live prices. Every brief links to the original publisher.">
+<meta name="description" content="Live crypto news with short briefs on Bitcoin, altcoins, NFTs, Ordinals, airdrops, regulation and Asia. Updated every 30 minutes, with sources linked.">
+<link rel="canonical" href="https://cryptoasiabtc.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Crypto Asia">
+<meta property="og:title" content="Crypto Asia — Crypto News, NFTs, Ordinals &amp; Airdrops">
+<meta property="og:description" content="Live crypto news with short briefs on Bitcoin, altcoins, NFTs, Ordinals, airdrops, regulation and Asia. Updated every 30 minutes, with sources linked.">
+<meta property="og:url" content="https://cryptoasiabtc.com/">
+<meta property="og:image" content="https://cryptoasiabtc.com/logos/ca-wide.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@CryptoAsiaBTC">
+<meta name="twitter:title" content="Crypto Asia — Crypto News, NFTs, Ordinals &amp; Airdrops">
+<meta name="twitter:description" content="Live crypto news with short briefs on Bitcoin, altcoins, NFTs, Ordinals, airdrops, regulation and Asia. Updated every 30 minutes, with sources linked.">
+<meta name="twitter:image" content="https://cryptoasiabtc.com/logos/ca-wide.png">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "name": "Crypto Asia", "url": "https://cryptoasiabtc.com/", "inLanguage": "en"}, {"@type": "Organization", "name": "Crypto Asia", "url": "https://cryptoasiabtc.com/", "logo": "https://cryptoasiabtc.com/logos/ca-icon.png", "sameAs": ["https://x.com/CryptoAsiaBTC"]}]}</script>
+<link rel="alternate" type="application/rss+xml" title="Crypto Asia news" href="https://cryptoasiabtc.com/feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
@@ -103,10 +117,11 @@
   var COIN_WORDS = [['BTC',/bitcoin|\bbtc\b/i],['ETH',/ethereum|\beth\b|ether\b/i],['SOL',/solana|\bsol\b/i],['XRP',/\bxrp\b|ripple/i],['BNB',/\bbnb\b|binance/i],['DOGE',/doge/i],['USDT',/tether|usdt/i],['USDC',/usdc|circle/i]];
   var AIRDROP_RE = /airdrop|air-drop|token claim|retroactive|points program|claim(?:s|ing)? (?:your )?tokens?/i;
   function hash(s){ var h=0; for (var i=0;i<s.length;i++) h=(h*31+s.charCodeAt(i))|0; return Math.abs(h); }
-  var TABS = ['All','Markets','Tech','Bitcoin','Altcoins','Asia','Regulation','Exchanges','Airdrops'];
-  var LABEL = {Markets:'Market',Altcoins:'Altcoin',Airdrops:'Airdrop'};
-  var LEGACY = {'Ethereum':'Altcoins','DeFi':'Altcoins','NFTs & Ordinals':'Altcoins'};
-  function catOf(i){ if (AIRDROP_RE.test((i.headline||'')+' '+(i.summary||''))) return 'Airdrops'; var c = i.category||'Other'; return LEGACY[c]||c; }
+  var TABS = ['All','Markets','Tech','Bitcoin','Altcoins','NFTs','Ordinals','Asia','Regulation','Exchanges','Airdrops'];
+  var LABEL = {Markets:'Market',Altcoins:'Altcoin',NFTs:'NFT',Airdrops:'Airdrop'};
+  var LEGACY = {'Ethereum':'Altcoins','DeFi':'Altcoins','NFTs & Ordinals':'NFTs'};
+  var ORD_RE = /\bordinals?\b|inscription|\brunes?\b|brc-?20|\bsats?\b/i, NFT_RE = /\bnfts?\b|non-fungible|opensea|magic eden|\bblur\b/i;
+  function catOf(i){ var t=(i.headline||'')+' '+(i.summary||''); if (AIRDROP_RE.test(t)) return 'Airdrops'; var c = i.category||'Other'; c = LEGACY[c]||c; if (c==='Regulation'||c==='Exchanges') return c; if (c==='Ordinals'||ORD_RE.test(t)) return 'Ordinals'; if (c==='NFTs'||NFT_RE.test(t)) return 'NFTs'; return c; }
 
   /* one simple illustration per topic, drawn in gold on black; position/rotation vary per story */
   var MOTIFS = {
@@ -115,7 +130,8 @@
     'Ethereum': function(){ return '<path d="M0 -58L38 4L0 24L-38 4Z" fill="#F5C518"/><path d="M0 32L38 10L0 58L-38 10Z" fill="none" stroke="#F5C518" stroke-width="5" stroke-linejoin="round"/>'; },
     'Altcoins': function(){ return '<circle cx="-26" cy="8" r="34" fill="none" stroke="#F5C518" stroke-width="6"/><circle cx="26" cy="-8" r="34" fill="#F5C518"/><circle cx="26" cy="-8" r="20" fill="none" stroke="#080807" stroke-width="4"/>'; },
     'DeFi':     function(){ return '<g stroke="#F5C518" stroke-width="4"><line x1="-50" y1="-20" x2="0" y2="-44"/><line x1="0" y1="-44" x2="52" y2="-14"/><line x1="52" y1="-14" x2="30" y2="42"/><line x1="30" y1="42" x2="-34" y2="40"/><line x1="-34" y1="40" x2="-50" y2="-20"/><line x1="0" y1="-44" x2="30" y2="42"/><line x1="-50" y1="-20" x2="52" y2="-14"/></g><g fill="#F5C518"><circle cx="-50" cy="-20" r="10"/><circle cx="0" cy="-44" r="10"/><circle cx="52" cy="-14" r="10"/><circle cx="30" cy="42" r="10"/><circle cx="-34" cy="40" r="10"/></g>'; },
-    'NFTs & Ordinals': function(){ return '<rect x="-52" y="-44" width="104" height="88" fill="none" stroke="#F5C518" stroke-width="6"/><rect x="-36" y="-28" width="72" height="56" fill="#F5C518"/><circle cx="-14" cy="-8" r="9" fill="#080807"/><path d="M-36 28L-8 4L10 20L22 10L36 28Z" fill="#080807"/>'; },
+    'Ordinals': function(){ return '<circle r="50" fill="none" stroke="#F5C518" stroke-width="6"/><circle r="7" fill="#F5C518"/><g stroke="#F5C518" stroke-width="5" stroke-linecap="round"><line x1="-26" y1="-26" x2="-10" y2="-10"/><line x1="26" y1="-26" x2="10" y2="-10"/><line x1="-26" y1="26" x2="-10" y2="10"/><line x1="26" y1="26" x2="10" y2="10"/></g><text y="70" text-anchor="middle" font-family="Orbitron,monospace" font-weight="900" font-size="13" fill="#F5C518">SAT</text>'; },
+    'NFTs': function(){ return '<rect x="-52" y="-44" width="104" height="88" fill="none" stroke="#F5C518" stroke-width="6"/><rect x="-36" y="-28" width="72" height="56" fill="#F5C518"/><circle cx="-14" cy="-8" r="9" fill="#080807"/><path d="M-36 28L-8 4L10 20L22 10L36 28Z" fill="#080807"/>'; },
     'Regulation': function(){ return '<path d="M-56 -30L0 -58L56 -30Z" fill="#F5C518"/><g fill="#F5C518"><rect x="-44" y="-22" width="14" height="60"/><rect x="-14" y="-22" width="14" height="60"/><rect x="16" y="-22" width="14" height="60"/><rect x="-56" y="44" width="112" height="10"/></g>'; },
     'Markets':  function(){ return '<g stroke="#F5C518" stroke-width="4"><line x1="-44" y1="-34" x2="-44" y2="30"/><line x1="-14" y1="-48" x2="-14" y2="14"/><line x1="16" y1="-20" x2="16" y2="44"/><line x1="46" y1="-52" x2="46" y2="8"/></g><g fill="#F5C518"><rect x="-52" y="-18" width="16" height="30"/><rect x="-22" y="-34" width="16" height="30"/><rect x="8" y="-4" width="16" height="34"/><rect x="38" y="-40" width="16" height="30"/></g>'; },
     'Exchanges':function(){ return '<path d="M-56 -18H34L18 -38M56 22H-34L-18 42" fill="none" stroke="#F5C518" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>'; },
@@ -151,6 +167,7 @@
     var html = list.slice(0, shown).map(function(i, n){
       return '<article class="card'+(n===0?' lead-card':'')+'"><div class="vis">'+vis(i)+'</div><div class="body">'+
         '<div class="meta"><span class="tag gold">'+esc(LABEL[catOf(i)]||catOf(i))+'</span>'+
+        (i.chain&&(catOf(i)==='NFTs'||catOf(i)==='Ordinals')?'<span class="tag">'+esc(i.chain)+'</span>':'')+
         (i.sample?'<span class="tag sample">Sample</span>':'')+
         '<span>'+esc(i.source||'')+'</span><span>'+esc(ago(i.published))+'</span></div>'+
         '<h3>'+esc(i.headline)+'</h3><p>'+esc(i.summary)+'</p>'+

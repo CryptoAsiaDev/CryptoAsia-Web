@@ -68,3 +68,68 @@ create policy "read verified exports" on public.studio_exports for select to ano
 drop policy if exists "insert unverified exports" on public.studio_exports;
 create policy "insert unverified exports" on public.studio_exports for insert to anon
   with check (verified = false and verified_at is null and reject_reason is null);
+
+
+-- ============================================================
+-- Events directory (run this part too, once)
+-- Visitors submit events as 'pending'. You approve them in events-admin.html
+-- (or in Table Editor: set status to 'approved'). Only approved, upcoming events are public.
+-- ============================================================
+create table if not exists public.events (
+  id          bigint generated always as identity primary key,
+  title       text not null check (char_length(title) between 3 and 120),
+  type        text not null check (type in ('Conference','Side event','Hackathon','Meetup','AMA / Space','Workshop','Other')),
+  starts_on   date not null,
+  ends_on     date not null,
+  online      boolean not null default false,
+  city        text check (char_length(city) <= 80),
+  country     text check (char_length(country) <= 80),
+  organizer   text not null check (char_length(organizer) between 2 and 80),
+  url         text not null check (url ~* '^https://[^ ]{4,400}$'),
+  description text not null check (char_length(description) between 10 and 600),
+  contact     text check (char_length(contact) <= 80),
+  status      text not null default 'pending' check (status in ('pending','approved','rejected')),
+  featured    boolean not null default false,
+  created_at  timestamptz not null default now(),
+  constraint dates_ok check (ends_on >= starts_on and starts_on <= current_date + 800)
+);
+create unique index if not exists events_url_unique on public.events (lower(url));
+create index if not exists events_public on public.events (status, starts_on);
+
+alter table public.events enable row level security;
+
+drop policy if exists "events read approved" on public.events;
+create policy "events read approved" on public.events for select to anon
+  using (status = 'approved' and ends_on >= current_date);
+
+drop policy if exists "events submit pending" on public.events;
+create policy "events submit pending" on public.events for insert to anon
+  with check (status = 'pending' and featured = false);
+
+-- you (a logged-in Supabase user) can see and change everything
+drop policy if exists "events admin all" on public.events;
+create policy "events admin all" on public.events for all to authenticated using (true) with check (true);
+
+-- flood guard: refuse new submissions when more than 40 arrived in the last hour
+create or replace function public.events_flood_guard() returns trigger language plpgsql as $$
+begin
+  if (select count(*) from public.events where created_at > now() - interval '1 hour') > 40 then
+    raise exception 'Too many submissions right now, try again later';
+  end if;
+  return new;
+end $$;
+drop trigger if exists events_flood on public.events;
+create trigger events_flood before insert on public.events for each row execute function public.events_flood_guard();
+
+-- "Report this event" button
+create table if not exists public.event_reports (
+  id         bigint generated always as identity primary key,
+  event_id   bigint not null references public.events(id) on delete cascade,
+  reason     text check (char_length(reason) <= 200),
+  created_at timestamptz not null default now()
+);
+alter table public.event_reports enable row level security;
+drop policy if exists "reports insert" on public.event_reports;
+create policy "reports insert" on public.event_reports for insert to anon with check (true);
+drop policy if exists "reports admin" on public.event_reports;
+create policy "reports admin" on public.event_reports for all to authenticated using (true) with check (true);

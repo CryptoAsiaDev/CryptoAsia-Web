@@ -46,14 +46,6 @@ The removed sections (Venture/Collect/Build, Our HODL, What We've Built, Token P
 Tracking loads after the page finishes, sets no cookies, respects Do Not Track, and is disclosed on `about.html`.
 Buttons with `data-track="name"` send click events (the airdrop Register buttons send `ref-<dex>`).
 
-## Perp DEX rankings (perps.html)
-
-- `.github/workflows/perps.yml` runs daily (08:15 KL), runs `scripts/fetch-perps.mjs`, and commits `perps-data.json` and `data/perps-history.json`.
-- Data comes from DefiLlama's open endpoints (override with PERPS_VOL_URL / PERPS_OI_URL; optional secret DEFILLAMA_API_KEY).
-- After the first run, open the run's summary: it lists any DEX not found on DefiLlama. Those show "--".
-- Edit `perps-meta.json` to add fees, season, token status, referral links, or to add a DEX (use `match` words from its DefiLlama name).
-- Trend and the daily signals (OI up/down, volume spike/slowdown) build from the saved history, so they fill in after a few days.
-
 ## Page layout
 - `index.html` = News (front page). `about.html` = About page (tools intro and privacy, link `about.html#privacy`).
 - The menu order is set in `shared.js` (LINKS). About is last.
@@ -64,11 +56,25 @@ Token logos in `logos/tokens/` come from the open-source Web3Icons set (MIT lice
 ## NFT Studio access
 No wallet is needed to build, preview or save projects (free, watermarked). The wallet is asked for only when someone chooses to export without a watermark. Projects live in the browser; the paid license is tied to the wallet that paid.
 
-### Perp data sources (updated)
-DefiLlama now charges for its perp volume data (HTTP 402), but open interest is still free. So: open interest comes from DefiLlama; 24h volume comes from each exchange's own public API (`scripts/perps-sources.mjs`, endpoints taken from DefiLlama's open-source adapters; CoinGecko is the fallback). Hibachi, Nado, Imperial, Bulk, RiseX and Extended also give 7-day / 30-day / total volume directly. 7-day, 30-day and total volume are added up from our daily records in `data/perps-history.json`, so they grow more complete each day (marked with *). After each run, open the run summary: "Volume sources" shows which exchanges answered and which failed.
-
 ## Auto-posting to X (@CryptoAsiaBTC)
 `.github/workflows/post-x.yml` runs 5 times a day (KL 08:10, 11:40, 15:20, 19:05, 22:30). `scripts/post-x.mjs` asks Claude to pick the biggest unposted story from `news.json` of the last 24 hours, writes a tweet (no link, "via source" + hashtags) and posts it. Posted stories are logged in `data/x-posted.json` so nothing repeats; max 6 a day.
 Secrets needed: `ANTHROPIC_API_KEY` (already set), `X_API_KEY`, `X_API_SECRET`, `X_ACCESS_TOKEN`, `X_ACCESS_SECRET`.
 Test first: Actions > Post news to X > Run workflow with dry_run = true (writes the tweet in the run summary, posts nothing).
 X charges per post; posts that contain a link cost far more, so links are off (`X_INCLUDE_LINK: 'false'`).
+
+## Events directory (events.html)
+1. In Supabase > SQL Editor, run the "Events directory" part at the bottom of `supabase/schema.sql` (once).
+2. `jobs-config.json` already holds your Supabase URL and anon key; events reuse them.
+3. Supabase > Authentication > Users > Add user (your email + a strong password). Then Authentication > Sign In / Providers: turn OFF "Allow new users to sign up".
+4. Open `events-admin.html`, sign in, and Approve or Reject pending events. Reports from visitors show under "reports". Approved events disappear automatically after their end date.
+Visitors can submit up to 3 events a day per browser; a hidden spam field and a database flood guard (40 submissions per hour) add protection. Until Supabase is set up, the page shows `events.json`.
+Old `perps.html` links are redirected to the Events page.
+
+## NFT and Ordinals news tabs
+`scripts/feeds.json` has NFT and Ordinals feeds; `fetch-news.mjs` has the categories "NFTs" and "Ordinals" plus a "chain" tag. The page also reclassifies by keyword, so older stories land in the right tab.
+
+## Auto-posting to Facebook
+`.github/workflows/post-x.yml` also posts the same story to your Facebook Page when the secrets `FB_PAGE_ID` and `FB_PAGE_TOKEN` exist (see `scripts/post-x.mjs`). Without them it only posts to X. Needs a Facebook Page (not a profile), a Meta app and a Page access token with `pages_manage_posts`.
+
+## SEO
+`sitemap.xml`, `robots.txt` and `feed.xml` (news RSS, rebuilt by the news workflow) are in the site root. Submit `https://cryptoasiabtc.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
