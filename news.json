@@ -1,6 +1,9 @@
 {
-  "updated": "2026-11-03T21:52:42.817Z",
+  "updated": "2026-11-04T01:44:20.284Z",
   "skipped": [
+    "de7588cf8dfe374d",
+    "4ce46e7e56958453",
+    "0a968f5c4349954b",
     "7572ff442030be96",
     "4fe7ab4d868948ad",
     "ee195a8057dcfa54",
@@ -101,6 +104,50 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "346b1080f381d0af",
+      "headline": "1inch lawyer expects US agencies to shape crypto rules amid midterms",
+      "summary": "A 1inch lawyer says US regulatory agencies are likely to drive crypto policy regardless of how the midterm elections turn out. The excerpt gives no further detail.",
+      "category": "Regulation",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/1inch-lawyer-sees-agencies-driving-us-crypto-regulation-as-midterms-unfold?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-04T00:45:16.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M4DJ3V1RSDPDYAETXYR8NEK1/hi-us-government-has-shut-down-bitcoin-crypto.jpg",
+      "sourceTitle": "1inch lawyer sees agencies driving US crypto regulation as midterms unfold"
+    },
+    {
+      "id": "204dbfb0c8a1a676",
+      "headline": "Experts Say Payments Could Give Crypto Super Apps Daily Use",
+      "summary": "At TOKEN2049 Singapore, panelists from firms including MetaMask, Trezor and WalletConnect discussed whether payments could make crypto an everyday financial service. The debate centred on everyday use rather than trading.",
+      "category": "Asia",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/crypto-super-apps-payments-changenow-token2049/",
+      "published": "2026-11-04T00:31:07.000Z",
+      "image": "https://assets.beincrypto.com/img/myIhDn9RYPIAGrpGu_co8sCgPek=/smart/8a41bfb57b2c46fdb67cb23e182994bc",
+      "sourceTitle": "Payments Could Give Crypto Super Apps a Daily Use Case, TOKEN2049 Experts Say"
+    },
+    {
+      "id": "e41e323f9e384293",
+      "headline": "Moscow Exchange Sets Dec. 1 Start for Crypto Trading",
+      "summary": "Russia's Moscow Exchange has announced it will begin cryptocurrency trading on December 1, offering bitcoin, ether and USDT. The exchange described it as the country's first organized digital currency market.",
+      "category": "Exchanges",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/exchanges/moscow-exchange-dec-1-crypto-trading-bitcoin-ether-usdt/",
+      "published": "2026-11-04T00:15:31.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/moscow-exchange-building-768x432.jpg",
+      "sourceTitle": "Moscow Exchange Confirms Dec. 1 Crypto Trading Launch With Bitcoin, Ether, USDT"
+    },
+    {
+      "id": "71f777f209d04753",
+      "headline": "RUNE gains 15% as THORChain resumes most swaps after pause",
+      "summary": "THORChain has restored trading on Bitcoin, Ethereum and several other networks after a refund bug halted activity. Three chains remain paused.",
+      "category": "Altcoins",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/markets/rune-rallies-15-as-thorchain-restarts-most-swaps-after-outage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-03T23:56:09.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6HX7RYCH2V2GKPP6BB2MVAX/thorchain-crypto-crowd-people-hype-mainstream-1.jpg",
+      "sourceTitle": "RUNE rallies 15% as THORChain restarts most swaps after halt"
+    },
     {
       "id": "35ef23fa03d84deb",
       "headline": "Dormant Bitcoin Wallet Activity Slows Again in October",
@@ -936,50 +983,6 @@
       "published": "2026-10-28T17:57:18.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/grv_nwmk-768x432.jpg",
       "sourceTitle": "GRVT Burns 1.1 Million Tokens as Countdown to Grvt 2.0 Begins"
-    },
-    {
-      "id": "5a78f36dee695de7",
-      "headline": "Exchange and DeFi Breaches Drive Most 2026 Crypto Hack Losses",
-      "summary": "Lightning.news data cited by Bitcoin Magazine puts net 2026 crypto hack losses near $2.35 billion after freezes and returns. September alone accounted for about $768 million, led by a Bitget wallet drain and a Liquid Network bug.",
-      "category": "Exchanges",
-      "source": "Bitcoin Magazine",
-      "url": "https://bitcoinmagazine.com/technical/centralized-exchange-and-defi-losses-dominate-2026-crypto-hacks-despite-hardware-wallet-failures",
-      "published": "2026-10-28T17:43:02.000Z",
-      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/10/tn-6.webp",
-      "sourceTitle": "Centralized Exchange and DeFi Losses Dominate 2026 Crypto Hacks Despite Hardware Wallet Failures"
-    },
-    {
-      "id": "36d0ead1103e00bb",
-      "headline": "DTCC moves toward blockchain for securities with major banks",
-      "summary": "The DTCC's tokenization service has gone live on the Canton Network and the Besu private chain. Twenty firms, including JPMorgan, Citi and Morgan Stanley, have signed up to use it.",
-      "category": "Tech",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/business/2026/10/28/wall-street-backbone-dtcc-brings-usd30-trillion-securities-closer-to-blockchain-with-major-banks",
-      "published": "2026-10-28T13:14:37.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/017c04b0a6f702fccd76ffd5aa923321e5b66146-2048x1152.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Wall Street backbone DTCC brings $30 trillion securities closer to blockchain with major banks"
-    },
-    {
-      "id": "80df8a3c29641adb",
-      "headline": "Former Goldman and BlackRock Staff Raise $4M for Onchain Loans",
-      "summary": "Birch Hill, founded by alumni of Goldman Sachs and BlackRock, closed a $4 million seed round led by Multicoin Capital. The startup aims to bring U.S. loans onto blockchain rails through a regulated approach.",
-      "category": "Tech",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382007/goldman-blackrock-alumni-raise-4-million-loans-onchain",
-      "published": "2026-10-28T13:01:02.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/decrypt-style-wall-street-gID_7.png",
-      "sourceTitle": "Goldman, BlackRock Alumni Raise $4 Million to Put Farm and Apartment Loans Onchain"
-    },
-    {
-      "id": "6b87837649dd244f",
-      "headline": "Spiral Says Bitcoin Payments Face Demand Problem, Not Technology",
-      "summary": "Spiral, the Bitcoin team linked to Block, argues that Bitcoin payments are held back by weak demand rather than technical limits. The group points to Stripe and Visa turning to stablecoins instead.",
-      "category": "Bitcoin",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-payments-stablecoins-spiral-report/",
-      "published": "2026-10-28T12:39:08.000Z",
-      "image": "https://assets.beincrypto.com/img/RcXcGEItjGlpUNbjvmLotyBLEA8=/smart/c1075ff28cfe40449a3e6e6bca977819",
-      "sourceTitle": "The Real Threat to Bitcoin Payments Isn’t Tech, Jack Dorsey’s Team Says"
     }
   ]
 }
