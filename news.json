@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-04T22:00:35.851Z",
+  "updated": "2026-11-05T02:37:09.695Z",
   "skipped": [
+    "8e1115b204757ecf",
+    "463ef8b099206d0b",
+    "874e5ceeb7dfd81b",
+    "a3793609279046d1",
+    "f66dacb16a19e10c",
     "6336c16886e2d41a",
     "4a0a30cca5b53c7b",
     "5c449ad8a5867a07",
@@ -110,6 +115,18 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "d48d2b3f2d23f502",
+      "headline": "Nearly $1B in Crypto Liquidations as Bitcoin Rises 4.6%",
+      "summary": "Crypto liquidations totaled $974.80 million over 24 hours as prices climbed, with most losses hitting traders betting on declines, per Coinglass. Bitcoin rose 4.64% to $80,480.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/crypto-liquidations-bitcoin-shorts-80000/",
+      "published": "2026-11-05T01:55:27.000Z",
+      "image": "https://assets.beincrypto.com/img/e7LLCEFNPSVeWjw7GjKCQebKB6s=/smart/d592b3c3252e46968e5fa5a5865563f5",
+      "sourceTitle": "Nearly $1 Billion in Crypto Liquidations Hit as Bitcoin Jumps 4.6%"
+    },
     {
       "id": "476651640843a39e",
       "headline": "Crypto Groups Challenge Illinois' 0.2% Crypto Tax in Court",
@@ -984,17 +1001,6 @@
       "published": "2026-10-29T00:08:14.000Z",
       "image": "https://assets.beincrypto.com/img/1sfIdqTefxW8wJq3A1PBF6C8lAI=/smart/df4303171b0b46cdbd67f527df4c0474",
       "sourceTitle": "33 Wall Street Giants Block Tokenized Stocks, But Apple and Tesla Stay Silent"
-    },
-    {
-      "id": "d30d8804e5dc6fca",
-      "headline": "Analysts Debate Whether Bitcoin Could Fall Like Silver",
-      "summary": "Benjamin Cowen warns Bitcoin could follow silver after a fake-out, while Charles Edwards expects limited downside. The excerpt gives no further detail on either view.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-price-warning-sign-silver-crash/",
-      "published": "2026-10-28T23:32:47.000Z",
-      "image": "https://assets.beincrypto.com/img/zWwrOsS-9z3fsRPxfPC4MKTCAog=/smart/ebc1394a537349c788bfe67a81bdade6",
-      "sourceTitle": "Could Bitcoin Price Crash Like Silver? Warning Signs Are Showing"
     }
   ]
 }
