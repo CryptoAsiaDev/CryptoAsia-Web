@@ -20,18 +20,30 @@ export async function pickAndWrite(cands, apiKey, includeLink, fetchFn = fetch) 
   const sys = `You run the X account of Crypto Asia, an Asia-focused crypto news brand. From the list of recent stories, pick the ONE that matters most to crypto readers (big market moves, major regulation, big exchange or protocol news, notable airdrops; Asia stories get a slight boost). Then write one tweet about it.
 Rules: max 240 characters. Plain, factual, no hype, no emojis spam (at most one emoji). Do not invent facts beyond the story. ${includeLink ? 'Do not include a link; it is added for you.' : 'Do not include any link or URL.'} End with the source as "via <source>" and 1 or 2 relevant hashtags.
 Reply with JSON only: {"id": "<story id>", "tweet": "<text>"}`;
-  const res = await fetchFn('https://api.anthropic.com/v1/messages', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
-    body: JSON.stringify({ model: MODEL, max_tokens: 400, system: sys, messages: [{ role: 'user', content: JSON.stringify(cands.map(c => ({ id: c.id, headline: c.headline, summary: c.summary, source: c.source, category: c.category }))) }] }),
-  });
-  if (!res.ok) throw new Error(`Claude API ${res.status}: ${(await res.text()).slice(0, 200)}`);
-  const raw = ((await res.json()).content || []).map(b => b.text || '').join('');
-  const a = raw.indexOf('{'), b = raw.lastIndexOf('}'); if (a < 0 || b < a) throw new Error('No JSON in model reply');
-  const j = JSON.parse(raw.slice(a, b + 1));
-  const story = cands.find(c => String(c.id) === String(j.id)); if (!story) throw new Error('Model chose an unknown story');
-  let tweet = String(j.tweet || '').replace(/https?:\/\/\S+/g, '').replace(/\s+\n/g, '\n').trim();
+  const ask = async (extra) => {
+    const res = await fetchFn('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({ model: MODEL, max_tokens: 800, system: sys + extra, messages: [{ role: 'user', content: JSON.stringify(cands.map(c => ({ id: c.id, headline: c.headline, summary: c.summary, source: c.source, category: c.category }))) }] }),
+    });
+    if (!res.ok) throw new Error(`Claude API ${res.status}: ${(await res.text()).slice(0, 200)}`);
+    const raw = ((await res.json()).content || []).map(b => b.text || '').join('');
+    const a = raw.indexOf('{'), b = raw.lastIndexOf('}');
+    if (a < 0 || b < a) { console.warn('Model reply had no JSON. First 300 characters: ' + raw.slice(0, 300)); return null; }
+    try { return JSON.parse(raw.slice(a, b + 1)); } catch (e) { console.warn('Model JSON could not be parsed: ' + raw.slice(0, 300)); return null; }
+  };
+  let j = await ask('');
+  if (!j) j = await ask('\nIMPORTANT: your whole reply must be one JSON object and nothing else. Start with { and end with }.');
+  let story = j && cands.find(c => String(c.id) === String(j.id));
+  let tweet = j ? String(j.tweet || '') : '';
+  if (!story || !tweet.trim()) {                        // fallback: newest story, written from its own headline (no AI)
+    console.warn('Using the fallback: newest story headline.');
+    story = cands[0];
+    tweet = `${story.headline}\nvia ${story.source}`;
+  }
+  tweet = tweet.replace(/https?:\/\/\S+/g, '').replace(/\s+\n/g, '\n').trim();
   if (!tweet) throw new Error('Empty tweet');
+  if (tweet.length > 240) tweet = tweet.slice(0, 237).trimEnd() + '...';
   if (includeLink) tweet += '\n' + story.url;            // X counts any link as 23 characters
   const len = includeLink ? tweet.length - story.url.length + 23 : tweet.length;
   if (len > 280) throw new Error('Tweet too long (' + len + ')');
