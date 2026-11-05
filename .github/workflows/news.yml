@@ -2,7 +2,8 @@ name: Update crypto news
 
 on:
   schedule:
-    - cron: '*/30 * * * *'     # every 30 minutes
+    - cron: '0 23 * * *'       # 07:00 Kuala Lumpur
+    - cron: '0 11 * * *'       # 19:00 Kuala Lumpur (twice a day)
   workflow_dispatch:           # lets you run it by hand from the Actions tab
 
 permissions:
@@ -29,6 +30,8 @@ jobs:
         run: node scripts/fetch-news.mjs
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NEWS_MAX_NEW: '20'      # runs are 12 hours apart, so allow more briefs per run
+          NEWS_PER_FEED: '15'     # and read more of each feed
 
       - name: Build RSS feed
         run: node scripts/make-feed.mjs
