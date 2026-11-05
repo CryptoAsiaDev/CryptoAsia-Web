@@ -1,6 +1,12 @@
 {
-  "updated": "2026-11-05T02:37:09.695Z",
+  "updated": "2026-11-05T04:42:57.700Z",
   "skipped": [
+    "9f6fa91fbbbf6331",
+    "5d159023af52a946",
+    "72d37b1cb6c559f0",
+    "6a5dd791c5b3dd1b",
+    "82659c70d87a7fe5",
+    "45fbd1ffa657e57c",
     "8e1115b204757ecf",
     "463ef8b099206d0b",
     "874e5ceeb7dfd81b",
@@ -115,6 +121,30 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "b3050dab6666a0da",
+      "headline": "Hong Kong to require crypto providers to track customer trades",
+      "summary": "Covered crypto providers will have to collect transaction information starting in 2027, ahead of the tax department beginning international information exchanges under CARF in 2028.",
+      "category": "Asia",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/hong-kong-forces-crypto-providers-to-track-customer-trades/",
+      "published": "2026-11-05T04:30:01.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/hong-kong-crypto-reporting.webp",
+      "sourceTitle": "Hong Kong forces crypto providers to track customer trades"
+    },
+    {
+      "id": "2a4a57d9ced8615a",
+      "headline": "Trump Media shifts $342M in bitcoin to Crypto.com",
+      "summary": "Blockchain data tracked by Arkham shows a wallet linked to Trump Media sent a large bitcoin transfer to Crypto.com. The amount is reported as $342 million.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/11/05/trump-media-moves-usd434-million-in-bitcoin-to-crypto-com-blockchain-data-show",
+      "published": "2026-11-05T04:11:33.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/de278a5c492ab4bde63167f3534082ff55913519-1577x1233.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Trump Media moves $342 million in bitcoin to Crypto.com, blockchain data show"
+    },
     {
       "id": "d48d2b3f2d23f502",
       "headline": "Nearly $1B in Crypto Liquidations as Bitcoin Rises 4.6%",
@@ -979,28 +1009,6 @@
       "published": "2026-10-29T05:54:39.000Z",
       "image": "https://cdn.sanity.io/images/s3y3vcno/production/0fd512cd2b3b63152562fab784b9d94b8b8b56ea-1500x994.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
       "sourceTitle": "AI found a way to crash bitcoin nodes on Windows and Macs. It's now public"
-    },
-    {
-      "id": "0210f361902150f8",
-      "headline": "Ripple Nears $900M Revenue Run Rate as XRP Expands",
-      "summary": "Ripple is reportedly approaching a projected $900 million annualized product revenue run rate, driven by expanding institutional custody and payment channels for XRP. The company's strategy spans payments, trading, treasury management and digital asset infrastructure.",
-      "category": "Altcoins",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/featured/ripple-roars-toward-900m-milestone-as-xrp-gains-wall-street-access/",
-      "published": "2026-10-29T00:30:52.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ripple-labs-1-8-768x432.jpg",
-      "sourceTitle": "Ripple Roars Toward $900M Milestone as XRP Gains Wall Street Access"
-    },
-    {
-      "id": "9acb6165e16f0090",
-      "headline": "33 major firms block tokenized stocks; Apple and Tesla silent",
-      "summary": "JPMorgan, Coca-Cola and 31 other companies reportedly used a new SEC veto to stop tokenized shares trading on OKX and ICE's venue. Apple and Tesla have not commented.",
-      "category": "Regulation",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/wall-street-giants-block-tokenized-stock/",
-      "published": "2026-10-29T00:08:14.000Z",
-      "image": "https://assets.beincrypto.com/img/1sfIdqTefxW8wJq3A1PBF6C8lAI=/smart/df4303171b0b46cdbd67f527df4c0474",
-      "sourceTitle": "33 Wall Street Giants Block Tokenized Stocks, But Apple and Tesla Stay Silent"
     }
   ]
 }
