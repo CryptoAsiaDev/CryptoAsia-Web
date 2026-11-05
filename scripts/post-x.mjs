@@ -50,6 +50,33 @@ Reply with JSON only: {"id": "<story id>", "tweet": "<text>"}`;
   return { story, tweet };
 }
 
+const MY_RE = /malaysia|malaysian|kuala lumpur|\bkl\b|ringgit|\bmyr\b|bursa|securities commission|bank negara|southeast asia|\basean\b|singapore|thailand|indonesia|vietnam|philippines/i;
+export const isMalaysian = st => MY_RE.test(`${st.headline || ''} ${st.summary || ''}`);
+
+// A separate, friendlier text for the Facebook Page (2-3 sentences). Falls back to the short post if the AI step fails.
+export async function writeFacebookText(story, fallback, apiKey, fetchFn = fetch) {
+  try {
+    const my = isMalaysian(story);
+    const sys = `You write Facebook Page posts for Crypto Asia, an Asia-focused crypto news brand run from Malaysia. Write ONE post about the story you are given.
+Style: casual and conversational, like a friendly crypto-savvy friend sharing news. 2 to 3 short sentences in your own words, max 450 characters. Plain English, no corporate tone. At most one emoji. At most 2 relevant hashtags at the end. Do not start with "Breaking". Do not include any link.
+Accuracy rules: use only facts from the headline and summary; never invent numbers, quotes or background. No hype, no price predictions, no advice to buy or sell.
+${my ? 'This story involves Malaysia or Southeast Asia: add a short Malaysian angle, for example why Malaysian readers may care, but only if it follows from the story itself; a light, natural Malaysian touch (like "lah" or "boleh") is allowed at most once, never forced.' : 'Do not add any local-slang or Malaysia-specific angle; keep it a general, casual post.'}
+Reply with JSON only: {"post": "<text>"}`;
+    const res = await fetchFn('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({ model: MODEL, max_tokens: 500, system: sys, messages: [{ role: 'user', content: JSON.stringify({ headline: story.headline, summary: story.summary, source: story.source }) }] }),
+    });
+    if (!res.ok) throw new Error('Claude API ' + res.status);
+    const raw = ((await res.json()).content || []).map(b => b.text || '').join('');
+    const a = raw.indexOf('{'), b = raw.lastIndexOf('}');
+    let text = String(JSON.parse(raw.slice(a, b + 1)).post || '').replace(/https?:\/\/\S+/g, '').trim();
+    if (text.length < 20) throw new Error('too short');
+    if (text.length > 600) text = text.slice(0, 597).trimEnd() + '...';
+    return `${text}\n\nSource: ${story.source}. More crypto news: https://cryptoasiabtc.com`;
+  } catch (e) { console.warn('Facebook text fallback (' + e.message + ')'); return fallback; }
+}
+
 export async function postTweet(text, creds, fetchFn = fetch) {
   const url = 'https://api.x.com/2/tweets';
   const r = await fetchFn(url, { method: 'POST', headers: { Authorization: oauthHeader('POST', url, creds), 'content-type': 'application/json' }, body: JSON.stringify({ text }) });
@@ -79,19 +106,23 @@ export async function run(env = process.env, fetchFn = fetch, now = new Date()) 
   if (!cands.length) { console.log('No fresh unposted stories.'); return null; }
   const { story, tweet } = await pickAndWrite(cands, env.ANTHROPIC_API_KEY, env.X_INCLUDE_LINK === 'true', fetchFn);
   console.log('Tweet:\n' + tweet + '\n(story: ' + story.headline + ')');
-  let tid = 'dry-run', fbid = '';
+  let tid = 'dry-run', fbid = '', xErr = '', fbErr = '';
   if (env.DRY_RUN !== 'true') {
     const creds = { key: env.X_API_KEY, secret: env.X_API_SECRET, token: env.X_ACCESS_TOKEN, tokenSecret: env.X_ACCESS_SECRET };
     const haveX = creds.key && creds.secret && creds.token && creds.tokenSecret;
     if (!haveX && !(env.FB_PAGE_ID && env.FB_PAGE_TOKEN)) throw new Error('X credentials are missing (X_API_KEY, X_API_SECRET, X_ACCESS_TOKEN, X_ACCESS_SECRET).');
-    if (haveX) { tid = (await postTweet(tweet, creds, fetchFn)).id; console.log('Posted: https://x.com/CryptoAsiaBTC/status/' + tid); }
-    else { tid = 'x-skipped'; console.warn('X credentials missing, posting to Facebook only.'); }
+    if (haveX) {
+      try { tid = (await postTweet(tweet, creds, fetchFn)).id; console.log('Posted: https://x.com/CryptoAsiaBTC/status/' + tid); }
+      catch (e) { xErr = e.message; tid = 'x-failed'; console.warn('X post failed (Facebook will still be tried): ' + e.message); }
+    } else { tid = 'x-skipped'; console.warn('X credentials missing, posting to Facebook only.'); }
   }
   // Facebook Page (optional): same story, with the article link so Facebook shows the preview card
   if (env.FB_PAGE_ID && env.FB_PAGE_TOKEN && env.DRY_RUN !== 'true') {
-    try { fbid = await postFacebook(tweet, story.url, env, fetchFn); console.log('Posted to Facebook: ' + fbid); }
-    catch (e) { console.warn('Facebook post failed (X post is unaffected): ' + e.message); }
+    try { const fbText = await writeFacebookText(story, tweet, env.ANTHROPIC_API_KEY, fetchFn); console.log('Facebook text:\n' + fbText); fbid = await postFacebook(fbText, story.url, env, fetchFn); console.log('Posted to Facebook: ' + fbid); }
+    catch (e) { fbErr = e.message; console.warn('Facebook post failed (X post is unaffected): ' + e.message); }
   }
+  const posted = (tid !== 'dry-run' && !['x-failed', 'x-skipped'].includes(tid)) || fbid;
+  if (env.DRY_RUN !== 'true' && !posted) throw new Error('Nothing was posted. ' + [xErr && 'X: ' + xErr, fbErr && 'Facebook: ' + fbErr].filter(Boolean).join(' | '));
   log.push({ story_id: story.id, tweet_id: tid, fb_id: fbid, kl_day: today, at: now.toISOString(), text: tweet });
   mkdirSync('data', { recursive: true });
   writeFileSync(LOG, JSON.stringify(log.slice(-500), null, 1));
