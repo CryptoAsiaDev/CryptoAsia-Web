@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-05T04:42:57.700Z",
+  "updated": "2026-11-05T18:38:53.743Z",
   "skipped": [
+    "f8d8914e80fbf395",
+    "446baa320ae5093e",
+    "ce7703e82f7c67e5",
+    "f7286dddb6039d3f",
+    "aba293e63101a20b",
     "9f6fa91fbbbf6331",
     "5d159023af52a946",
     "72d37b1cb6c559f0",
@@ -121,6 +126,30 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "aa52e0894dc1bfe6",
+      "headline": "Eric Trump-Linked American Bitcoin Reports $126M Profit, Shares Fall",
+      "summary": "American Bitcoin Corp., a bitcoin miner co-founded by Eric Trump, posted about $126 million in third-quarter net income after prior losses. The Nasdaq-listed firm holds 8,427 BTC, though its mining costs rose and its shares dropped.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/mining/eric-trumps-american-bitcoin-banks-126m-abtc-shares-dive/",
+      "published": "2026-11-05T18:22:35.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/eric-trumps-american-bitcoin-banks-126m-profit-as-mining-costs-climb-768x432.png",
+      "sourceTitle": "Eric Trump’s American Bitcoin Banks $126M Profit—But ABTC Shares Dive"
+    },
+    {
+      "id": "0ea8d0eebe70fe81",
+      "headline": "Amundi launches tokenized equity index fund on Ethereum",
+      "summary": "Europe's largest asset manager, Amundi, has tokenized an equity index fund on Ethereum. The new share class gives blockchain-based exposure to an index covering 600 companies across European markets.",
+      "category": "Tech",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/amundi-tokenizes-european-equity-index-fund-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-05T18:09:38.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6P8H9870ZQY6MMMYHJSDGZ5/hi-how-binance-plans-to-bring-tokenized-us-stocks-4.png",
+      "sourceTitle": "Europe’s largest asset manager Amundi tokenizes equity index fund on Ethereum"
+    },
     {
       "id": "b3050dab6666a0da",
       "headline": "Hong Kong to require crypto providers to track customer trades",
@@ -987,28 +1016,6 @@
       "published": "2026-10-29T06:51:25.000Z",
       "image": "https://assets.beincrypto.com/img/wRH3rdIGlRIJuYcfQ8YcVf9XVg0=/smart/14bd50f7fb094628930544598d369f96",
       "sourceTitle": "Chainlink Loses 21% in October Even as Tokens Keep Leaving Exchanges"
-    },
-    {
-      "id": "2a3c4c42f2d034c8",
-      "headline": "UNI slips below $7 as new wallet addresses hit six-year high",
-      "summary": "Uniswap's UNI token has fallen back under $7 after briefly recovering above that level this week. Meanwhile, new UNI addresses reached a six-year high, though the excerpt does not say what this signals for price.",
-      "category": "Altcoins",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/uniswap-new-addresses-2020-high/",
-      "published": "2026-10-29T06:16:46.000Z",
-      "image": "https://assets.beincrypto.com/img/PP1MW6vJH9c2X1LvTrRYj94XQns=/smart/18eea6b726be4623b99164fa25a0ae1e",
-      "sourceTitle": "UNI’s 6-Year Wallet Spike May Not Mean What It Looks Like"
-    },
-    {
-      "id": "f2713dfd80c41501",
-      "headline": "AI-discovered flaws can crash bitcoin nodes on Windows and Macs",
-      "summary": "Three vulnerabilities found by a language-model scan have been made public. They are the first disclosed under Bitcoin Core's new rules for bugs that are easy to find.",
-      "category": "Tech",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/tech/2026/10/29/ai-found-a-way-to-crash-bitcoin-nodes-on-windows-and-macs-it-s-now-public",
-      "published": "2026-10-29T05:54:39.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/0fd512cd2b3b63152562fab784b9d94b8b8b56ea-1500x994.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "AI found a way to crash bitcoin nodes on Windows and Macs. It's now public"
     }
   ]
 }
