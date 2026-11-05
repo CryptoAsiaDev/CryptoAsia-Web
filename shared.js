@@ -41,6 +41,7 @@
           '<img src="logos/ca-icon.png" alt="Crypto Asia logo" width="46" height="46"><b>CRYPTO ASIA</b></a>'+
         '<ul class="nav-links" id="navLinks">'+items+
           '<li><a class="btn" href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">&#120143; Follow</a></li>'+
+          '<li><a class="btn" href="https://www.facebook.com/CryptoBitcoinAsia" target="_blank" rel="noopener" aria-label="Follow on Facebook" title="Follow on Facebook">f</a></li>'+
           '<li><button class="theme-btn" id="themeBtn" type="button"></button></li>'+
         '</ul>'+
         '<button class="nav-toggle" id="navToggle" type="button" aria-label="Menu">Menu</button>'+
@@ -59,7 +60,7 @@
   if(footHost){
     footHost.outerHTML =
       '<footer class="foot"><img class="foot-logo" src="logos/ca-round.png" alt="Crypto Asia" loading="lazy">'+
-      '&copy; 2026 <a href="index.html">CRYPTO ASIA</a> &mdash; CRYPTOASIABTC.COM &middot; <a href="about.html#privacy">About &amp; Privacy</a> &middot; <a href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">@CryptoAsiaBTC</a>'+
+      '&copy; 2026 <a href="index.html">CRYPTO ASIA</a> &mdash; CRYPTOASIABTC.COM &middot; <a href="about.html#privacy">About &amp; Privacy</a> &middot; <a href="https://www.x.com/CryptoAsiaBTC" target="_blank" rel="noopener">@CryptoAsiaBTC</a> &middot; <a href="https://www.facebook.com/CryptoBitcoinAsia" target="_blank" rel="noopener">Facebook</a>'+
       '<div class="disc">For information and entertainment only. Nothing on this site is financial, legal or tax advice. Crypto is volatile and you can lose money. Do your own research.</div></footer>';
   }
 

@@ -38,7 +38,7 @@ h1{font-family:var(--fh);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line
 .chip{width:72px;height:72px;border-radius:50%;flex:none;position:relative;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:900;font-size:1.05rem;color:#fff;overflow:hidden}
 .chip img{width:100%;height:100%;object-fit:cover;pointer-events:none;-webkit-user-drag:none}
 .chip.drag{opacity:.35}
-.ghost{position:fixed;z-index:999;pointer-events:none;transform:translate(-50%,-50%) scale(1.1);box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.chip.ghost{position:fixed;z-index:999;pointer-events:none;transform:translate(-50%,-50%) scale(1.1);box-shadow:0 8px 24px rgba(0,0,0,.5)}
 .pool{margin-top:1.2rem}
 .pool h2{font-family:var(--fm);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--text2);margin-bottom:.4rem;font-weight:400}
 .pool .zone{background:var(--surface);border:2px dashed var(--border);min-height:96px}
@@ -71,6 +71,7 @@ h1{font-family:var(--fh);font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;line
   <div class="bar">
     <button class="btn" id="dl">Download image</button>
     <a class="btn dark" id="shareX" target="_blank" rel="noopener">Share on X</a>
+    <a class="btn dark" id="shareFB" target="_blank" rel="noopener">Share on Facebook</a>
     <button class="btn ghost" id="reset">Reset</button>
   </div>
   <p class="hint">Your list is saved in this browser only. Nothing is uploaded. Tier lists are personal opinions, not financial advice.</p>
@@ -106,6 +107,7 @@ function render(){
   $('names').textContent=names.join(' · ');
   var txt=encodeURIComponent(c.title+' — make yours at https://cryptoasiabtc.com/tierlist.html @CryptoAsiaBTC');
   $('shareX').href='https://x.com/intent/post?text='+txt;
+  $('shareFB').href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('https://cryptoasiabtc.com/tierlist.html')+'&quote='+encodeURIComponent(c.title);
 }
 var drag=null;
 function down(e){if(e.button>0)return;var el=e.currentTarget;e.preventDefault();
@@ -123,7 +125,11 @@ function up(e){window.removeEventListener('pointermove',move);window.removeEvent
   drag.g.remove();drag=null;render()}
 $('title').addEventListener('input',function(){cs().title=this.value;save();$('shareX').href='https://x.com/intent/post?text='+encodeURIComponent(this.value+' — make yours at https://cryptoasiabtc.com/tierlist.html @CryptoAsiaBTC')});
 $('sub').addEventListener('input',function(){cs().sub=this.value;save()});
-$('reset').onclick=function(){if(confirm('Clear this tier list?')){var c=cs();c.place={};c.title=CATS[cat].title;c.sub='';save();render()}};
+var rt=null;
+$('reset').onclick=function(){var b=this;
+  if(!rt){b.textContent='Click again to clear';rt=setTimeout(function(){rt=null;b.textContent='Reset'},4000);return}   // in-page confirm: browser pop-ups can be blocked
+  clearTimeout(rt);rt=null;b.textContent='Reset';
+  var c=cs();c.place={};c.custom=[];c.title=CATS[cat].title;c.sub='';save();render()};
 function shrink(file,cb){var r=new FileReader();r.onload=function(){var im=new Image();im.onload=function(){var s=96,cv=document.createElement('canvas');cv.width=cv.height=s;var x=cv.getContext('2d'),m=Math.min(im.width,im.height);x.drawImage(im,(im.width-m)/2,(im.height-m)/2,m,m,0,0,s,s);cb(cv.toDataURL('image/png'))};im.src=r.result};r.readAsDataURL(file)}
 $('addBtn').onclick=function(){var n=$('addName').value.trim();if(!n)return;var f=$('addImg').files[0];
   function add(img){var c=cs();c.custom.push({id:'c-'+Date.now(),name:n,img:img||null,color:COLORS[c.custom.length%COLORS.length]});save();$('addName').value='';$('addImg').value='';render()}
