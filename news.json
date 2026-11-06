@@ -1,6 +1,9 @@
 {
-  "updated": "2026-11-05T18:38:53.743Z",
+  "updated": "2026-11-06T03:02:32.570Z",
   "skipped": [
+    "c24505d6e85da2e4",
+    "bac0e7dfe9a0fc0d",
+    "4deff1e34f51d6e8",
     "f8d8914e80fbf395",
     "446baa320ae5093e",
     "ce7703e82f7c67e5",
@@ -126,6 +129,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "b3d2f2c2cd0aeae8",
+      "headline": "Optimism proposal would reduce Security Council authority over standalone chains",
+      "summary": "A proposed policy would let qualifying transfers move forward without another governance vote, changing how users depend on parties for network upgrades. The change concerns the Optimism ecosystem's governance.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/optimism-new-proposal-weakens-council-power-over-standalone-chains/",
+      "published": "2026-11-06T02:10:05.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/optimism-locked-key-cabinet-1280x720-1.jpg",
+      "sourceTitle": "Optimism new proposal weakens council power over standalone chains"
+    },
+    {
+      "id": "9ec862e1c860e1a6",
+      "headline": "Bitrue Rebrands Around Bitrue AI, Moving Beyond Its XRP Focus",
+      "summary": "Crypto exchange Bitrue announced a brand shift placing Bitrue AI at the center of its identity. The company is moving from being known mainly for XRP trading toward an AI-focused crypto platform.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitrue-ai-first-crypto-exchange-xrp-trading-tools/",
+      "published": "2026-11-06T01:02:56.000Z",
+      "image": "https://assets.beincrypto.com/img/Z1X3XhbBsgxkjS1fnyrf1YgbuA8=/smart/2cb589861d10416cb8562412e2a02560",
+      "sourceTitle": "Bitrue Pivots To AI With Bitrue AI, Building On Its XRP Roots"
+    },
+    {
+      "id": "d952c5bbf40f67be",
+      "headline": "Ripple-backed XRP treasury firm Evernorth shares fall sharply after listing",
+      "summary": "Evernorth, backed by Ripple, has dropped nearly 47% since its October Nasdaq listing. A new filing shows 73.7 million shares that holders could resell, raising concerns about possible selling pressure.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/evernorth-xrp-treasury-nasdaq-crash/",
+      "published": "2026-11-06T01:00:00.000Z",
+      "image": "https://assets.beincrypto.com/img/IlEsGv3Ull4mHDKMJMhDdPnEXNI=/smart/ab62c610b01f48a3a6297f42b1aa7836",
+      "sourceTitle": "Nasdaq's XRP Treasury Crashed Nearly 50% In a Month"
+    },
     {
       "id": "aa52e0894dc1bfe6",
       "headline": "Eric Trump-Linked American Bitcoin Reports $126M Profit, Shares Fall",
@@ -983,39 +1022,6 @@
       "published": "2026-10-29T14:37:41.000Z",
       "image": "https://assets.beincrypto.com/img/NnoZj4weku4k6rQMbUee8A1JyQ4=/smart/2d12c335997a4b87a962233f8a1b82f6",
       "sourceTitle": "KuCoin Exits Russia and Belarus as EU Crypto Sanctions Tighten"
-    },
-    {
-      "id": "5cd8ef6d608bbf1f",
-      "headline": "Uniswap Labs opens TJAR fee conversion tool to outside apps",
-      "summary": "Uniswap Labs has made its Token Jar fee conversion system available to other applications via a new tool called TJAR. The first app mentioned is Robinhood.",
-      "category": "Altcoins",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/defi/2026-10-29-uniswap-token-jar-tjar-robinhood-432131",
-      "published": "2026-10-29T14:34:17.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2021/03/20210323_Uniswap_V3.jpg",
-      "sourceTitle": "Uniswap Labs opens fee conversion tool TJAR to apps, starting with Robinhood"
-    },
-    {
-      "id": "e2316f19df769144",
-      "headline": "A chart bitcoin traders should watch closely right now",
-      "summary": "An analyst highlights a market at an inflection point that could influence inflation trends and risk assets, including bitcoin and tech stocks.",
-      "category": "Markets",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/10/29/the-chart-bitcoin-traders-should-be-paying-attention-to",
-      "published": "2026-10-29T07:44:44.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/9a3df88b822ccd36c4983c47b34c3466952f3fa2-5854x3908.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "The chart bitcoin traders should be paying attention to"
-    },
-    {
-      "id": "76a4bbe0cb023e25",
-      "headline": "Chainlink Falls 21% in October Despite Steady Exchange Outflows",
-      "summary": "LINK has seen tokens leave Binance for 18 straight days, yet its price is down about 21% this month. A large earlier deposit may account for part of the outflow streak.",
-      "category": "Altcoins",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/chainlink-price-exchange-outflows-binance/",
-      "published": "2026-10-29T06:51:25.000Z",
-      "image": "https://assets.beincrypto.com/img/wRH3rdIGlRIJuYcfQ8YcVf9XVg0=/smart/14bd50f7fb094628930544598d369f96",
-      "sourceTitle": "Chainlink Loses 21% in October Even as Tokens Keep Leaving Exchanges"
     }
   ]
 }
