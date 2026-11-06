@@ -93,6 +93,18 @@ export async function postFacebook(text, link, env, fetchFn = fetch) {
   return JSON.parse(out).id;
 }
 
+// Telegram group or channel (optional): needs TG_BOT_TOKEN and TG_CHAT_ID. Reuses the Facebook text, so no extra AI cost.
+export async function postTelegram(text, env, fetchFn = fetch) {
+  const r = await fetchFn(`https://api.telegram.org/bot${env.TG_BOT_TOKEN}/sendMessage`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ chat_id: env.TG_CHAT_ID, text: text.slice(0, 4000), disable_web_page_preview: false }),
+  });
+  const out = await r.text();
+  if (!r.ok) throw new Error(`Telegram API ${r.status}: ${out.slice(0, 300).replace(env.TG_BOT_TOKEN, '***')}`);
+  return String(JSON.parse(out).result?.message_id || '');
+}
+
 export async function run(env = process.env, fetchFn = fetch, now = new Date()) {
   const log = existsSync(LOG) ? JSON.parse(readFileSync(LOG, 'utf8')) : [];
   const today = new Date(now.getTime() + 8 * 3600000).toISOString().slice(0, 10);
@@ -116,14 +128,25 @@ export async function run(env = process.env, fetchFn = fetch, now = new Date()) 
       catch (e) { xErr = e.message; tid = 'x-failed'; console.warn('X post failed (Facebook will still be tried): ' + e.message); }
     } else { tid = 'x-skipped'; console.warn('X credentials missing, posting to Facebook only.'); }
   }
-  // Facebook Page (optional): same story, with the article link so Facebook shows the preview card
-  if (env.FB_PAGE_ID && env.FB_PAGE_TOKEN && env.DRY_RUN !== 'true') {
-    try { const fbText = await writeFacebookText(story, tweet, env.ANTHROPIC_API_KEY, fetchFn); console.log('Facebook text:\n' + fbText); fbid = await postFacebook(fbText, story.url, env, fetchFn); console.log('Posted to Facebook: ' + fbid); }
-    catch (e) { fbErr = e.message; console.warn('Facebook post failed (X post is unaffected): ' + e.message); }
+  // Facebook Page and Telegram (both optional). They share one friendlier text, written once.
+  const wantFb = env.FB_PAGE_ID && env.FB_PAGE_TOKEN, wantTg = env.TG_BOT_TOKEN && env.TG_CHAT_ID;
+  let tgid = '', tgErr = '';
+  if ((wantFb || wantTg) && env.DRY_RUN !== 'true') {
+    const fbText = await writeFacebookText(story, tweet, env.ANTHROPIC_API_KEY, fetchFn);
+    console.log('Facebook/Telegram text:\n' + fbText);
+    if (wantFb) {
+      try { fbid = await postFacebook(fbText, story.url, env, fetchFn); console.log('Posted to Facebook: ' + fbid); }
+      catch (e) { fbErr = e.message; console.warn('Facebook post failed (others are unaffected): ' + e.message); }
+    }
+    if (wantTg) {
+      const body = fbText.split('\n\nSource: ')[0];
+      try { tgid = await postTelegram(`${body}\n\nSource: ${story.source}\n${story.url}`, env, fetchFn); console.log('Posted to Telegram: ' + tgid); }
+      catch (e) { tgErr = e.message; console.warn('Telegram post failed (others are unaffected): ' + e.message); }
+    }
   }
-  const posted = (tid !== 'dry-run' && !['x-failed', 'x-skipped'].includes(tid)) || fbid;
-  if (env.DRY_RUN !== 'true' && !posted) throw new Error('Nothing was posted. ' + [xErr && 'X: ' + xErr, fbErr && 'Facebook: ' + fbErr].filter(Boolean).join(' | '));
-  log.push({ story_id: story.id, tweet_id: tid, fb_id: fbid, kl_day: today, at: now.toISOString(), text: tweet });
+  const posted = (tid !== 'dry-run' && !['x-failed', 'x-skipped'].includes(tid)) || fbid || tgid;
+  if (env.DRY_RUN !== 'true' && !posted) throw new Error('Nothing was posted. ' + [xErr && 'X: ' + xErr, fbErr && 'Facebook: ' + fbErr, tgErr && 'Telegram: ' + tgErr].filter(Boolean).join(' | '));
+  log.push({ story_id: story.id, tweet_id: tid, fb_id: fbid, tg_id: tgid, kl_day: today, at: now.toISOString(), text: tweet });
   mkdirSync('data', { recursive: true });
   writeFileSync(LOG, JSON.stringify(log.slice(-500), null, 1));
   if (env.GITHUB_STEP_SUMMARY) appendFileSync(env.GITHUB_STEP_SUMMARY, `### Tweet ${env.DRY_RUN === 'true' ? '(dry run, not posted)' : 'posted'}\n\n${tweet}\n`);
