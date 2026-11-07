@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-06T17:53:26.722Z",
+  "updated": "2026-11-07T02:29:55.910Z",
   "skipped": [
+    "8a6e8f19759809f4",
+    "b11792fc8139b0be",
     "53bab8a3556d484f",
     "2a4df89cc2b84acb",
     "d88f3e2fed35bdba",
@@ -132,6 +134,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "bc47550d26bc45d5",
+      "headline": "Greece Passes Crypto Tax Law with 10% Gains and 15% DeFi Levies",
+      "summary": "Greece's parliament has approved a tax framework setting a 10% rate on crypto capital gains and 15% on income from staking, lending and DeFi. It marks the country's first comprehensive treatment of digital asset taxation.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/regulation-and-legal/greece-approves-crypto-gains-tax-levy-staking-defi-income/",
+      "published": "2026-11-07T01:45:02.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/greece-unsplash-768x432.png",
+      "sourceTitle": "Greece Approves 10% Crypto Gains Tax, 15% Levy on Staking and DeFi Income"
+    },
+    {
+      "id": "b4da673a1be99b9c",
+      "headline": "Aave Labs Buys Avon Team to Build Fixed-Rate Lending",
+      "summary": "Aave Labs has acquired the Avon team, which brings its lending protocols and onchain order book. No first market or launch date has been announced yet.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/defi/aave-labs-acquires-avon-team-to-develop-fixed-rate-lending",
+      "published": "2026-11-06T22:09:37.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/7d7f9d63c34b807952174d155e5e4249d5effe2f-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Aave Labs Acquires Avon Team to Develop Fixed-Rate Lending"
+    },
+    {
+      "id": "799d6c653a312921",
+      "headline": "US Treasury Severs Crypto Exchange MEXC From American Financial System",
+      "summary": "FinCEN has ordered U.S. institutions to stop all transfers to and from MEXC, which Treasury says facilitated $16 billion in illicit finance linked to Iran, North Korea and Russia. The action is part of Operation Economic Outcast.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382758/treasury-cuts-off-crypto-exchange-mexc-us-financial-system",
+      "published": "2026-11-06T21:06:03.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/scott-bessent-decrypt-style-1-gID_7.jpg",
+      "sourceTitle": "Treasury Cuts Crypto Exchange MEXC Off From US Financial System"
+    },
     {
       "id": "b3b991bb172aa8a2",
       "headline": "US Imposes Sanctions on 45 More Prince Group-Linked Targets",
@@ -998,39 +1036,6 @@
       "published": "2026-10-29T19:11:16.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/htx-and-kucoin-768x432.png",
       "sourceTitle": "HTX Exits UK After FCA Settlement as KuCoin Abandons Russia and Belarus"
-    },
-    {
-      "id": "8dc4a122fe41c7eb",
-      "headline": "Unidentified large holder withdraws $290 million from DeFi nightly, Aave rates rise",
-      "summary": "Bitquery tracked a temporary liquidity squeeze as funds left DeFi near midnight. A milder snapshot appeared on October 29, when borrowing rates were lower.",
-      "category": "Altcoins",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/aaves-midnight-usdc-withdrawals-briefly-left-lenders-with-little-spare-cash/",
-      "published": "2026-10-29T19:00:42.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/aave-usdc-vault-outflow.webp",
-      "sourceTitle": "Mystery whale pulls $290 million from DeFi every midnight as Aave borrowing rates triple"
-    },
-    {
-      "id": "dce9d849666be595",
-      "headline": "Polymarket halts trading following breach at outside vendor",
-      "summary": "Polymarket has paused trading after one of its third-party providers was compromised, and users reported their accounts were drained.",
-      "category": "Exchanges",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/10/29/polymarket-suspends-trading-after-third-party-breach-leads-to-user-losses",
-      "published": "2026-10-29T18:55:35.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/1336be5f04368968b919876af2286e534602b7ac-3803x2139.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Polymarket suspends trading after third-party breach leads to user losses"
-    },
-    {
-      "id": "2fdb905215022e59",
-      "headline": "Walmart Bars Its Shares From OKX-ICE Tokenized Trading Venue",
-      "summary": "Walmart, Eli Lilly, Cigna, Carnival and Arcos Dorados have objected to their shares being traded on the planned OKX-ICE tokenized stock venue. The objections bring the total to 38 companies.",
-      "category": "Exchanges",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382145/walmart-blocks-stock-okx-ice-tokenized-trading-venue",
-      "published": "2026-10-29T15:07:15.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2020/03/shutterstock_11416303911-gID_4.jpg",
-      "sourceTitle": "Walmart Blocks Its Stock From OKX-ICE Tokenized Trading Venue"
     }
   ]
 }
