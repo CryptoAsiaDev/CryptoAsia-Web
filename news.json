@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-07T02:29:55.910Z",
+  "updated": "2026-11-07T16:47:58.111Z",
   "skipped": [
+    "62e0ab775402d831",
+    "cc9155509296b0cd",
     "8a6e8f19759809f4",
     "b11792fc8139b0be",
     "53bab8a3556d484f",
@@ -134,6 +136,18 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "b2bddf0a7bacbfa1",
+      "headline": "Bitcoin Trails Restaurant Chain Stocks Over Six Months",
+      "summary": "Bitcoin's price has declined over the past six months, lagging several restaurant chain stocks, though it still outperformed Nvidia's shares.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-price-snack-stocks-nvidia/",
+      "published": "2026-11-07T15:31:10.000Z",
+      "image": "https://assets.beincrypto.com/img/MoGXgIBSbqenvCFFrGke4PErzlg=/smart/bddb1653729440c488c595b8375a6273",
+      "sourceTitle": "Bitcoin and Nvidia are Losing to Restaurant Chain Stocks in 2026"
+    },
     {
       "id": "bc47550d26bc45d5",
       "headline": "Greece Passes Crypto Tax Law with 10% Gains and 15% DeFi Levies",
@@ -1025,17 +1039,6 @@
       "published": "2026-10-29T19:23:03.000Z",
       "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M64FW4X54T1VWYMX6B1PR4H5/hi-you-are-once-again-banning-crypto-content-polymarket-1.jpg",
       "sourceTitle": "Polymarket suspended trading amid reports of user funds being drained"
-    },
-    {
-      "id": "ae79e2308deca14c",
-      "headline": "HTX and KuCoin Pull Back From Key International Markets",
-      "summary": "Exchanges HTX and KuCoin have announced withdrawals from international markets, with HTX leaving the UK after a settlement with regulators and KuCoin halting services in Russia and Belarus. The moves add to a wider trend of exchanges exiting markets amid regulatory enforcement and sanctions compliance.",
-      "category": "Exchanges",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/regulation-and-legal/htx-exits-uk-fca-settlement-kucoin-abandons-russia-belarus/",
-      "published": "2026-10-29T19:11:16.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/htx-and-kucoin-768x432.png",
-      "sourceTitle": "HTX Exits UK After FCA Settlement as KuCoin Abandons Russia and Belarus"
     }
   ]
 }
