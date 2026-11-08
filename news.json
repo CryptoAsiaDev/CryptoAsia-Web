@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-08T01:59:12.645Z",
+  "updated": "2026-11-08T16:59:03.672Z",
   "skipped": [
+    "766e42d1ac023063",
+    "e2624de7242d3d65",
+    "4497e5976b6fe3d5",
+    "2c38ebccc5428dc5",
     "6a204271e339bc62",
     "bef501b96e6a932a",
     "62e0ab775402d831",
@@ -138,6 +142,54 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "39eb80de19398eca",
+      "headline": "Crypto Market Gives Back Post-Election Gains as Bitcoin, XRP Fall",
+      "summary": "The crypto market swung sharply in early November, briefly adding about $100 billion after the U.S. midterm elections before losing those gains amid a global tech stock sell-off.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/weekly-report-crypto-market-erases-100b-rally-as-bitcoin-xrp-prices-slide/",
+      "published": "2026-11-08T16:05:09.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/weekly-report-crypto-market-erases-100b-rally-as-bitcoin-xrp-prices-slide-768x432.png",
+      "sourceTitle": "Weekly Report: Crypto Market Erases $100B Rally as Bitcoin, XRP Prices Slide"
+    },
+    {
+      "id": "f8d0c05caac5fb88",
+      "headline": "Bitcoin Developer Proposes Collateral Rule to Deter Quantum Attacks",
+      "summary": "Developer Cory Fields has proposed requiring future quantum attackers to post bitcoin as collateral before accessing vulnerable wallets. Owners who prepare could recover their coins and receive a penalty payment.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382761/bitcoin-developer-quantum-landmines-losing-bet",
+      "published": "2026-11-08T14:01:03.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/04/quantum-decrypt-style-gID_7.jpg",
+      "sourceTitle": "This Bitcoin Developer’s Idea Would Make Quantum Attacks a Losing Bet"
+    },
+    {
+      "id": "b431ea497743c593",
+      "headline": "Daily roundup of key crypto news and events",
+      "summary": "A daily digest covering crypto market trends, events, DeFi, Web3 and regulation developments.",
+      "category": "Other",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-08T13:33:00.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/article-covers-110589-what-happened-in-crypto-today.jpg",
+      "sourceTitle": "Here’s what happened in crypto today"
+    },
+    {
+      "id": "39aac61c833f846d",
+      "headline": "Binance and OKX leaders exchange barbs over user losses",
+      "summary": "Binance co-founder Yi He responded to OKX CEO Star Xu with a complaint about stuck tokens, after Xu had criticized Binance's UID transfer setup. The exchange leaders are trading public jabs.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/binance-okx-user-id-backlash/",
+      "published": "2026-11-08T12:38:31.000Z",
+      "image": "https://assets.beincrypto.com/img/1pr8gwZyaKvb_jfSXgc0hOdgwus=/smart/3f1301f25b0c4ebfb6b6d03282f4233b",
+      "sourceTitle": "Binance and OKX Bosses Trade Jabs Over User Losses"
+    },
     {
       "id": "0e235bc4841a648b",
       "headline": "Sky's TVL drops 15% weekly as USDS supply shrinks",
@@ -1000,50 +1052,6 @@
       "published": "2026-10-30T05:45:27.000Z",
       "image": "https://cdn.sanity.io/images/s3y3vcno/production/af945cfdd3152f9ebc96d44f89ccafea550ccb57-5760x3840.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
       "sourceTitle": "XRP Ledger developers tighten the rules for who can hold 'restricted' tokens"
-    },
-    {
-      "id": "082cfe64bdb3ed2c",
-      "headline": "Securitize Runs WSJ Ad Backing Tokenization for Public Companies",
-      "summary": "Tokenization firm Securitize published a full-page Wall Street Journal ad touting benefits of tokenizing shares for public companies. It responds to an earlier full-page ad that urged CEOs to reject share digitization.",
-      "category": "Markets",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/finance/securitize-defends-tokenization-against-critics-full-page-wsj-ad/",
-      "published": "2026-10-30T05:30:55.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/wall-street-journal-tokenization-ad-768x432.jpg",
-      "sourceTitle": "Securitize Defends Tokenization Against Critics With Full-Page WSJ Ad"
-    },
-    {
-      "id": "fb234077a49fac6b",
-      "headline": "Analyst James Check Says Calmer Bitcoin Markets Could Be Bullish",
-      "summary": "Market analyst James Check argues that Bitcoin's growing stability is a positive sign. He notes volatility is approaching 2023 lows, and JPMorgan is reportedly waiting for calmer conditions.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-boring-bull-case-james-check/",
-      "published": "2026-10-30T05:00:00.000Z",
-      "image": "https://assets.beincrypto.com/img/ADHGiAxERHy_554lxlEkdG5jHNI=/smart/c9e0d1f4ef4f41f69bb700eaba265351",
-      "sourceTitle": "Bitcoin Is Getting Boring, and That's the Bull Case, Says Market Analyst James Check"
-    },
-    {
-      "id": "656843c632ba1542",
-      "headline": "Onchain lending fees fall about half as Morpho diverges",
-      "summary": "A 1kx report says user-paid fees in onchain lending markets dropped roughly 50% year over year in 2026. New Market Trading CEO Frank Hepworth warns against locking up bitcoin for low fixed yields due to smart contract and counterparty risks.",
-      "category": "Altcoins",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/finance/onchain-lending-fees-plunge-50-as-morpho-bucks-the-trend/",
-      "published": "2026-10-29T23:43:41.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/on-chain-lending-fees-plunge-50-as-morpho-bucks-the-trend-768x432.jpg",
-      "sourceTitle": "Onchain Lending Fees Plunge 50% as Morpho Bucks the Trend"
-    },
-    {
-      "id": "4dfed0431a035dab",
-      "headline": "Suspected Binance hacker moves funds through DeFi exchanges",
-      "summary": "Etherscan data shows wallets linked to the suspected Binance hack swapping freezable stablecoins for Ethereum on decentralized exchanges. Some DeFi platforms have reportedly paused markets.",
-      "category": "Exchanges",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382194/binance-hack-exit-ramps-defi-exchange-ethereum",
-      "published": "2026-10-29T22:57:48.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/Hacker-decrypt-style-02-gID_7.png",
-      "sourceTitle": "Binance Hacker Hunts for Exit Ramps as DeFi Exchanges Pause Markets"
     }
   ]
 }
