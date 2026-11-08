@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-07T16:47:58.111Z",
+  "updated": "2026-11-08T01:59:12.645Z",
   "skipped": [
+    "6a204271e339bc62",
+    "bef501b96e6a932a",
     "62e0ab775402d831",
     "cc9155509296b0cd",
     "8a6e8f19759809f4",
@@ -136,6 +138,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "0e235bc4841a648b",
+      "headline": "Sky's TVL drops 15% weekly as USDS supply shrinks",
+      "summary": "Total value locked in the Sky protocol fell 15% over the past week, while USDS circulating supply declined to $5.59 billion. Sky.money currently lists a 3.80% savings rate set by governance.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/defi/sky-tvl-falls-15-in-a-week-as-usds-supply-contracts",
+      "published": "2026-11-08T00:34:34.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/4b6f7e288bff4857a81d7e3c3e3dd212e0b5c3e6-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Sky TVL Falls 15% in a Week as USDS Supply Contracts"
+    },
+    {
+      "id": "e38969b39c04e514",
+      "headline": "Ripple CEO Says XRP Remains Company's Core Focus",
+      "summary": "Ripple CEO Brad Garlinghouse reaffirmed XRP as the company's north star, tying RLUSD expansion and business integration to more liquidity and utility for the token. His strategy aims at more payments and institutional activity across the XRP ecosystem.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/featured/xrp-is-ripples-north-star-ceo-centers-strategy-on-things-that-are-good-for-xrp/",
+      "published": "2026-11-08T00:10:48.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/ripple-ceo-brad-garlinghouse-xrp-2-768x432.jpg",
+      "sourceTitle": "XRP Is Ripple’s North Star: CEO Centers Strategy on ‘Things That Are Good for XRP’"
+    },
+    {
+      "id": "a6afe142d848cf6a",
+      "headline": "EU Creates Crypto Task Force to Stop Russian Sanctions Evasion",
+      "summary": "The European Union is setting up a dedicated crypto task force within a new sanctions office to coordinate national authorities. It aims to stop evasion of sanctions using digital assets, including networks such as A7 that offered a digital ruble stablecoin.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/regulation-and-legal/eu-deploys-dedicated-crypto-task-force-to-block-russian-evasion/",
+      "published": "2026-11-07T23:02:31.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/tenth-high-level-meeting-on-union-restrictive-measures-768x432.jpg",
+      "sourceTitle": "EU Deploys Dedicated Crypto Task Force to Block Russian Evasion"
+    },
     {
       "id": "b2bddf0a7bacbfa1",
       "headline": "Bitcoin Trails Restaurant Chain Stocks Over Six Months",
@@ -1006,39 +1044,6 @@
       "published": "2026-10-29T22:57:48.000Z",
       "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/Hacker-decrypt-style-02-gID_7.png",
       "sourceTitle": "Binance Hacker Hunts for Exit Ramps as DeFi Exchanges Pause Markets"
-    },
-    {
-      "id": "ae15560f28f670bc",
-      "headline": "ICE and Trade[XYZ] plan US perpetual futures market on Hyperliquid",
-      "summary": "Intercontinental Exchange, owner of the New York Stock Exchange, and crypto startup Trade[XYZ] announced plans for a US market offering round-the-clock perpetual futures across crypto, equities, commodities and currencies. The launch is subject to regulatory approval.",
-      "category": "Exchanges",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/nyse-owner-takes-tradexyz-stake-as-it-plans-us-hyperliquid-futures/",
-      "published": "2026-10-29T20:00:22.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/ice-hyperliquid-retail-deal.webp",
-      "sourceTitle": "NYSE owner takes Trade[XYZ] stake as it plans US Hyperliquid futures"
-    },
-    {
-      "id": "2c29a6735d2f0f67",
-      "headline": "Public firms' share of blockchain revenue has doubled since 2022",
-      "summary": "A 1kx report says publicly traded companies now capture a larger portion of blockchain revenue, linked to institutional adoption and real-world use cases.",
-      "category": "Markets",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/public-companies-double-share-of-blockchain-revenue-since-2022-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-29T19:53:14.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M64KJ64YRMXTP1BG2ZXATA10/wallet-crypto-savings-digital-assets.jpg",
-      "sourceTitle": "Public companies double share of blockchain revenue since 2022: Report"
-    },
-    {
-      "id": "654bd62869f5879f",
-      "headline": "Polymarket halts trading after reported drain of user funds",
-      "summary": "The prediction market platform paused trading after saying a third-party provider had been compromised. Reports also claim user funds were drained.",
-      "category": "Exchanges",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/polymarket-suspends-trading-user-funds-compromised?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-29T19:23:03.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M64FW4X54T1VWYMX6B1PR4H5/hi-you-are-once-again-banning-crypto-content-polymarket-1.jpg",
-      "sourceTitle": "Polymarket suspended trading amid reports of user funds being drained"
     }
   ]
 }
