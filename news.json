@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-08T16:59:03.672Z",
+  "updated": "2026-11-09T02:18:27.915Z",
   "skipped": [
+    "63a82bddfa44b86c",
+    "efccc89b207a731a",
     "766e42d1ac023063",
     "e2624de7242d3d65",
     "4497e5976b6fe3d5",
@@ -142,6 +144,54 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "5148ec89f9b71034",
+      "headline": "Solana Company Plans Hong Kong Expansion Focused on Tokenization",
+      "summary": "The Solana Company, which holds 2.2 million SOL, is targeting Hong Kong for expansion as the city prioritizes tokenization in its fintech development. The move could grow its headcount to 30 to serve local banks.",
+      "category": "Asia",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/the-solana-company-targets-hong-kong-for-massive-apac-expansion/",
+      "published": "2026-11-09T00:30:45.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/the-solana-company-targets-hong-kong-for-massive-apac-expansion-768x432.png",
+      "sourceTitle": "The Solana Company Targets Hong Kong for Massive APAC Expansion"
+    },
+    {
+      "id": "9b7c13f00c9bb158",
+      "headline": "Crypto Liquidations Top $855M as Bitcoin Dips Below $74K",
+      "summary": "Bitcoin dropped toward $74,000 late Sunday, touching $73,708, its lowest since August, as forced selling spread through markets. Ethereum fell to $2,100, and CoinGlass recorded $855.69 million in liquidations over 24 hours.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-price-crash-crypto-liquidations-market-risks/",
+      "published": "2026-11-08T23:36:20.000Z",
+      "image": "https://assets.beincrypto.com/img/zWwrOsS-9z3fsRPxfPC4MKTCAog=/smart/ebc1394a537349c788bfe67a81bdade6",
+      "sourceTitle": "Crypto Liquidations Surge as Bitcoin Falls Below $74K. How Bad Is It?"
+    },
+    {
+      "id": "7b76fb1d100a6a3c",
+      "headline": "Threshold says tBTC bridge resumed onchain, app still paused",
+      "summary": "Threshold reports that the tBTC bridge has restarted onchain, while its app stays paused. An Aave tBTC reserve on Ethereum remains frozen as more operators are expected to reconnect.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/security/threshold-says-tbtc-bridge-has-resumed-onchain-but-app-remains-paused",
+      "published": "2026-11-08T23:17:04.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/ded56830c10b0155666ebb6ee5429e097bd8192a-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Threshold Says tBTC Bridge Has Resumed Onchain, but App Remains Paused"
+    },
+    {
+      "id": "27a256ecba80ccb9",
+      "headline": "AVAX Drops 28% Over Four Weeks, Trailing Bitcoin and Ether",
+      "summary": "AVAX fell 28% over four weeks, underperforming Bitcoin and ether, which lost 11.3% and 16% respectively over the same period. The token gave back earlier relative gains.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/markets/avax-falls-28-in-four-weeks-lagging-bitcoin-and-ether",
+      "published": "2026-11-08T22:41:53.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/25d8dfcc6c77de66610afeb620deaecb687d649a-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "AVAX Falls 28% in Four Weeks, Lagging Bitcoin and Ether"
+    },
     {
       "id": "39eb80de19398eca",
       "headline": "Crypto Market Gives Back Post-Election Gains as Bitcoin, XRP Fall",
@@ -1008,50 +1058,6 @@
       "published": "2026-10-31T03:40:43.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/10/aave-emergency-cap-cuts-standard-image.jpg",
       "sourceTitle": "Aave reopens frozen markets but blocks new collateral loans"
-    },
-    {
-      "id": "1b0a8fa0c8465b50",
-      "headline": "Blockchain Revenue Forecast to Fall, DeFi Still Leads",
-      "summary": "Global blockchain revenues are projected to drop to about $100 billion in 2026 from roughly $140 billion in 2025. DeFi and finance still generate about two-thirds of the total, while infrastructure revenue has hit its lowest level since 2020.",
-      "category": "Altcoins",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/defi/blockchain-revenues-plunge-30-but-new-growth-engine-emerges/",
-      "published": "2026-10-31T03:05:49.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/blockchain-revenues-plunge-30-but-a-new-growth-engine-emerges-768x432.jpg",
-      "sourceTitle": "Blockchain Revenues Plunge 30%, but a New Growth Engine Emerges"
-    },
-    {
-      "id": "9339e1f9cc68c221",
-      "headline": "Maple locks XRP collateral as loan maturities approach in December and January",
-      "summary": "About 225 million XRP backs three stablecoin loan positions on Maple, with December and January maturity dates. The excerpt notes that maturities do not automatically release the collateral, raising liquidation concerns.",
-      "category": "Altcoins",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/maple-locks-280m-in-xrp-collateral-and-upcoming-maturity-dates-threaten-liquidations/",
-      "published": "2026-10-31T00:10:43.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/maple-finance-xrp-collateral-standard-image-v2.jpg",
-      "sourceTitle": "Maple locks $280M in XRP collateral and upcoming maturity dates threaten liquidations"
-    },
-    {
-      "id": "e64c5b0907a1ad16",
-      "headline": "Strategy plans more Bitcoin buys as Saylor cites $30B credit",
-      "summary": "Michael Saylor says Strategy could raise up to $30 billion in digital credit without issuing new common stock or relying on further Bitcoin price gains. The company plans additional BTC purchases.",
-      "category": "Bitcoin",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/strategy-30-billion-digital-credit-capacity-bitcoin-buys?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-10-30T05:53:07.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M65N18RTP4EB58E1CCHH5C3R/earnings-calls-strategy-saylor-phong-le.jpg",
-      "sourceTitle": "Strategy eyes more Bitcoin buys as Saylor touts $30B credit capacity"
-    },
-    {
-      "id": "8a7f40bfabbf137b",
-      "headline": "XRP Ledger developers tighten access rules for restricted tokens",
-      "summary": "Developers are proposing fixes that would narrow who can hold permissioned tokens on the XRP Ledger. The XRP Ledger Foundation says no users were affected.",
-      "category": "Altcoins",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/tech/2026/10/30/xrp-ledger-developers-tighten-the-rules-for-who-can-hold-restricted-tokens",
-      "published": "2026-10-30T05:45:27.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/af945cfdd3152f9ebc96d44f89ccafea550ccb57-5760x3840.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "XRP Ledger developers tighten the rules for who can hold 'restricted' tokens"
     }
   ]
 }
