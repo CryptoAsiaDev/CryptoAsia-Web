@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-09T02:18:27.915Z",
+  "updated": "2026-11-09T21:23:15.878Z",
   "skipped": [
+    "89df535e6daaa6f1",
+    "b381943bb144cb2d",
     "63a82bddfa44b86c",
     "efccc89b207a731a",
     "766e42d1ac023063",
@@ -144,6 +146,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "bd08c4939bfcb827",
+      "headline": "Buterin Faces US Lawsuit Over Ethereum Foundation Firing",
+      "summary": "Vitalik Buterin is facing a US lawsuit that alleges the Ethereum Foundation dismissed a cancer patient who led an internal staff revolt. The case is tied to a dispute known as the Ethereum 'suicide pledge' row.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/vitalik-buterin-sued-ethereum-foundation-firing/",
+      "published": "2026-11-09T20:41:08.000Z",
+      "image": "https://assets.beincrypto.com/img/PAbDjXkr7ACueP5Vr6xecMJ6bQg=/smart/ba5599c2bc524df29c08c8e1442ff80c",
+      "sourceTitle": "Vitalik Buterin Sued in Ethereum ‘Suicide Pledge' Row"
+    },
+    {
+      "id": "6fb9caad5a4940dd",
+      "headline": "Wall Street Pushes Tokenization, but Buyer Demand Is Uncertain",
+      "summary": "Tokenization is growing quickly, with banks and asset managers showing interest, yet beyond tokenized stocks it remains unclear whether anyone will buy such products. Issuing an asset as a token does not guarantee demand.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/wall-street-wants-to-tokenize-everything-but-whos-buying/",
+      "published": "2026-11-09T20:34:31.000Z",
+      "image": "https://assets.beincrypto.com/img/vJxO_6FApXntX3LIH2CPnxdQZt8=/smart/b0facfb22b68410c93a4242153f1d00b",
+      "sourceTitle": "Wall Street Wants to Tokenize Everything. But Who’s Buying?"
+    },
+    {
+      "id": "0c91d0ec76590d19",
+      "headline": "XRP's euro cash-out route showed under €100 of direct liquidity",
+      "summary": "A November 8 ledger snapshot showed only 96.80 EURGH available to direct XRP sellers, highlighting a conversion limit ahead of GateHub's announced SEPA redemption.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/xrps-new-euro-cash-out-route-had-less-than-e100-in-its-direct-market/",
+      "published": "2026-11-09T20:00:36.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/xrp-eurgh-narrow-bridge.webp",
+      "sourceTitle": "XRP’s new euro cash-out route had less than €100 in its direct market"
+    },
     {
       "id": "5148ec89f9b71034",
       "headline": "Solana Company Plans Hong Kong Expansion Focused on Tokenization",
@@ -1025,39 +1063,6 @@
       "published": "2026-10-31T16:45:59.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/10/chainalysis-data-alert.webp",
       "sourceTitle": "Chainalysis breach exposed customer names, emails and company roles"
-    },
-    {
-      "id": "7e6c70fb6f8d0d7a",
-      "headline": "AI Tools Could Speed Up Crypto Hacks as Billions Remain Exposed",
-      "summary": "Security researchers warn that attackers are already using autonomous AI tools to automate phishing, vulnerability research and credential theft. They note that recent large breaches are not all AI-driven.",
-      "category": "Tech",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/security/ai-gives-crypto-hackers-machine-speed-as-billions-sit-at-risk/",
-      "published": "2026-10-31T13:00:58.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/ai-gives-crypto-hackers-machine-speed-as-billions-sit-at-risk-768x432.png",
-      "sourceTitle": "AI Gives Crypto Hackers Machine Speed as Billions Sit at Risk"
-    },
-    {
-      "id": "6c9ba010133dfdc3",
-      "headline": "Chainalysis says attacker used AI agents to access client data",
-      "summary": "Blockchain analytics firm Chainalysis reportedly suffered a breach in which AI agents helped an attacker obtain client names, emails and job roles.",
-      "category": "Other",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/chainalysis-hacked-ai-agents-client-data/",
-      "published": "2026-10-31T12:25:56.000Z",
-      "image": "https://assets.beincrypto.com/img/cPi5rDtxFsizqmorDd3blp_gvXc=/smart/ac5f8d44c5fd4a5eb23140fbd317e093",
-      "sourceTitle": "Chainalysis, the Firm That Hunts Crypto Hackers, Got Hacked With AI Agents"
-    },
-    {
-      "id": "6333a6de5b515569",
-      "headline": "Aave reopens frozen markets but restricts new collateral-backed loans",
-      "summary": "Aave has reopened previously frozen markets, according to LlamaRisk, after main emergency batches were executed. Practical access will still depend on available liquidity and collateral rules.",
-      "category": "Altcoins",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/aave-reopens-frozen-markets-but-blocks-new-collateral-loans/",
-      "published": "2026-10-31T03:40:43.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/aave-emergency-cap-cuts-standard-image.jpg",
-      "sourceTitle": "Aave reopens frozen markets but blocks new collateral loans"
     }
   ]
 }
