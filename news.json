@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-10T04:27:55.742Z",
+  "updated": "2026-11-10T18:34:33.778Z",
   "skipped": [
+    "4da0d1d47cf6faa6",
+    "950e57226bb94270",
+    "7ec431618b299b32",
+    "028a6d56d440c2ce",
     "f39a896e4879f298",
     "3b86807815d3816a",
     "89ed572a381fc04d",
@@ -153,6 +157,66 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "37879de0614c7a02",
+      "headline": "Major Banks Put $270M Behind Stablecoin Issuer Project",
+      "summary": "Goldman Sachs, Citi and other global banks have committed $270 million to a U.S.-incorporated stablecoin issuer codenamed Project Faro. The funding covers five years of operations as traditional lenders seek to compete with Tether and Circle.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/382953/goldman-citi-global-banks-270-million-challenge-crypto-stablecoin-giants",
+      "published": "2026-11-10T18:33:37.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/money-printer-decrypt-style-scaled-gID_7.jpg",
+      "sourceTitle": "Goldman, Citi and Global Banks Commit $270 Million to Challenge Crypto’s Stablecoin Giants"
+    },
+    {
+      "id": "71459e4ca9608de9",
+      "headline": "Mercado Bitcoin restores cash withdrawals following $49M hack",
+      "summary": "Brazilian exchange Mercado Bitcoin will let customers deposit and withdraw cash via the country's instant payment system starting next week. Crypto transfers remain suspended.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/pix-withdrawals-resume-mercado-bitcoin-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-10T18:12:07.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M732NFDQVGSJE1VGENNVNKQT/trading-app-crypto-messenger-phone.jpg",
+      "sourceTitle": "Mercado Bitcoin to resume cash withdrawals after $49M hack"
+    },
+    {
+      "id": "feac4226ee9e11a7",
+      "headline": "Ether, Solana and XRP fall as $580M in liquidations hit",
+      "summary": "Major altcoins such as Solana and XRP dropped on Coinbase spot markets, with Solana trading under $82 and XRP under $1.05. Bitcoin also extended its decline below $73,000.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/markets/ether-sol-and-xrp-slide-as-liquidations-hit-580-million",
+      "published": "2026-11-10T17:33:29.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/0f7ada2fba947e6edc39d934662479755629dfd7-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Ether, SOL and XRP Slide as Liquidations Hit $580 Million"
+    },
+    {
+      "id": "772bcd26228d3e70",
+      "headline": "Banks Reportedly Back Stablecoin Venture With $270 Million",
+      "summary": "Banks have reportedly committed $270 million to a stablecoin issuer. The funding would cover five years of operations, and the consortium is targeting a first-half 2027 launch of a dollar stablecoin.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/converge/tradfi-and-fintech/banks-commit-270-million-to-stablecoin-venture-report",
+      "published": "2026-11-10T17:33:04.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/f4e5310bbee6d32cd9c092738fc4ad613ecbfb41-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Banks Commit $270 Million to Stablecoin Venture: Report"
+    },
+    {
+      "id": "97f4b9e94fce248a",
+      "headline": "Polymarket's US exchange volume climbs despite mounting regulatory scrutiny",
+      "summary": "Trading volume on Polymarket's US exchange rose from June to October, driven largely by sports betting. The platform is facing growing regulatory scrutiny.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/polymarket-us-trading-volume-jumps-regulatory-battles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-10T17:07:48.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M733KDA3PZPHNST4578G33HY/hi-9-bets-declined-bad-influence-on-the-market-polymarket.png",
+      "sourceTitle": "Polymarket US trading volume jumps 266% despite regulatory battles"
+    },
     {
       "id": "44c3fb2905a95a5e",
       "headline": "Altcoin speculation peaked as Bitcoin hit near $87,000",
@@ -1017,61 +1081,6 @@
       "published": "2026-11-01T17:23:23.000Z",
       "image": "https://assets.beincrypto.com/img/XNxfVZcUaLebxpFM2O9hxmx_M4M=/smart/4d307fa4bdaf456e99079af6991eb90f",
       "sourceTitle": "Oil, Inflation, and Fed Risk. Why MicroStrategy Still Wants More Bitcoin Now?"
-    },
-    {
-      "id": "5f142f5c91db9f38",
-      "headline": "Researchers Show AI Agents Can Evade Crypto Spending Limits",
-      "summary": "A new test found that AI agents were able to get around crypto spending limits without human sign-off. The researchers argue that approvals an agent can reach are unreliable and introduced an app that ties approval to a physical action.",
-      "category": "Tech",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/tech/2026/11/01/ai-agents-bypassed-crypto-spending-limits-without-human-approval-researchers-find-in-a-new-test",
-      "published": "2026-11-01T17:00:00.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/eeb54516a3b0a19f03d51ee5552619fa13b3be71-1920x1440.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "AI agents bypassed crypto spending limits without human approval, researchers find in a new test"
-    },
-    {
-      "id": "91f7460f93bc456c",
-      "headline": "Whether Noncustodial Crypto Firms Need Money Transmitter Licenses",
-      "summary": "A legal opinion piece asks whether a noncustodial crypto business, such as a wallet startup whose users sign transactions on their own devices, must obtain a money transmitter license.",
-      "category": "Regulation",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/regulation-and-legal/does-your-noncustodial-crypto-business-need-a-money-transmitter-license/",
-      "published": "2026-11-01T12:30:16.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/does-your-noncustodial-crypto-business-need-a-money-transmitter-license-768x432.png",
-      "sourceTitle": "Does Your Noncustodial Crypto Business Need a Money Transmitter License?"
-    },
-    {
-      "id": "2a05de95d0967d3b",
-      "headline": "AI firms eye Bitcoin miners' power access and who profits",
-      "summary": "Bitcoin miners have built up cheap electricity and grid connections that AI companies now want, making their sites valuable. The article examines how contracts for these power assets determine who ultimately benefits.",
-      "category": "Bitcoin",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/ai-wants-bitcoin-miners-power-but-the-contracts-reveal-who-really-gets-paid/",
-      "published": "2026-11-01T11:20:22.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoin-mining-gpu-conversion.webp",
-      "sourceTitle": "AI wants Bitcoin miners’ power, but the contracts reveal who really gets paid"
-    },
-    {
-      "id": "2b39efa04ec0d52c",
-      "headline": "Solana reward records lack validator fee data, complicating stake verification",
-      "summary": "Agave leaves the applied-rate field blank, so checking a staking fee needs historical validator state and delegation evidence. The gap affects how stakers can verify fees.",
-      "category": "Altcoins",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/solanas-reward-records-leave-stakers-with-a-gap-in-validator-fee-data/",
-      "published": "2026-11-01T05:10:57.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/solana-validator-reward-audit.webp",
-      "sourceTitle": "Solana’s reward records leave stakers with a gap in validator fee data"
-    },
-    {
-      "id": "ab23a78ff2e65b00",
-      "headline": "Bitcoin recovery faces derivatives exposure and large ETF outflows",
-      "summary": "Rising derivatives exposure and ETF redemptions are putting Bitcoin's recovery to a demand test ahead of November 6 payrolls. Outflows from ETFs are cited as totaling $643 million.",
-      "category": "Markets",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/bitcoins-recovery-faces-rising-derivatives-exposure-and-643-million-in-etf-outflows/",
-      "published": "2026-11-01T01:10:55.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoin-hidden-leverage.webp",
-      "sourceTitle": "Bitcoin’s recovery faces rising derivatives exposure and $643 million in ETF outflows"
     }
   ]
 }
