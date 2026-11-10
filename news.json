@@ -1,6 +1,13 @@
 {
-  "updated": "2026-11-09T21:23:15.878Z",
+  "updated": "2026-11-10T04:27:55.742Z",
   "skipped": [
+    "f39a896e4879f298",
+    "3b86807815d3816a",
+    "89ed572a381fc04d",
+    "8f96c9337d99e8a7",
+    "e9d60ad7f296d306",
+    "53260aa446295d74",
+    "41cab955c3ff85b0",
     "89df535e6daaa6f1",
     "b381943bb144cb2d",
     "63a82bddfa44b86c",
@@ -146,6 +153,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "44c3fb2905a95a5e",
+      "headline": "Altcoin speculation peaked as Bitcoin hit near $87,000",
+      "summary": "According to Glassnode, altcoin speculation reached a high around the time Bitcoin peaked near $87,100. Short-term holders are now selling most tokens at a loss.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/altcoin-speculation-peaked-recent-buyers-losses/",
+      "published": "2026-11-10T03:30:27.000Z",
+      "image": "https://assets.beincrypto.com/img/1sfIdqTefxW8wJq3A1PBF6C8lAI=/smart/df4303171b0b46cdbd67f527df4c0474",
+      "sourceTitle": "Altcoin Speculation Peaked With Bitcoin Near $87,000, but Recent Buyers Now Sell at Losses"
+    },
+    {
+      "id": "99015e0685547724",
+      "headline": "Bitcoin eyes U.S. inflation data as analysts question relief rally",
+      "summary": "Bitcoin is trading under $75,000 ahead of October inflation figures. Analysts say a lasting recovery would need better liquidity and spot ETF demand, not just short-term macro relief.",
+      "category": "Markets",
+      "chain": "",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/11/10/bitcoin-faces-u-s-cpi-test-as-analysts-warn-inflation-relief-may-not-be-enough",
+      "published": "2026-11-10T03:22:26.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/b5c969ee70de7444f1035edf7701cc88d16ae253-3000x2001.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Bitcoin faces U.S. CPI test as analysts warn inflation relief may not be enough"
+    },
+    {
+      "id": "028a3e4b2c1ffcdf",
+      "headline": "IRS Sends Tax Letters to Crypto Users, Adviser Says",
+      "summary": "Cryptotaxaudit's CEO says the IRS is running a letter campaign urging crypto taxpayers to review past filings. He added that receiving a letter does not by itself indicate wrongdoing.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/crypto-news/irs-sending-crypto-users-tax-letters-what-you-need-know/",
+      "published": "2026-11-10T01:40:17.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/irs-sign-768x432.jpg",
+      "sourceTitle": "IRS Is Sending Crypto Users Tax Letters—Here’s What You Need to Know"
+    },
     {
       "id": "bd08c4939bfcb827",
       "headline": "Buterin Faces US Lawsuit Over Ethereum Foundation Firing",
@@ -1029,40 +1072,6 @@
       "published": "2026-11-01T01:10:55.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/10/bitcoin-hidden-leverage.webp",
       "sourceTitle": "Bitcoin’s recovery faces rising derivatives exposure and $643 million in ETF outflows"
-    },
-    {
-      "id": "04d0dc8f3b307250",
-      "headline": "KuCoin launches Winter Bootcamp with futures airdrop for new users",
-      "summary": "KuCoin has started a Prepare for Winter Bootcamp offering a 100 USDT futures airdrop to new users. The excerpt gives no further details on eligibility or how the reward is claimed.",
-      "category": "Airdrops",
-      "source": "Google News: airdrops",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOMEl4a0hiaWlydHJQaHhIMjF3N0FuZjZRbHpGd0l0NkpoLV9BSzJBd0E0R0MyTnlObGhFNmE0LXF2MDM4OEpCeGwzY3RjbGJuSEVvZWd2V1I1d3FVdVo3am54XzlvaU1EUExkZjlUSDVHMk5DYnZQbl9reHVJaHhrWktaQzBWQ2k4NEJfS0l3WjZJdEhnM292bWFxT21Jdw?oc=5",
-      "published": "2026-11-01T00:04:16.000Z",
-      "image": "",
-      "sourceTitle": "KuCoin launches Prepare for Winter Bootcamp with 100 USDT Futures Airdrop for new users - Traders Union",
-      "imgRetry": 1
-    },
-    {
-      "id": "58ee688f3744bc2c",
-      "headline": "Binance says ten cryptos fully backed after hack recovery",
-      "summary": "Binance said ten cryptocurrencies are now fully backed after replenishing 90% of stolen assets. The exchange is sourcing less liquid tokens to cover the remaining shortfall and is targeting a Sunday withdrawal restart.",
-      "category": "Exchanges",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/security/binance-says-btc-eth-xrp-and-7-other-cryptos-fully-backed-after-hack/",
-      "published": "2026-10-31T17:45:33.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/binance-4-2-768x432.jpg",
-      "sourceTitle": "Binance Says BTC, ETH, XRP and 7 Other Cryptos Fully Backed After Hack"
-    },
-    {
-      "id": "6aefb753d975b2a1",
-      "headline": "Chainalysis data breach exposes customer names, emails and roles",
-      "summary": "Blockchain analytics firm Chainalysis says a breach exposed customer names, email addresses and company roles. It is urging customers to watch for unexpected authentication prompts while it determines which records were accessed.",
-      "category": "Exchanges",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/chainalysis-breach-customer-names-emails-roles/",
-      "published": "2026-10-31T16:45:59.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/10/chainalysis-data-alert.webp",
-      "sourceTitle": "Chainalysis breach exposed customer names, emails and company roles"
     }
   ]
 }
