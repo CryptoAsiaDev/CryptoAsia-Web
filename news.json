@@ -1,6 +1,7 @@
 {
-  "updated": "2026-11-11T02:28:34.573Z",
+  "updated": "2026-11-11T18:32:43.591Z",
   "skipped": [
+    "14a1b0b163de87d9",
     "66e6e7e10e032a2e",
     "a0af5a5675860b2c",
     "30d427a8afa29961",
@@ -163,6 +164,126 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "b09fd0ab190f0583",
+      "headline": "Bitcoin Heads for First Back-to-Back Annual Losses",
+      "summary": "Bitcoin is on track for two consecutive years of losses, which would break a long-running pattern of annual gains. The excerpt notes that the data contains some nuance.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383049/bitcoin-first-back-to-back-annual-losses-history",
+      "published": "2026-11-11T17:56:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/Bitcoin-mountain-decrypt-style-gID_7.png",
+      "sourceTitle": "Bitcoin Faces First Back-to-Back Annual Losses in History, But There's a Catch"
+    },
+    {
+      "id": "c7a7f8d4c9b57036",
+      "headline": "Bitcoin Recovers Above $74,000 Following Inflation-Driven Dip",
+      "summary": "Bitcoin climbed back above $74,600 after falling to $72,787 when U.S. inflation data came in hotter than expected. Market-wide liquidations totaled $199 million, with $51 million tied to bitcoin.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/bitcoin-price-reclaims-74k-after-cpi-sell-off-sparks-volatility/",
+      "published": "2026-11-11T17:32:32.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-price-nov11-2026-768x432.jpg",
+      "sourceTitle": "Bitcoin Price Reclaims $74K After CPI Sell-Off Sparks Volatility"
+    },
+    {
+      "id": "40a21f3f7a92b78a",
+      "headline": "Stablecoin supply shrinks by $14.2 billion, largest drop since 2022",
+      "summary": "Total stablecoin supply fell by $14.2 billion, the steepest contraction since the 2022 downturn. USDT and USDC together dropped by nearly $11 billion over the past month, while gold-backed tokens stayed flat.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/ecosystems/2026-11-11-stablecoin-supply-drops-14-2-billion-largest-contraction-since-2022-bear-market-437907",
+      "published": "2026-11-11T17:23:10.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2025/06/20250602_Stablecoins_News.jpg",
+      "sourceTitle": "Stablecoin supply drops $14.2 billion in largest contraction since 2022 bear market"
+    },
+    {
+      "id": "13ae714db58b498b",
+      "headline": "Helius Unveils Privacy Rings Protocol for Solana Transactions",
+      "summary": "Solana Privacy Rings are a protocol from Helius that encrypt balances and transfer amounts while keeping activity on the Solana network. The piece explains how the system works and how it compares to alternatives.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/resources/what-are-solana-privacy-rings-inside-helius-privacy-protocol-for-solana",
+      "published": "2026-11-11T17:09:18.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/11/solana-security-padlocks-gID_5-pID_1.png",
+      "sourceTitle": "What Are Solana Privacy Rings? Inside Helius’ Privacy Protocol for Solana"
+    },
+    {
+      "id": "a4537757918ada14",
+      "headline": "LlamaRisk Suggests Borrow Rate Limits for Aave V3",
+      "summary": "Risk firm LlamaRisk has proposed timed borrowing buffers for Aave V3, alongside a steward-managed route for large clients. The parameters are still provisional, and governance votes have not yet taken place.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/defi/llamarisk-proposes-borrowing-speed-limits-for-aave-v3",
+      "published": "2026-11-11T17:07:29.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/d7130c9b5e9df0523c04b7fe7be3af0676729b72-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "LlamaRisk Proposes Borrowing Speed Limits for Aave V3"
+    },
+    {
+      "id": "394e6e3263488d4a",
+      "headline": "Apex Group joins Hedera Council, eyeing tokenization and settlement",
+      "summary": "Apex Group, which oversees $3.5 trillion in assets, has joined the Hedera Council. It plans to explore Hedera for tokenization, compliance and settlement.",
+      "category": "Tech",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/deals/2026-11-11-apex-group-joins-hedera-council-tokenization-437917",
+      "published": "2026-11-11T17:07:22.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2019/09/20190917_Hedera-Hashgraph-Coins-Genesis.jpg",
+      "sourceTitle": "Apex Group joins Hedera Council to explore tokenization and settlement"
+    },
+    {
+      "id": "b7a2ae1390a1a8e1",
+      "headline": "Bitcoin Core patches high-severity bug that could halt mining",
+      "summary": "Bitcoin Core developers have fixed three bugs, including a serious one that could stop miners from building new blocks. The flaws involve denial-of-service and privacy issues rather than theft of coins.",
+      "category": "Tech",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383044/bitcoin-core-patches-bug-could-have-stalled-btc-mining",
+      "published": "2026-11-11T16:58:57.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/bitcoin-decrypt-style-pixel-gID_7.png",
+      "sourceTitle": "A High-Severity Bug Could Have Stalled Bitcoin Mining—Bitcoin Core Has a Fix"
+    },
+    {
+      "id": "603cf2a348b0a14c",
+      "headline": "Pyth Network brings NYSE stock and ETF data to marketplace",
+      "summary": "Pyth Network has added real-time stock and ETF data from the New York Stock Exchange to its data marketplace.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/web3/2026-11-11-pyth-network-nyse-data-437928",
+      "published": "2026-11-11T16:56:54.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2019/02/nyse.jpg",
+      "sourceTitle": "Pyth Network adds NYSE stock and ETF data to its marketplace"
+    },
+    {
+      "id": "97c3e36f4a38a8d1",
+      "headline": "Bitcoin steadies near $74K as stocks gain amid yield rise",
+      "summary": "Bitcoin moved within a tight band while investors bought dips in tech shares. Meanwhile, US bond yields rose after inflation data came in high.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-11T16:26:00.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M75N52D7VC58F2MJTGJCRMV1/bungee-jumping-bitcoin-1-960x640.webp",
+      "sourceTitle": "Bitcoin hovers near $74K as stocks rise despite US bond yield rebound"
+    },
+    {
+      "id": "e19937745eec70c3",
+      "headline": "StoneX keeps Buy rating on Securitize, citing tokenization growth",
+      "summary": "StoneX reaffirmed its Buy recommendation on Securitize, pointing to tokenized equities, fund demand and structured credit as drivers of growth. The brief is based on a short excerpt, so further details are not covered here.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/markets/2026-11-11-stonex-sees-111-upside-for-securitize-shares-as-tokenization-revenue-rebounds-437910",
+      "published": "2026-11-11T16:22:13.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2025/10/20251028_Secrutize_News.jpg",
+      "sourceTitle": "StoneX sees 111% upside for Securitize shares as tokenization revenue rebounds"
+    },
     {
       "id": "93b1c74c14cb9e39",
       "headline": "Solana perpetuals volume jumps 65% as spot trading shrinks",
@@ -980,116 +1101,6 @@
       "published": "2026-11-02T18:13:57.000Z",
       "image": "https://cdn.sanity.io/images/s3y3vcno/production/496e985a634ba1aeb9b7f9402a83952eaaa48b4c-6000x4000.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
       "sourceTitle": "Bitcoin traders eye post-election rally as exchange outflows point to supply squeeze"
-    },
-    {
-      "id": "a77d56687dde6b6b",
-      "headline": "Animoca Brands gains final approval for Abu Dhabi fund management",
-      "summary": "Animoca Brands, a former mobile games firm, is expanding its fund management arm in Abu Dhabi. The move targets institutional interest in stablecoins and tokenized assets.",
-      "category": "Asia",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/animoca-brands-expands-asset-management-business-with-abu-dhabi-approval?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-02T18:00:16.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6EKKJWC0SAK1Q9MXWA0N87Y/ai-abu-dhabi-businessmen-2.png",
-      "sourceTitle": "Animoca Brands clears final hurdle for Abu Dhabi fund management"
-    },
-    {
-      "id": "6aa29116f0830e4f",
-      "headline": "Bitcoin Dips Under $77K as Binance Restores Hack Losses",
-      "summary": "Bitcoin fell below $77,000 on Monday, even after Binance said it had fully replaced assets lost in a recent hack using its own funds. A smaller exchange hack was also reported the same day.",
-      "category": "Markets",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/market-updates/binance-hack-fallout-keeps-bitcoin-price-under-pressure-77k/",
-      "published": "2026-11-02T17:49:35.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-price-nov2-2026-768x432.png",
-      "sourceTitle": "Binance Hack Fallout Keeps Bitcoin Price Under Pressure Below $77K"
-    },
-    {
-      "id": "2e213fa08cefa160",
-      "headline": "Eclair tightens Bitcoin funding rules to protect Lightning payments",
-      "summary": "A recent Eclair release now requires confirmed peer inputs for splices by default and improves recovery when a channel must close while funding is still pending. The changes address risks tied to unconfirmed inputs on the Lightning Network.",
-      "category": "Tech",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/eclair-tightens-bitcoin-funding-rules-after-unconfirmed-inputs-put-lightning-payments-at-risk/",
-      "published": "2026-11-02T17:40:27.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/eclair-lightning-splice.webp",
-      "sourceTitle": "Eclair tightens Bitcoin funding rules after unconfirmed inputs put Lightning payments at risk"
-    },
-    {
-      "id": "d9c92b68a99075ba",
-      "headline": "Nvidia and Nike Among Latest Firms Opposing Tokenized Stock Trading",
-      "summary": "Twelve more companies, including Nvidia, Costco and Nike, have objected to their shares being traded on a planned OKX-ICE tokenized stock venue. The total number of objections now stands at 50.",
-      "category": "Exchanges",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382348/nvidia-nike-biggest-wave-yet-tokenized-stock-objections",
-      "published": "2026-11-02T17:36:03.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/decrypt-style-nvidia-jensen-huang-gID_7.png",
-      "sourceTitle": "Nvidia and Nike Lead Biggest Wave Yet of Tokenized Stock Objections"
-    },
-    {
-      "id": "d420904f7c2304d1",
-      "headline": "Blockchain sleuth says EU entity may have lost $106 million",
-      "summary": "Onchain investigator ZachXBT suggests an EU-based entity lost about $106 million from crypto exchange accounts. The attacker reportedly moved the funds through ether, instant exchanges and Monero, while the victim and affected exchanges remain unidentified.",
-      "category": "Exchanges",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/tech/2026/11/02/eu-entity-suspected-of-losing-usd106-million-from-crypto-exchange-accounts-zachxbt-says",
-      "published": "2026-11-02T17:21:04.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/c18c9af8ef94bcbc9a17fac89a01b83bfc76fd8f-5472x3648.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "EU entity suspected of losing $106 million from crypto exchange accounts, ZachXBT says"
-    },
-    {
-      "id": "ad8c04c9f9dc8c99",
-      "headline": "BTCPay Server team links wallet drains to older versions",
-      "summary": "The BTCPay Server team says hot wallet drains are tied to versions 2.4.1 and older. It reports no credible attacks on its latest 2.4.7 release.",
-      "category": "Exchanges",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/btcpay-server-hack-hot-wallets-drained/",
-      "published": "2026-11-02T07:00:00.000Z",
-      "image": "https://assets.beincrypto.com/img/S61udqqW4m3kpaVZhvBg0Upg64w=/smart/34c386915f2340d18fe22efe51652d9c",
-      "sourceTitle": "Is Your BTCPay Server Safe? What the Hot Wallet Drain Investigation Shows"
-    },
-    {
-      "id": "325088d1a026246c",
-      "headline": "Cardano budget proposal for 2027 would let funding stewards apply for grants",
-      "summary": "A proposed Cardano budget for 2027 would allow funding stewards to seek grants as well. Under the plan, stewards could influence assessments while DReps keep voting power over spending.",
-      "category": "Altcoins",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/cardanos-2027-budget-proposal-would-let-funding-stewards-seek-grants-too/",
-      "published": "2026-11-02T00:20:43.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/cardano-budget-compass.webp",
-      "sourceTitle": "Cardano’s 2027 budget proposal would let funding stewards seek grants too"
-    },
-    {
-      "id": "24f126807fff1762",
-      "headline": "Bitcoin's usual October rally fails as other markets diverge",
-      "summary": "Bitcoin finished October down 7%, as oil, bonds and AI-related trades moved away from their typical patterns. The excerpt does not explain the specific causes.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-uptober-october-oil-ai-bonds/",
-      "published": "2026-11-01T22:32:38.000Z",
-      "image": "https://assets.beincrypto.com/img/QPq4HffmQS5_vk4XL9aGH4PP_hE=/smart/992f02f1e02044e7878f05b879d6c5d7",
-      "sourceTitle": "Bitcoin Uptober Failed as Oil, Bonds and AI Broke Pattern: What Changed?"
-    },
-    {
-      "id": "faaf53eba53b964d",
-      "headline": "Cardano Alerts Operators to Serious Linux Vulnerability",
-      "summary": "A critical Linux flaw has put Cardano stake pools holding 21.5 billion staked ADA on alert. The excerpt does not detail what holders could lose.",
-      "category": "Altcoins",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/cardano-critical-security-warning-staked-ada-risk/",
-      "published": "2026-11-01T20:49:15.000Z",
-      "image": "https://assets.beincrypto.com/img/zWXrRawBJQ8znnTskdN_5JQ_S7o=/smart/956cf8e08422408e9af7777ae8ebbb98",
-      "sourceTitle": "Cardano Warns of Critical Linux Flaw: Is Your ADA at Risk?"
-    },
-    {
-      "id": "62144807ac601a8e",
-      "headline": "Scammers allegedly abused SEC website to lure investors into fraud",
-      "summary": "The SEC has filed a complaint seeking a targeted future filing bar and monetary relief over an alleged crypto fraud. The scheme reportedly used the regulator's website to attract investors.",
-      "category": "Regulation",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/crypto-scammers-used-secs-website-to-lure-investors-into-alleged-130-million-fraud/",
-      "published": "2026-11-01T20:00:49.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/sec-filing-facade.webp",
-      "sourceTitle": "Crypto scammers used SEC’s website to lure investors into alleged $130 million fraud"
     }
   ]
 }
