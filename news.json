@@ -1,6 +1,12 @@
 {
-  "updated": "2026-11-10T18:34:33.778Z",
+  "updated": "2026-11-11T02:28:34.573Z",
   "skipped": [
+    "66e6e7e10e032a2e",
+    "a0af5a5675860b2c",
+    "30d427a8afa29961",
+    "b2c05ad198b1f904",
+    "e22da6bfc1c2a657",
+    "1f4f99aedd6b3be3",
     "4da0d1d47cf6faa6",
     "950e57226bb94270",
     "7ec431618b299b32",
@@ -157,6 +163,54 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "93b1c74c14cb9e39",
+      "headline": "Solana perpetuals volume jumps 65% as spot trading shrinks",
+      "summary": "Perpetual futures trading on Solana has surged, with one venue making up about 77% of weekly turnover in DefiLlama's Solana data. The growth comes as stablecoin market capitalization declines.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/solana-perp-volume-explodes-65-amid-shrinking-spot-activity/",
+      "published": "2026-11-11T02:10:48.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/gmtrade-exchange-hall.webp",
+      "sourceTitle": "Solana perp volume explodes 65% amid shrinking spot activity"
+    },
+    {
+      "id": "760bcd4523d115a9",
+      "headline": "LNbits issues urgent patch following reported Bitcoin wallet thefts",
+      "summary": "The LNbits project warned that installations on older versions are vulnerable and advised operators to replace potentially exposed credentials even after upgrading.",
+      "category": "Tech",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/lnbits-rushes-emergency-patch-after-reported-bitcoin-wallet-thefts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-11T01:16:58.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M742SBA2GA6V6RGES4J05W5E/doctor-medicine-tomography-bitcoin-2.jpg",
+      "sourceTitle": "LNbits rushes emergency patch after reported Bitcoin wallet thefts"
+    },
+    {
+      "id": "3a0fa9c5d1d515d7",
+      "headline": "Former Ripple CTO says no hidden XRP plan exists",
+      "summary": "David Schwartz, Ripple's CTO Emeritus, told frustrated XRP holders that the token's price mostly tracks the broader market. He said there is no secret plan behind XRP.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/xrp-price-schwartz-no-secret-plan/",
+      "published": "2026-11-11T00:06:22.000Z",
+      "image": "https://assets.beincrypto.com/img/PIIfKc-FHWI96iq6NQcCYKYhSRM=/smart/ffcf19b48bc347d1bbc491a882de0a5a",
+      "sourceTitle": "Ripple Ex-CTO Tells Angry XRP Holders There’s No Secret Plan"
+    },
+    {
+      "id": "48defd3f59345c88",
+      "headline": "Ether Dips Near $2,000 as Stakers Hold Firm",
+      "summary": "Ether briefly fell toward $2,000 after hotter-than-expected US inflation data unsettled markets, then recovered to around $2,060. Staking data shows investors showing little interest in withdrawing their staked ETH.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/ethereum-staking-exit-queue-price-drop/",
+      "published": "2026-11-10T23:54:53.000Z",
+      "image": "https://assets.beincrypto.com/img/NolNrSbSjrX83UW2zeC664XckQk=/smart/2465a0f2e5de42028637e2a702354e98",
+      "sourceTitle": "Ethereum Price Fell 20%, But Stakers Are Refusing to Sell"
+    },
     {
       "id": "37879de0614c7a02",
       "headline": "Major Banks Put $270M Behind Stablecoin Issuer Project",
@@ -1036,51 +1090,6 @@
       "published": "2026-11-01T20:00:49.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/11/sec-filing-facade.webp",
       "sourceTitle": "Crypto scammers used SEC’s website to lure investors into alleged $130 million fraud"
-    },
-    {
-      "id": "1320a15a6ccbf37d",
-      "headline": "Crypto guide to the 2026 US midterms and policy stakes",
-      "summary": "An explainer previews how the 2026 midterm elections could shape crypto legislation and regulation over the next two years. It outlines what readers should know about the vote.",
-      "category": "Regulation",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/policy/2026/11/01/the-crypto-reader-s-guide-to-the-2026-midterm-election-state-of-crypto",
-      "published": "2026-11-01T19:30:00.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/3d14ee5efae01770bbbc627c6ecb94cb0e826a8d-4027x2265.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "The crypto reader's guide to the 2026 midterm election: State of Crypto"
-    },
-    {
-      "id": "ceede95cb49d0607",
-      "headline": "Variational_io token and points airdrop may arrive sooner than expected",
-      "summary": "Ran Neuner said a token and points airdrop from Variational_io could come earlier than anticipated. The excerpt provides no further details.",
-      "category": "Airdrops",
-      "source": "Google News: airdrops",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNRTFxcFJ1b0ZKdEtrWFR4dGQ0MmpfSlBNdnpFSmx5Q2J0N3hidzBpcDRUdXc2dWk5SVg5UFFPdHhXY1RWRzlTUWxqMzd4dm03V1E1SlZ4N2tBSm03UnVKdFpCQkppU3BjTFBTZFVYOXdWQmZqaHFnTEtVTEJTV1lTLWpZT1ZsRjQwb2VXc0R3?oc=5",
-      "published": "2026-11-01T19:20:24.000Z",
-      "image": "",
-      "sourceTitle": "Ran Neuner: Token and points airdrop from variational_io could arrive earlier than expected - Traders Union",
-      "imgRetry": 1
-    },
-    {
-      "id": "eff0ace7403b1cf4",
-      "headline": "Analyst says North Korean hackers laundered Binance-linked funds through Tron",
-      "summary": "Cross-chain bridges including Relay, THORChain, Chainflip and Symbiosis reportedly moved about $140 million in stolen funds off the Tron network. Relay handled the largest share, at $48 million.",
-      "category": "Tech",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/defi/2026-11-01-north-korean-hackers-launder-242-million-of-binance-loot-via-tron-as-fbi-presses-thorchain-analyst-432257",
-      "published": "2026-11-01T18:25:48.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/ChatGPT-Image-Nov-1-2026-12_51_51-PM_clean.png",
-      "sourceTitle": "North Korean hackers launder $242 million of Binance loot via Tron as FBI presses THORChain: analyst"
-    },
-    {
-      "id": "450101d996983064",
-      "headline": "Strategy Hints at More Bitcoin Buying Amid Oil and Fed Concerns",
-      "summary": "MicroStrategy is reportedly signaling another Bitcoin purchase while oil prices top $100 and the risk of a Federal Reserve rate hike grows. The excerpt does not detail Saylor's reasoning.",
-      "category": "Bitcoin",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/microstrategy-bitcoin-buy-oil-fed-risk/",
-      "published": "2026-11-01T17:23:23.000Z",
-      "image": "https://assets.beincrypto.com/img/XNxfVZcUaLebxpFM2O9hxmx_M4M=/smart/4d307fa4bdaf456e99079af6991eb90f",
-      "sourceTitle": "Oil, Inflation, and Fed Risk. Why MicroStrategy Still Wants More Bitcoin Now?"
     }
   ]
 }
