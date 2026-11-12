@@ -1,6 +1,9 @@
 {
-  "updated": "2026-11-11T18:32:43.591Z",
+  "updated": "2026-11-12T03:33:25.810Z",
   "skipped": [
+    "65d5174efac2fb6f",
+    "96f4e12bc4ced933",
+    "f73c294f00adedae",
     "14a1b0b163de87d9",
     "66e6e7e10e032a2e",
     "a0af5a5675860b2c",
@@ -164,6 +167,54 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "9eb92b0fb65cb8e7",
+      "headline": "Bitcoin dominance tests 61% level; altcoin impact discussed",
+      "summary": "Bitcoin's market dominance is testing a 61% breakout level, and a weekly Supertrend indicator has flipped bullish. The piece looks at what this could mean for altcoins.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-dominance-breakout-altcoin-season-analysis/",
+      "published": "2026-11-12T03:00:00.000Z",
+      "image": "https://assets.beincrypto.com/img/MoGXgIBSbqenvCFFrGke4PErzlg=/smart/bddb1653729440c488c595b8375a6273",
+      "sourceTitle": "Bitcoin Dominance Tests 61% Breakout, and That's Bad News for Altcoins"
+    },
+    {
+      "id": "67a9a10dcab241e8",
+      "headline": "Solana Company posts Q3 revenue rise on staking rewards",
+      "summary": "Solana Company, a digital asset treasury firm, reported quarterly revenue of $3.4 million, up from $697,000 a year earlier. The company's growth was linked to staking rewards.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/business/2026-11-11-solana-company-reports-q3-revenue-growth-438448",
+      "published": "2026-11-12T02:25:14.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/solana-company-1920.png",
+      "sourceTitle": "‘Milestone quarter’: Solana Company reports Q3 revenue growth driven by staking rewards"
+    },
+    {
+      "id": "b30ec062b2c9d686",
+      "headline": "Large Bitcoin holders accumulate as ETF investors pull out funds",
+      "summary": "Glassnode data through November 9 shows a narrow pattern of whale accumulation, while Bitcoin ETF sessions through November 10 still recorded outflows.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/bitcoin-whales-stack-coins-while-etf-investors-dump-millions-daily/",
+      "published": "2026-11-11T23:50:44.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/tidal-whales.jpg",
+      "sourceTitle": "Bitcoin whales stack coins while ETF investors dump millions daily"
+    },
+    {
+      "id": "2b19aff7a3c48ddf",
+      "headline": "Zcash Slides Under $965 After 26% Weekly Drop",
+      "summary": "Zcash's seven-day decline was about three times larger than bitcoin's. The token now trades roughly 43% below its late-September level.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/markets/zcash-falls-below-965-as-weekly-loss-reaches-26",
+      "published": "2026-11-11T23:39:06.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/268b96d2026d3b3c2b2ceeb3dfb027713851d90a-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Zcash Falls Below $965 as Weekly Loss Reaches 26%"
+    },
     {
       "id": "b09fd0ab190f0583",
       "headline": "Bitcoin Heads for First Back-to-Back Annual Losses",
@@ -1057,50 +1108,6 @@
       "published": "2026-11-03T06:50:46.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/11/solana-pool-routing-spreads.webp",
       "sourceTitle": "Solana study finds wider spreads outside aggregators at five of six sampled pools"
-    },
-    {
-      "id": "ecfb341934613e4c",
-      "headline": "SEC Staff Signal Easier Path for Governance Tokens",
-      "summary": "SEC staff have said that open governance token votes do not amount to central control. The excerpt also indicates that some projects still do not meet the test.",
-      "category": "Regulation",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/sec-faq-governance-tokens-holder-votes/",
-      "published": "2026-11-03T00:37:07.000Z",
-      "image": "https://assets.beincrypto.com/img/bLatKTiFeaV_4BjfuMKVvP2RIfU=/smart/34dce25b9ac6454cb073b4795ddbefce",
-      "sourceTitle": "SEC Just Made Regulation Easier For Governance Tokens Like Uniswap"
-    },
-    {
-      "id": "6f282a6479dc1d19",
-      "headline": "Funds From Binance Hack Moved Through About 12,000 Wallets",
-      "summary": "Blockchain analytics firm Elliptic found that stolen Binance funds passed through roughly 12,000 wallets in under four days across 11 blockchains. The firm assessed that only a negligible amount had likely been cashed out.",
-      "category": "Exchanges",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/security/binance-hack-funds-spread-across-12000-wallets-in-under-four-days/",
-      "published": "2026-11-03T00:05:30.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/elliptic-binance-hack-1-768x432.jpg",
-      "sourceTitle": "Binance Hack Funds Spread Across 12,000 Wallets in Under Four Days"
-    },
-    {
-      "id": "c4521d75e2c77777",
-      "headline": "Custodia Bank Asks Supreme Court to Review Federal Reserve Account Denial",
-      "summary": "Crypto-focused Custodia Bank has filed a reply brief urging the U.S. Supreme Court to hear its case against a Federal Reserve decision. The appeals court ruling let regional Fed banks deny master accounts to eligible institutions.",
-      "category": "Regulation",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/regulation-and-legal/crypto-bank-custodia-urges-supreme-court-end-tyranny-federal-reserve/",
-      "published": "2026-11-02T22:50:16.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/07/supremecourt-768x432.jpg",
-      "sourceTitle": "Crypto Bank Custodia Urges Supreme Court to End ‘Tyranny’ of Federal Reserve"
-    },
-    {
-      "id": "7d8ca012ea28877c",
-      "headline": "Bitcoin traders watch for rebound after midterms, citing outflows",
-      "summary": "Traders are monitoring short positions, exchange withdrawals and key price levels for signs of a bitcoin rebound following the midterm elections. Falling exchange balances are being read as a possible supply squeeze.",
-      "category": "Markets",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/11/02/bitcoin-traders-eye-post-election-rally-as-exchange-outflows-point-to-supply-squeeze",
-      "published": "2026-11-02T18:13:57.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/496e985a634ba1aeb9b7f9402a83952eaaa48b4c-6000x4000.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Bitcoin traders eye post-election rally as exchange outflows point to supply squeeze"
     }
   ]
 }
