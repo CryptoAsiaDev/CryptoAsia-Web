@@ -175,5 +175,14 @@
   "kl_day": "2026-11-12",
   "at": "2026-11-11T19:28:30.803Z",
   "text": "Total stablecoin supply fell $14.2 billion, the steepest contraction since 2022. USDT and USDC together dropped nearly $11 billion over the past month, while gold-backed tokens stayed flat. via The Block #Stablecoins #Crypto"
+ },
+ {
+  "story_id": "b7a2ae1390a1a8e1",
+  "tweet_id": "2120774076947947982",
+  "fb_id": "886346204857351_1578267124108536",
+  "tg_id": "2723",
+  "kl_day": "2026-11-12",
+  "at": "2026-11-12T07:01:48.387Z",
+  "text": "Bitcoin Core developers fixed three bugs, including a serious one that could stop miners from building new blocks. The flaws involve denial-of-service and privacy issues, not theft of coins. via Decrypt #Bitcoin"
  }
 ]
