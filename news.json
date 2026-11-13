@@ -1,6 +1,9 @@
 {
-  "updated": "2026-11-13T03:05:44.263Z",
+  "updated": "2026-11-13T18:28:07.250Z",
   "skipped": [
+    "f647ce4aae9b3950",
+    "aa7ea6aaaa7957fb",
+    "62eb73c30982a306",
     "f6a5e56d2c1efea8",
     "74236c6cd57ea517",
     "e918ded14db31f3d",
@@ -171,6 +174,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "a2ebd83a9a376742",
+      "headline": "BitGo rejects breach claims as Unocoin investigates transfers",
+      "summary": "BitGo says the disputed transfers were made with keys held by Unocoin and without its involvement. Unocoin suspects a backup mechanism was misused, and its services remain suspended.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/security/bitgo-denies-breach-as-unocoin-probes-wallet-transfers",
+      "published": "2026-11-13T18:11:50.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/85f4e84c2ed841241f07c8a002eaa33498203646-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "BitGo Denies Breach as Unocoin Probes Wallet Transfers"
+    },
+    {
+      "id": "e4f7576d61632859",
+      "headline": "Trump Names First Democrats for SEC and CFTC Posts",
+      "summary": "Trump has proposed a bipartisan slate of two Republicans and two Democrats for the SEC and CFTC, his first Democratic picks for either agency. The nominees would fill commissions that shape crypto policy.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383260/trump-first-democratic-picks-sec-cftc-could-reshape-crypto",
+      "published": "2026-11-13T17:56:03.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/US-Capitol-decrypt-style-01-gID_7.png",
+      "sourceTitle": "Trump’s First Democratic Picks for SEC and CFTC Could Reshape Crypto’s Regulators"
+    },
+    {
+      "id": "6341bfbbb057b6c1",
+      "headline": "Bitcoin slides to 12-week low as rate-hike worries erase rally",
+      "summary": "Bitcoin has fallen back to around August price levels as stubborn inflation, rising expectations of another rate increase and ETF outflows weigh on the market.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383231/bitcoin-hits-12-week-low-fed-rate-fears-undo-summer-rally",
+      "published": "2026-11-13T17:22:54.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/02/bitcoin-down-crash-decrypt-style-1-gID_7.jpg",
+      "sourceTitle": "Bitcoin Hits 12-Week Low as Fed Rate Fears Undo Most of Summer Rally"
+    },
     {
       "id": "cfe31196ed72c805",
       "headline": "About $600M in Long Positions Liquidated as Bitcoin, Ether Drop",
@@ -1088,39 +1127,6 @@
       "published": "2026-11-04T00:15:31.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/moscow-exchange-building-768x432.jpg",
       "sourceTitle": "Moscow Exchange Confirms Dec. 1 Crypto Trading Launch With Bitcoin, Ether, USDT"
-    },
-    {
-      "id": "71f777f209d04753",
-      "headline": "RUNE gains 15% as THORChain resumes most swaps after pause",
-      "summary": "THORChain has restored trading on Bitcoin, Ethereum and several other networks after a refund bug halted activity. Three chains remain paused.",
-      "category": "Altcoins",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/markets/rune-rallies-15-as-thorchain-restarts-most-swaps-after-outage?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-03T23:56:09.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6HX7RYCH2V2GKPP6BB2MVAX/thorchain-crypto-crowd-people-hype-mainstream-1.jpg",
-      "sourceTitle": "RUNE rallies 15% as THORChain restarts most swaps after halt"
-    },
-    {
-      "id": "35ef23fa03d84deb",
-      "headline": "Dormant Bitcoin Wallet Activity Slows Again in October",
-      "summary": "Long-dormant bitcoin wallets moved about 2,159 BTC last month, a second straight monthly decline. Wallets from 2013 accounted for much of the activity, while addresses from the earliest years were largely absent.",
-      "category": "Bitcoin",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/featured/octobers-dormant-bitcoin-awakenings-cool-transfers-plunge-august/",
-      "published": "2026-11-03T21:05:38.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/octobers-dormant-bitcoin-awakenings-cool-as-transfers-plunge-81-from-august-768x432.png",
-      "sourceTitle": "October’s Dormant Bitcoin Awakenings Cool as Transfers Plunge 81% From August"
-    },
-    {
-      "id": "74b290272cdcd8a1",
-      "headline": "Traders Worry About Democratic Midterm Sweep Ahead of Election Day",
-      "summary": "Crypto traders are reportedly concerned that Democrats could win a midterm sweep, with Ohio's outcome seen as significant. The excerpt also points to a Bitcoin price level being watched during the anxiety.",
-      "category": "Markets",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/crypto-traders-fear-democratic-midterm-sweep/",
-      "published": "2026-11-03T20:39:52.000Z",
-      "image": "https://assets.beincrypto.com/img/BTHbEx36-hLZ2eaWpZRE2vO48rs=/smart/55f11683870a4a14a07e13d74b7299c6",
-      "sourceTitle": "Bitcoin's Election Day Panic: Crypto Traders Fear a Democratic Midterm Sweep"
     }
   ]
 }
