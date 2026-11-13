@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-12T18:46:48.965Z",
+  "updated": "2026-11-13T03:05:44.263Z",
   "skipped": [
+    "f6a5e56d2c1efea8",
+    "74236c6cd57ea517",
     "e918ded14db31f3d",
     "31a5e63b5acbac56",
     "65d5174efac2fb6f",
@@ -169,6 +171,54 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "cfe31196ed72c805",
+      "headline": "About $600M in Long Positions Liquidated as Bitcoin, Ether Drop",
+      "summary": "Traders betting on higher prices lost $599 million in 24 hours as Bitcoin and Ethereum fell to their lowest levels in nearly three months. Longs accounted for 88% of $680.81 million in total crypto liquidations.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/crypto-liquidations-bitcoin-ethereum-3-month-low/",
+      "published": "2026-11-13T01:54:29.000Z",
+      "image": "https://assets.beincrypto.com/img/e7LLCEFNPSVeWjw7GjKCQebKB6s=/smart/d592b3c3252e46968e5fa5a5865563f5",
+      "sourceTitle": "Nearly $600 Million in Crypto Longs Liquidated as Bitcoin and Ethereum Fall to August Lows"
+    },
+    {
+      "id": "50cd069a884e9d36",
+      "headline": "Bitcoin Falls to Around $70,600 Amid Extended Losses",
+      "summary": "Bitcoin slid to about $70,600 as its four-week decline deepened. Coinbase also hit a fresh 28-day low, and ether kept trailing bitcoin over one- and four-week periods.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/markets/bitcoin-sinks-to-70-600-as-four-week-losses-deepen",
+      "published": "2026-11-13T00:57:09.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/1750e141b492a4cd679afccc9f2aba2bcda4dce9-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
+      "sourceTitle": "Bitcoin Sinks to $70,600 as Four-Week Losses Deepen"
+    },
+    {
+      "id": "47464820a07d163c",
+      "headline": "Visa to Settle Stablecoin Transactions Using Western Union's USDPT",
+      "summary": "Anchorage Digital is working with Visa so that certain stablecoins issued by its federally regulated bank, beginning with Western Union's USDPT, can serve as settlement assets on Visanet.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/visa-western-union-usdpt-stablecoin-settlement-anchorage/",
+      "published": "2026-11-13T00:55:28.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/visa-taps-anchorage-digital-to-expand-stablecoin-settlement-768x432.jpg",
+      "sourceTitle": "Visa Adds Western Union’s USDPT for Stablecoin Settlement via Anchorage"
+    },
+    {
+      "id": "0c62c95ecffe1e6a",
+      "headline": "Aave user loses $305,000 in Across Protocol website hijack",
+      "summary": "A user reportedly lost about $305,000 from an Aave deposit token after the Across Protocol website was hijacked. Blockchain analytics firm Bitquery estimates total losses of roughly $401,900 across nine wallets.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/across-protocol-website-attack-reached-an-aave-deposit-new-402000-loss-trace-shows/",
+      "published": "2026-11-13T00:30:17.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/across-aave-hijack-cobalt-empty-rack.jpg",
+      "sourceTitle": "Aave user loses $305,000 after Across Protocol website hijack"
+    },
     {
       "id": "3598ea19ecdb834a",
       "headline": "Binance says hacked assets are covered; proof pending",
@@ -1071,50 +1121,6 @@
       "published": "2026-11-03T20:39:52.000Z",
       "image": "https://assets.beincrypto.com/img/BTHbEx36-hLZ2eaWpZRE2vO48rs=/smart/55f11683870a4a14a07e13d74b7299c6",
       "sourceTitle": "Bitcoin's Election Day Panic: Crypto Traders Fear a Democratic Midterm Sweep"
-    },
-    {
-      "id": "dae7ddab6d6ec052",
-      "headline": "Tether CEO Says Bitcoin Holdings Exceed Publicly Reported Amounts",
-      "summary": "Tether CEO Paolo Ardoino disclosed a bitcoin treasury larger than what the stablecoin issuer's financial statements previously showed. He made the remarks at a Swiss crypto conference.",
-      "category": "Bitcoin",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/crypto-news/tethers-bitcoin-fortune-extends-beyond-publicly-identified-wallet/",
-      "published": "2026-11-03T20:05:20.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/tethers-bitcoin-fortune-extends-beyond-its-publicly-identified-wallet-768x432.png",
-      "sourceTitle": "Tether’s Bitcoin Fortune Extends Beyond Its Publicly Identified Wallet"
-    },
-    {
-      "id": "4ac7f049792cad82",
-      "headline": "Hong Kong bank pilot enables round-the-clock settlement for tokenized fund deals",
-      "summary": "A pilot in Hong Kong lets participating institutions settle tokenized deposit transactions in central bank money outside conventional hours. The service is aimed at supporting treasury and fund activity.",
-      "category": "Asia",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/hong-kong-bank-pilot-opens-24-7-cash-settlement-for-tokenized-fund-deals/",
-      "published": "2026-11-03T16:00:28.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/hong-kong-settlement-window.webp",
-      "sourceTitle": "Hong Kong bank pilot opens 24/7 cash settlement for tokenized fund deals"
-    },
-    {
-      "id": "e4043bbb95a35f6a",
-      "headline": "Quickex Rolls Out Private Swap to Limit Visible Wallet Links",
-      "summary": "Quickex, a crypto swap service active since 2018, has launched Private Swap, which aims to reduce the public on-chain connection between sending and receiving wallets. The feature uses the same basic conversion steps as a standard Quickex swap.",
-      "category": "Exchanges",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/press-releases/quickex-launches-private-swap-to-reduce-direct-on-chain-linkage-between-wallets/",
-      "published": "2026-11-03T15:48:21.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/f_nwmk-768x432.png",
-      "sourceTitle": "Quickex Launches Private Swap to Reduce Direct On-Chain Linkage Between Wallets"
-    },
-    {
-      "id": "744d1274691a56d5",
-      "headline": "Bitcoin holds near $76K lows as US midterms loom",
-      "summary": "Bitcoin posted modest gains at the open of Wall Street trading on Tuesday while markets looked ahead to the US midterm elections for direction.",
-      "category": "Markets",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/markets/bitcoin-price-defends-76k-lows-as-analysis-sees-stocks-pricing-in-political-gridlock?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-03T15:44:42.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6GYWTMJRC5WVDCDG7QCTRRJ/article-covers-180463-us-cpi-lower-expected-rate-cuts-coming-1280x853-960x640.webp",
-      "sourceTitle": "Bitcoin price defends $76K lows as analysts see stocks pricing in ‘political gridlock’"
     }
   ]
 }
