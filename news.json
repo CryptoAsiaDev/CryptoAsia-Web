@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-13T18:28:07.250Z",
+  "updated": "2026-11-14T02:52:04.559Z",
   "skipped": [
+    "645d3179539d5407",
+    "bfe113858306b5d5",
+    "0d54d40a6a88d7bd",
+    "4f63893c2a657697",
+    "54ab18e0f858e90f",
     "f647ce4aae9b3950",
     "aa7ea6aaaa7957fb",
     "62eb73c30982a306",
@@ -174,6 +179,54 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "d06208008430285f",
+      "headline": "AAVE Drops 30% Over Four Weeks, Worse Than BTC and ETH",
+      "summary": "The Aave governance token fell further than bitcoin and ether over the period, while the dollar value of assets locked on Aave declined by a smaller percentage.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/markets/aave-slides-30-in-four-weeks-trailing-bitcoin-and-ether",
+      "published": "2026-11-14T02:39:42.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/5e06d8d00ace8e7376045056e2833056c8c43c11-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "AAVE Slides 30% in Four Weeks, Trailing Bitcoin and Ether"
+    },
+    {
+      "id": "d5a39a960a623c9c",
+      "headline": "Unocoin pauses all services after hackers get around BitGo freeze",
+      "summary": "Indian exchange Unocoin says disputed transfers were signed outside BitGo while it investigates suspected misuse of a backup mechanism. The firm has halted all services during the probe.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/unocoin-halts-all-services-after-hackers-bypass-bitgo-freeze/",
+      "published": "2026-11-14T02:10:17.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/shutter-branded.jpg",
+      "sourceTitle": "Unocoin halts all services after hackers bypass BitGo freeze"
+    },
+    {
+      "id": "4abd4d7e741bf84c",
+      "headline": "Glassnode Data Flags Quantum Risk for Over a Third of Bitcoin",
+      "summary": "Analytics firm Glassnode counted about 7.12 million bitcoin whose public keys already appear on the public ledger, a potential quantum vulnerability. Most owners could fix it quickly, but some early coins may never be secured.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/one-third-bitcoin-supply-faces-quantum-risk/",
+      "published": "2026-11-13T23:30:00.000Z",
+      "image": "https://assets.beincrypto.com/img/1ikDQ02bW3GG74XeADqD9lbV1v8=/smart/790c941d0a0a4f878bd2d096990ad6ce",
+      "sourceTitle": "Over 35% of Bitcoin Supply Faces Potential Quantum Risk, New Data Shows"
+    },
+    {
+      "id": "73c93698c8cfc1f7",
+      "headline": "Grayscale Says Crypto Offers Opportunities Beyond Bitcoin",
+      "summary": "Grayscale said crypto's growth is opening investment options beyond bitcoin, as sectors differ in business models, adoption and token economics. Its analysis links weakening correlations to a greater role for picking individual assets, while noting marketwide risks remain.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/grayscale-sees-new-crypto-opportunities-bitcoin-grip-weakens/",
+      "published": "2026-11-13T23:10:02.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/grayscale-1-1-768x432.jpg",
+      "sourceTitle": "Grayscale Sees New Crypto Opportunities as Bitcoin’s Grip Weakens"
+    },
     {
       "id": "a2ebd83a9a376742",
       "headline": "BitGo rejects breach claims as Unocoin investigates transfers",
@@ -1083,50 +1136,6 @@
       "published": "2026-11-04T07:30:56.000Z",
       "image": "https://assets.beincrypto.com/img/OjVhRxOjWyrhuxfO5fVYzo2p3gE=/smart/d62bfa60d9cf4ec9aeb89ffdef249ee8",
       "sourceTitle": "ZachXBT Tracked a $133M Crypto Theft for Two Days. Then He Named the Victim"
-    },
-    {
-      "id": "53cd91c5f7b77e8f",
-      "headline": "Bitcoin rebounds from seven-week low as Democrats sweep Congress",
-      "summary": "Bitcoin dipped to a seven-week low of $75,618 as crypto long liquidations approached $300 million over 24 hours. The article links the price move to the Democratic sweep of Congress.",
-      "category": "Markets",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/markets/bitcoin-bounces-from-7-week-low-under-76k-as-democrats-eye-congress-sweep?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-04T07:25:47.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6JMY7XMBZ97KS5GW9AD860J/regulation-papers-960x640.webp",
-      "sourceTitle": "Bitcoin bounces from 7-week low under $76K as Democrats sweep Congress"
-    },
-    {
-      "id": "346b1080f381d0af",
-      "headline": "1inch lawyer expects US agencies to shape crypto rules amid midterms",
-      "summary": "A 1inch lawyer says US regulatory agencies are likely to drive crypto policy regardless of how the midterm elections turn out. The excerpt gives no further detail.",
-      "category": "Regulation",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/1inch-lawyer-sees-agencies-driving-us-crypto-regulation-as-midterms-unfold?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-04T00:45:16.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/10/01M4DJ3V1RSDPDYAETXYR8NEK1/hi-us-government-has-shut-down-bitcoin-crypto.jpg",
-      "sourceTitle": "1inch lawyer sees agencies driving US crypto regulation as midterms unfold"
-    },
-    {
-      "id": "204dbfb0c8a1a676",
-      "headline": "Experts Say Payments Could Give Crypto Super Apps Daily Use",
-      "summary": "At TOKEN2049 Singapore, panelists from firms including MetaMask, Trezor and WalletConnect discussed whether payments could make crypto an everyday financial service. The debate centred on everyday use rather than trading.",
-      "category": "Asia",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/crypto-super-apps-payments-changenow-token2049/",
-      "published": "2026-11-04T00:31:07.000Z",
-      "image": "https://assets.beincrypto.com/img/myIhDn9RYPIAGrpGu_co8sCgPek=/smart/8a41bfb57b2c46fdb67cb23e182994bc",
-      "sourceTitle": "Payments Could Give Crypto Super Apps a Daily Use Case, TOKEN2049 Experts Say"
-    },
-    {
-      "id": "e41e323f9e384293",
-      "headline": "Moscow Exchange Sets Dec. 1 Start for Crypto Trading",
-      "summary": "Russia's Moscow Exchange has announced it will begin cryptocurrency trading on December 1, offering bitcoin, ether and USDT. The exchange described it as the country's first organized digital currency market.",
-      "category": "Exchanges",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/exchanges/moscow-exchange-dec-1-crypto-trading-bitcoin-ether-usdt/",
-      "published": "2026-11-04T00:15:31.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/moscow-exchange-building-768x432.jpg",
-      "sourceTitle": "Moscow Exchange Confirms Dec. 1 Crypto Trading Launch With Bitcoin, Ether, USDT"
     }
   ]
 }
