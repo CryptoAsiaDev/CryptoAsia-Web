@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-14T16:56:23.661Z",
+  "updated": "2026-11-15T02:19:47.523Z",
   "skipped": [
+    "a5750919585e8315",
+    "a1bd997cd4936ff9",
+    "a35a9af83c382521",
+    "d7a6771196e9cb69",
     "03a6e177e22ec3a5",
     "74cda5aee271f524",
     "ea765f9b384c975c",
@@ -183,6 +187,30 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "c5b6e70a29a8e725",
+      "headline": "Glassnode Flags Large Bitcoin Leveraged Liquidation Zone Near $60K",
+      "summary": "Glassnode warned that a concentration of leveraged positions near $60,000 could fuel forced selling and deepen Bitcoin's decline. The firm pointed to thinner trading liquidity and losses on bullish bets adding pressure across crypto markets.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/bitcoin-faces-massive-liquidation-cluster-near-60k-glassnode-warns/",
+      "published": "2026-11-15T00:30:41.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-liquidation-cluster-768x432.jpg",
+      "sourceTitle": "Bitcoin Faces Massive Liquidation Cluster Near $60K, Glassnode Warns"
+    },
+    {
+      "id": "c2318196c9ace810",
+      "headline": "Kraken Parent Posts Quarterly Profit Rebound Ahead of IPO",
+      "summary": "Payward, the parent of crypto exchange Kraken, reported adjusted third-quarter earnings of $60 million, up from $23 million in the second quarter. The figure was still 67% lower than a year earlier, according to a shareholder letter cited by Bloomberg.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/kraken-payward-q3-2026-earnings-rebound/",
+      "published": "2026-11-15T00:15:29.000Z",
+      "image": "https://assets.beincrypto.com/img/3MSigYtPlSVtun7SdtF6Dbl50Yw=/smart/1b6af11dba5648f2aafec3c5c757ba22",
+      "sourceTitle": "Kraken Parent’s Profit Rebound Still Leaves a Wide Gap Before Its IPO"
+    },
     {
       "id": "b918d6c7270c0261",
       "headline": "Kazakhstan to issue tokenized government bonds next quarter",
@@ -1118,30 +1146,6 @@
       "published": "2026-11-05T04:11:33.000Z",
       "image": "https://cdn.sanity.io/images/s3y3vcno/production/de278a5c492ab4bde63167f3534082ff55913519-1577x1233.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
       "sourceTitle": "Trump Media moves $342 million in bitcoin to Crypto.com, blockchain data show"
-    },
-    {
-      "id": "d48d2b3f2d23f502",
-      "headline": "Nearly $1B in Crypto Liquidations as Bitcoin Rises 4.6%",
-      "summary": "Crypto liquidations totaled $974.80 million over 24 hours as prices climbed, with most losses hitting traders betting on declines, per Coinglass. Bitcoin rose 4.64% to $80,480.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/crypto-liquidations-bitcoin-shorts-80000/",
-      "published": "2026-11-05T01:55:27.000Z",
-      "image": "https://assets.beincrypto.com/img/e7LLCEFNPSVeWjw7GjKCQebKB6s=/smart/d592b3c3252e46968e5fa5a5865563f5",
-      "sourceTitle": "Nearly $1 Billion in Crypto Liquidations Hit as Bitcoin Jumps 4.6%"
-    },
-    {
-      "id": "476651640843a39e",
-      "headline": "Crypto Groups Challenge Illinois' 0.2% Crypto Tax in Court",
-      "summary": "Crypto industry groups are seeking to have Illinois' 0.2% levy struck down. The tax would be based on asset value rather than gains, and covered brokers would have to collect it from customers.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/regulation/crypto-groups-seek-to-strike-down-illinois-0-2-tax",
-      "published": "2026-11-04T21:39:13.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/b9c77bb05f196c16bb693b405114775d2fba3f7a-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Crypto Groups Seek to Strike Down Illinois’ 0.2% Tax"
     }
   ]
 }
