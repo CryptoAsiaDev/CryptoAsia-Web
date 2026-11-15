@@ -1,6 +1,9 @@
 {
-  "updated": "2026-11-15T02:19:47.523Z",
+  "updated": "2026-11-15T17:38:32.985Z",
   "skipped": [
+    "4dd422b9795f3ccd",
+    "4bf876402563ffcf",
+    "d0ee67aa3beef47d",
     "a5750919585e8315",
     "a1bd997cd4936ff9",
     "a35a9af83c382521",
@@ -187,6 +190,90 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "0e37f0293d5ec5e2",
+      "headline": "Crypto Selloff Deepens as XRP Falls to Two-Year Low",
+      "summary": "Crypto markets lost over $130 billion since Friday as XRP dropped below $1 and bitcoin dipped to an intraday low of $61,947. Sentiment has reached extreme fear, and $1.71 billion in leveraged positions were liquidated overnight.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/crypto-market-rout-deepens-as-xrp-price-hits-2-year-low-and-etf-money-flees/",
+      "published": "2026-11-15T17:10:25.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/crypto-market-rout-deepens-as-xrp-price-hits-2-year-low-and-etf-money-flees-768x432.png",
+      "sourceTitle": "Crypto Market Rout Deepens as XRP Price Hits 2-Year Low and ETF Money Flees"
+    },
+    {
+      "id": "e7c42b65ed6aaaf1",
+      "headline": "Bitcoin slides under $67,000 as $1.6B in liquidations deepen fear",
+      "summary": "Bitcoin fell below $67,000 amid a $1.6 billion wave of liquidations, with market sentiment described as extreme fear.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Google News: NFT",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQjA3aUgtLTJ4ODBHWTREVUllRXBNZGJhcnhnbWI0OGhiOW9wbHVBc1RlU0J4ZWxibVRRVlNMaF9RYjBEWW1tY3Btc0JXaTRYaUd4TGpSTmdUNHhWQTQzdkY1VVB2THJiVnFUTDlzM3p1QkVmRDg1VmxYeVB1VFE3bzkySVdPdw?oc=5",
+      "published": "2026-11-15T16:46:42.000Z",
+      "image": "",
+      "sourceTitle": "Bitcoin Drops Below $67,000 as $1.6B Liquidation Wave Deepens ‘Extreme Fear’ - NFTevening"
+    },
+    {
+      "id": "ff96c0c258822735",
+      "headline": "Saylor Teases Another Strategy Bitcoin Purchase as Prices Fall",
+      "summary": "Michael Saylor hinted at another bitcoin buy by Strategy during a sharp market drop. The company's holdings remain below acquisition cost.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/featured/michael-saylor-hints-at-another-strategy-bitcoin-buy-as-btc-slides/",
+      "published": "2026-11-15T16:20:32.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/strategy-tracker-nov-15-768x432.jpg",
+      "sourceTitle": "Michael Saylor Hints at Another Strategy Bitcoin Buy as BTC Slides"
+    },
+    {
+      "id": "3368737bc3df901b",
+      "headline": "Wall Street Firms Race to Dominate Onchain Dollar Market",
+      "summary": "Major traditional finance players, including Goldman, Citi, SoFi, Anchorage, Mastercard, Visa and Circle, are moving into onchain dollar products. The excerpt notes the space was previously led by Tether and Circle.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383284/how-wall-street-racing-onchain-dollar-stablecoins",
+      "published": "2026-11-15T16:01:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/decrypt-style-wall-street-gID_7.png",
+      "sourceTitle": "How Wall Street Is Racing to Claim the Onchain Dollar"
+    },
+    {
+      "id": "5161058678379562",
+      "headline": "Binance's Ether Reserves Fall to Lowest Since 2021",
+      "summary": "Binance's ETH holdings dropped to roughly 2.9 million, their smallest level in almost five years, even as Ether's price slid to its lowest point since early July. Coins leaving exchanges are often read as a sign holders are not selling.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/ethereum-price-4-month-low-binance-reserves/",
+      "published": "2026-11-15T15:46:28.000Z",
+      "image": "https://assets.beincrypto.com/img/JLrmd8mLwWCzbH-T2vtB7TOHXaI=/smart/494c0e2cc1ba477d872c64505718f587",
+      "sourceTitle": "Binance Holds the Least Ethereum Since 2021"
+    },
+    {
+      "id": "5d434cb46cbaa97b",
+      "headline": "Large ETH Holders Buy as Price Dips Below $1,800",
+      "summary": "Onchain swap data shows some large wallets buying ether during the decline. Analytics firm Lookonchain's exchange withdrawal tally, however, does not confirm new purchases.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/markets/large-wallets-buy-eth-as-price-falls-below-1-800",
+      "published": "2026-11-15T15:44:31.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/245507cc6256a311e21d2cff0d7c3aa4aba25d17-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Large Wallets Buy ETH as Price Falls Below $1,800"
+    },
+    {
+      "id": "18393d8f25197e71",
+      "headline": "Bitcoin appears undervalued on one metric after ETF outflows",
+      "summary": "An adjusted MVRV signal from analyst Darkfost suggests Bitcoin's valuation has become lower, while ETF withdrawals and an SOPR reading leave any recovery unconfirmed.",
+      "category": "Markets",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/bitcoins-new-value-alert-still-needs-proof-that-buyers-can-absorb-supply/",
+      "published": "2026-11-15T15:35:58.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/bitcoin-valuation-depths.webp",
+      "sourceTitle": "Bitcoin now looks cheap by one measure after $1 billion in ETF outflows"
+    },
     {
       "id": "c5b6e70a29a8e725",
       "headline": "Glassnode Flags Large Bitcoin Leveraged Liquidation Zone Near $60K",
@@ -1062,90 +1149,6 @@
       "published": "2026-11-06T16:00:00.000Z",
       "image": "https://assets.beincrypto.com/img/wLORznaEKSMZskQJ_q1_76W9pyI=/smart/07501917facb4af18ff6b3be88696281",
       "sourceTitle": "Trump’s Plan to Let 401(k)s Hold Crypto Is Almost Final: When Can Savers Buy In?"
-    },
-    {
-      "id": "b3d2f2c2cd0aeae8",
-      "headline": "Optimism proposal would reduce Security Council authority over standalone chains",
-      "summary": "A proposed policy would let qualifying transfers move forward without another governance vote, changing how users depend on parties for network upgrades. The change concerns the Optimism ecosystem's governance.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/optimism-new-proposal-weakens-council-power-over-standalone-chains/",
-      "published": "2026-11-06T02:10:05.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/optimism-locked-key-cabinet-1280x720-1.jpg",
-      "sourceTitle": "Optimism new proposal weakens council power over standalone chains"
-    },
-    {
-      "id": "9ec862e1c860e1a6",
-      "headline": "Bitrue Rebrands Around Bitrue AI, Moving Beyond Its XRP Focus",
-      "summary": "Crypto exchange Bitrue announced a brand shift placing Bitrue AI at the center of its identity. The company is moving from being known mainly for XRP trading toward an AI-focused crypto platform.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitrue-ai-first-crypto-exchange-xrp-trading-tools/",
-      "published": "2026-11-06T01:02:56.000Z",
-      "image": "https://assets.beincrypto.com/img/Z1X3XhbBsgxkjS1fnyrf1YgbuA8=/smart/2cb589861d10416cb8562412e2a02560",
-      "sourceTitle": "Bitrue Pivots To AI With Bitrue AI, Building On Its XRP Roots"
-    },
-    {
-      "id": "d952c5bbf40f67be",
-      "headline": "Ripple-backed XRP treasury firm Evernorth shares fall sharply after listing",
-      "summary": "Evernorth, backed by Ripple, has dropped nearly 47% since its October Nasdaq listing. A new filing shows 73.7 million shares that holders could resell, raising concerns about possible selling pressure.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/evernorth-xrp-treasury-nasdaq-crash/",
-      "published": "2026-11-06T01:00:00.000Z",
-      "image": "https://assets.beincrypto.com/img/IlEsGv3Ull4mHDKMJMhDdPnEXNI=/smart/ab62c610b01f48a3a6297f42b1aa7836",
-      "sourceTitle": "Nasdaq's XRP Treasury Crashed Nearly 50% In a Month"
-    },
-    {
-      "id": "aa52e0894dc1bfe6",
-      "headline": "Eric Trump-Linked American Bitcoin Reports $126M Profit, Shares Fall",
-      "summary": "American Bitcoin Corp., a bitcoin miner co-founded by Eric Trump, posted about $126 million in third-quarter net income after prior losses. The Nasdaq-listed firm holds 8,427 BTC, though its mining costs rose and its shares dropped.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/mining/eric-trumps-american-bitcoin-banks-126m-abtc-shares-dive/",
-      "published": "2026-11-05T18:22:35.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/eric-trumps-american-bitcoin-banks-126m-profit-as-mining-costs-climb-768x432.png",
-      "sourceTitle": "Eric Trump’s American Bitcoin Banks $126M Profit—But ABTC Shares Dive"
-    },
-    {
-      "id": "0ea8d0eebe70fe81",
-      "headline": "Amundi launches tokenized equity index fund on Ethereum",
-      "summary": "Europe's largest asset manager, Amundi, has tokenized an equity index fund on Ethereum. The new share class gives blockchain-based exposure to an index covering 600 companies across European markets.",
-      "category": "Tech",
-      "chain": "",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/amundi-tokenizes-european-equity-index-fund-ethereum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-05T18:09:38.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M6P8H9870ZQY6MMMYHJSDGZ5/hi-how-binance-plans-to-bring-tokenized-us-stocks-4.png",
-      "sourceTitle": "Europe’s largest asset manager Amundi tokenizes equity index fund on Ethereum"
-    },
-    {
-      "id": "b3050dab6666a0da",
-      "headline": "Hong Kong to require crypto providers to track customer trades",
-      "summary": "Covered crypto providers will have to collect transaction information starting in 2027, ahead of the tax department beginning international information exchanges under CARF in 2028.",
-      "category": "Asia",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/hong-kong-forces-crypto-providers-to-track-customer-trades/",
-      "published": "2026-11-05T04:30:01.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/hong-kong-crypto-reporting.webp",
-      "sourceTitle": "Hong Kong forces crypto providers to track customer trades"
-    },
-    {
-      "id": "2a4a57d9ced8615a",
-      "headline": "Trump Media shifts $342M in bitcoin to Crypto.com",
-      "summary": "Blockchain data tracked by Arkham shows a wallet linked to Trump Media sent a large bitcoin transfer to Crypto.com. The amount is reported as $342 million.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/11/05/trump-media-moves-usd434-million-in-bitcoin-to-crypto-com-blockchain-data-show",
-      "published": "2026-11-05T04:11:33.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/de278a5c492ab4bde63167f3534082ff55913519-1577x1233.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Trump Media moves $342 million in bitcoin to Crypto.com, blockchain data show"
     }
   ]
 }
