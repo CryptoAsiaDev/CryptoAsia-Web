@@ -1,6 +1,13 @@
 {
-  "updated": "2026-11-15T17:38:32.985Z",
+  "updated": "2026-11-16T02:31:42.514Z",
   "skipped": [
+    "fd2604bd6b9e0745",
+    "13e6d3d85ac80062",
+    "50f38b92949dd3ad",
+    "664d1a770da3ed1c",
+    "216e5c0d792c22f3",
+    "0c91c485d1ddcb31",
+    "9a4cd83f1765ae3e",
     "4dd422b9795f3ccd",
     "4bf876402563ffcf",
     "d0ee67aa3beef47d",
@@ -191,6 +198,42 @@
   ],
   "items": [
     {
+      "id": "968f1c5faafbe1eb",
+      "headline": "Binance Founder CZ Suggests Reasons Behind Recent Crypto Price Drop",
+      "summary": "Changpeng Zhao listed possible pressures on crypto prices, including IPO demand, fund withdrawals, security concerns, inflation and politics. He said their link to the selloff was unclear and mentioned recent personal purchases.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/why-are-crypto-prices-down-binance-founder-cz-lists-possible-reasons/",
+      "published": "2026-11-16T01:30:14.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/liquidation-heatmap-nov-15-768x432.jpg",
+      "sourceTitle": "Why Are Crypto Prices Down? Binance Founder CZ Lists Possible Reasons"
+    },
+    {
+      "id": "f80542915419a70d",
+      "headline": "Ripple co-founder Schwartz reveals sharp cut in XRP holdings",
+      "summary": "David Schwartz says he has significantly reduced his XRP, bitcoin and ether holdings, citing discomfort with investment risk. He still argues XRP would likely benefit if the XRP Ledger succeeds.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/featured/ripples-david-schwartz-once-held-26-million-xrp-now-just-3-million/",
+      "published": "2026-11-16T00:05:26.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/xrp-nov-15-768x432.jpg",
+      "sourceTitle": "Ripple’s David Schwartz Once Held 26 Million XRP. Now Just 3 Million"
+    },
+    {
+      "id": "49e6468e15fcef1f",
+      "headline": "Saylor Points to Four Bitcoin Metrics Amid Price Drop",
+      "summary": "Michael Saylor highlighted four Bitcoin metrics to frame the recent price decline. Binance co-founder CZ responded that correlation does not equal causation.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/saylor-rare-extreme-bitcoin-metrics-price/",
+      "published": "2026-11-15T23:07:38.000Z",
+      "image": "https://assets.beincrypto.com/img/YY_Ht2aJ-f7RW9lNUyJBXrr_vGY=/smart/c030b5c43851499bb5d7cbae6658c531",
+      "sourceTitle": "Saylor Highlights 4 Rare and Extreme Metrics Bitcoin Has Just Hit to Explain Price"
+    },
+    {
       "id": "0e37f0293d5ec5e2",
       "headline": "Crypto Selloff Deepens as XRP Falls to Two-Year Low",
       "summary": "Crypto markets lost over $130 billion since Friday as XRP dropped below $1 and bitcoin dipped to an intraday low of $61,947. Sentiment has reached extreme fear, and $1.71 billion in leveraged positions were liquidated overnight.",
@@ -212,7 +255,8 @@
       "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQjA3aUgtLTJ4ODBHWTREVUllRXBNZGJhcnhnbWI0OGhiOW9wbHVBc1RlU0J4ZWxibVRRVlNMaF9RYjBEWW1tY3Btc0JXaTRYaUd4TGpSTmdUNHhWQTQzdkY1VVB2THJiVnFUTDlzM3p1QkVmRDg1VmxYeVB1VFE3bzkySVdPdw?oc=5",
       "published": "2026-11-15T16:46:42.000Z",
       "image": "",
-      "sourceTitle": "Bitcoin Drops Below $67,000 as $1.6B Liquidation Wave Deepens ‘Extreme Fear’ - NFTevening"
+      "sourceTitle": "Bitcoin Drops Below $67,000 as $1.6B Liquidation Wave Deepens ‘Extreme Fear’ - NFTevening",
+      "imgRetry": 1
     },
     {
       "id": "ff96c0c258822735",
@@ -1113,42 +1157,6 @@
       "published": "2026-11-06T16:41:29.000Z",
       "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/crypto-credit-cards-mastercard-visa-gID_7.jpg",
       "sourceTitle": "Crypto Card Provider Gnosis Pay Says Hackers Accessed Customer Data"
-    },
-    {
-      "id": "d8511afd24f3b7f6",
-      "headline": "Binance severs ties with SignalPlus after fake Teams invite hack",
-      "summary": "Binance cut off trading platform SignalPlus following a breach that began with a fraudulent Microsoft Teams invitation. SignalPlus later reported losses below $82,000 and said reimbursement is underway, while Deribit also disabled connected keys.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/binance-cuts-off-trading-platform-signalplus-after-hackers-break-in-with-a-fake-teams-invite/",
-      "published": "2026-11-06T16:30:48.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/binance-access-disconnected.webp",
-      "sourceTitle": "Binance cuts off trading platform SignalPlus after hackers break in with a fake Teams invite"
-    },
-    {
-      "id": "4ed0e6fe349f24af",
-      "headline": "Strive posts $509M Q3 profit on bitcoin gains",
-      "summary": "Strive reported a profitable third quarter driven by bitcoin gains, with its bitcoin holdings reaching 43,124 BTC. Its shares continued to decline over the period.",
-      "category": "Markets",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/business/2026-11-06-strives-bitcoin-gains-509-million-q3-profit-btc-buying-ramps-up-435907",
-      "published": "2026-11-06T16:07:24.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/10/Screenshot-2026-10-19-at-14.32.12.png",
-      "sourceTitle": "Strive’s bitcoin gains drive $509 million Q3 profit as BTC buying ramps up"
-    },
-    {
-      "id": "35d91544c30003b1",
-      "headline": "US Retirement Rule Allowing Crypto in 401(k)s Nears Completion",
-      "summary": "A final rule permitting crypto in 401(k) retirement plans is under White House review, and the timing for savers to access it is in focus. Details on when this could happen are not provided here.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/crypto-401k-rule-white-house-review/",
-      "published": "2026-11-06T16:00:00.000Z",
-      "image": "https://assets.beincrypto.com/img/wLORznaEKSMZskQJ_q1_76W9pyI=/smart/07501917facb4af18ff6b3be88696281",
-      "sourceTitle": "Trump’s Plan to Let 401(k)s Hold Crypto Is Almost Final: When Can Savers Buy In?"
     }
   ]
 }
