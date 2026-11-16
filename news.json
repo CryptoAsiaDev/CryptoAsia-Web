@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-16T02:31:42.514Z",
+  "updated": "2026-11-16T20:53:51.650Z",
   "skipped": [
+    "05665370e0b46886",
+    "7e014939a35bbfdd",
     "fd2604bd6b9e0745",
     "13e6d3d85ac80062",
     "50f38b92949dd3ad",
@@ -197,6 +199,66 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "97f51602bce47080",
+      "headline": "Democrat senators flag illicit finance gaps in SEC tokenized stock plan",
+      "summary": "Four Democratic senators have raised concerns about the SEC's newly unveiled innovation exemption. The excerpt is brief, so details of their specific objections are not covered here.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/regulation/2026-11-16-democratic-senators-warn-secs-tokenized-stock-exemption-illicit-finance-gaps-441432",
+      "published": "2026-11-16T20:44:01.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2021/12/20211208_Capitol-Congress-Regulation.jpg",
+      "sourceTitle": "Democratic senators warn SEC’s tokenized stock exemption has illicit finance gaps"
+    },
+    {
+      "id": "8877bba031f69f98",
+      "headline": "Tom Lee Links Ether Slump to Nvidia and Anthropic IPO",
+      "summary": "Bitmine's holdings dropped to $11.8 billion from $14.3 billion a week earlier as ether fell 28% over two weeks. Chairman Tom Lee attributes the sharp decline to Nvidia fallout and cash raising ahead of Anthropic's IPO.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383364/tom-lee-blames-nvidia-anthropic-ipo-ethereum-plunge-bitmine-buys",
+      "published": "2026-11-16T20:36:03.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/11/tom-lee-fundstrat-decrypt-style-02-gID_7.jpg",
+      "sourceTitle": "Tom Lee Blames Nvidia and Anthropic IPO for Ethereum Plunge as Bitmine Buys the Dip"
+    },
+    {
+      "id": "f91b40bd9d11ad58",
+      "headline": "US Bitcoin ETFs See $1.07B Weekly Outflow, Third Straight Loss",
+      "summary": "U.S. bitcoin ETFs posted $1.07 billion in net outflows for the week through November 13, their third consecutive weekly decline. Two-week outflows now total $2.35 billion.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/bitcoin-etf/bitcoin-etfs-lose-1-07b-week-pushing-2-week-outflows-2-35b/",
+      "published": "2026-11-16T20:20:25.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-etfs-lose-1-07b-as-outflows-top-1b-for-2nd-week-768x432.jpg",
+      "sourceTitle": "Bitcoin ETFs Lose $1.07B in a Week, Pushing 2-Week Outflows to $2.35B"
+    },
+    {
+      "id": "1bcc7600cb57cb2a",
+      "headline": "Proposed XRP upgrade may aid trading, but not necessarily token demand",
+      "summary": "A proposed upgrade to XRP would introduce new pool-pricing curves that could improve trade execution. Any added demand for holding the token would depend on adoption, routing and sustained funding.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/xrps-proposed-upgrade-could-improve-trading-without-boosting-token-demand/",
+      "published": "2026-11-16T20:10:19.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/xrp-liquidity-test-rig.webp",
+      "sourceTitle": "XRP’s proposed upgrade could improve trading without boosting token demand"
+    },
+    {
+      "id": "f4d94c9f6613c209",
+      "headline": "Coinbase and Broadridge float standard for tokenized stock disclosures",
+      "summary": "Coinbase and Broadridge have proposed a standard that would link holders of tokenized stocks with corporate disclosures and voting materials in digital wallets. The standard would not itself grant shareholder rights.",
+      "category": "Tech",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/coinbase-broadridge-tokenized-stock-shareholder-notices?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-16T19:56:18.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M7JTN734VB6CHE3TCTHAYQMT/digital-bonds-on-blockchain-2.png",
+      "sourceTitle": "Coinbase and Broadridge propose standard for tokenized stock disclosures"
+    },
     {
       "id": "968f1c5faafbe1eb",
       "headline": "Binance Founder CZ Suggests Reasons Behind Recent Crypto Price Drop",
@@ -1097,66 +1159,6 @@
       "published": "2026-11-07T01:45:02.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/greece-unsplash-768x432.png",
       "sourceTitle": "Greece Approves 10% Crypto Gains Tax, 15% Levy on Staking and DeFi Income"
-    },
-    {
-      "id": "b4da673a1be99b9c",
-      "headline": "Aave Labs Buys Avon Team to Build Fixed-Rate Lending",
-      "summary": "Aave Labs has acquired the Avon team, which brings its lending protocols and onchain order book. No first market or launch date has been announced yet.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/defi/aave-labs-acquires-avon-team-to-develop-fixed-rate-lending",
-      "published": "2026-11-06T22:09:37.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/7d7f9d63c34b807952174d155e5e4249d5effe2f-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Aave Labs Acquires Avon Team to Develop Fixed-Rate Lending"
-    },
-    {
-      "id": "799d6c653a312921",
-      "headline": "US Treasury Severs Crypto Exchange MEXC From American Financial System",
-      "summary": "FinCEN has ordered U.S. institutions to stop all transfers to and from MEXC, which Treasury says facilitated $16 billion in illicit finance linked to Iran, North Korea and Russia. The action is part of Operation Economic Outcast.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382758/treasury-cuts-off-crypto-exchange-mexc-us-financial-system",
-      "published": "2026-11-06T21:06:03.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/scott-bessent-decrypt-style-1-gID_7.jpg",
-      "sourceTitle": "Treasury Cuts Crypto Exchange MEXC Off From US Financial System"
-    },
-    {
-      "id": "b3b991bb172aa8a2",
-      "headline": "US Imposes Sanctions on 45 More Prince Group-Linked Targets",
-      "summary": "The US Treasury's OFAC has sanctioned additional offshore companies and associates it says helped Prince Group executives conceal assets and evade earlier sanctions. The action targets an alleged crypto scam network.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382730/us-sanctions-45-more-targets-tied-to-alleged-crypto-scam-empire-prince-group",
-      "published": "2026-11-06T17:42:31.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/09/Treasury-Department1-gID_7.jpg",
-      "sourceTitle": "US Sanctions 45 More Targets Tied to Alleged Crypto Scam Empire Prince Group"
-    },
-    {
-      "id": "3c20fa6f7e3923f9",
-      "headline": "Thai regulator files criminal complaint against Bitget operator",
-      "summary": "Thailand's SEC has lodged a criminal complaint against BG Limited, the operator of Bitget, over alleged unlicensed trading in Thailand from 2022 to 2025. The move comes ahead of a planned December 5 access block.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Bitcoin Magazine",
-      "url": "https://bitcoinmagazine.com/news/thailand-sec-bitget-criminal-dec-5",
-      "published": "2026-11-06T17:30:00.000Z",
-      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/02/Thailand-Moves-to-Cement-Bitcoin-and-Digital-Assets-in-Regulated-Derivatives-Market.jpg",
-      "sourceTitle": "Thailand SEC Files Criminal Complaint Against Bitget Ahead of Dec. 5 Access Block"
-    },
-    {
-      "id": "6be1deca1b2eb4b5",
-      "headline": "Gnosis Pay says hackers accessed some customer data",
-      "summary": "Crypto card provider Gnosis Pay said attackers got into customer information on a legacy system behind its branded cards. Funds were not affected, and its enterprise card platform was not touched.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382718/crypto-card-provider-gnosis-pay-hackers-customer-data",
-      "published": "2026-11-06T16:41:29.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/crypto-credit-cards-mastercard-visa-gID_7.jpg",
-      "sourceTitle": "Crypto Card Provider Gnosis Pay Says Hackers Accessed Customer Data"
     }
   ]
 }
