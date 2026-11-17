@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-16T20:53:51.650Z",
+  "updated": "2026-11-17T04:55:24.500Z",
   "skipped": [
+    "987db0c1a998c5bd",
+    "5264cd1e2b27ca41",
+    "9b6aab4e26bdeb42",
+    "22401408d429ed26",
     "05665370e0b46886",
     "7e014939a35bbfdd",
     "fd2604bd6b9e0745",
@@ -199,6 +203,18 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "c8d2167636b345d7",
+      "headline": "Bitcoin whales hold record unrealized losses without selling",
+      "summary": "Short-term Bitcoin whales are sitting on nearly $8 billion in unrealized losses, a record high, after a roughly 30% drop since October. Exchange inflows remain fairly contained, suggesting recent large buyers have not rushed to sell.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/bitcoin-whales-sit-record-8b-losses-but-arent-selling/",
+      "published": "2026-11-17T03:30:13.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-whales-sit-on-record-8b-losses-but-arent-selling-768x432.png",
+      "sourceTitle": "Bitcoin Whales Sit on Record $8 Billion Losses—but They Aren’t Selling"
+    },
     {
       "id": "97f51602bce47080",
       "headline": "Democrat senators flag illicit finance gaps in SEC tokenized stock plan",
@@ -1147,18 +1163,6 @@
       "published": "2026-11-07T15:31:10.000Z",
       "image": "https://assets.beincrypto.com/img/MoGXgIBSbqenvCFFrGke4PErzlg=/smart/bddb1653729440c488c595b8375a6273",
       "sourceTitle": "Bitcoin and Nvidia are Losing to Restaurant Chain Stocks in 2026"
-    },
-    {
-      "id": "bc47550d26bc45d5",
-      "headline": "Greece Passes Crypto Tax Law with 10% Gains and 15% DeFi Levies",
-      "summary": "Greece's parliament has approved a tax framework setting a 10% rate on crypto capital gains and 15% on income from staking, lending and DeFi. It marks the country's first comprehensive treatment of digital asset taxation.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/regulation-and-legal/greece-approves-crypto-gains-tax-levy-staking-defi-income/",
-      "published": "2026-11-07T01:45:02.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/greece-unsplash-768x432.png",
-      "sourceTitle": "Greece Approves 10% Crypto Gains Tax, 15% Levy on Staking and DeFi Income"
     }
   ]
 }
