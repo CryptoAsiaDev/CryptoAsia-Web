@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-17T04:55:24.500Z",
+  "updated": "2026-11-17T19:43:38.793Z",
   "skipped": [
+    "e4947cee5672bbd6",
+    "61556c2220dab93b",
+    "f715bf7c56e79175",
+    "d0f1010b80a181d6",
+    "a01458e005b49549",
     "987db0c1a998c5bd",
     "5264cd1e2b27ca41",
     "9b6aab4e26bdeb42",
@@ -203,6 +208,54 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "99e668d58486f051",
+      "headline": "Ethereum developers debate scaling upgrade that may disrupt apps",
+      "summary": "Developers warned on a core dev call that two scaling changes in the Glamsterdam upgrade break assumptions some contracts rely on. The changes would boost capacity but could affect many applications.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383462/ethereum-devs-scaling-upgrade-could-break-15000-apps",
+      "published": "2026-11-17T19:26:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/ethereum-decrypt-style-05-gID_7.png",
+      "sourceTitle": "Ethereum Devs Weigh a Scaling Upgrade That Could Break 15,000 Apps"
+    },
+    {
+      "id": "ec56b61cc7bd8c0d",
+      "headline": "Western Union Reports Its Solana Cash-Out Network Is Live",
+      "summary": "Solana points to access to 400,000 cash-pickup locations, though Western Union's consumer site still labels global cash-out as coming soon.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/converge/tradfi-and-fintech/western-union-says-solana-cash-out-network-is-live",
+      "published": "2026-11-17T18:17:18.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/763ed3905d047a5d0f244ab9ad02772100bf8ee6-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Western Union Says Solana Cash-Out Network Is Live"
+    },
+    {
+      "id": "3264ef9dc6b0d368",
+      "headline": "US Bitcoin ETF Outflows Snap as Investors Return",
+      "summary": "US Bitcoin ETFs ended a streak of outflows totaling $1.91 billion, while Bitcoin held around the $62,000 level. The report also notes which funds are seeing inflows.",
+      "category": "Markets",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/wall-street-bitcoin-etfs-inflows-return/",
+      "published": "2026-11-17T18:07:40.000Z",
+      "image": "https://assets.beincrypto.com/img/8WRz_faNjnBIDwOdEgTpOqHwIls=/smart/5aaf09f0a00a4a428dc44c73285d8d85",
+      "sourceTitle": "Wall Street Investors Slowly Get Back to Bitcoin After a $1.9 Billion Exit"
+    },
+    {
+      "id": "975ce675e1e92401",
+      "headline": "Coinbase extends onchain crypto loans to New York users",
+      "summary": "Coinbase has widened its onchain crypto lending product to residents of New York. Bitcoin, Ether and Solana are accepted as collateral.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/business/2026-11-17-coinbase-borrow-new-york-morpho-442842",
+      "published": "2026-11-17T18:00:02.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/06/20260612_Coinbase_News_2.jpg",
+      "sourceTitle": "Coinbase expands onchain crypto loans to New York via Morpho"
+    },
     {
       "id": "c8d2167636b345d7",
       "headline": "Bitcoin whales hold record unrealized losses without selling",
@@ -1115,54 +1168,6 @@
       "published": "2026-11-08T12:38:31.000Z",
       "image": "https://assets.beincrypto.com/img/1pr8gwZyaKvb_jfSXgc0hOdgwus=/smart/3f1301f25b0c4ebfb6b6d03282f4233b",
       "sourceTitle": "Binance and OKX Bosses Trade Jabs Over User Losses"
-    },
-    {
-      "id": "0e235bc4841a648b",
-      "headline": "Sky's TVL drops 15% weekly as USDS supply shrinks",
-      "summary": "Total value locked in the Sky protocol fell 15% over the past week, while USDS circulating supply declined to $5.59 billion. Sky.money currently lists a 3.80% savings rate set by governance.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/defi/sky-tvl-falls-15-in-a-week-as-usds-supply-contracts",
-      "published": "2026-11-08T00:34:34.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/4b6f7e288bff4857a81d7e3c3e3dd212e0b5c3e6-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Sky TVL Falls 15% in a Week as USDS Supply Contracts"
-    },
-    {
-      "id": "e38969b39c04e514",
-      "headline": "Ripple CEO Says XRP Remains Company's Core Focus",
-      "summary": "Ripple CEO Brad Garlinghouse reaffirmed XRP as the company's north star, tying RLUSD expansion and business integration to more liquidity and utility for the token. His strategy aims at more payments and institutional activity across the XRP ecosystem.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/featured/xrp-is-ripples-north-star-ceo-centers-strategy-on-things-that-are-good-for-xrp/",
-      "published": "2026-11-08T00:10:48.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/ripple-ceo-brad-garlinghouse-xrp-2-768x432.jpg",
-      "sourceTitle": "XRP Is Ripple’s North Star: CEO Centers Strategy on ‘Things That Are Good for XRP’"
-    },
-    {
-      "id": "a6afe142d848cf6a",
-      "headline": "EU Creates Crypto Task Force to Stop Russian Sanctions Evasion",
-      "summary": "The European Union is setting up a dedicated crypto task force within a new sanctions office to coordinate national authorities. It aims to stop evasion of sanctions using digital assets, including networks such as A7 that offered a digital ruble stablecoin.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/regulation-and-legal/eu-deploys-dedicated-crypto-task-force-to-block-russian-evasion/",
-      "published": "2026-11-07T23:02:31.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/tenth-high-level-meeting-on-union-restrictive-measures-768x432.jpg",
-      "sourceTitle": "EU Deploys Dedicated Crypto Task Force to Block Russian Evasion"
-    },
-    {
-      "id": "b2bddf0a7bacbfa1",
-      "headline": "Bitcoin Trails Restaurant Chain Stocks Over Six Months",
-      "summary": "Bitcoin's price has declined over the past six months, lagging several restaurant chain stocks, though it still outperformed Nvidia's shares.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-price-snack-stocks-nvidia/",
-      "published": "2026-11-07T15:31:10.000Z",
-      "image": "https://assets.beincrypto.com/img/MoGXgIBSbqenvCFFrGke4PErzlg=/smart/bddb1653729440c488c595b8375a6273",
-      "sourceTitle": "Bitcoin and Nvidia are Losing to Restaurant Chain Stocks in 2026"
     }
   ]
 }
