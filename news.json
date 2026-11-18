@@ -1,6 +1,13 @@
 {
-  "updated": "2026-11-17T19:43:38.793Z",
+  "updated": "2026-11-18T03:59:22.058Z",
   "skipped": [
+    "3f9d2b799a38dbf9",
+    "b8039d3944704fce",
+    "e95cdd82bad9828b",
+    "5bc7f1b266186fd6",
+    "cab48bcd12d7665a",
+    "83f1b6b160f9dda2",
+    "a7595c0c58637a8a",
     "e4947cee5672bbd6",
     "61556c2220dab93b",
     "f715bf7c56e79175",
@@ -208,6 +215,78 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "0009673c913337ea",
+      "headline": "Ondo Finance Joins MAS Project Guardian on Asset Tokenisation",
+      "summary": "Ondo Finance has joined Singapore's Monetary Authority of Singapore initiative Project Guardian, which focuses on developing tokenised assets in financial markets. The firm will contribute its experience bringing tokenised assets to investors.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Fintech News Singapore",
+      "url": "https://fintechnews.sg/141505/digitalassets/ondo-finance-mas-guardian-tokenisation/",
+      "published": "2026-11-18T03:44:00.000Z",
+      "image": "https://fintechnewssg-22e90.kxcdn.com/wp-content/uploads/2026/11/Allison-Parent-150x150.jpg",
+      "sourceTitle": "Ondo Finance Joins MAS’ Project Guardian to Support Asset Tokenisation"
+    },
+    {
+      "id": "918bd64fab265d02",
+      "headline": "CoinGecko gains Solana Foundation support, explores adding crypto trading",
+      "summary": "Data platform CoinGecko has received backing from the Solana Foundation and is looking at trading features. Details on how and when such trading would launch have not been provided.",
+      "category": "Markets",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/coingecko-secures-solana-foundation-backing-and-eyes-crypto-trading/",
+      "published": "2026-11-18T03:10:56.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/coingecko-market-data-dispatch.jpg",
+      "sourceTitle": "CoinGecko secures Solana Foundation backing and eyes crypto trading"
+    },
+    {
+      "id": "4d0b16b8e3de0cdc",
+      "headline": "Coinbase AI system stops $4.7M in deepfake Musk scam transfers",
+      "summary": "Coinbase says its AI defense system stopped about 91% of attempted transfers tied to a fake Tesla livestream, with no human involvement.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/defi/2026-11-17-coinbase-ai-defense-deepfake-elon-musk-442918",
+      "published": "2026-11-18T02:47:51.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/06/20260612_Coinbase_News.jpg",
+      "sourceTitle": "Coinbase AI defense blocks $4.7 million from being sent to deepfake Elon Musk scam"
+    },
+    {
+      "id": "04f85f12c3ebf17a",
+      "headline": "Crypto startup valuations diverge as top firms hit new highs",
+      "summary": "Crypto unicorns from the 2021 boom now trade at steep secondary-market discounts of 50% to 70%. Meanwhile, the leading companies have reached new valuation highs.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/newsletters/the-funding/2026-11-17-crypto-startup-valuations-442903",
+      "published": "2026-11-18T02:40:00.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2023/03/20230327_MarketsUp_Down_Generic.jpg",
+      "sourceTitle": "What’s happening to crypto startup valuations?"
+    },
+    {
+      "id": "d68e827b5250be98",
+      "headline": "DBS and Circle add round-the-clock USDC access for institutions",
+      "summary": "Eligible institutional clients can now mint and redeem USDC through DBS, giving them a bank-based route to dollar stablecoin liquidity in Asia.",
+      "category": "Asia",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/converge/tradfi-and-fintech/dbs-circle-add-24-7-institutional-usdc-access-in-asia",
+      "published": "2026-11-18T02:30:00.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/53686c573e303d141a2438fac4a78f720fe0f9bd-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "DBS, Circle Add 24/7 Institutional USDC Access in Asia"
+    },
+    {
+      "id": "afc75bb9fe9d820e",
+      "headline": "Fed's Waller Expects Stablecoins and Tokenized Deposits to Coexist",
+      "summary": "Federal Reserve Governor Christopher Waller expects stablecoins, tokenized bank deposits and other digital payment instruments to operate side by side as blockchain becomes more integrated into traditional finance. He said the payments future will likely include several forms of tokenized money alongside existing banking infrastructure.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/regulation-and-legal/fed-governor-stablecoins-tokenized-deposits-coexisting-financial-system/",
+      "published": "2026-11-18T02:05:22.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2025/06/federal-reserve-reputational-risk-768x432.jpg",
+      "sourceTitle": "Fed Governor Sees Stablecoins, Tokenized Deposits Coexisting in Financial System"
+    },
     {
       "id": "99e668d58486f051",
       "headline": "Ethereum developers debate scaling upgrade that may disrupt apps",
@@ -1096,78 +1175,6 @@
       "published": "2026-11-08T23:36:20.000Z",
       "image": "https://assets.beincrypto.com/img/zWwrOsS-9z3fsRPxfPC4MKTCAog=/smart/ebc1394a537349c788bfe67a81bdade6",
       "sourceTitle": "Crypto Liquidations Surge as Bitcoin Falls Below $74K. How Bad Is It?"
-    },
-    {
-      "id": "7b76fb1d100a6a3c",
-      "headline": "Threshold says tBTC bridge resumed onchain, app still paused",
-      "summary": "Threshold reports that the tBTC bridge has restarted onchain, while its app stays paused. An Aave tBTC reserve on Ethereum remains frozen as more operators are expected to reconnect.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/security/threshold-says-tbtc-bridge-has-resumed-onchain-but-app-remains-paused",
-      "published": "2026-11-08T23:17:04.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/ded56830c10b0155666ebb6ee5429e097bd8192a-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Threshold Says tBTC Bridge Has Resumed Onchain, but App Remains Paused"
-    },
-    {
-      "id": "27a256ecba80ccb9",
-      "headline": "AVAX Drops 28% Over Four Weeks, Trailing Bitcoin and Ether",
-      "summary": "AVAX fell 28% over four weeks, underperforming Bitcoin and ether, which lost 11.3% and 16% respectively over the same period. The token gave back earlier relative gains.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/markets/avax-falls-28-in-four-weeks-lagging-bitcoin-and-ether",
-      "published": "2026-11-08T22:41:53.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/25d8dfcc6c77de66610afeb620deaecb687d649a-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "AVAX Falls 28% in Four Weeks, Lagging Bitcoin and Ether"
-    },
-    {
-      "id": "39eb80de19398eca",
-      "headline": "Crypto Market Gives Back Post-Election Gains as Bitcoin, XRP Fall",
-      "summary": "The crypto market swung sharply in early November, briefly adding about $100 billion after the U.S. midterm elections before losing those gains amid a global tech stock sell-off.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/market-updates/weekly-report-crypto-market-erases-100b-rally-as-bitcoin-xrp-prices-slide/",
-      "published": "2026-11-08T16:05:09.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/weekly-report-crypto-market-erases-100b-rally-as-bitcoin-xrp-prices-slide-768x432.png",
-      "sourceTitle": "Weekly Report: Crypto Market Erases $100B Rally as Bitcoin, XRP Prices Slide"
-    },
-    {
-      "id": "f8d0c05caac5fb88",
-      "headline": "Bitcoin Developer Proposes Collateral Rule to Deter Quantum Attacks",
-      "summary": "Developer Cory Fields has proposed requiring future quantum attackers to post bitcoin as collateral before accessing vulnerable wallets. Owners who prepare could recover their coins and receive a penalty payment.",
-      "category": "Bitcoin",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382761/bitcoin-developer-quantum-landmines-losing-bet",
-      "published": "2026-11-08T14:01:03.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/04/quantum-decrypt-style-gID_7.jpg",
-      "sourceTitle": "This Bitcoin Developer’s Idea Would Make Quantum Attacks a Losing Bet"
-    },
-    {
-      "id": "b431ea497743c593",
-      "headline": "Daily roundup of key crypto news and events",
-      "summary": "A daily digest covering crypto market trends, events, DeFi, Web3 and regulation developments.",
-      "category": "Other",
-      "chain": "",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/what-happened-in-crypto-today?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-08T13:33:00.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/article-covers-110589-what-happened-in-crypto-today.jpg",
-      "sourceTitle": "Here’s what happened in crypto today"
-    },
-    {
-      "id": "39aac61c833f846d",
-      "headline": "Binance and OKX leaders exchange barbs over user losses",
-      "summary": "Binance co-founder Yi He responded to OKX CEO Star Xu with a complaint about stuck tokens, after Xu had criticized Binance's UID transfer setup. The exchange leaders are trading public jabs.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/binance-okx-user-id-backlash/",
-      "published": "2026-11-08T12:38:31.000Z",
-      "image": "https://assets.beincrypto.com/img/1pr8gwZyaKvb_jfSXgc0hOdgwus=/smart/3f1301f25b0c4ebfb6b6d03282f4233b",
-      "sourceTitle": "Binance and OKX Bosses Trade Jabs Over User Losses"
     }
   ]
 }
