@@ -1,6 +1,15 @@
 {
-  "updated": "2026-11-18T19:20:46.212Z",
+  "updated": "2026-11-19T03:56:34.964Z",
   "skipped": [
+    "f9b2cfce6ed2acf4",
+    "d39207d1cab1c4de",
+    "9431c60ad6a81928",
+    "79eba1d0039eefab",
+    "45c046dfcf9be83e",
+    "a292da35e88357f1",
+    "10e8e8bc2dbbdc68",
+    "aa31fd599a0309c3",
+    "d3fd82772d37240f",
     "962461523e069516",
     "f1c6ae68ac10ab97",
     "e6435e85a44c77b4",
@@ -219,6 +228,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "24f0ef4d3ad1b51d",
+      "headline": "Kraken parent Payward agrees to buy Tribe Capital",
+      "summary": "Payward, the parent company of Kraken, is acquiring Tribe Capital to broaden its private-market offerings. The move adds private-market sourcing, underwriting and fund management capabilities to Payward's platform.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/business/2026-11-18-kraken-parent-payward-tribe-capital-443522",
+      "published": "2026-11-19T03:18:53.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/kraken-unsplash-crop.jpg",
+      "sourceTitle": "Kraken parent Payward to acquire Tribe Capital to expand private-market offerings"
+    },
+    {
+      "id": "6599f16d4a11fa36",
+      "headline": "Bitcoin Testnet5 launches so miners can trial four proposed fixes",
+      "summary": "A new Bitcoin test network lets mining pools check the blocks their software builds while Bitcoin Core and Sparrow Wallet prepare support.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/bitcoin-launches-testnet5-and-gives-miners-a-real-trial-of-four-proposed-fixes/",
+      "published": "2026-11-19T02:30:49.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/bitcoin-mining-proving-ground.webp",
+      "sourceTitle": "Bitcoin launches Testnet5 and gives miners a real trial of four proposed fixes"
+    },
+    {
+      "id": "99564e662c0dae33",
+      "headline": "Three firms finish trial of tokenized deposit interoperability",
+      "summary": "Standard Chartered, StraitsX and OCBC have completed a trial focused on interoperability for tokenized deposits. The companies argue that cross-platform compatibility is needed for such deposits to reach their full potential.",
+      "category": "Asia",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/web3/2026-11-18-standard-chartered-straitsx-ocbc-tokenized-deposit-poc-442964",
+      "published": "2026-11-19T02:30:00.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/10/standard-chartered.png",
+      "sourceTitle": "Standard Chartered, StraitsX, OCBC complete trial of tokenized deposit interoperability"
+    },
     {
       "id": "0009673c913337ea",
       "headline": "Ondo Finance Joins MAS Project Guardian on Asset Tokenisation",
@@ -1143,42 +1188,6 @@
       "published": "2026-11-09T20:34:31.000Z",
       "image": "https://assets.beincrypto.com/img/vJxO_6FApXntX3LIH2CPnxdQZt8=/smart/b0facfb22b68410c93a4242153f1d00b",
       "sourceTitle": "Wall Street Wants to Tokenize Everything. But Who’s Buying?"
-    },
-    {
-      "id": "0c91d0ec76590d19",
-      "headline": "XRP's euro cash-out route showed under €100 of direct liquidity",
-      "summary": "A November 8 ledger snapshot showed only 96.80 EURGH available to direct XRP sellers, highlighting a conversion limit ahead of GateHub's announced SEPA redemption.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/xrps-new-euro-cash-out-route-had-less-than-e100-in-its-direct-market/",
-      "published": "2026-11-09T20:00:36.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/xrp-eurgh-narrow-bridge.webp",
-      "sourceTitle": "XRP’s new euro cash-out route had less than €100 in its direct market"
-    },
-    {
-      "id": "5148ec89f9b71034",
-      "headline": "Solana Company Plans Hong Kong Expansion Focused on Tokenization",
-      "summary": "The Solana Company, which holds 2.2 million SOL, is targeting Hong Kong for expansion as the city prioritizes tokenization in its fintech development. The move could grow its headcount to 30 to serve local banks.",
-      "category": "Asia",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/finance/the-solana-company-targets-hong-kong-for-massive-apac-expansion/",
-      "published": "2026-11-09T00:30:45.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/the-solana-company-targets-hong-kong-for-massive-apac-expansion-768x432.png",
-      "sourceTitle": "The Solana Company Targets Hong Kong for Massive APAC Expansion"
-    },
-    {
-      "id": "9b7c13f00c9bb158",
-      "headline": "Crypto Liquidations Top $855M as Bitcoin Dips Below $74K",
-      "summary": "Bitcoin dropped toward $74,000 late Sunday, touching $73,708, its lowest since August, as forced selling spread through markets. Ethereum fell to $2,100, and CoinGlass recorded $855.69 million in liquidations over 24 hours.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-price-crash-crypto-liquidations-market-risks/",
-      "published": "2026-11-08T23:36:20.000Z",
-      "image": "https://assets.beincrypto.com/img/zWwrOsS-9z3fsRPxfPC4MKTCAog=/smart/ebc1394a537349c788bfe67a81bdade6",
-      "sourceTitle": "Crypto Liquidations Surge as Bitcoin Falls Below $74K. How Bad Is It?"
     }
   ]
 }
