@@ -1,6 +1,7 @@
 {
-  "updated": "2026-11-19T03:56:34.964Z",
+  "updated": "2026-11-19T19:26:58.811Z",
   "skipped": [
+    "39ddc0211d05f4e5",
     "f9b2cfce6ed2acf4",
     "d39207d1cab1c4de",
     "9431c60ad6a81928",
@@ -228,6 +229,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "79d85497c831fbbb",
+      "headline": "Bitcoin forms death cross as Anthropic IPO fails to lift stocks",
+      "summary": "Bitcoin slipped after Anthropic's shares jumped on their Nasdaq debut while broader stocks fell. Bitcoin's daily chart shows deeply oversold momentum and a strong downtrend.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383655/bitcoin-enters-death-cross-anthropic-ipo",
+      "published": "2026-11-19T19:08:24.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/02/bitcoin-crack-decrypt-style-gID_7.jpg",
+      "sourceTitle": "Bitcoin Enters Death Cross as Anthropic IPO Fails to Lift Wall Street"
+    },
+    {
+      "id": "16afea967046de4b",
+      "headline": "Sky lifts stUSDS yield; app shows zero withdrawal liquidity",
+      "summary": "Sky raised the stUSDS yield to 24.74%, and a later app snapshot showed no withdrawal liquidity. A borrower's repayment and a bot's redemption came just before the rate change.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/defi/sky-raises-stusds-yield-to-24-74-app-shows-0-liquidity",
+      "published": "2026-11-19T18:10:29.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/e8a706db63c0b289e141ecda097edd78c590e793-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Sky Raises stUSDS Yield to 24.74%; App Shows $0 Liquidity"
+    },
+    {
+      "id": "ce1d147e5b6f5af2",
+      "headline": "Higher rates may curb Bitcoin buying by treasury firms",
+      "summary": "Treasury companies holding Bitcoin could find it harder to issue new shares on terms that justify further purchases, even when dividends are well covered. The excerpt suggests rising interest rates as the pressure point.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/why-higher-rates-could-slow-bitcoin-buying-at-treasury-firms?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-19T18:09:32.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/09/01M1XP9EEWDQ84ZSGS1X5SFP19/hi-sbuidl-blackrocks-tokenized-treasury-fund.jpg",
+      "sourceTitle": "Why higher rates could slow Bitcoin buying at treasury firms"
+    },
     {
       "id": "24f0ef4d3ad1b51d",
       "headline": "Kraken parent Payward agrees to buy Tribe Capital",
@@ -1152,42 +1189,6 @@
       "published": "2026-11-10T03:22:26.000Z",
       "image": "https://cdn.sanity.io/images/s3y3vcno/production/b5c969ee70de7444f1035edf7701cc88d16ae253-3000x2001.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
       "sourceTitle": "Bitcoin faces U.S. CPI test as analysts warn inflation relief may not be enough"
-    },
-    {
-      "id": "028a3e4b2c1ffcdf",
-      "headline": "IRS Sends Tax Letters to Crypto Users, Adviser Says",
-      "summary": "Cryptotaxaudit's CEO says the IRS is running a letter campaign urging crypto taxpayers to review past filings. He added that receiving a letter does not by itself indicate wrongdoing.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/crypto-news/irs-sending-crypto-users-tax-letters-what-you-need-know/",
-      "published": "2026-11-10T01:40:17.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/irs-sign-768x432.jpg",
-      "sourceTitle": "IRS Is Sending Crypto Users Tax Letters—Here’s What You Need to Know"
-    },
-    {
-      "id": "bd08c4939bfcb827",
-      "headline": "Buterin Faces US Lawsuit Over Ethereum Foundation Firing",
-      "summary": "Vitalik Buterin is facing a US lawsuit that alleges the Ethereum Foundation dismissed a cancer patient who led an internal staff revolt. The case is tied to a dispute known as the Ethereum 'suicide pledge' row.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/vitalik-buterin-sued-ethereum-foundation-firing/",
-      "published": "2026-11-09T20:41:08.000Z",
-      "image": "https://assets.beincrypto.com/img/PAbDjXkr7ACueP5Vr6xecMJ6bQg=/smart/ba5599c2bc524df29c08c8e1442ff80c",
-      "sourceTitle": "Vitalik Buterin Sued in Ethereum ‘Suicide Pledge' Row"
-    },
-    {
-      "id": "6fb9caad5a4940dd",
-      "headline": "Wall Street Pushes Tokenization, but Buyer Demand Is Uncertain",
-      "summary": "Tokenization is growing quickly, with banks and asset managers showing interest, yet beyond tokenized stocks it remains unclear whether anyone will buy such products. Issuing an asset as a token does not guarantee demand.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/wall-street-wants-to-tokenize-everything-but-whos-buying/",
-      "published": "2026-11-09T20:34:31.000Z",
-      "image": "https://assets.beincrypto.com/img/vJxO_6FApXntX3LIH2CPnxdQZt8=/smart/b0facfb22b68410c93a4242153f1d00b",
-      "sourceTitle": "Wall Street Wants to Tokenize Everything. But Who’s Buying?"
     }
   ]
 }
