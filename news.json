@@ -1,6 +1,11 @@
 {
-  "updated": "2026-11-20T03:50:00.270Z",
+  "updated": "2026-11-20T19:01:52.879Z",
   "skipped": [
+    "a260c85a2c92ba33",
+    "9368ad7382e45989",
+    "0b82445c00ab8f10",
+    "86b68210df086739",
+    "e3885d2b0bc94c86",
     "b8c8cb4941cc1a47",
     "a70a40336c214572",
     "f5e3b060247f6d44",
@@ -239,6 +244,66 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "39c3162163e92213",
+      "headline": "BENQI Proposes Queue to Cut sAVAX Unstaking Delays",
+      "summary": "BENQI plans a new queue system to shorten waits for sAVAX unstaking. Pending requests will carry over with their elapsed time preserved, and existing holders won't need to move or swap tokens.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/defi/benqi-plans-new-queue-to-shorten-savax-unstaking-waits",
+      "published": "2026-11-20T18:54:17.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/73e52890db59a1341da97905da3484ef76af1323-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "BENQI Plans New Queue to Shorten sAVAX Unstaking Waits"
+    },
+    {
+      "id": "04b987ace09ab679",
+      "headline": "Sky disputes illicit fund claims amid $2B stablecoin outflows",
+      "summary": "Sky says its USDS stablecoin kept its $1 peg despite over $2 billion in withdrawals. The protocol is also contesting a report that links it to illicit activity.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/sky-protocol-sees-2b-in-stablecoin-withdrawals-disputes-illicit-fund-claims?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-20T18:37:10.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M7X2CXDXB4B5SGSAMFZAXXE0/hi-kraken-ipo-1.png",
+      "sourceTitle": "Sky Protocol sees $2 billion in stablecoin withdrawals, disputes illicit fund claims"
+    },
+    {
+      "id": "badbd3469a1100bd",
+      "headline": "JPMorgan says bitcoin's drop widens gap to production cost",
+      "summary": "JPMorgan estimates bitcoin's production cost at $86,000, and a recent price decline has increased the distance between that figure and the market price. The excerpt gives no further detail.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/markets/2026-11-20-jpmorgan-bitcoin-price-correction-gap-86000-production-cost-444763",
+      "published": "2026-11-20T18:17:39.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/GettyImages-880121294.jpg",
+      "sourceTitle": "JPMorgan says bitcoin price correction widens gap to estimated $86,000 production cost"
+    },
+    {
+      "id": "ff849ab3bc43e519",
+      "headline": "Bitcoin falls under $59,000 as crypto liquidations exceed $1.5 billion",
+      "summary": "Bitcoin dropped below $59,000 on Friday, touching a multi-month low of $58,701. The decline extends a sharp November sell-off and leaves the asset down more than 30% for the year so far.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/bitcoin-price-crashes-below-59k-crypto-liquidations-top-1-5b/",
+      "published": "2026-11-20T17:21:01.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-price-nov20-2026-768x432.png",
+      "sourceTitle": "Bitcoin Price Crashes Below $59K as Crypto Liquidations Top $1.5B"
+    },
+    {
+      "id": "995467f4d076f38f",
+      "headline": "Bitcoin dips under $60,000 in live market update",
+      "summary": "Bitcoin's price has fallen below $60,000, according to a live market report. The excerpt provides no further details on the cause or scope of the decline.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Google News: Ordinals",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5XQUU5ZVBYUHRfalJxSUFUTzEzeE0xalF1OWo5R3otY0NZTWN5NndRNmIyX1FDN1ZOMVdELXFuUjNjZnJTLWlBVkNDM242bFFnTnozWDZPSkRiZXJaNFJndTlFekM?oc=5",
+      "published": "2026-11-20T17:15:51.000Z",
+      "image": "https://d2jq4jjbn1fq59.cloudfront.net/bitcoin_crash_live_updates_1_495464045f.webp",
+      "sourceTitle": "Bitcoin crash live: price below $60,000 - CryptoTicker.io"
+    },
     {
       "id": "d856328f01cb0f09",
       "headline": "Bitcoin falls to four-month low as tech stocks weaken",
@@ -1139,66 +1204,6 @@
       "published": "2026-11-11T02:10:48.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/11/gmtrade-exchange-hall.webp",
       "sourceTitle": "Solana perp volume explodes 65% amid shrinking spot activity"
-    },
-    {
-      "id": "760bcd4523d115a9",
-      "headline": "LNbits issues urgent patch following reported Bitcoin wallet thefts",
-      "summary": "The LNbits project warned that installations on older versions are vulnerable and advised operators to replace potentially exposed credentials even after upgrading.",
-      "category": "Tech",
-      "chain": "",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/lnbits-rushes-emergency-patch-after-reported-bitcoin-wallet-thefts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-11T01:16:58.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M742SBA2GA6V6RGES4J05W5E/doctor-medicine-tomography-bitcoin-2.jpg",
-      "sourceTitle": "LNbits rushes emergency patch after reported Bitcoin wallet thefts"
-    },
-    {
-      "id": "3a0fa9c5d1d515d7",
-      "headline": "Former Ripple CTO says no hidden XRP plan exists",
-      "summary": "David Schwartz, Ripple's CTO Emeritus, told frustrated XRP holders that the token's price mostly tracks the broader market. He said there is no secret plan behind XRP.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/xrp-price-schwartz-no-secret-plan/",
-      "published": "2026-11-11T00:06:22.000Z",
-      "image": "https://assets.beincrypto.com/img/PIIfKc-FHWI96iq6NQcCYKYhSRM=/smart/ffcf19b48bc347d1bbc491a882de0a5a",
-      "sourceTitle": "Ripple Ex-CTO Tells Angry XRP Holders There’s No Secret Plan"
-    },
-    {
-      "id": "48defd3f59345c88",
-      "headline": "Ether Dips Near $2,000 as Stakers Hold Firm",
-      "summary": "Ether briefly fell toward $2,000 after hotter-than-expected US inflation data unsettled markets, then recovered to around $2,060. Staking data shows investors showing little interest in withdrawing their staked ETH.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/ethereum-staking-exit-queue-price-drop/",
-      "published": "2026-11-10T23:54:53.000Z",
-      "image": "https://assets.beincrypto.com/img/NolNrSbSjrX83UW2zeC664XckQk=/smart/2465a0f2e5de42028637e2a702354e98",
-      "sourceTitle": "Ethereum Price Fell 20%, But Stakers Are Refusing to Sell"
-    },
-    {
-      "id": "37879de0614c7a02",
-      "headline": "Major Banks Put $270M Behind Stablecoin Issuer Project",
-      "summary": "Goldman Sachs, Citi and other global banks have committed $270 million to a U.S.-incorporated stablecoin issuer codenamed Project Faro. The funding covers five years of operations as traditional lenders seek to compete with Tether and Circle.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/382953/goldman-citi-global-banks-270-million-challenge-crypto-stablecoin-giants",
-      "published": "2026-11-10T18:33:37.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/money-printer-decrypt-style-scaled-gID_7.jpg",
-      "sourceTitle": "Goldman, Citi and Global Banks Commit $270 Million to Challenge Crypto’s Stablecoin Giants"
-    },
-    {
-      "id": "71459e4ca9608de9",
-      "headline": "Mercado Bitcoin restores cash withdrawals following $49M hack",
-      "summary": "Brazilian exchange Mercado Bitcoin will let customers deposit and withdraw cash via the country's instant payment system starting next week. Crypto transfers remain suspended.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/pix-withdrawals-resume-mercado-bitcoin-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-10T18:12:07.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M732NFDQVGSJE1VGENNVNKQT/trading-app-crypto-messenger-phone.jpg",
-      "sourceTitle": "Mercado Bitcoin to resume cash withdrawals after $49M hack"
     }
   ]
 }
