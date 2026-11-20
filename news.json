@@ -1,6 +1,16 @@
 {
-  "updated": "2026-11-19T19:26:58.811Z",
+  "updated": "2026-11-20T03:50:00.270Z",
   "skipped": [
+    "b8c8cb4941cc1a47",
+    "a70a40336c214572",
+    "f5e3b060247f6d44",
+    "6e00cf3a05fd0581",
+    "da58fe0debe53450",
+    "e290a6ff82fe766c",
+    "92d449014aee87d8",
+    "8b5e0cd098e10b6e",
+    "db57f3b2047da78a",
+    "c0546b941acd6e9d",
     "39ddc0211d05f4e5",
     "f9b2cfce6ed2acf4",
     "d39207d1cab1c4de",
@@ -229,6 +239,66 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "d856328f01cb0f09",
+      "headline": "Bitcoin falls to four-month low as tech stocks weaken",
+      "summary": "Bitcoin remains under pressure following Anthropic's IPO, while Nasdaq futures have slipped below their 200-day average.",
+      "category": "Markets",
+      "chain": "",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/11/20/bitcoin-hits-four-month-low-after-anthropic-s-ipo-as-tech-stocks-wilt",
+      "published": "2026-11-20T03:32:30.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/fb21374687550e965340d083e61b5214aabddd3c-2182x1213.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Bitcoin hits four-month low after Anthropic's IPO as tech stocks wilt"
+    },
+    {
+      "id": "2be273a9b30596e3",
+      "headline": "Bitcoin Drops to Mining Cost as Hashrate Nears Peak",
+      "summary": "Bitcoin has reached roughly $62,000, a level tied to mining costs, while network hashrate approaches a record. On-chain data is cited as still pointing to further downside.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/bitcoin-mining-cost-hashrate-bearish/",
+      "published": "2026-11-20T02:39:51.000Z",
+      "image": "https://assets.beincrypto.com/img/ZiyWw1xyTem2NE_biZhxedEOn1A=/smart/1aea29b12a69423a81ade56413ad7897",
+      "sourceTitle": "Bitcoin Falls to Mining Cost Level as Hashrate Nears Record and Indicators Flip Bearish"
+    },
+    {
+      "id": "8f2a8979a3537c84",
+      "headline": "Optimism's OP token falls 25% weekly, lagging Bitcoin",
+      "summary": "The Optimism governance token has dropped about 39% over 28 days, erasing its October gains. Ether declined less steeply across both time windows.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/markets/optimism-s-op-drops-25-in-a-week-trailing-bitcoin",
+      "published": "2026-11-20T02:28:51.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/df6c12d30dd9fbba57b562c8ba041dc7cfe66bd8-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Optimism’s OP Drops 25% in a Week, Trailing Bitcoin"
+    },
+    {
+      "id": "a65c77c43564e985",
+      "headline": "Bitcoin hits new selloff low at $61,220 on Coinbase",
+      "summary": "Bitcoin fell to a fresh low of $61,220 on Coinbase, with its losses over roughly four weeks reaching 24.6% according to CoinGecko. Most tokens on a watchlist also declined over the past day.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/markets/bitcoin-sets-new-selloff-low-of-61-220-on-coinbase",
+      "published": "2026-11-20T02:23:20.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/9fc00354bdaad8ad42f22dfbd56c8ff600737b8d-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Bitcoin Sets New Selloff Low of $61,220 on Coinbase"
+    },
+    {
+      "id": "25fc1f78b8bbadfa",
+      "headline": "Coinbase reportedly plans its own US prediction markets",
+      "summary": "Bloomberg reports that Coinbase is planning in-house prediction market contracts in the US, which currently rely on Kalshi. The offering would target retail and institutional customers, with a launch aimed at the first half of 2027.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/cefi/coinbase-plans-in-house-us-prediction-markets-bloomberg",
+      "published": "2026-11-20T02:15:05.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/df8a468bc2e7dd0f43a204f69ba8af534caecc31-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Coinbase Plans In-House US Prediction Markets: Bloomberg"
+    },
     {
       "id": "79d85497c831fbbb",
       "headline": "Bitcoin forms death cross as Anthropic IPO fails to lift stocks",
@@ -1129,66 +1199,6 @@
       "published": "2026-11-10T18:12:07.000Z",
       "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M732NFDQVGSJE1VGENNVNKQT/trading-app-crypto-messenger-phone.jpg",
       "sourceTitle": "Mercado Bitcoin to resume cash withdrawals after $49M hack"
-    },
-    {
-      "id": "feac4226ee9e11a7",
-      "headline": "Ether, Solana and XRP fall as $580M in liquidations hit",
-      "summary": "Major altcoins such as Solana and XRP dropped on Coinbase spot markets, with Solana trading under $82 and XRP under $1.05. Bitcoin also extended its decline below $73,000.",
-      "category": "Markets",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/markets/ether-sol-and-xrp-slide-as-liquidations-hit-580-million",
-      "published": "2026-11-10T17:33:29.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/0f7ada2fba947e6edc39d934662479755629dfd7-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Ether, SOL and XRP Slide as Liquidations Hit $580 Million"
-    },
-    {
-      "id": "772bcd26228d3e70",
-      "headline": "Banks Reportedly Back Stablecoin Venture With $270 Million",
-      "summary": "Banks have reportedly committed $270 million to a stablecoin issuer. The funding would cover five years of operations, and the consortium is targeting a first-half 2027 launch of a dollar stablecoin.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/converge/tradfi-and-fintech/banks-commit-270-million-to-stablecoin-venture-report",
-      "published": "2026-11-10T17:33:04.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/f4e5310bbee6d32cd9c092738fc4ad613ecbfb41-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Banks Commit $270 Million to Stablecoin Venture: Report"
-    },
-    {
-      "id": "97f4b9e94fce248a",
-      "headline": "Polymarket's US exchange volume climbs despite mounting regulatory scrutiny",
-      "summary": "Trading volume on Polymarket's US exchange rose from June to October, driven largely by sports betting. The platform is facing growing regulatory scrutiny.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/polymarket-us-trading-volume-jumps-regulatory-battles?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-10T17:07:48.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M733KDA3PZPHNST4578G33HY/hi-9-bets-declined-bad-influence-on-the-market-polymarket.png",
-      "sourceTitle": "Polymarket US trading volume jumps 266% despite regulatory battles"
-    },
-    {
-      "id": "44c3fb2905a95a5e",
-      "headline": "Altcoin speculation peaked as Bitcoin hit near $87,000",
-      "summary": "According to Glassnode, altcoin speculation reached a high around the time Bitcoin peaked near $87,100. Short-term holders are now selling most tokens at a loss.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/altcoin-speculation-peaked-recent-buyers-losses/",
-      "published": "2026-11-10T03:30:27.000Z",
-      "image": "https://assets.beincrypto.com/img/1sfIdqTefxW8wJq3A1PBF6C8lAI=/smart/df4303171b0b46cdbd67f527df4c0474",
-      "sourceTitle": "Altcoin Speculation Peaked With Bitcoin Near $87,000, but Recent Buyers Now Sell at Losses"
-    },
-    {
-      "id": "99015e0685547724",
-      "headline": "Bitcoin eyes U.S. inflation data as analysts question relief rally",
-      "summary": "Bitcoin is trading under $75,000 ahead of October inflation figures. Analysts say a lasting recovery would need better liquidity and spot ETF demand, not just short-term macro relief.",
-      "category": "Markets",
-      "chain": "",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/11/10/bitcoin-faces-u-s-cpi-test-as-analysts-warn-inflation-relief-may-not-be-enough",
-      "published": "2026-11-10T03:22:26.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/b5c969ee70de7444f1035edf7701cc88d16ae253-3000x2001.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Bitcoin faces U.S. CPI test as analysts warn inflation relief may not be enough"
     }
   ]
 }
