@@ -1,6 +1,7 @@
 {
-  "updated": "2026-11-20T19:01:52.879Z",
+  "updated": "2026-11-21T03:42:29.761Z",
   "skipped": [
+    "b6566f4315430173",
     "a260c85a2c92ba33",
     "9368ad7382e45989",
     "0b82445c00ab8f10",
@@ -244,6 +245,30 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "d1e203cec4021969",
+      "headline": "Bitquery Tracks Over $1.58M Stolen in Fluidkey Exploit",
+      "summary": "Fluidkey says a flaw in a logging tool let an attacker trigger transfers when users opened the app. Private keys remained on users' devices.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/hacks/bitquery-traces-at-least-1-58-million-in-fluidkey-hack",
+      "published": "2026-11-21T02:47:09.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/71fdf9126a5dd6a7a5b27992f5439cfe0ef2e3f2-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Bitquery Traces at Least $1.58 Million in Fluidkey Hack"
+    },
+    {
+      "id": "72d60e25e9dae677",
+      "headline": "Aave V4 proposal would route idle USDC into Circle Gateway",
+      "summary": "A proposed Aave V4 plan would let idle USDC be swept into Circle Gateway, with exposure capped at 10 million USDC and 25% of supply. Cash would still be kept available for withdrawals and loans.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/defi/aave-v4-plan-would-put-idle-usdc-into-circle-gateway",
+      "published": "2026-11-20T22:54:45.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/0429332c24542d97c068c86dac1ddc5e9312a03a-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Aave V4 Plan Would Put Idle USDC Into Circle Gateway"
+    },
     {
       "id": "39c3162163e92213",
       "headline": "BENQI Proposes Queue to Cut sAVAX Unstaking Delays",
@@ -1180,30 +1205,6 @@
       "published": "2026-11-11T16:26:00.000Z",
       "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M75N52D7VC58F2MJTGJCRMV1/bungee-jumping-bitcoin-1-960x640.webp",
       "sourceTitle": "Bitcoin hovers near $74K as stocks rise despite US bond yield rebound"
-    },
-    {
-      "id": "e19937745eec70c3",
-      "headline": "StoneX keeps Buy rating on Securitize, citing tokenization growth",
-      "summary": "StoneX reaffirmed its Buy recommendation on Securitize, pointing to tokenized equities, fund demand and structured credit as drivers of growth. The brief is based on a short excerpt, so further details are not covered here.",
-      "category": "Markets",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/markets/2026-11-11-stonex-sees-111-upside-for-securitize-shares-as-tokenization-revenue-rebounds-437910",
-      "published": "2026-11-11T16:22:13.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2025/10/20251028_Secrutize_News.jpg",
-      "sourceTitle": "StoneX sees 111% upside for Securitize shares as tokenization revenue rebounds"
-    },
-    {
-      "id": "93b1c74c14cb9e39",
-      "headline": "Solana perpetuals volume jumps 65% as spot trading shrinks",
-      "summary": "Perpetual futures trading on Solana has surged, with one venue making up about 77% of weekly turnover in DefiLlama's Solana data. The growth comes as stablecoin market capitalization declines.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/solana-perp-volume-explodes-65-amid-shrinking-spot-activity/",
-      "published": "2026-11-11T02:10:48.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/gmtrade-exchange-hall.webp",
-      "sourceTitle": "Solana perp volume explodes 65% amid shrinking spot activity"
     }
   ]
 }
