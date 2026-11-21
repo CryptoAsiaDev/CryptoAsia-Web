@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-21T03:42:29.761Z",
+  "updated": "2026-11-21T17:56:00.551Z",
   "skipped": [
+    "ae6f236ad3177dda",
+    "af00e3fdb3a2e090",
+    "6138b9b26525c2d1",
+    "47bd12795da1f18f",
     "b6566f4315430173",
     "a260c85a2c92ba33",
     "9368ad7382e45989",
@@ -245,6 +249,78 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "50a435182dc39976",
+      "headline": "Bitcoin rebounds 9% from two-year low back above $60,000",
+      "summary": "Bitcoin climbed about 9% off a two-year low to reclaim the $60,000 level, as traders look ahead to Monday's stock market open. A sell-off had erased $1.8 billion in leveraged crypto positions, mostly long bets on rising prices.",
+      "category": "Markets",
+      "chain": "",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/markets/2026/11/21/bitcoin-bounces-9-from-two-year-low-to-retake-usd60-000-as-traders-eye-monday-s-stock-open",
+      "published": "2026-11-21T17:50:00.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/6a50d7f76698cadd3cc56a5abf007eb4039d9d74-1163x450.png?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Bitcoin bounces 9% from two-year low to retake $60,000 as traders eye Monday’s stock open"
+    },
+    {
+      "id": "b9f2def683d8687a",
+      "headline": "Singapore plans sandbox for AI agents making stablecoin payments",
+      "summary": "A planned sandbox would examine how banks and payment providers confirm an AI agent's authority before it carries out stablecoin payments. The excerpt gives few further details.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/singapore-wants-to-test-stablecoin-payments-by-ai-agents/",
+      "published": "2026-11-21T17:40:11.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/bank-agent-payment-clearance.webp",
+      "sourceTitle": "Singapore wants to test stablecoin payments by AI agents"
+    },
+    {
+      "id": "79f4104b0e57176f",
+      "headline": "SEC Says Fake Crypto Exchanges Defrauded US Investors of $37M",
+      "summary": "The SEC alleges eight Colorado-registered entities, likely operated from overseas, impersonated legitimate advisers and crypto platforms, including faking SEC certificates and filings. The scheme reportedly defrauded U.S. investors of more than $37 million.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383752/fraudsters-fake-crypto-exchanges-steal-37-million-sec",
+      "published": "2026-11-21T17:01:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/SecuritiesExchange_logo-gID_7.png",
+      "sourceTitle": "Fraudsters Used Fake Crypto Exchanges to Steal $37 Million, SEC Alleges"
+    },
+    {
+      "id": "b01de8e999b959a0",
+      "headline": "Bitwise CIO Says Washington Politics Are Hurting Crypto Growth",
+      "summary": "Bitwise CIO Matt Hougan argues that regulatory constraints are preventing crypto from delivering on its promise to upgrade the financial system. He says current rules block changes needed for innovation.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/crypto-news/washington-politics-are-crushing-crypto-industry-ambitions-warns-bitwise-cio/",
+      "published": "2026-11-21T16:55:27.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/10/bitwise-cio-says-bitcoin-can-win-whether-ai-booms-or-crashes-768x432.png",
+      "sourceTitle": "Washington Politics Are Crushing Crypto Industry Ambitions, Warns Bitwise CIO"
+    },
+    {
+      "id": "5046d0209d4049e8",
+      "headline": "Coins.ph restricts transfers to self-custody wallets",
+      "summary": "The Philippine exchange now allows external crypto transfers only to regulated exchanges and requires counterparty details for every amount. The change limits withdrawals to self-custody wallets.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/regulation/coins-ph-halts-transfers-with-self-custody-wallets",
+      "published": "2026-11-21T15:20:19.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/7b56849ce55deb14f3a8cbcf119e57e4f986c1fc-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Coins.ph Halts Transfers With Self-Custody Wallets"
+    },
+    {
+      "id": "b1d92e36843180cd",
+      "headline": "Bitcoin dips under $60,000 as crypto liquidations hit $1.57B",
+      "summary": "Bitcoin fell below $60,000, and crypto liquidations totaled $1.57 billion over 24 hours. The excerpt offers no further detail on the cause.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Google News: airdrops",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9Wc3JXWm1yeW5rNFhONGRSRTNwaFhVcjY5T0R1aktDSVM4TER5NDhUQ3VEX0k1ODc2bjdVZjJsY2lUS3JxSnl0SDJRZ0hlc0g1UkktQmo4ZzdJc2dyUkJsZDdjaGlFRms3YW5PQy03ZXdqVHB3MzB6SGMyeTVrQQ?oc=5",
+      "published": "2026-11-21T14:46:00.000Z",
+      "image": "",
+      "sourceTitle": "Bitcoin Falls Below $60,000 as Crypto Liquidations Reach $1.57 Billion in 24 Hours - Hokanews"
+    },
     {
       "id": "d1e203cec4021969",
       "headline": "Bitquery Tracks Over $1.58M Stolen in Fluidkey Exploit",
@@ -1133,78 +1209,6 @@
       "published": "2026-11-11T17:23:10.000Z",
       "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2025/06/20250602_Stablecoins_News.jpg",
       "sourceTitle": "Stablecoin supply drops $14.2 billion in largest contraction since 2022 bear market"
-    },
-    {
-      "id": "13ae714db58b498b",
-      "headline": "Helius Unveils Privacy Rings Protocol for Solana Transactions",
-      "summary": "Solana Privacy Rings are a protocol from Helius that encrypt balances and transfer amounts while keeping activity on the Solana network. The piece explains how the system works and how it compares to alternatives.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/resources/what-are-solana-privacy-rings-inside-helius-privacy-protocol-for-solana",
-      "published": "2026-11-11T17:09:18.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/11/solana-security-padlocks-gID_5-pID_1.png",
-      "sourceTitle": "What Are Solana Privacy Rings? Inside Helius’ Privacy Protocol for Solana"
-    },
-    {
-      "id": "a4537757918ada14",
-      "headline": "LlamaRisk Suggests Borrow Rate Limits for Aave V3",
-      "summary": "Risk firm LlamaRisk has proposed timed borrowing buffers for Aave V3, alongside a steward-managed route for large clients. The parameters are still provisional, and governance votes have not yet taken place.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/defi/llamarisk-proposes-borrowing-speed-limits-for-aave-v3",
-      "published": "2026-11-11T17:07:29.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/d7130c9b5e9df0523c04b7fe7be3af0676729b72-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "LlamaRisk Proposes Borrowing Speed Limits for Aave V3"
-    },
-    {
-      "id": "394e6e3263488d4a",
-      "headline": "Apex Group joins Hedera Council, eyeing tokenization and settlement",
-      "summary": "Apex Group, which oversees $3.5 trillion in assets, has joined the Hedera Council. It plans to explore Hedera for tokenization, compliance and settlement.",
-      "category": "Tech",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/deals/2026-11-11-apex-group-joins-hedera-council-tokenization-437917",
-      "published": "2026-11-11T17:07:22.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2019/09/20190917_Hedera-Hashgraph-Coins-Genesis.jpg",
-      "sourceTitle": "Apex Group joins Hedera Council to explore tokenization and settlement"
-    },
-    {
-      "id": "b7a2ae1390a1a8e1",
-      "headline": "Bitcoin Core patches high-severity bug that could halt mining",
-      "summary": "Bitcoin Core developers have fixed three bugs, including a serious one that could stop miners from building new blocks. The flaws involve denial-of-service and privacy issues rather than theft of coins.",
-      "category": "Tech",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/383044/bitcoin-core-patches-bug-could-have-stalled-btc-mining",
-      "published": "2026-11-11T16:58:57.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/06/bitcoin-decrypt-style-pixel-gID_7.png",
-      "sourceTitle": "A High-Severity Bug Could Have Stalled Bitcoin Mining—Bitcoin Core Has a Fix"
-    },
-    {
-      "id": "603cf2a348b0a14c",
-      "headline": "Pyth Network brings NYSE stock and ETF data to marketplace",
-      "summary": "Pyth Network has added real-time stock and ETF data from the New York Stock Exchange to its data marketplace.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/web3/2026-11-11-pyth-network-nyse-data-437928",
-      "published": "2026-11-11T16:56:54.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2019/02/nyse.jpg",
-      "sourceTitle": "Pyth Network adds NYSE stock and ETF data to its marketplace"
-    },
-    {
-      "id": "97c3e36f4a38a8d1",
-      "headline": "Bitcoin steadies near $74K as stocks gain amid yield rise",
-      "summary": "Bitcoin moved within a tight band while investors bought dips in tech shares. Meanwhile, US bond yields rose after inflation data came in high.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/markets/bitcoin-74k-stocks-us-bond-yield-inflation-cpi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-11T16:26:00.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M75N52D7VC58F2MJTGJCRMV1/bungee-jumping-bitcoin-1-960x640.webp",
-      "sourceTitle": "Bitcoin hovers near $74K as stocks rise despite US bond yield rebound"
     }
   ]
 }
