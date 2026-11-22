@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-21T17:56:00.551Z",
+  "updated": "2026-11-22T02:46:34.308Z",
   "skipped": [
+    "bf0f33c65937258e",
+    "6c405e1c9493a33d",
+    "c09fc8367b1afad1",
+    "890a510869060526",
     "ae6f236ad3177dda",
     "af00e3fdb3a2e090",
     "6138b9b26525c2d1",
@@ -250,6 +254,54 @@
   ],
   "items": [
     {
+      "id": "6f1ef3f436f81ce0",
+      "headline": "Bitcoin Miners Squeezed as Hashrate Climbs Back Above 1 ZH/s",
+      "summary": "Bitcoin's hashrate has recovered to above 1,000 EH/s after a drop of about 100 EH/s, even as the price fell to levels not seen since early September 2024. Miner profitability has become tighter.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/mining/bitcoin-mining-profits-turn-ugly-despite-hashrates-return-above-1-zh-s/",
+      "published": "2026-11-22T02:14:34.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-mining-profits-turn-ugly-despite-hashrates-return-above-1-zhs-768x432.png",
+      "sourceTitle": "Bitcoin Mining Profits Turn Ugly Despite Hashrate’s Return Above 1 ZH/s"
+    },
+    {
+      "id": "6a88aae7f7311427",
+      "headline": "AI-assisted research uncovers medium-severity Bitcoin Core node flaw",
+      "summary": "Bitcoin Core disclosed a medium-severity vulnerability that let malicious peers temporarily stall nodes via repeated transaction announcements. The flaw was found using AI-assisted security research.",
+      "category": "Tech",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/security/ai-finds-bitcoin-core-security-flaw-that-could-temporarily-freeze-nodes/",
+      "published": "2026-11-22T00:17:40.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/ai-finds-bitcoin-core-security-flaw-that-could-temporarily-freeze-nodes-768x432.png",
+      "sourceTitle": "AI Finds Bitcoin Core Security Flaw That Could Temporarily Freeze Nodes"
+    },
+    {
+      "id": "2d7ee3624efb7aba",
+      "headline": "Central Banks Privately Weigh Bitcoin Alongside Gold Holdings",
+      "summary": "Central bank officials reportedly say gold and bitcoin share a key appeal in self-custody, and that at least one central bank is known to hold bitcoin. The excerpt also notes that 7% of surveyed central banks were considering digital assets.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/behind-closed-doors-central-banks-build-case-bitcoin-gold/",
+      "published": "2026-11-21T22:55:12.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/btc_gold_2026-768x432.png",
+      "sourceTitle": "Behind Closed Doors, Central Banks Build a Case for Bitcoin—But With Gold"
+    },
+    {
+      "id": "0ca86751b6f257a1",
+      "headline": "Cyber probes suspected bridge exploit as Korean exchanges pause transfers",
+      "summary": "Upbit and Bithumb have both suspended deposits and withdrawals for the CYBER token due to a suspected security incident. The project is reportedly investigating a possible bridge exploit.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/defi/2026-11-21-cyber-investigating-suspected-1-million-bridge-exploit-as-upbit-bithumb-freeze-transfers-444810",
+      "published": "2026-11-21T18:51:14.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2021/04/20210402_Cybercrime_Generic_G.jpg",
+      "sourceTitle": "Cyber investigating suspected $1 million bridge exploit as Upbit, Bithumb freeze transfers"
+    },
+    {
       "id": "50a435182dc39976",
       "headline": "Bitcoin rebounds 9% from two-year low back above $60,000",
       "summary": "Bitcoin climbed about 9% off a two-year low to reclaim the $60,000 level, as traders look ahead to Monday's stock market open. A sell-off had erased $1.8 billion in leveraged crypto positions, mostly long bets on rising prices.",
@@ -319,7 +371,8 @@
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9Wc3JXWm1yeW5rNFhONGRSRTNwaFhVcjY5T0R1aktDSVM4TER5NDhUQ3VEX0k1ODc2bjdVZjJsY2lUS3JxSnl0SDJRZ0hlc0g1UkktQmo4ZzdJc2dyUkJsZDdjaGlFRms3YW5PQy03ZXdqVHB3MzB6SGMyeTVrQQ?oc=5",
       "published": "2026-11-21T14:46:00.000Z",
       "image": "",
-      "sourceTitle": "Bitcoin Falls Below $60,000 as Crypto Liquidations Reach $1.57 Billion in 24 Hours - Hokanews"
+      "sourceTitle": "Bitcoin Falls Below $60,000 as Crypto Liquidations Reach $1.57 Billion in 24 Hours - Hokanews",
+      "imgRetry": 1
     },
     {
       "id": "d1e203cec4021969",
@@ -1161,54 +1214,6 @@
       "published": "2026-11-11T23:50:44.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/11/tidal-whales.jpg",
       "sourceTitle": "Bitcoin whales stack coins while ETF investors dump millions daily"
-    },
-    {
-      "id": "2b19aff7a3c48ddf",
-      "headline": "Zcash Slides Under $965 After 26% Weekly Drop",
-      "summary": "Zcash's seven-day decline was about three times larger than bitcoin's. The token now trades roughly 43% below its late-September level.",
-      "category": "Markets",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/markets/zcash-falls-below-965-as-weekly-loss-reaches-26",
-      "published": "2026-11-11T23:39:06.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/268b96d2026d3b3c2b2ceeb3dfb027713851d90a-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Zcash Falls Below $965 as Weekly Loss Reaches 26%"
-    },
-    {
-      "id": "b09fd0ab190f0583",
-      "headline": "Bitcoin Heads for First Back-to-Back Annual Losses",
-      "summary": "Bitcoin is on track for two consecutive years of losses, which would break a long-running pattern of annual gains. The excerpt notes that the data contains some nuance.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/383049/bitcoin-first-back-to-back-annual-losses-history",
-      "published": "2026-11-11T17:56:02.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/07/Bitcoin-mountain-decrypt-style-gID_7.png",
-      "sourceTitle": "Bitcoin Faces First Back-to-Back Annual Losses in History, But There's a Catch"
-    },
-    {
-      "id": "c7a7f8d4c9b57036",
-      "headline": "Bitcoin Recovers Above $74,000 Following Inflation-Driven Dip",
-      "summary": "Bitcoin climbed back above $74,600 after falling to $72,787 when U.S. inflation data came in hotter than expected. Market-wide liquidations totaled $199 million, with $51 million tied to bitcoin.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/market-updates/bitcoin-price-reclaims-74k-after-cpi-sell-off-sparks-volatility/",
-      "published": "2026-11-11T17:32:32.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-price-nov11-2026-768x432.jpg",
-      "sourceTitle": "Bitcoin Price Reclaims $74K After CPI Sell-Off Sparks Volatility"
-    },
-    {
-      "id": "40a21f3f7a92b78a",
-      "headline": "Stablecoin supply shrinks by $14.2 billion, largest drop since 2022",
-      "summary": "Total stablecoin supply fell by $14.2 billion, the steepest contraction since the 2022 downturn. USDT and USDC together dropped by nearly $11 billion over the past month, while gold-backed tokens stayed flat.",
-      "category": "Markets",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/ecosystems/2026-11-11-stablecoin-supply-drops-14-2-billion-largest-contraction-since-2022-bear-market-437907",
-      "published": "2026-11-11T17:23:10.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2025/06/20250602_Stablecoins_News.jpg",
-      "sourceTitle": "Stablecoin supply drops $14.2 billion in largest contraction since 2022 bear market"
     }
   ]
 }
