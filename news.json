@@ -1,6 +1,9 @@
 {
-  "updated": "2026-11-22T02:46:34.308Z",
+  "updated": "2026-11-22T18:23:47.542Z",
   "skipped": [
+    "82fa808016bb9c3a",
+    "9ad0a50814c5ba42",
+    "d85a97bebee80cc9",
     "bf0f33c65937258e",
     "6c405e1c9493a33d",
     "c09fc8367b1afad1",
@@ -253,6 +256,66 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "aa34dfa422071888",
+      "headline": "UK plans to bar exchanges from market-making on own platforms",
+      "summary": "Under UK proposals, firms that make markets in spot Bitcoin on qualifying platforms would be exempt from principal-dealing permission for that activity, with separate venue rules also applying.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/uk-to-ban-crypto-exchanges-from-making-markets-on-their-own-platforms-as-bitcoin-rules-change/",
+      "published": "2026-11-22T18:05:49.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/uk-bitcoin-market-carveout.webp",
+      "sourceTitle": "UK to ban crypto exchanges from making markets on their own platforms as Bitcoin rules change"
+    },
+    {
+      "id": "127803cb0c365d40",
+      "headline": "Peter Brandt Compares Bitcoin Sell-Off to Past Steep Drops",
+      "summary": "Veteran trader Peter Brandt noted that bitcoin previously fell at least 75% after parabolic rallies. He questioned whether the current decline from the record high is following that same pattern.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/market-updates/peter-brandt-links-75-bitcoin-drops-to-parabolic-rallies/",
+      "published": "2026-11-22T17:01:11.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/peter-brandt-75-pct-crash-768x432.jpg",
+      "sourceTitle": "Peter Brandt Links 75% Bitcoin Drops to Parabolic Rallies"
+    },
+    {
+      "id": "d34bb5fa21bfd71c",
+      "headline": "Bitcoin climbs above $61,000, then surrenders part of weekend gains",
+      "summary": "Bitcoin moved above $61,000 on Sunday, with Binance perpetual futures recording far more net buying than its spot market. The price later gave back about a third of the weekend rally.",
+      "category": "Markets",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/bitcoin-reclaims-61000-before-giving-back-a-third-of-that-rally/",
+      "published": "2026-11-22T14:30:34.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/bitcoin-crosscurrent-breakout.webp",
+      "sourceTitle": "Bitcoin reclaims $61,000 before giving back a third of the weekend rally"
+    },
+    {
+      "id": "12e7ff8bbc61e515",
+      "headline": "Deribit outage affects Bitcoin hedgers; Coinbase US derivatives unaffected",
+      "summary": "Two trading interruptions disrupted global Bitcoin and Ether perpetuals that share Deribit execution. Coinbase said its US derivatives were not affected.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/deribit-outage-hit-bitcoin-hedgers-on-coinbase/",
+      "published": "2026-11-22T14:00:44.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/deribit-shared-switchboard.webp",
+      "sourceTitle": "Deribit outage hit Bitcoin hedgers on Coinbase"
+    },
+    {
+      "id": "ffae009bc0b11ae7",
+      "headline": "Quantum threat to Bitcoin security may outlast upgrade timelines",
+      "summary": "Quantum computers cannot currently break Bitcoin's network security, but Leo Fan cautions that upgrading the network and moving funds could take longer than expected.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "CoinDesk",
+      "url": "https://www.coindesk.com/tech/2026/11/22/bitcoin-s-quantum-security-challenge-extends-to-bridges-custodians-and-millions-of-coins",
+      "published": "2026-11-22T14:00:00.000Z",
+      "image": "https://cdn.sanity.io/images/s3y3vcno/production/aeeabe28669425a95b4918b55a4680c3e968c1c7-6002x4001.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
+      "sourceTitle": "Bitcoin's quantum security challenge extends to bridges, custodians and millions of coins"
+    },
     {
       "id": "6f1ef3f436f81ce0",
       "headline": "Bitcoin Miners Squeezed as Hashrate Climbs Back Above 1 ZH/s",
@@ -1154,66 +1217,6 @@
       "published": "2026-11-12T18:03:57.000Z",
       "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2019/07/new-york-1-e1577451823576.jpg",
       "sourceTitle": "NYDFS sets fresh advertising standards for crypto firms"
-    },
-    {
-      "id": "3d0576288a385371",
-      "headline": "DOJ, Banks and DeFi Groups Back Suit Against Illinois Crypto Tax",
-      "summary": "The Justice Department, the U.S. Chamber of Commerce, SIFMA and a crypto coalition including a16z, Paradigm and Uniswap have filed briefs supporting a lawsuit seeking to invalidate Illinois' 0.2% tax on digital asset transactions.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/383144/illinois-crypto-tax-draws-alliance-doj-banks-defi",
-      "published": "2026-11-12T17:46:02.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/08/money-bitcoin-gID_7.jpg",
-      "sourceTitle": "Illinois Crypto Tax Draws Unlikely Alliance of DOJ, Banks and DeFi"
-    },
-    {
-      "id": "4ebc2d5146f9cf06",
-      "headline": "Crypto industry says Illinois crypto tax can't be enforced as written",
-      "summary": "Crypto industry groups have filed opposition in a court challenge to a crypto transaction tax in Illinois, arguing the tax would not work in practice.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/policy/2026/11/12/illinois-crypto-tax-is-impossible-to-enforce-as-written-crypto-industry-tells-court",
-      "published": "2026-11-12T16:45:52.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/e33b3fcac1c0e8c98ef703b71e95d78b3237411a-8192x5464.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Illinois crypto tax is impossible to enforce as written, crypto industry tells court"
-    },
-    {
-      "id": "9eb92b0fb65cb8e7",
-      "headline": "Bitcoin dominance tests 61% level; altcoin impact discussed",
-      "summary": "Bitcoin's market dominance is testing a 61% breakout level, and a weekly Supertrend indicator has flipped bullish. The piece looks at what this could mean for altcoins.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/bitcoin-dominance-breakout-altcoin-season-analysis/",
-      "published": "2026-11-12T03:00:00.000Z",
-      "image": "https://assets.beincrypto.com/img/MoGXgIBSbqenvCFFrGke4PErzlg=/smart/bddb1653729440c488c595b8375a6273",
-      "sourceTitle": "Bitcoin Dominance Tests 61% Breakout, and That's Bad News for Altcoins"
-    },
-    {
-      "id": "67a9a10dcab241e8",
-      "headline": "Solana Company posts Q3 revenue rise on staking rewards",
-      "summary": "Solana Company, a digital asset treasury firm, reported quarterly revenue of $3.4 million, up from $697,000 a year earlier. The company's growth was linked to staking rewards.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/business/2026-11-11-solana-company-reports-q3-revenue-growth-438448",
-      "published": "2026-11-12T02:25:14.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/solana-company-1920.png",
-      "sourceTitle": "‘Milestone quarter’: Solana Company reports Q3 revenue growth driven by staking rewards"
-    },
-    {
-      "id": "b30ec062b2c9d686",
-      "headline": "Large Bitcoin holders accumulate as ETF investors pull out funds",
-      "summary": "Glassnode data through November 9 shows a narrow pattern of whale accumulation, while Bitcoin ETF sessions through November 10 still recorded outflows.",
-      "category": "Bitcoin",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/bitcoin-whales-stack-coins-while-etf-investors-dump-millions-daily/",
-      "published": "2026-11-11T23:50:44.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/tidal-whales.jpg",
-      "sourceTitle": "Bitcoin whales stack coins while ETF investors dump millions daily"
     }
   ]
 }
