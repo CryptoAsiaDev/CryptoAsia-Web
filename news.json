@@ -1,6 +1,12 @@
 {
-  "updated": "2026-11-23T03:27:31.232Z",
+  "updated": "2026-11-23T22:30:51.640Z",
   "skipped": [
+    "131b986f1c30490f",
+    "cba1c52db66d704e",
+    "6f3f956ffa71f411",
+    "e46f5230ec4cd18b",
+    "92219d4d4689ac9f",
+    "d56f4accd3fc8a22",
     "69c129cac72266d7",
     "51639d903aabab1a",
     "8e7f947c44259871",
@@ -260,6 +266,18 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "ab3eccaa15523507",
+      "headline": "Strive Makes No Bitcoin Purchases Last Week, Holds 43,404 BTC",
+      "summary": "Strive neither bought bitcoin nor sold stock last week, keeping its holdings at 43,404 BTC, according to a Monday 8-K filing. Its ASST shares traded near $15.55.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "Bitcoin Magazine",
+      "url": "https://bitcoinmagazine.com/news/strive-asst-no-bitcoin-purchases-holdings",
+      "published": "2026-11-23T21:09:15.000Z",
+      "image": "https://bitcoinmagazine.com/wp-content/uploads/2026/04/Strive-Expands-Bitcoin-Treasury-With-61.4-Million-Purchase-Holdings-Reach-14557-BTC.jpg",
+      "sourceTitle": "Strive (ASST) Buys No Bitcoin Last Week, Holdings Stay at 43,404 BTC"
+    },
     {
       "id": "ba38869b7ea0bdf0",
       "headline": "Solana memory checks may cause some older app transactions to fail",
@@ -1209,18 +1227,6 @@
       "published": "2026-11-12T18:41:56.000Z",
       "image": "https://cdn.sanity.io/images/6oftkxoa/production/fe453c44a141c7506910aa0818e6897ecebcd05f-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
       "sourceTitle": "Binance Says Hack Assets Covered, Reserve Proof Pending"
-    },
-    {
-      "id": "4e3868008f22b0f4",
-      "headline": "Sky advisor suggests pausing new borrowing from core vaults",
-      "summary": "BA Labs, a Sky advisor, has proposed stopping new borrowing from core vaults, which would leave existing borrowers able to repay and manage collateral but not mint more. The report cites 771 open vaults holding about 376.33 million USDS in debt.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/defi/sky-advisor-proposes-halting-new-core-vault-borrowing",
-      "published": "2026-11-12T18:30:26.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/b5ac4ab0457ba8a1a6aaccaa50a567bf3fb4927c-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Sky Advisor Proposes Halting New Core Vault Borrowing"
     }
   ]
 }
