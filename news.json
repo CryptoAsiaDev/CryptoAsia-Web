@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-22T18:23:47.542Z",
+  "updated": "2026-11-23T03:27:31.232Z",
   "skipped": [
+    "69c129cac72266d7",
+    "51639d903aabab1a",
+    "8e7f947c44259871",
+    "f9f3d18d75cc6eae",
     "82fa808016bb9c3a",
     "9ad0a50814c5ba42",
     "d85a97bebee80cc9",
@@ -256,6 +260,30 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "ba38869b7ea0bdf0",
+      "headline": "Solana memory checks may cause some older app transactions to fail",
+      "summary": "New memory checks on Solana could make certain older application transactions fail. A replay surfaced an Anchor account handoff issue, and a separate change removes validator data copies.",
+      "category": "Tech",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/solanas-new-memory-checks-could-make-some-older-app-transactions-fail/",
+      "published": "2026-11-23T03:05:58.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/solana-code-go-gauge.webp",
+      "sourceTitle": "Solana’s new memory checks could make some older app transactions fail"
+    },
+    {
+      "id": "862567f020e91545",
+      "headline": "Bithumb suspends CYBER deposits and withdrawals, trading continues",
+      "summary": "Bithumb halted CYBER deposits and withdrawals over a suspected security issue, while trading remains open. Kraken separately warned of possible delays for CYBER deposits sent via Optimism.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/bithumb-halts-cyber-deposits-and-withdrawals-while-trading-stays-open/",
+      "published": "2026-11-22T23:05:26.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/bithumb-cyber-transfer-shutter.webp",
+      "sourceTitle": "Bithumb halts CYBER deposits and withdrawals while trading stays open"
+    },
     {
       "id": "aa34dfa422071888",
       "headline": "UK plans to bar exchanges from market-making on own platforms",
@@ -1193,30 +1221,6 @@
       "published": "2026-11-12T18:30:26.000Z",
       "image": "https://cdn.sanity.io/images/6oftkxoa/production/b5ac4ab0457ba8a1a6aaccaa50a567bf3fb4927c-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
       "sourceTitle": "Sky Advisor Proposes Halting New Core Vault Borrowing"
-    },
-    {
-      "id": "ad36e5fd1161efdc",
-      "headline": "New York regulator sets 2027 deadline for crypto marketing rules",
-      "summary": "New York's financial regulator will require BitLicense holders and crypto trust companies to prepare annually approved marketing policies. The policies are to cover risk disclosures, paid promoters and misleading claims, with a May 2027 deadline.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/regulation/nydfs-sets-may-2027-deadline-for-crypto-ad-policies",
-      "published": "2026-11-12T18:09:17.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/46bb11579eb5dae7de2ff6492405153e9f732fa1-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "NYDFS Sets May 2027 Deadline for Crypto Ad Policies"
-    },
-    {
-      "id": "02879e8d65af9ef9",
-      "headline": "New York regulator issues crypto advertising guidance for firms",
-      "summary": "The New York Department of Financial Services has released guidance setting out what it expects crypto firms to do when creating policies and procedures for advertising and marketing.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/regulation/2026-11-12-nydfs-sets-fresh-advertising-standards-crypto-firms-439014",
-      "published": "2026-11-12T18:03:57.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2019/07/new-york-1-e1577451823576.jpg",
-      "sourceTitle": "NYDFS sets fresh advertising standards for crypto firms"
     }
   ]
 }
