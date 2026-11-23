@@ -472,5 +472,14 @@
   "kl_day": "2026-11-23",
   "at": "2026-11-23T07:23:58.036Z",
   "text": "Bithumb has suspended CYBER deposits and withdrawals over a suspected security issue, while trading remains open. Kraken also warned of possible delays for CYBER deposits sent via Optimism. via CryptoSlate #Bithumb #CryptoNews"
+ },
+ {
+  "story_id": "ba38869b7ea0bdf0",
+  "tweet_id": "2124931262234206628",
+  "fb_id": "886346204857351_1589813656287216",
+  "tg_id": "2757",
+  "kl_day": "2026-11-24",
+  "at": "2026-11-23T18:21:04.801Z",
+  "text": "Solana's new memory checks could cause some older app transactions to fail. A replay surfaced an Anchor account handoff issue, and a separate change removes validator data copies. via CryptoSlate #Solana #Web3"
  }
 ]
