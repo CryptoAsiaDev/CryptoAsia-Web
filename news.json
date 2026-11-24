@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-23T22:30:51.640Z",
+  "updated": "2026-11-24T06:41:14.344Z",
   "skipped": [
+    "392c5d4b889e1689",
+    "f0297c5a3360c45b",
+    "4334322a3bceead2",
+    "ec2f26609670495e",
     "131b986f1c30490f",
     "cba1c52db66d704e",
     "6f3f956ffa71f411",
@@ -266,6 +270,66 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "9dc0938b088ac63a",
+      "headline": "BlackRock fund in Hong Kong adds stablecoin payment option",
+      "summary": "BlackRock's HKD Digital Liquidity Fund now offers tokenized units starting at HK$10. Stablecoin payments through the fund are limited to professional investors.",
+      "category": "Asia",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/converge/tradfi-and-fintech/blackrock-opens-hong-kong-fund-to-stablecoin-payments",
+      "published": "2026-11-24T06:32:21.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/51252d4e73db37a31a08d8a3daecb0a97a62054c-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "BlackRock Opens Hong Kong Fund to Stablecoin Payments"
+    },
+    {
+      "id": "291bf6a3657e3ad2",
+      "headline": "Bitcoin dips near $60,000 as Nvidia-driven rally fades",
+      "summary": "Bitcoin slipped back toward $60,000 after a brief lift tied to Jensen Huang's return to Nvidia. Analysts say the move was a short-lived reflex that did not ease macro pressures on bitcoin as a risk asset.",
+      "category": "Markets",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/markets/2026-11-24-bitcoin-60000-jensen-huang-fizzles-445472",
+      "published": "2026-11-24T06:21:34.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/Jensen-Huang-1-scaled.jpg",
+      "sourceTitle": "Bitcoin slips back toward $60,000 as Jensen Huang’s Nvidia return rally fizzles"
+    },
+    {
+      "id": "52b3f6c173c03a10",
+      "headline": "LendingUSA and Cross River Bank launch bitcoin-backed loan platform",
+      "summary": "LendingUSA and Cross River Bank have rolled out a lending platform secured by bitcoin, letting eligible borrowers get cash without selling their holdings. Loans range from $10,000 to $250,000.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/lendingusa-cross-river-bank-bitcoin-backed-loans-250k/",
+      "published": "2026-11-24T05:30:00.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-holders-can-borrow-up-to-70-of-their-collaterals-value-under-new-lending-program-768x432.jpg",
+      "sourceTitle": "LendingUSA, Cross River Bank Debut Bitcoin-Backed Loans Up to $250K"
+    },
+    {
+      "id": "f1a8ac77e2ee1d6f",
+      "headline": "UK Rules Bar Crypto Venues From Market-Making on Their Own Platforms",
+      "summary": "Under new UK rules, market making in qualifying cryptoassets on qualifying platforms will fall outside principal-dealing permission. Separate final FCA rules prohibit firms from making markets on UK platforms they operate from October 25, 2027.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/regulation/uk-qualifying-crypto-venues-face-own-platform-market-making-ban",
+      "published": "2026-11-24T05:01:51.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/de6e809fc78a81db357458278c0a4b903d142dda-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "UK Qualifying Crypto Venues Face Own-Platform Market-Making Ban"
+    },
+    {
+      "id": "09a583c18595cc07",
+      "headline": "Fidelity Analyst Sees Bitcoin Quantum Risk as Mostly Addressed",
+      "summary": "A Fidelity analyst says the quantum threat to Bitcoin is largely solved, though a decentralized network may be slow to adopt the fixes. The piece asks whether holders will upgrade.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/fidelity-analyst-bitcoin-quantum-threat-solved/",
+      "published": "2026-11-24T05:00:00.000Z",
+      "image": "https://assets.beincrypto.com/img/0X0ic7NuPe8fuh41yMVQv_We25c=/smart/d6881b515b584b28bc3bf5598b4bccb5",
+      "sourceTitle": "Fidelity Analyst Says Bitcoin Quantum Threat Is Largely Solved: Will Holders Upgrade?"
+    },
     {
       "id": "ab3eccaa15523507",
       "headline": "Strive Makes No Bitcoin Purchases Last Week, Holds 43,404 BTC",
@@ -1167,66 +1231,6 @@
       "published": "2026-11-13T17:22:54.000Z",
       "image": "https://cdn.decrypt.co/wp-content/uploads/2026/02/bitcoin-down-crash-decrypt-style-1-gID_7.jpg",
       "sourceTitle": "Bitcoin Hits 12-Week Low as Fed Rate Fears Undo Most of Summer Rally"
-    },
-    {
-      "id": "cfe31196ed72c805",
-      "headline": "About $600M in Long Positions Liquidated as Bitcoin, Ether Drop",
-      "summary": "Traders betting on higher prices lost $599 million in 24 hours as Bitcoin and Ethereum fell to their lowest levels in nearly three months. Longs accounted for 88% of $680.81 million in total crypto liquidations.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/crypto-liquidations-bitcoin-ethereum-3-month-low/",
-      "published": "2026-11-13T01:54:29.000Z",
-      "image": "https://assets.beincrypto.com/img/e7LLCEFNPSVeWjw7GjKCQebKB6s=/smart/d592b3c3252e46968e5fa5a5865563f5",
-      "sourceTitle": "Nearly $600 Million in Crypto Longs Liquidated as Bitcoin and Ethereum Fall to August Lows"
-    },
-    {
-      "id": "50cd069a884e9d36",
-      "headline": "Bitcoin Falls to Around $70,600 Amid Extended Losses",
-      "summary": "Bitcoin slid to about $70,600 as its four-week decline deepened. Coinbase also hit a fresh 28-day low, and ether kept trailing bitcoin over one- and four-week periods.",
-      "category": "Markets",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/markets/bitcoin-sinks-to-70-600-as-four-week-losses-deepen",
-      "published": "2026-11-13T00:57:09.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/1750e141b492a4cd679afccc9f2aba2bcda4dce9-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Bitcoin Sinks to $70,600 as Four-Week Losses Deepen"
-    },
-    {
-      "id": "47464820a07d163c",
-      "headline": "Visa to Settle Stablecoin Transactions Using Western Union's USDPT",
-      "summary": "Anchorage Digital is working with Visa so that certain stablecoins issued by its federally regulated bank, beginning with Western Union's USDPT, can serve as settlement assets on Visanet.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/finance/visa-western-union-usdpt-stablecoin-settlement-anchorage/",
-      "published": "2026-11-13T00:55:28.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/visa-taps-anchorage-digital-to-expand-stablecoin-settlement-768x432.jpg",
-      "sourceTitle": "Visa Adds Western Union’s USDPT for Stablecoin Settlement via Anchorage"
-    },
-    {
-      "id": "0c62c95ecffe1e6a",
-      "headline": "Aave user loses $305,000 in Across Protocol website hijack",
-      "summary": "A user reportedly lost about $305,000 from an Aave deposit token after the Across Protocol website was hijacked. Blockchain analytics firm Bitquery estimates total losses of roughly $401,900 across nine wallets.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/across-protocol-website-attack-reached-an-aave-deposit-new-402000-loss-trace-shows/",
-      "published": "2026-11-13T00:30:17.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/across-aave-hijack-cobalt-empty-rack.jpg",
-      "sourceTitle": "Aave user loses $305,000 after Across Protocol website hijack"
-    },
-    {
-      "id": "3598ea19ecdb834a",
-      "headline": "Binance says hacked assets are covered; proof pending",
-      "summary": "Binance says it has closed the remaining gap in customer backing. Users will need to wait for cryptographic proof of a new snapshot before they can verify it.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/hacks/binance-says-hack-assets-covered-reserve-proof-pending",
-      "published": "2026-11-12T18:41:56.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/fe453c44a141c7506910aa0818e6897ecebcd05f-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "Binance Says Hack Assets Covered, Reserve Proof Pending"
     }
   ]
 }
