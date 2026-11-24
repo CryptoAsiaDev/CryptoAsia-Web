@@ -1,6 +1,9 @@
 {
-  "updated": "2026-11-24T06:41:14.344Z",
+  "updated": "2026-11-24T21:04:09.060Z",
   "skipped": [
+    "7ae7fa8774589470",
+    "afea339fc0e3752f",
+    "bee3ad8ecc66fa35",
     "392c5d4b889e1689",
     "f0297c5a3360c45b",
     "4334322a3bceead2",
@@ -270,6 +273,78 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "54660523431aa159",
+      "headline": "SEC staff grants Molecule no-action relief for research tokens",
+      "summary": "SEC staff said it would not recommend enforcement against Molecule over utility tokens that let people back scientific research. The relief covers the company's token model as described.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/regulation/2026-11-24-sec-staff-gives-molecule-no-action-relief-scientific-research-tokens-446067",
+      "published": "2026-11-24T20:53:14.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/gettyimages-2212002201-594x594-1.jpg",
+      "sourceTitle": "SEC staff gives Molecule no-action relief for scientific research tokens"
+    },
+    {
+      "id": "ac564b69812efd28",
+      "headline": "Ethereum Foundation Ranks AI Risk Above Quantum Computing Threat",
+      "summary": "The Ethereum Foundation has expanded its protocol security team and is focusing on a cryptographic overhaul. It cites AI advances as a threat to the mathematical assumptions protecting crypto assets.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383927/ethereum-foundation-ai-more-urgent-threat-quantum-computing",
+      "published": "2026-11-24T20:36:02.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/Ethereum-decrypt-style-04-gID_7.png",
+      "sourceTitle": "Ethereum Foundation Says AI Is a More Urgent Threat Than Quantum Computing"
+    },
+    {
+      "id": "33eda6c8ecc65876",
+      "headline": "Kraken's Krak Plans US Credit Cards Supporting USDC",
+      "summary": "Kraken's Krak is planning credit cards in the US with a USDC option. The top cashback tier requires a $150,000 Krak balance and Krakpass membership, while a secured card locks USDC and earns variable yield.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/converge/cefi/kraken-s-krak-plans-us-credit-cards-with-usdc-option",
+      "published": "2026-11-24T20:35:38.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/bacaaa3f34cba91db6957bda505059025b0c471d-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Kraken’s Krak Plans US Credit Cards With USDC Option"
+    },
+    {
+      "id": "adb18dd6423b1ba3",
+      "headline": "Coldcard explains why Bitcoin wallet flaw escaped detection for years",
+      "summary": "Coinkite, the maker of Coldcard, described why repeated security reviews did not catch the flaw. The company has not yet decided on compensation for affected customers.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/coldcard-how-security-reviews-missed-bitcoin-wallet-flaw-years?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-24T19:04:26.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M87AWRBC8FGN1Y9J8122FYZF/thief-bitcoin-1280x854.webp",
+      "sourceTitle": "Coldcard reveals how Bitcoin wallet flaw went undetected for over 5 years"
+    },
+    {
+      "id": "e118e147332c4b31",
+      "headline": "Hong Kong sets approval rules for banks holding customers' crypto",
+      "summary": "Standalone custodians would generally need a license, while banks would need to register alongside existing custody standards. The rules concern how crypto held for customers is overseen in Hong Kong.",
+      "category": "Asia",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/hong-kong-wants-banks-to-secure-new-approval-before-holding-customers-crypto/",
+      "published": "2026-11-24T19:00:30.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/hong-kong-custody-key.webp",
+      "sourceTitle": "Hong Kong wants banks to secure new approval before holding customers’ crypto"
+    },
+    {
+      "id": "c3a5e833a6d2ccda",
+      "headline": "CFTC Guidance Lets Crypto Count Toward Reserve Buffers",
+      "summary": "Staff guidance from the CFTC allows swap venues and clearinghouses to count Bitcoin, Ethereum and stablecoins toward a 12-month operating-cost buffer, with certain conditions attached.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Decrypt",
+      "url": "https://decrypt.co/383906/cftc-new-crypto-reserves-guidance-actually-allows-what-it-doesnt",
+      "published": "2026-11-24T18:55:27.000Z",
+      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/cftc-decrypt-style-01-gID_7.jpg",
+      "sourceTitle": "What the CFTC’s New Crypto Reserves Guidance Actually Allows—And What It Doesn’t"
+    },
     {
       "id": "9dc0938b088ac63a",
       "headline": "BlackRock fund in Hong Kong adds stablecoin payment option",
@@ -1159,78 +1234,6 @@
       "published": "2026-11-14T02:39:42.000Z",
       "image": "https://cdn.sanity.io/images/6oftkxoa/production/5e06d8d00ace8e7376045056e2833056c8c43c11-2048x1152.webp?fm=webp&q=85",
       "sourceTitle": "AAVE Slides 30% in Four Weeks, Trailing Bitcoin and Ether"
-    },
-    {
-      "id": "d5a39a960a623c9c",
-      "headline": "Unocoin pauses all services after hackers get around BitGo freeze",
-      "summary": "Indian exchange Unocoin says disputed transfers were signed outside BitGo while it investigates suspected misuse of a backup mechanism. The firm has halted all services during the probe.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/unocoin-halts-all-services-after-hackers-bypass-bitgo-freeze/",
-      "published": "2026-11-14T02:10:17.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/shutter-branded.jpg",
-      "sourceTitle": "Unocoin halts all services after hackers bypass BitGo freeze"
-    },
-    {
-      "id": "4abd4d7e741bf84c",
-      "headline": "Glassnode Data Flags Quantum Risk for Over a Third of Bitcoin",
-      "summary": "Analytics firm Glassnode counted about 7.12 million bitcoin whose public keys already appear on the public ledger, a potential quantum vulnerability. Most owners could fix it quickly, but some early coins may never be secured.",
-      "category": "Bitcoin",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/one-third-bitcoin-supply-faces-quantum-risk/",
-      "published": "2026-11-13T23:30:00.000Z",
-      "image": "https://assets.beincrypto.com/img/1ikDQ02bW3GG74XeADqD9lbV1v8=/smart/790c941d0a0a4f878bd2d096990ad6ce",
-      "sourceTitle": "Over 35% of Bitcoin Supply Faces Potential Quantum Risk, New Data Shows"
-    },
-    {
-      "id": "73c93698c8cfc1f7",
-      "headline": "Grayscale Says Crypto Offers Opportunities Beyond Bitcoin",
-      "summary": "Grayscale said crypto's growth is opening investment options beyond bitcoin, as sectors differ in business models, adoption and token economics. Its analysis links weakening correlations to a greater role for picking individual assets, while noting marketwide risks remain.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/market-updates/grayscale-sees-new-crypto-opportunities-bitcoin-grip-weakens/",
-      "published": "2026-11-13T23:10:02.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/grayscale-1-1-768x432.jpg",
-      "sourceTitle": "Grayscale Sees New Crypto Opportunities as Bitcoin’s Grip Weakens"
-    },
-    {
-      "id": "a2ebd83a9a376742",
-      "headline": "BitGo rejects breach claims as Unocoin investigates transfers",
-      "summary": "BitGo says the disputed transfers were made with keys held by Unocoin and without its involvement. Unocoin suspects a backup mechanism was misused, and its services remain suspended.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/security/bitgo-denies-breach-as-unocoin-probes-wallet-transfers",
-      "published": "2026-11-13T18:11:50.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/85f4e84c2ed841241f07c8a002eaa33498203646-2048x1152.png?w=800&fit=max&fm=jpg&q=70&bg=ffffff",
-      "sourceTitle": "BitGo Denies Breach as Unocoin Probes Wallet Transfers"
-    },
-    {
-      "id": "e4f7576d61632859",
-      "headline": "Trump Names First Democrats for SEC and CFTC Posts",
-      "summary": "Trump has proposed a bipartisan slate of two Republicans and two Democrats for the SEC and CFTC, his first Democratic picks for either agency. The nominees would fill commissions that shape crypto policy.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/383260/trump-first-democratic-picks-sec-cftc-could-reshape-crypto",
-      "published": "2026-11-13T17:56:03.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2025/05/US-Capitol-decrypt-style-01-gID_7.png",
-      "sourceTitle": "Trump’s First Democratic Picks for SEC and CFTC Could Reshape Crypto’s Regulators"
-    },
-    {
-      "id": "6341bfbbb057b6c1",
-      "headline": "Bitcoin slides to 12-week low as rate-hike worries erase rally",
-      "summary": "Bitcoin has fallen back to around August price levels as stubborn inflation, rising expectations of another rate increase and ETF outflows weigh on the market.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/383231/bitcoin-hits-12-week-low-fed-rate-fears-undo-summer-rally",
-      "published": "2026-11-13T17:22:54.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/02/bitcoin-down-crash-decrypt-style-1-gID_7.jpg",
-      "sourceTitle": "Bitcoin Hits 12-Week Low as Fed Rate Fears Undo Most of Summer Rally"
     }
   ]
 }
