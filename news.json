@@ -1,6 +1,10 @@
 {
-  "updated": "2026-11-25T05:12:05.288Z",
+  "updated": "2026-11-25T20:26:21.829Z",
   "skipped": [
+    "4355b7984f8eb0f9",
+    "bb094f0dcba13583",
+    "df63b925204b5129",
+    "f991e460a0a4c4b0",
     "fab28d77b7662e48",
     "4f491d1a29f5b880",
     "fcf6c3af70107ea8",
@@ -280,6 +284,78 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "9326e724d2a6bb9d",
+      "headline": "Ripple partners with Turkish bank, eyeing wider XRP use there",
+      "summary": "Ripple says its custody software is deployed at Yapı Kredi in Turkey. A route for converting Turkish lira into withdrawable XRP has not been publicly confirmed.",
+      "category": "Asia",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/ripples-latest-banking-partnership-opens-another-route-to-xrp-adoption-in-turkey/",
+      "published": "2026-11-25T20:10:29.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/yapi-kredi-vault-gate.webp",
+      "sourceTitle": "Ripple’s latest banking partnership opens another route to XRP adoption in Turkey"
+    },
+    {
+      "id": "676a93d5845b1c5d",
+      "headline": "Attack redirects Bitcoin miners' compute power to steal rewards",
+      "summary": "Braiins has warned that an attacker is diverting miners' computing power to take bitcoin mining rewards. The attack reportedly exploits unencrypted connections.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/ecosystems/2026-11-25-bitcoin-miners-hit-hashrate-hijacking-attack-exploiting-unencrypted-connections-446723",
+      "published": "2026-11-25T19:37:10.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/GettyImages-1371375644-scaled.jpg",
+      "sourceTitle": "Bitcoin miners hit by hashrate hijacking attack exploiting unencrypted connections"
+    },
+    {
+      "id": "2251a529757bac21",
+      "headline": "Bit Digital Sells ETH to Repay $50M Galaxy Loan",
+      "summary": "Bit Digital said it sold 29,825 ETH to repay $50 million in secured borrowings from Galaxy Digital. The move is part of a wider trend of publicly traded digital asset treasury companies selling reserves to cut leverage.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/crypto-news/bit-digital-sells-nearly-30000-eth-to-slash-galaxy-debt-by-50-million/",
+      "published": "2026-11-25T19:30:18.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bit-digital-sells-nearly-30000-eth-to-slash-galaxy-debt-by-50-million-768x432.png",
+      "sourceTitle": "Bit Digital Sells Nearly 30,000 ETH to Slash Galaxy Debt by $50 Million"
+    },
+    {
+      "id": "6fc5e66435d4429e",
+      "headline": "Fidelity seeks listing for spot Chainlink fund on Nasdaq",
+      "summary": "Fidelity has filed for a proposed fund that would hold LINK tokens directly without staking them. The filing is not a launch, and the product would join existing offerings from Grayscale and Bitwise.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/converge/tradfi-and-fintech/fidelity-files-for-spot-chainlink-fund-on-nasdaq",
+      "published": "2026-11-25T19:05:25.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/1a814c7500a24de7581ea40cdccfd8980fea5ee3-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Fidelity Files for Spot Chainlink Fund on Nasdaq"
+    },
+    {
+      "id": "a9864c6c12d8dd44",
+      "headline": "US Bitcoin reserve bill advances to House Union Calendar",
+      "summary": "A proposed US bitcoin reserve bill has been placed on the House Union Calendar. Under one section, federally acquired bitcoin would be held for 20 years after enactment, and House passage is still pending.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/regulation/us-bitcoin-reserve-bill-reaches-house-union-calendar",
+      "published": "2026-11-25T19:05:10.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/03e496e57b70ce7c502c03b8d2df8322d40ed237-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "US Bitcoin Reserve Bill Reaches House Union Calendar"
+    },
+    {
+      "id": "5c95f4065bc19768",
+      "headline": "CleanSpark sells Bitcoin to fund AI expansion amid heavy losses",
+      "summary": "Bitcoin miner CleanSpark is selling its bitcoin holdings to raise cash for possible acquisitions. The story also notes that a price drop can make borrowing against bitcoin more demanding, as shown by its Two Prime facility.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/cleanspark-is-selling-bitcoin-to-fund-its-ai-expansion-as-annual-losses-approach-1-billion/",
+      "published": "2026-11-25T19:00:01.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/cleanspark-bitcoin-sale-receipt.webp",
+      "sourceTitle": "CleanSpark is selling Bitcoin to fund its AI expansion as annual losses approach $1 billion"
+    },
     {
       "id": "1f66bd594ee1a2c4",
       "headline": "Finmo Adds USDC and USDT to Business Accounts",
@@ -1169,78 +1245,6 @@
       "published": "2026-11-15T15:44:31.000Z",
       "image": "https://cdn.sanity.io/images/6oftkxoa/production/245507cc6256a311e21d2cff0d7c3aa4aba25d17-2048x1152.webp?fm=webp&q=85",
       "sourceTitle": "Large Wallets Buy ETH as Price Falls Below $1,800"
-    },
-    {
-      "id": "18393d8f25197e71",
-      "headline": "Bitcoin appears undervalued on one metric after ETF outflows",
-      "summary": "An adjusted MVRV signal from analyst Darkfost suggests Bitcoin's valuation has become lower, while ETF withdrawals and an SOPR reading leave any recovery unconfirmed.",
-      "category": "Markets",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/bitcoins-new-value-alert-still-needs-proof-that-buyers-can-absorb-supply/",
-      "published": "2026-11-15T15:35:58.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/bitcoin-valuation-depths.webp",
-      "sourceTitle": "Bitcoin now looks cheap by one measure after $1 billion in ETF outflows"
-    },
-    {
-      "id": "c5b6e70a29a8e725",
-      "headline": "Glassnode Flags Large Bitcoin Leveraged Liquidation Zone Near $60K",
-      "summary": "Glassnode warned that a concentration of leveraged positions near $60,000 could fuel forced selling and deepen Bitcoin's decline. The firm pointed to thinner trading liquidity and losses on bullish bets adding pressure across crypto markets.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/market-updates/bitcoin-faces-massive-liquidation-cluster-near-60k-glassnode-warns/",
-      "published": "2026-11-15T00:30:41.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-liquidation-cluster-768x432.jpg",
-      "sourceTitle": "Bitcoin Faces Massive Liquidation Cluster Near $60K, Glassnode Warns"
-    },
-    {
-      "id": "c2318196c9ace810",
-      "headline": "Kraken Parent Posts Quarterly Profit Rebound Ahead of IPO",
-      "summary": "Payward, the parent of crypto exchange Kraken, reported adjusted third-quarter earnings of $60 million, up from $23 million in the second quarter. The figure was still 67% lower than a year earlier, according to a shareholder letter cited by Bloomberg.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/kraken-payward-q3-2026-earnings-rebound/",
-      "published": "2026-11-15T00:15:29.000Z",
-      "image": "https://assets.beincrypto.com/img/3MSigYtPlSVtun7SdtF6Dbl50Yw=/smart/1b6af11dba5648f2aafec3c5c757ba22",
-      "sourceTitle": "Kraken Parent’s Profit Rebound Still Leaves a Wide Gap Before Its IPO"
-    },
-    {
-      "id": "b918d6c7270c0261",
-      "headline": "Kazakhstan to issue tokenized government bonds next quarter",
-      "summary": "Kazakhstan plans to launch tokenized government bonds in the first quarter, following its first sale of tokenized central bank notes. The move comes as the country expands its crypto market.",
-      "category": "Asia",
-      "chain": "",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/business/2026/11/14/kazakhstan-plans-tokenized-government-bonds-in-first-quarter-after-usd22-million-note-sale",
-      "published": "2026-11-14T15:38:27.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/f848ee6dd7e6ff1afdc488982529261469645ec0-6708x4472.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "Kazakhstan plans tokenized government bonds in first quarter after $22 million note sale"
-    },
-    {
-      "id": "c6edf19e65a23c78",
-      "headline": "UK, Singapore and Thailand central banks test cross-border FX settlement",
-      "summary": "A project called Meridian FX APAC showed how transactions can be coordinated between traditional settlement systems and blockchain-based ones. The test involves central banks from the UK, Singapore and Thailand.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/policy/2026/11/14/uk-singapore-and-thailand-central-banks-test-cross-border-fx-settlement-as-stablecoins-gain-ground",
-      "published": "2026-11-14T15:00:00.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/c3b2b5c1d4640f31fd55291b5060600217e305cb-1000x726.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "UK, Singapore, and Thailand central banks test cross-border FX settlement as stablecoins gain ground"
-    },
-    {
-      "id": "6c5db5c3659cfbdf",
-      "headline": "HYPE Token Holds Up Better Than Bitcoin and Ether in Selloff",
-      "summary": "Hyperliquid's HYPE token has fallen about a quarter from its peak but is outperforming Bitcoin and Ethereum during the latest market downturn. Its derivatives market is cited as one possible reason, with HYPE near $73 on Friday.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/hyperliquid-hype-price-resilience-crypto-market-crash/",
-      "published": "2026-11-14T13:15:31.000Z",
-      "image": "https://assets.beincrypto.com/img/hqi23TQ1-B2nr7CGWs3ShdR2jzg=/smart/2c48c80b4f2545a1ac148482ee5ed0dc",
-      "sourceTitle": "Hyperliquid's HYPE Token Shows Resilience as Crypto Market Crash Deepens"
     }
   ]
 }
