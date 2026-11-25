@@ -1,6 +1,13 @@
 {
-  "updated": "2026-11-24T21:04:09.060Z",
+  "updated": "2026-11-25T05:12:05.288Z",
   "skipped": [
+    "fab28d77b7662e48",
+    "4f491d1a29f5b880",
+    "fcf6c3af70107ea8",
+    "82f12b2ec48cfe7a",
+    "8ecb7123c3dec71a",
+    "8929d058d8c302f9",
+    "47f40b64bea21768",
     "7ae7fa8774589470",
     "afea339fc0e3752f",
     "bee3ad8ecc66fa35",
@@ -273,6 +280,30 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "1f66bd594ee1a2c4",
+      "headline": "Finmo Adds USDC and USDT to Business Accounts",
+      "summary": "Finmo has enabled businesses to hold, receive and pay in USDC and USDT from its Business Account alongside fiat balances. Stablecoin balances can also be viewed next to bank accounts in Finmo Treasury.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "Fintech News Singapore",
+      "url": "https://fintechnews.sg/142303/blockchain/finmo-stablecoins-usdc-usdt-business-account/",
+      "published": "2026-11-25T02:50:55.000Z",
+      "image": "https://fintechnewssg-22e90.kxcdn.com/wp-content/uploads/2026/06/David-Hanna-150x150.jpg",
+      "sourceTitle": "Finmo Adds USDC and USDT Support to Business Accounts"
+    },
+    {
+      "id": "e35e9853f5c0fb17",
+      "headline": "CFTC lets US exchanges count Bitcoin reserves at a discount",
+      "summary": "CFTC staff say exchanges and clearinghouses can count qualifying crypto toward reserves at a haircut. A worked example illustrates how the annual buffer could fall short.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/the-cftc-opens-the-door-to-bitcoin-reserves-at-us-exchanges-with-a-20-catch/",
+      "published": "2026-11-25T02:50:52.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/bitcoin-operating-buffer-headroom.webp",
+      "sourceTitle": "The CFTC opens the door to Bitcoin reserves at US exchanges with a 20% catch"
+    },
     {
       "id": "54660523431aa159",
       "headline": "SEC staff grants Molecule no-action relief for research tokens",
@@ -1210,30 +1241,6 @@
       "published": "2026-11-14T13:15:31.000Z",
       "image": "https://assets.beincrypto.com/img/hqi23TQ1-B2nr7CGWs3ShdR2jzg=/smart/2c48c80b4f2545a1ac148482ee5ed0dc",
       "sourceTitle": "Hyperliquid's HYPE Token Shows Resilience as Crypto Market Crash Deepens"
-    },
-    {
-      "id": "11d1aef5934d07aa",
-      "headline": "Market makers may be amplifying bitcoin and ether price swings",
-      "summary": "Bitcoin and ether are trading in ranges where market makers and dealers could be adding to volatility. The excerpt is brief and offers no further detail.",
-      "category": "Markets",
-      "chain": "",
-      "source": "CoinDesk",
-      "url": "https://www.coindesk.com/markets/2026/11/14/a-behind-the-scenes-force-may-amplify-bitcoin-and-ether-price-volatility",
-      "published": "2026-11-14T12:57:00.000Z",
-      "image": "https://cdn.sanity.io/images/s3y3vcno/production/edd6986aac22b09dea34bd96bcf1c26daad85c18-1600x740.jpg?fm=jpg&w=800&h=450&crop=focalpoint&fit=clip",
-      "sourceTitle": "A behind the scenes force may amplify bitcoin and ether price volatility"
-    },
-    {
-      "id": "d06208008430285f",
-      "headline": "AAVE Drops 30% Over Four Weeks, Worse Than BTC and ETH",
-      "summary": "The Aave governance token fell further than bitcoin and ether over the period, while the dollar value of assets locked on Aave declined by a smaller percentage.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/markets/aave-slides-30-in-four-weeks-trailing-bitcoin-and-ether",
-      "published": "2026-11-14T02:39:42.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/5e06d8d00ace8e7376045056e2833056c8c43c11-2048x1152.webp?fm=webp&q=85",
-      "sourceTitle": "AAVE Slides 30% in Four Weeks, Trailing Bitcoin and Ether"
     }
   ]
 }
