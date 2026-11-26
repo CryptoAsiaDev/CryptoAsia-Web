@@ -1,6 +1,8 @@
 {
-  "updated": "2026-11-26T04:38:48.381Z",
+  "updated": "2026-11-26T20:03:58.027Z",
   "skipped": [
+    "6e431443e35d183e",
+    "ff02999329ac96fc",
     "f041bebe82fec372",
     "4e3e7ad576c6a05f",
     "c51d9749682266da",
@@ -291,6 +293,54 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "daae2e186e192898",
+      "headline": "Binance Lifts Post-Hack Withdrawal Suspension on Most Networks",
+      "summary": "Binance says withdrawals are now open on nearly all networks. A small number remain paused for maintenance or upgrades.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/cefi/binance-says-post-hack-withdrawal-suspension-is-over",
+      "published": "2026-11-26T19:17:27.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/17b28f4181c6522727a3318cb022fa285dbc617b-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Binance Says Post-Hack Withdrawal Suspension Is Over"
+    },
+    {
+      "id": "67f8cecd4d96949e",
+      "headline": "Fidelity files with SEC for spot Chainlink ETF",
+      "summary": "Fidelity Investments has submitted a filing to the SEC seeking to launch a spot Chainlink exchange-traded fund. The move extends its crypto ETF lineup beyond bitcoin, ethereum and solana.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/finance/fidelity-pushes-beyond-bitcoin-with-chainlink-etf-filing/",
+      "published": "2026-11-26T18:30:28.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/fidelity-pushes-beyond-bitcoin-with-chainlink-etf-filing.jpg",
+      "sourceTitle": "Fidelity Pushes Beyond Bitcoin With Chainlink ETF Filing"
+    },
+    {
+      "id": "719568056a2ea4be",
+      "headline": "Spain proposes letting regulator freeze crypto accounts",
+      "summary": "A new decree would let Spain's financial intelligence unit suspend crypto accounts. Firms that fail to comply could face fines.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/news/spain-moves-grant-financial-watchdog-power-freeze-crypto-accounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-26T18:26:31.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M8CCD2RN9Y8M1ZHAA60WA1ZA/frozen-token-with-spanish-flag.png",
+      "sourceTitle": "Spain moves to grant financial watchdog power to freeze crypto accounts"
+    },
+    {
+      "id": "66d9661fb4b2e47f",
+      "headline": "Economist warns hawkish Fed could hit crypto in December",
+      "summary": "Economist Robin Brooks cautioned that stocks could face serious consequences if the Federal Reserve does not offer dovish signals before the FOMC blackout period. The warning links monetary policy expectations to broader risk assets, including crypto.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Cointelegraph",
+      "url": "https://cointelegraph.com/markets/crypto-hawkish-fed-risks-december-meltdown?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+      "published": "2026-11-26T17:39:53.000Z",
+      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M8CA3FNTMVJ8NYKSJGRZZ4NT/hi-impact-of-fed-interest-rates-on-crypto-holders-2-960x640.webp",
+      "sourceTitle": "Crypto on notice as hawkish Fed risks December ‘meltdown’"
+    },
     {
       "id": "33d0749363452608",
       "headline": "Coinbase CEO Says Investors Rotate From Bitcoin Into IPOs, Then Back",
@@ -1203,55 +1253,6 @@
       "published": "2026-11-16T00:05:26.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/xrp-nov-15-768x432.jpg",
       "sourceTitle": "Ripple’s David Schwartz Once Held 26 Million XRP. Now Just 3 Million"
-    },
-    {
-      "id": "49e6468e15fcef1f",
-      "headline": "Saylor Points to Four Bitcoin Metrics Amid Price Drop",
-      "summary": "Michael Saylor highlighted four Bitcoin metrics to frame the recent price decline. Binance co-founder CZ responded that correlation does not equal causation.",
-      "category": "Bitcoin",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/saylor-rare-extreme-bitcoin-metrics-price/",
-      "published": "2026-11-15T23:07:38.000Z",
-      "image": "https://assets.beincrypto.com/img/YY_Ht2aJ-f7RW9lNUyJBXrr_vGY=/smart/c030b5c43851499bb5d7cbae6658c531",
-      "sourceTitle": "Saylor Highlights 4 Rare and Extreme Metrics Bitcoin Has Just Hit to Explain Price"
-    },
-    {
-      "id": "0e37f0293d5ec5e2",
-      "headline": "Crypto Selloff Deepens as XRP Falls to Two-Year Low",
-      "summary": "Crypto markets lost over $130 billion since Friday as XRP dropped below $1 and bitcoin dipped to an intraday low of $61,947. Sentiment has reached extreme fear, and $1.71 billion in leveraged positions were liquidated overnight.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/market-updates/crypto-market-rout-deepens-as-xrp-price-hits-2-year-low-and-etf-money-flees/",
-      "published": "2026-11-15T17:10:25.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/crypto-market-rout-deepens-as-xrp-price-hits-2-year-low-and-etf-money-flees-768x432.png",
-      "sourceTitle": "Crypto Market Rout Deepens as XRP Price Hits 2-Year Low and ETF Money Flees"
-    },
-    {
-      "id": "e7c42b65ed6aaaf1",
-      "headline": "Bitcoin slides under $67,000 as $1.6B in liquidations deepen fear",
-      "summary": "Bitcoin fell below $67,000 amid a $1.6 billion wave of liquidations, with market sentiment described as extreme fear.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Google News: NFT",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQjA3aUgtLTJ4ODBHWTREVUllRXBNZGJhcnhnbWI0OGhiOW9wbHVBc1RlU0J4ZWxibVRRVlNMaF9RYjBEWW1tY3Btc0JXaTRYaUd4TGpSTmdUNHhWQTQzdkY1VVB2THJiVnFUTDlzM3p1QkVmRDg1VmxYeVB1VFE3bzkySVdPdw?oc=5",
-      "published": "2026-11-15T16:46:42.000Z",
-      "image": "",
-      "sourceTitle": "Bitcoin Drops Below $67,000 as $1.6B Liquidation Wave Deepens ‘Extreme Fear’ - NFTevening",
-      "imgRetry": 1
-    },
-    {
-      "id": "ff96c0c258822735",
-      "headline": "Saylor Teases Another Strategy Bitcoin Purchase as Prices Fall",
-      "summary": "Michael Saylor hinted at another bitcoin buy by Strategy during a sharp market drop. The company's holdings remain below acquisition cost.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/featured/michael-saylor-hints-at-another-strategy-bitcoin-buy-as-btc-slides/",
-      "published": "2026-11-15T16:20:32.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/strategy-tracker-nov-15-768x432.jpg",
-      "sourceTitle": "Michael Saylor Hints at Another Strategy Bitcoin Buy as BTC Slides"
     }
   ]
 }
