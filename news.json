@@ -1,6 +1,13 @@
 {
-  "updated": "2026-11-25T20:26:21.829Z",
+  "updated": "2026-11-26T04:38:48.381Z",
   "skipped": [
+    "f041bebe82fec372",
+    "4e3e7ad576c6a05f",
+    "c51d9749682266da",
+    "c0737a702d78e76a",
+    "ca75b0e19ac04b6c",
+    "89fc85a17dcb7053",
+    "0215d3b6651ff607",
     "4355b7984f8eb0f9",
     "bb094f0dcba13583",
     "df63b925204b5129",
@@ -284,6 +291,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "33d0749363452608",
+      "headline": "Coinbase CEO Says Investors Rotate From Bitcoin Into IPOs, Then Back",
+      "summary": "Coinbase CEO Brian Armstrong said investors have historically sold bitcoin to buy into major IPOs and later returned to it. He argued bitcoin remains important for investors expecting higher inflation and money printing.",
+      "category": "Markets",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/featured/coinbase-ceo-says-investors-swap-bitcoin-for-big-ipos-then-rotate-back/",
+      "published": "2026-11-26T03:30:34.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/bitcoin-price-nov-25-768x432.jpg",
+      "sourceTitle": "Coinbase CEO Says Investors Swap Bitcoin for Big IPOs, Then Rotate Back"
+    },
+    {
+      "id": "52dc201b7e90f59f",
+      "headline": "House committee advances bitcoin reserve bill, but passage looks difficult",
+      "summary": "A House committee has moved forward a Strategic Bitcoin Reserve bill. With the current Congress expected to adjourn within weeks, there is little time for the full chamber to pass it.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/regulation/2026-11-25-house-committee-advances-strategic-bitcoin-reserve-bill-446778",
+      "published": "2026-11-26T03:03:01.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/darren-halstead-sT50jo9LCH0-unsplash-scaled-e1795660899257.jpg",
+      "sourceTitle": "House Committee advances Strategic Bitcoin Reserve bill with narrow path to passage"
+    },
+    {
+      "id": "b71439f2894aef52",
+      "headline": "Lido tightens Ethereum staking penalties as operators get larger validator access",
+      "summary": "Lido is changing its penalty rules for Ethereum staking operators and expanding their access to larger validators. The move follows a March slashing event that involved six validators.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/lido-tightens-ethereum-staking-penalties-as-operators-gain-access-to-larger-validators/",
+      "published": "2026-11-26T01:50:48.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/lido-operator-bond-repair.webp",
+      "sourceTitle": "Lido tightens Ethereum staking penalties as operators gain access to larger validators"
+    },
     {
       "id": "9326e724d2a6bb9d",
       "headline": "Ripple partners with Turkish bank, eyeing wider XRP use there",
@@ -1209,42 +1252,6 @@
       "published": "2026-11-15T16:20:32.000Z",
       "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/strategy-tracker-nov-15-768x432.jpg",
       "sourceTitle": "Michael Saylor Hints at Another Strategy Bitcoin Buy as BTC Slides"
-    },
-    {
-      "id": "3368737bc3df901b",
-      "headline": "Wall Street Firms Race to Dominate Onchain Dollar Market",
-      "summary": "Major traditional finance players, including Goldman, Citi, SoFi, Anchorage, Mastercard, Visa and Circle, are moving into onchain dollar products. The excerpt notes the space was previously led by Tether and Circle.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Decrypt",
-      "url": "https://decrypt.co/383284/how-wall-street-racing-onchain-dollar-stablecoins",
-      "published": "2026-11-15T16:01:02.000Z",
-      "image": "https://cdn.decrypt.co/wp-content/uploads/2026/01/decrypt-style-wall-street-gID_7.png",
-      "sourceTitle": "How Wall Street Is Racing to Claim the Onchain Dollar"
-    },
-    {
-      "id": "5161058678379562",
-      "headline": "Binance's Ether Reserves Fall to Lowest Since 2021",
-      "summary": "Binance's ETH holdings dropped to roughly 2.9 million, their smallest level in almost five years, even as Ether's price slid to its lowest point since early July. Coins leaving exchanges are often read as a sign holders are not selling.",
-      "category": "Markets",
-      "chain": "",
-      "source": "BeInCrypto",
-      "url": "https://beincrypto.com/ethereum-price-4-month-low-binance-reserves/",
-      "published": "2026-11-15T15:46:28.000Z",
-      "image": "https://assets.beincrypto.com/img/JLrmd8mLwWCzbH-T2vtB7TOHXaI=/smart/494c0e2cc1ba477d872c64505718f587",
-      "sourceTitle": "Binance Holds the Least Ethereum Since 2021"
-    },
-    {
-      "id": "5d434cb46cbaa97b",
-      "headline": "Large ETH Holders Buy as Price Dips Below $1,800",
-      "summary": "Onchain swap data shows some large wallets buying ether during the decline. Analytics firm Lookonchain's exchange withdrawal tally, however, does not confirm new purchases.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/news/markets/large-wallets-buy-eth-as-price-falls-below-1-800",
-      "published": "2026-11-15T15:44:31.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/245507cc6256a311e21d2cff0d7c3aa4aba25d17-2048x1152.webp?fm=webp&q=85",
-      "sourceTitle": "Large Wallets Buy ETH as Price Falls Below $1,800"
     }
   ]
 }
