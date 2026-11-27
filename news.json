@@ -1,6 +1,14 @@
 {
-  "updated": "2026-11-26T20:03:58.027Z",
+  "updated": "2026-11-27T04:42:56.583Z",
   "skipped": [
+    "48c2dd37e52e45d2",
+    "b2348faf6a5ffefb",
+    "3bbbc68244f9e2d1",
+    "56e0ac95f4800c8f",
+    "326f7c4c04be09cb",
+    "540d2def74737da9",
+    "254b173337d90891",
+    "db305c82a613f12e",
     "6e431443e35d183e",
     "ff02999329ac96fc",
     "f041bebe82fec372",
@@ -293,6 +301,42 @@
     "411b85e0b11be00b"
   ],
   "items": [
+    {
+      "id": "fd0585f383189176",
+      "headline": "EU banking watchdog urges safeguards for crypto firms using DeFi lending",
+      "summary": "The European banking regulator has renewed its call for crypto firms that direct customers into decentralized lending to have safeguards assessed. The article also reports that USDT leads borrowing on several DeFi protocols reviewed.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/usdt-leads-borrowing-on-four-of-six-defi-protocols-examined-by-europes-banking-watchdog/",
+      "published": "2026-11-27T04:20:14.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/tether-lending-snapshot-film.webp",
+      "sourceTitle": "USDT leads borrowing on four of six DeFi protocols examined by Europe’s banking watchdog"
+    },
+    {
+      "id": "40ed4bed44401f6e",
+      "headline": "Asian nations plan working group on digital payments and crypto rules",
+      "summary": "China, Japan, South Korea and ASEAN have decided to form a working group focused on digital payments and crypto regulation. The move follows a May meeting in Uzbekistan, where cross-border digital payments were identified as a new area of cooperation.",
+      "category": "Asia",
+      "chain": "",
+      "source": "The Block",
+      "url": "https://www.theblock.co/news/regulation/2026-11-26-china-japan-south-korea-asean-digital-payments-447029",
+      "published": "2026-11-27T04:18:40.000Z",
+      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/11/ASEAN-plus-three-crop-scaled.jpg",
+      "sourceTitle": "China, Japan, South Korea and ASEAN to form working group on digital payments, crypto regulation"
+    },
+    {
+      "id": "def5d40c7ce8387a",
+      "headline": "Bluefin Plans to Close Sui Perpetual Futures Platform in December",
+      "summary": "Bluefin has told traders to close their positions before 4 p.m. ET on December 4. Per DefiLlama's 30-day data, rivals Aftermath Finance and DipCoin handled more Sui perpetuals volume than Bluefin.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/defi/bluefin-to-shut-down-perpetual-futures-on-sui-dec-4",
+      "published": "2026-11-27T03:02:07.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/76b1ec6c8ad262989b6596a762ab9599f711448d-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Bluefin to Shut Down Perpetual Futures on Sui Dec. 4"
+    },
     {
       "id": "daae2e186e192898",
       "headline": "Binance Lifts Post-Hack Withdrawal Suspension on Most Networks",
@@ -1217,42 +1261,6 @@
       "published": "2026-11-16T20:10:19.000Z",
       "image": "https://cryptoslate.com/wp-content/uploads/2026/11/xrp-liquidity-test-rig.webp",
       "sourceTitle": "XRP’s proposed upgrade could improve trading without boosting token demand"
-    },
-    {
-      "id": "f4d94c9f6613c209",
-      "headline": "Coinbase and Broadridge float standard for tokenized stock disclosures",
-      "summary": "Coinbase and Broadridge have proposed a standard that would link holders of tokenized stocks with corporate disclosures and voting materials in digital wallets. The standard would not itself grant shareholder rights.",
-      "category": "Tech",
-      "chain": "",
-      "source": "Cointelegraph",
-      "url": "https://cointelegraph.com/news/coinbase-broadridge-tokenized-stock-shareholder-notices?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-      "published": "2026-11-16T19:56:18.000Z",
-      "image": "https://s3-images.ctmedia.io/media/article-covers/2026/11/01M7JTN734VB6CHE3TCTHAYQMT/digital-bonds-on-blockchain-2.png",
-      "sourceTitle": "Coinbase and Broadridge propose standard for tokenized stock disclosures"
-    },
-    {
-      "id": "968f1c5faafbe1eb",
-      "headline": "Binance Founder CZ Suggests Reasons Behind Recent Crypto Price Drop",
-      "summary": "Changpeng Zhao listed possible pressures on crypto prices, including IPO demand, fund withdrawals, security concerns, inflation and politics. He said their link to the selloff was unclear and mentioned recent personal purchases.",
-      "category": "Markets",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/market-updates/why-are-crypto-prices-down-binance-founder-cz-lists-possible-reasons/",
-      "published": "2026-11-16T01:30:14.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/liquidation-heatmap-nov-15-768x432.jpg",
-      "sourceTitle": "Why Are Crypto Prices Down? Binance Founder CZ Lists Possible Reasons"
-    },
-    {
-      "id": "f80542915419a70d",
-      "headline": "Ripple co-founder Schwartz reveals sharp cut in XRP holdings",
-      "summary": "David Schwartz says he has significantly reduced his XRP, bitcoin and ether holdings, citing discomfort with investment risk. He still argues XRP would likely benefit if the XRP Ledger succeeds.",
-      "category": "Altcoins",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/featured/ripples-david-schwartz-once-held-26-million-xrp-now-just-3-million/",
-      "published": "2026-11-16T00:05:26.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/xrp-nov-15-768x432.jpg",
-      "sourceTitle": "Ripple’s David Schwartz Once Held 26 Million XRP. Now Just 3 Million"
     }
   ]
 }
