@@ -1,6 +1,7 @@
 {
-  "updated": "2026-11-27T19:52:41.449Z",
+  "updated": "2026-11-28T04:28:15.940Z",
   "skipped": [
+    "e5085a87b429c89f",
     "cecb6bf917300215",
     "37c5422d3b90b07c",
     "d6c92d9d6158e6e9",
@@ -299,10 +300,69 @@
     "01765e01090b8e3c",
     "14cdf5b43829db24",
     "d8cf8eb11972f711",
-    "2d8db9690ad4f40f",
-    "8071e8ccb709a07a"
+    "2d8db9690ad4f40f"
   ],
   "items": [
+    {
+      "id": "4a4d55a3d4c2a6cd",
+      "headline": "Binance resumes withdrawals after October suspension; some users may still be blocked",
+      "summary": "Binance said it lifted its October withdrawal suspension on November 26. Customers may still run into network maintenance or account restrictions.",
+      "category": "Exchanges",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/binance-withdrawals-are-back-after-octobers-hack-and-heres-why-yours-might-still-be-blocked/",
+      "published": "2026-11-28T02:10:31.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/01-binance-open-gate.webp",
+      "sourceTitle": "Binance withdrawals are back after October’s hack and here’s why yours might still be blocked"
+    },
+    {
+      "id": "d12deef773925027",
+      "headline": "Israeli bank lets clients buy Bitcoin with 2% fees each way",
+      "summary": "An Israeli bank's app allows customers to buy Bitcoin but blocks transfers to outside wallets and institutions. Each purchase or sale carries a 2% charge.",
+      "category": "Asia",
+      "chain": "",
+      "source": "CryptoSlate",
+      "url": "https://cryptoslate.com/israeli-bank-lets-customers-buy-bitcoin-but-charges-them-2-to-get-in-and-2-to-get-out/",
+      "published": "2026-11-28T00:50:45.000Z",
+      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/01-discount-bitcoin-trading-counter.webp",
+      "sourceTitle": "Israeli bank lets customers buy Bitcoin but charges them 2% to get in and 2% to get out"
+    },
+    {
+      "id": "d98d097b7cbb62eb",
+      "headline": "Anza Calls for Prompt Agave Upgrade on Solana Mainnet",
+      "summary": "Anza said Solana's clusters are operating normally. Jito-Solana and Harmonic have released builds based on Agave v4.4.2.",
+      "category": "Altcoins",
+      "chain": "",
+      "source": "The Defiant",
+      "url": "https://thedefiant.io/news/blockchains/anza-urges-immediate-agave-upgrade-on-solana-mainnet",
+      "published": "2026-11-27T23:37:39.000Z",
+      "image": "https://cdn.sanity.io/images/6oftkxoa/production/9cfcd6d843239150b14064cd82d07794be060c89-2048x1152.webp?fm=webp&q=85",
+      "sourceTitle": "Anza Urges Immediate Agave Upgrade on Solana Mainnet"
+    },
+    {
+      "id": "6daa225658489dfe",
+      "headline": "Sanctioned Russian Bank VTB Begins Selling Bitcoin to Clients",
+      "summary": "VTB, a Russian bank that the US has blacklisted over Iran, is now selling Bitcoin. The report also covers who can buy and which coins the US can freeze.",
+      "category": "Bitcoin",
+      "chain": "",
+      "source": "BeInCrypto",
+      "url": "https://beincrypto.com/us-blacklisted-vtb-iran-sells-bitcoin/",
+      "published": "2026-11-27T23:00:00.000Z",
+      "image": "https://assets.beincrypto.com/img/LVmKjy3aLJ-weBmFsAxSELjHvSw=/smart/e0d01c766b4f4e87881f6bc3f4969c6f",
+      "sourceTitle": "America Blacklisted VTB Over Iran. Now Russia's No. 2 Bank Sells Bitcoin"
+    },
+    {
+      "id": "0b63d9afd35cd751",
+      "headline": "Injective asks SEC to allow on-chain order books for tokenized stocks",
+      "summary": "Injective has called on the U.S. Securities and Exchange Commission to widen its exemptions for tokenized stock trading so they cover on-chain order books.",
+      "category": "Regulation",
+      "chain": "",
+      "source": "Bitcoin.com News",
+      "url": "https://news.bitcoin.com/regulation-and-legal/injective-urges-sec-open-tokenized-stock-trading-order-books/",
+      "published": "2026-11-27T22:40:46.000Z",
+      "image": "https://static.news.bitcoin.com/wp-content/uploads/2026/11/sec-5.jpg",
+      "sourceTitle": "Injective Urges SEC to Open Tokenized Stock Trading to Order Books"
+    },
     {
       "id": "dc5658eb878e674a",
       "headline": "Bitcoin Trades Below Popular Long-Term Models, Raising Bear Market Concerns",
@@ -1203,66 +1263,6 @@
       "published": "2026-11-18T03:44:00.000Z",
       "image": "https://fintechnewssg-22e90.kxcdn.com/wp-content/uploads/2026/11/Allison-Parent-150x150.jpg",
       "sourceTitle": "Ondo Finance Joins MAS’ Project Guardian to Support Asset Tokenisation"
-    },
-    {
-      "id": "918bd64fab265d02",
-      "headline": "CoinGecko gains Solana Foundation support, explores adding crypto trading",
-      "summary": "Data platform CoinGecko has received backing from the Solana Foundation and is looking at trading features. Details on how and when such trading would launch have not been provided.",
-      "category": "Markets",
-      "chain": "",
-      "source": "CryptoSlate",
-      "url": "https://cryptoslate.com/coingecko-secures-solana-foundation-backing-and-eyes-crypto-trading/",
-      "published": "2026-11-18T03:10:56.000Z",
-      "image": "https://cryptoslate.com/wp-content/uploads/2026/11/coingecko-market-data-dispatch.jpg",
-      "sourceTitle": "CoinGecko secures Solana Foundation backing and eyes crypto trading"
-    },
-    {
-      "id": "4d0b16b8e3de0cdc",
-      "headline": "Coinbase AI system stops $4.7M in deepfake Musk scam transfers",
-      "summary": "Coinbase says its AI defense system stopped about 91% of attempted transfers tied to a fake Tesla livestream, with no human involvement.",
-      "category": "Exchanges",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/news/defi/2026-11-17-coinbase-ai-defense-deepfake-elon-musk-442918",
-      "published": "2026-11-18T02:47:51.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/06/20260612_Coinbase_News.jpg",
-      "sourceTitle": "Coinbase AI defense blocks $4.7 million from being sent to deepfake Elon Musk scam"
-    },
-    {
-      "id": "04f85f12c3ebf17a",
-      "headline": "Crypto startup valuations diverge as top firms hit new highs",
-      "summary": "Crypto unicorns from the 2021 boom now trade at steep secondary-market discounts of 50% to 70%. Meanwhile, the leading companies have reached new valuation highs.",
-      "category": "Markets",
-      "chain": "",
-      "source": "The Block",
-      "url": "https://www.theblock.co/newsletters/the-funding/2026-11-17-crypto-startup-valuations-442903",
-      "published": "2026-11-18T02:40:00.000Z",
-      "image": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2023/03/20230327_MarketsUp_Down_Generic.jpg",
-      "sourceTitle": "What’s happening to crypto startup valuations?"
-    },
-    {
-      "id": "d68e827b5250be98",
-      "headline": "DBS and Circle add round-the-clock USDC access for institutions",
-      "summary": "Eligible institutional clients can now mint and redeem USDC through DBS, giving them a bank-based route to dollar stablecoin liquidity in Asia.",
-      "category": "Asia",
-      "chain": "",
-      "source": "The Defiant",
-      "url": "https://thedefiant.io/converge/tradfi-and-fintech/dbs-circle-add-24-7-institutional-usdc-access-in-asia",
-      "published": "2026-11-18T02:30:00.000Z",
-      "image": "https://cdn.sanity.io/images/6oftkxoa/production/53686c573e303d141a2438fac4a78f720fe0f9bd-2048x1152.webp?fm=webp&q=85",
-      "sourceTitle": "DBS, Circle Add 24/7 Institutional USDC Access in Asia"
-    },
-    {
-      "id": "afc75bb9fe9d820e",
-      "headline": "Fed's Waller Expects Stablecoins and Tokenized Deposits to Coexist",
-      "summary": "Federal Reserve Governor Christopher Waller expects stablecoins, tokenized bank deposits and other digital payment instruments to operate side by side as blockchain becomes more integrated into traditional finance. He said the payments future will likely include several forms of tokenized money alongside existing banking infrastructure.",
-      "category": "Regulation",
-      "chain": "",
-      "source": "Bitcoin.com News",
-      "url": "https://news.bitcoin.com/regulation-and-legal/fed-governor-stablecoins-tokenized-deposits-coexisting-financial-system/",
-      "published": "2026-11-18T02:05:22.000Z",
-      "image": "https://static.news.bitcoin.com/wp-content/uploads/2025/06/federal-reserve-reputational-risk-768x432.jpg",
-      "sourceTitle": "Fed Governor Sees Stablecoins, Tokenized Deposits Coexisting in Financial System"
     }
   ]
 }
